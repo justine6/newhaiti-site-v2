@@ -1,0 +1,7 @@
+* text=auto
+*.js text=auto
+*.html text=auto
+*.css text=auto
+*.tsx text=auto
+# ... add other text-based file extensions
+* binary
