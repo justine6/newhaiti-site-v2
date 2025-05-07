@@ -843,10 +843,10 @@ export default function Home() {
         <div className="container mx-auto px-4 py-2 flex justify-between items-center">
           <div className="flex items-center gap-3">
             <Image
-              src="/images/lion-logo.png"
+              src="/images/newhaitilogo-1.JPG"
               alt="Lion Logo"
-              width={50}
-              height={50}
+              width={80}
+              height={180}
               className="rounded-full"
             />
             <div className="font-bold text-[#00209F]">New Haiti Team 2075</div>
