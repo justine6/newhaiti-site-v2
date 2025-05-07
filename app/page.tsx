@@ -42,8 +42,8 @@ const translations = {
       map: "Haiti Map",
       appeal: "Appeal",
       projects: "Projects",
-      team: "Our Team",
-      join: "Join Us",
+      // team: "Our Team",
+      // join: "Join Us",
       contact: "Contact",
     },
     hero: {
@@ -1064,7 +1064,7 @@ export default function Home() {
             <div className="flex flex-col md:flex-row items-center gap-8">
               <div className="md:w-1/4 flex justify-center mb-4 md:mb-0">
                 <Image
-                  src="/images/lion-logo.png"
+                  src="images/newhaitilogo-1.JPG"
                   alt="Lion Logo"
                   width={150}
                   height={150}
@@ -1213,7 +1213,7 @@ export default function Home() {
           <div className="container mx-auto px-4 text-center">
             <div className="flex flex-col md:flex-row items-center justify-center gap-8 mb-8">
               <Image
-                src="/images/lion-logo.png"
+                src="/images/newhaitilogo-1.JPG"
                 alt="Lion Logo"
                 width={100}
                 height={100}
@@ -1250,7 +1250,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Team Section */}
+        {/* Team Section
         <section ref={teamRef} id="team" className="py-16 bg-gray-100">
           <div className="container mx-auto px-4">
             <h2 className="text-3xl font-bold text-center mb-4 text-[#00209F]">
@@ -1314,7 +1314,7 @@ export default function Home() {
               ))}
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* Call to Action */}
         <section
@@ -1534,7 +1534,7 @@ export default function Home() {
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="flex items-center gap-3 mb-4 md:mb-0">
               <Image
-                src="/images/lion-logo.png"
+                src="/images/newhaitilogo-1.JPG"
                 alt="Lion Logo"
                 width={40}
                 height={40}
