@@ -336,9 +336,10 @@ const translations = {
       required: "Chan sa a obligatwa",
       invalidEmail: "Tanpri antre yon adrès imèl ki valid",
       contactInfo: "Enfòmasyon Kontak",
-      address: "Pòtoprens, Ayiti",
-      phone: "+509 xxxx xxxx",
-      emailAddress: "contact@newhaititeam2075.org",
+      s: "Port-au-Prince, Haiti",
+      phone: "+509 43607248",
+      phone2: "918-640-8249",
+      emailAddress: "nouvoayiti2075@gmail.com",
     },
     footer: {
       tagline: "Nouvo Ekip Ayiti 2075 | Pou yon Ayiti Pasifik, Pwospè, ak Ini",
@@ -495,9 +496,10 @@ const translations = {
       required: "Ce champ est obligatoire",
       invalidEmail: "Veuillez entrer une adresse email valide",
       contactInfo: "Informations de Contact",
-      address: "Port-au-Prince, Haïti",
-      phone: "+509 xxxx xxxx",
-      emailAddress: "contact@newhaititeam2075.org",
+      s: "Port-au-Prince, Haiti",
+      phone: "+509 43607248",
+      phone2: "918-640-8249",
+      emailAddress: "nouvoayiti2075@gmail.com",
     },
     footer: {
       tagline:
@@ -656,9 +658,10 @@ const translations = {
       required: "Este campo es obligatorio",
       invalidEmail: "Por favor, introduzca una dirección de email válida",
       contactInfo: "Información de Contacto",
-      address: "Puerto Príncipe, Haití",
-      phone: "+509 xxxx xxxx",
-      emailAddress: "contact@newhaititeam2075.org",
+      s: "Port-au-Prince, Haiti",
+      phone: "+509 43607248",
+      phone2: "918-640-8249",
+      emailAddress: "nouvoayiti2075@gmail.com",
     },
     footer: {
       tagline:
@@ -1349,7 +1352,7 @@ export default function Home() {
               {t.contact.subtitle}
             </p>
 
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <div className="flex-1 items-center text-cen">
               {/* Contact Information */}
               <div className="lg:col-span-1 bg-white p-6 rounded-lg shadow-md">
                 <h3 className="text-xl font-bold mb-6 text-[#00209F]">
@@ -1366,16 +1369,31 @@ export default function Home() {
 
                   <div className="flex items-start gap-4">
                     <Phone className="h-6 w-6 text-[#D21034] mt-1" />
-                    <div>
-                      <p className="font-medium">{t.contact.phone}</p>
-                    </div>
+                    <a
+                      href={`tel:${t.contact.phone}`}
+                      className="font-medium text-blue-600 hover:underline"
+                    >
+                      {t.contact.phone}
+                    </a>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <Phone className="h-6 w-6 text-[#D21034] mt-1" />
+                    <a
+                      href={`tel:${t.contact.phone2}`}
+                      className="font-medium text-blue-600 hover:underline"
+                    >
+                      {t.contact.phone2}
+                    </a>
                   </div>
 
                   <div className="flex items-start gap-4">
                     <Mail className="h-6 w-6 text-[#D21034] mt-1" />
-                    <div>
-                      <p className="font-medium">{t.contact.emailAddress}</p>
-                    </div>
+                    <a
+                      href={`tel:${t.contact.emailAddress}`}
+                      className="font-medium text-blue-600 hover:underline"
+                    >
+                      {t.contact.emailAddress}
+                    </a>
                   </div>
                 </div>
 
@@ -1422,7 +1440,7 @@ export default function Home() {
 
               {/* Contact Form */}
               <div className="lg:col-span-2">
-                <form
+                {/* <form
                   onSubmit={handleSubmit}
                   className="bg-white p-6 rounded-lg shadow-md"
                 >
@@ -1521,7 +1539,7 @@ export default function Home() {
                       )}
                     </Button>
                   </div>
-                </form>
+                </form> */}
               </div>
             </div>
           </div>
