@@ -1,9 +1,9 @@
-"use client";
+'use client';
 
-import type React from "react";
+import type React from 'react';
 
-import { useState, useEffect, useRef } from "react";
-import Image from "next/image";
+import { useState, useEffect, useRef } from 'react';
+import Image from 'next/image';
 import {
   ChevronDown,
   Facebook,
@@ -18,407 +18,405 @@ import {
   Twitter,
   Linkedin,
   Globe,
-} from "lucide-react";
-import { Button } from "@/components/ui/button";
+} from 'lucide-react';
+import { Button } from '@/components/ui/button';
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Label } from "@/components/ui/label";
-import { toast } from "@/components/ui/use-toast";
-import { ToastAction } from "@/components/ui/toast";
+} from '@/components/ui/dropdown-menu';
+import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
+import { Label } from '@/components/ui/label';
+import { toast } from '@/components/ui/use-toast';
+import { ToastAction } from '@/components/ui/toast';
 
 // Language translations
 const translations = {
   en: {
-    language: "English",
+    language: 'English',
     nav: {
-      home: "Home",
-      vision: "Vision",
-      map: "Haiti Map",
-      appeal: "Appeal",
-      projects: "Projects",
+      home: 'Home',
+      vision: 'Vision',
+      map: 'Haiti Map',
+      appeal: 'Appeal',
+      projects: 'Projects',
       // team: "Our Team",
       // join: "Join Us",
-      contact: "Contact",
+      contact: 'Contact',
     },
     hero: {
-      title: "New Haiti Team 2075",
-      subtitle: "Restoring Dignity. Rebuilding Hope.",
-      joinButton: "Join the Movement",
-      visionButton: "Read the Vision",
+      title: 'New Haiti Team 2075',
+      subtitle: 'Restoring Dignity. Rebuilding Hope.',
+      joinButton: 'Join the Movement',
+      visionButton: 'Read the Vision',
     },
     visionary: {
-      heading: "A Message from Dr. Frantz Lamour",
+      heading: 'A Message from Dr. Frantz Lamour',
       paragraph:
         "This is not about politics. It's about peace, healing, and giving our children a better tomorrow. We don't seek power — we're restoring it to the people.",
     },
     map: {
-      title: "Haiti United",
+      title: 'Haiti United',
       paragraph1:
-        "Our vision encompasses all of Haiti, from north to south, east to west. We are working to restore peace and prosperity across the entire nation, bringing communities together in a shared vision of a better future.",
+        'Our vision encompasses all of Haiti, from north to south, east to west. We are working to restore peace and prosperity across the entire nation, bringing communities together in a shared vision of a better future.',
       paragraph2:
-        "The New Haiti Team 2075 is committed to projects that benefit all Haitians, regardless of location, background, or political affiliation.",
+        'The New Haiti Team 2075 is committed to projects that benefit all Haitians, regardless of location, background, or political affiliation.',
     },
     appeal: {
-      title: "Lay Down Your Weapons",
+      title: 'Lay Down Your Weapons',
       quote:
-        "We call on all armed groups to join us in rebuilding our communities. Together, we can create a Haiti where our children can grow up in safety and prosperity.",
+        'We call on all armed groups to join us in rebuilding our communities. Together, we can create a Haiti where our children can grow up in safety and prosperity.',
     },
     projects: {
-      title: "Peace Restoration Projects",
+      title: 'Peace Restoration Projects',
       items: [
         {
-          title: "Community Cleaning & Sanitation",
-          summary: "Improving public health through clean environments",
+          title: 'Community Cleaning & Sanitation',
+          summary: 'Improving public health through clean environments',
         },
         {
-          title: "Youth Education Programs",
-          summary: "Investing in the future through knowledge",
+          title: 'Youth Education Programs',
+          summary: 'Investing in the future through knowledge',
         },
         {
-          title: "Infrastructure Rebuilding",
-          summary: "Restoring essential services and structures",
+          title: 'Infrastructure Rebuilding',
+          summary: 'Restoring essential services and structures',
         },
         {
-          title: "Healthcare Access",
-          summary: "Bringing medical care to all communities",
+          title: 'Healthcare Access',
+          summary: 'Bringing medical care to all communities',
         },
         {
-          title: "Agricultural Development",
-          summary: "Ensuring food security and sustainability",
+          title: 'Agricultural Development',
+          summary: 'Ensuring food security and sustainability',
         },
         {
-          title: "Vocational Training",
-          summary: "Building skills for economic independence",
+          title: 'Vocational Training',
+          summary: 'Building skills for economic independence',
         },
         {
-          title: "Cultural Preservation",
-          summary: "Celebrating and protecting Haitian heritage",
+          title: 'Cultural Preservation',
+          summary: 'Celebrating and protecting Haitian heritage',
         },
         {
-          title: "Conflict Resolution",
-          summary: "Creating peaceful dialogue between communities",
+          title: 'Conflict Resolution',
+          summary: 'Creating peaceful dialogue between communities',
         },
         {
           title: "Women's Empowerment",
-          summary: "Supporting gender equality and opportunity",
+          summary: 'Supporting gender equality and opportunity',
         },
         {
-          title: "Environmental Protection",
+          title: 'Environmental Protection',
           summary: "Safeguarding Haiti's natural resources",
         },
         {
-          title: "Digital Inclusion",
-          summary: "Bridging the technology gap for all Haitians",
+          title: 'Digital Inclusion',
+          summary: 'Bridging the technology gap for all Haitians',
         },
       ],
     },
     team: {
-      title: "Meet Our Core Team",
-      subtitle:
-        "Dedicated individuals working together to build a better Haiti",
+      title: 'Meet Our Core Team',
+      subtitle: 'Dedicated individuals working together to build a better Haiti',
       members: [
         {
-          name: "Dr. Frantz Lamour",
-          role: "Founder & Visionary",
-          bio: "Dr. Frantz Lamour is a respected community leader with over 20 years of experience in social development and peace-building initiatives. His vision for a united Haiti drives our mission.",
+          name: 'Dr. Frantz Lamour',
+          role: 'Founder & Visionary',
+          bio: 'Dr. Frantz Lamour is a respected community leader with over 20 years of experience in social development and peace-building initiatives. His vision for a united Haiti drives our mission.',
           social: {
-            twitter: "#",
-            linkedin: "#",
-            website: "#",
+            twitter: '#',
+            linkedin: '#',
+            website: '#',
           },
         },
         {
-          name: "Marie Joseph",
-          role: "Community Outreach Director",
-          bio: "Marie has dedicated her career to grassroots organizing and community development. She leads our efforts to engage with local communities and build sustainable partnerships.",
+          name: 'Marie Joseph',
+          role: 'Community Outreach Director',
+          bio: 'Marie has dedicated her career to grassroots organizing and community development. She leads our efforts to engage with local communities and build sustainable partnerships.',
           social: {
-            twitter: "#",
-            linkedin: "#",
+            twitter: '#',
+            linkedin: '#',
           },
         },
         {
-          name: "Jean-Michel Baptiste",
-          role: "Education Programs Lead",
-          bio: "With a background in educational policy and curriculum development, Jean-Michel oversees our youth education initiatives and vocational training programs.",
+          name: 'Jean-Michel Baptiste',
+          role: 'Education Programs Lead',
+          bio: 'With a background in educational policy and curriculum development, Jean-Michel oversees our youth education initiatives and vocational training programs.',
           social: {
-            linkedin: "#",
-            website: "#",
+            linkedin: '#',
+            website: '#',
           },
         },
         {
-          name: "Claudette Toussaint",
-          role: "Healthcare Coordinator",
-          bio: "Dr. Toussaint brings her medical expertise to our healthcare access programs, ensuring that essential medical services reach underserved communities.",
+          name: 'Claudette Toussaint',
+          role: 'Healthcare Coordinator',
+          bio: 'Dr. Toussaint brings her medical expertise to our healthcare access programs, ensuring that essential medical services reach underserved communities.',
           social: {
-            twitter: "#",
-            linkedin: "#",
+            twitter: '#',
+            linkedin: '#',
           },
         },
       ],
     },
     cta: {
       heading: "Let's Build the Future Together",
-      quote: "Put down your weapons and pick up your tools.",
-      volunteerButton: "Volunteer",
-      shareButton: "Share This Vision",
+      quote: 'Put down your weapons and pick up your tools.',
+      volunteerButton: 'Volunteer',
+      shareButton: 'Share This Vision',
     },
     contact: {
-      title: "Get in Touch",
-      subtitle: "Have questions or want to get involved? Reach out to us.",
-      name: "Your Name",
-      email: "Your Email",
-      subject: "Subject",
-      message: "Your Message",
-      submit: "Send Message",
+      title: 'Get in Touch',
+      subtitle: 'Have questions or want to get involved? Reach out to us.',
+      name: 'Your Name',
+      email: 'Your Email',
+      subject: 'Subject',
+      message: 'Your Message',
+      submit: 'Send Message',
       success: "Message sent successfully! We'll get back to you soon.",
-      error: "There was an error sending your message. Please try again.",
-      required: "This field is required",
-      invalidEmail: "Please enter a valid email address",
-      contactInfo: "Contact Information",
-      address: "Port-au-Prince, Haiti",
-      phone: "+509 43607248",
-      phone2: "918-640-8249",
-      emailAddress: "nouvoayiti2075@gmail.com",
+      error: 'There was an error sending your message. Please try again.',
+      required: 'This field is required',
+      invalidEmail: 'Please enter a valid email address',
+      contactInfo: 'Contact Information',
+      address: 'Port-au-Prince, Haiti',
+      phone: '+509 43607248',
+      phone2: '918-640-8249',
+      emailAddress: 'nouvoayiti2075@gmail.com',
     },
     footer: {
-      tagline:
-        "New Haiti Team 2075 | For a Peaceful, Prosperous, and United Haiti",
-      legal: "This is a non-political, peace-driven citizen initiative.",
-      backToTop: "Back to top",
+      tagline: 'New Haiti Team 2075 | For a Peaceful, Prosperous, and United Haiti',
+      legal: 'This is a non-political, peace-driven citizen initiative.',
+      backToTop: 'Back to top',
     },
   },
   ht: {
-    language: "Kreyòl Ayisyen",
+    language: 'Kreyòl Ayisyen',
     nav: {
-      home: "Akèy",
-      vision: "Vizyon",
-      map: "Kat Ayiti",
-      appeal: "Apèl",
-      projects: "Pwojè",
-      team: "Ekip Nou",
-      join: "Rejwenn Nou",
-      contact: "Kontakte",
+      home: 'Akèy',
+      vision: 'Vizyon',
+      map: 'Kat Ayiti',
+      appeal: 'Apèl',
+      projects: 'Pwojè',
+      team: 'Ekip Nou',
+      join: 'Rejwenn Nou',
+      contact: 'Kontakte',
     },
     hero: {
-      title: "Nouvo Ekip Ayiti 2075",
-      subtitle: "Restore Diyite. Rebati Espwa.",
-      joinButton: "Rejwenn Mouvman an",
-      visionButton: "Li Vizyon an",
+      title: 'Nouvo Ekip Ayiti 2075',
+      subtitle: 'Restore Diyite. Rebati Espwa.',
+      joinButton: 'Rejwenn Mouvman an',
+      visionButton: 'Li Vizyon an',
     },
     visionary: {
-      heading: "Yon Mesaj de Dr. Frantz Lamour",
+      heading: 'Yon Mesaj de Dr. Frantz Lamour',
       paragraph:
-        "Sa pa gen anyen pou wè ak politik. Se pou lapè, gerizon, ak bay timoun nou yo yon demen ki pi bon. Nou pa chèche pouvwa — n ap restore li bay pèp la.",
+        'Sa pa gen anyen pou wè ak politik. Se pou lapè, gerizon, ak bay timoun nou yo yon demen ki pi bon. Nou pa chèche pouvwa — n ap restore li bay pèp la.',
     },
     map: {
-      title: "Ayiti Ini",
+      title: 'Ayiti Ini',
       paragraph1:
-        "Vizyon nou anbrasse tout Ayiti, soti nan nò rive nan sid, lès rive nan lwès. N ap travay pou restore lapè ak pwosperite nan tout peyi a, rasanble kominote yo nan yon vizyon pataje pou yon pi bon avni.",
+        'Vizyon nou anbrasse tout Ayiti, soti nan nò rive nan sid, lès rive nan lwès. N ap travay pou restore lapè ak pwosperite nan tout peyi a, rasanble kominote yo nan yon vizyon pataje pou yon pi bon avni.',
       paragraph2:
-        "Nouvo Ekip Ayiti 2075 angaje nan pwojè ki benefisye tout Ayisyen, kèlkeswa kote yo ye, orijin yo, oswa afilyasyon politik yo.",
+        'Nouvo Ekip Ayiti 2075 angaje nan pwojè ki benefisye tout Ayisyen, kèlkeswa kote yo ye, orijin yo, oswa afilyasyon politik yo.',
     },
     appeal: {
-      title: "Depoze Zam Ou Yo",
+      title: 'Depoze Zam Ou Yo',
       quote:
-        "Nou mande tout gwoup ame yo pou yo vin jwenn nou nan rebati kominote nou yo. Ansanm, nou ka kreye yon Ayiti kote timoun nou yo ka grandi nan sekirite ak pwosperite.",
+        'Nou mande tout gwoup ame yo pou yo vin jwenn nou nan rebati kominote nou yo. Ansanm, nou ka kreye yon Ayiti kote timoun nou yo ka grandi nan sekirite ak pwosperite.',
     },
     projects: {
-      title: "Pwojè Restorasyon Lapè",
+      title: 'Pwojè Restorasyon Lapè',
       items: [
         {
-          title: "Netwayaj ak Sanitasyon Kominotè",
-          summary: "Amelyore sante piblik atravè anviwònman pwòp",
+          title: 'Netwayaj ak Sanitasyon Kominotè',
+          summary: 'Amelyore sante piblik atravè anviwònman pwòp',
         },
         {
-          title: "Pwogram Edikasyon Jèn",
-          summary: "Envesti nan lavni atravè konesans",
+          title: 'Pwogram Edikasyon Jèn',
+          summary: 'Envesti nan lavni atravè konesans',
         },
         {
-          title: "Rekonstriksyon Enfrastrikti",
-          summary: "Restore sèvis esansyèl ak estrikti",
+          title: 'Rekonstriksyon Enfrastrikti',
+          summary: 'Restore sèvis esansyèl ak estrikti',
         },
         {
-          title: "Aksè a Swen Sante",
-          summary: "Pote swen medikal nan tout kominote yo",
+          title: 'Aksè a Swen Sante',
+          summary: 'Pote swen medikal nan tout kominote yo',
         },
         {
-          title: "Devlopman Agrikòl",
-          summary: "Asire sekirite alimantè ak dirab",
+          title: 'Devlopman Agrikòl',
+          summary: 'Asire sekirite alimantè ak dirab',
         },
         {
-          title: "Fòmasyon Pwofesyonèl",
-          summary: "Bati konpetans pou endepandans ekonomik",
+          title: 'Fòmasyon Pwofesyonèl',
+          summary: 'Bati konpetans pou endepandans ekonomik',
         },
         {
-          title: "Prezèvasyon Kiltirèl",
-          summary: "Selebre ak pwoteje eritaj ayisyen",
+          title: 'Prezèvasyon Kiltirèl',
+          summary: 'Selebre ak pwoteje eritaj ayisyen',
         },
         {
-          title: "Rezolisyon Konfli",
-          summary: "Kreye dyalòg pasifik ant kominote yo",
+          title: 'Rezolisyon Konfli',
+          summary: 'Kreye dyalòg pasifik ant kominote yo',
         },
-        { title: "Pouvwa Fanm", summary: "Sipòte egalite sèks ak opòtinite" },
+        { title: 'Pouvwa Fanm', summary: 'Sipòte egalite sèks ak opòtinite' },
         {
-          title: "Pwoteksyon Anviwònman",
-          summary: "Pwoteje resous natirèl Ayiti",
+          title: 'Pwoteksyon Anviwònman',
+          summary: 'Pwoteje resous natirèl Ayiti',
         },
         {
-          title: "Enklizyon Dijital",
-          summary: "Konble eka teknolojik pou tout Ayisyen",
+          title: 'Enklizyon Dijital',
+          summary: 'Konble eka teknolojik pou tout Ayisyen',
         },
       ],
     },
     team: {
-      title: "Rankontre Ekip Santral Nou",
-      subtitle: "Moun devwe k ap travay ansanm pou bati yon Ayiti ki pi bon",
+      title: 'Rankontre Ekip Santral Nou',
+      subtitle: 'Moun devwe k ap travay ansanm pou bati yon Ayiti ki pi bon',
       members: [
         {
-          name: "Dr. Frantz Lamour",
-          role: "Fondatè & Vizyonè",
-          bio: "Dr. Frantz Lamour se yon lidè kominotè respekte ki gen plis pase 20 lane eksperyans nan devlopman sosyal ak inisyativ pou bati lapè. Vizyon li pou yon Ayiti ini kondwi misyon nou.",
+          name: 'Dr. Frantz Lamour',
+          role: 'Fondatè & Vizyonè',
+          bio: 'Dr. Frantz Lamour se yon lidè kominotè respekte ki gen plis pase 20 lane eksperyans nan devlopman sosyal ak inisyativ pou bati lapè. Vizyon li pou yon Ayiti ini kondwi misyon nou.',
           social: {
-            twitter: "#",
-            linkedin: "#",
-            website: "#",
+            twitter: '#',
+            linkedin: '#',
+            website: '#',
           },
         },
         {
-          name: "Marie Joseph",
-          role: "Direktris Sansibilizasyon Kominotè",
-          bio: "Marie te dedye karyè li nan òganizasyon popilè ak devlopman kominotè. Li dirije efò nou yo pou angaje ak kominote lokal yo epi bati patenarya dirab.",
+          name: 'Marie Joseph',
+          role: 'Direktris Sansibilizasyon Kominotè',
+          bio: 'Marie te dedye karyè li nan òganizasyon popilè ak devlopman kominotè. Li dirije efò nou yo pou angaje ak kominote lokal yo epi bati patenarya dirab.',
           social: {
-            twitter: "#",
-            linkedin: "#",
+            twitter: '#',
+            linkedin: '#',
           },
         },
         {
-          name: "Jean-Michel Baptiste",
-          role: "Responsab Pwogram Edikasyon",
-          bio: "Avèk yon background nan politik edikasyonèl ak devlopman kourikoulòm, Jean-Michel sipèvize inisyativ edikasyon jèn nou yo ak pwogram fòmasyon pwofesyonèl yo.",
+          name: 'Jean-Michel Baptiste',
+          role: 'Responsab Pwogram Edikasyon',
+          bio: 'Avèk yon background nan politik edikasyonèl ak devlopman kourikoulòm, Jean-Michel sipèvize inisyativ edikasyon jèn nou yo ak pwogram fòmasyon pwofesyonèl yo.',
           social: {
-            linkedin: "#",
-            website: "#",
+            linkedin: '#',
+            website: '#',
           },
         },
         {
-          name: "Claudette Toussaint",
-          role: "Kowòdonatris Swen Sante",
-          bio: "Dr. Toussaint pote ekspètiz medikal li nan pwogram aksè swen sante nou yo, asire ke sèvis medikal esansyèl yo rive nan kominote ki pa byen desèvi yo.",
+          name: 'Claudette Toussaint',
+          role: 'Kowòdonatris Swen Sante',
+          bio: 'Dr. Toussaint pote ekspètiz medikal li nan pwogram aksè swen sante nou yo, asire ke sèvis medikal esansyèl yo rive nan kominote ki pa byen desèvi yo.',
           social: {
-            twitter: "#",
-            linkedin: "#",
+            twitter: '#',
+            linkedin: '#',
           },
         },
       ],
     },
     cta: {
-      heading: "Ann Bati Lavni Ansanm",
-      quote: "Depoze zam ou epi pran zouti ou.",
-      volunteerButton: "Volontè",
-      shareButton: "Pataje Vizyon Sa a",
+      heading: 'Ann Bati Lavni Ansanm',
+      quote: 'Depoze zam ou epi pran zouti ou.',
+      volunteerButton: 'Volontè',
+      shareButton: 'Pataje Vizyon Sa a',
     },
     contact: {
-      title: "Kontakte Nou",
-      subtitle: "Ou gen kesyon oswa ou vle patisipe? Kontakte nou.",
-      name: "Non Ou",
-      email: "Imèl Ou",
-      subject: "Sijè",
-      message: "Mesaj Ou",
-      submit: "Voye Mesaj",
-      success: "Mesaj la voye avèk siksè! N ap retounen jwenn ou byento.",
-      error: "Te gen yon erè lè n ap voye mesaj ou a. Tanpri eseye ankò.",
-      required: "Chan sa a obligatwa",
-      invalidEmail: "Tanpri antre yon adrès imèl ki valid",
-      contactInfo: "Enfòmasyon Kontak",
-      s: "Port-au-Prince, Haiti",
-      phone: "+509 43607248",
-      phone2: "918-640-8249",
-      emailAddress: "nouvoayiti2075@gmail.com",
+      title: 'Kontakte Nou',
+      subtitle: 'Ou gen kesyon oswa ou vle patisipe? Kontakte nou.',
+      name: 'Non Ou',
+      email: 'Imèl Ou',
+      subject: 'Sijè',
+      message: 'Mesaj Ou',
+      submit: 'Voye Mesaj',
+      success: 'Mesaj la voye avèk siksè! N ap retounen jwenn ou byento.',
+      error: 'Te gen yon erè lè n ap voye mesaj ou a. Tanpri eseye ankò.',
+      required: 'Chan sa a obligatwa',
+      invalidEmail: 'Tanpri antre yon adrès imèl ki valid',
+      contactInfo: 'Enfòmasyon Kontak',
+      s: 'Port-au-Prince, Haiti',
+      phone: '+509 43607248',
+      phone2: '918-640-8249',
+      emailAddress: 'nouvoayiti2075@gmail.com',
     },
     footer: {
-      tagline: "Nouvo Ekip Ayiti 2075 | Pou yon Ayiti Pasifik, Pwospè, ak Ini",
-      legal: "Sa a se yon inisyativ sitwayen ki pa politik, ki chache lapè.",
-      backToTop: "Retounen anlè",
+      tagline: 'Nouvo Ekip Ayiti 2075 | Pou yon Ayiti Pasifik, Pwospè, ak Ini',
+      legal: 'Sa a se yon inisyativ sitwayen ki pa politik, ki chache lapè.',
+      backToTop: 'Retounen anlè',
     },
   },
   fr: {
-    language: "Français",
+    language: 'Français',
     nav: {
-      home: "Accueil",
-      vision: "Vision",
+      home: 'Accueil',
+      vision: 'Vision',
       map: "Carte d'Haïti",
-      appeal: "Appel",
-      projects: "Projets",
-      team: "Notre Équipe",
-      join: "Rejoignez-nous",
-      contact: "Contact",
+      appeal: 'Appel',
+      projects: 'Projets',
+      team: 'Notre Équipe',
+      join: 'Rejoignez-nous',
+      contact: 'Contact',
     },
     hero: {
-      title: "Nouvelle Équipe Haïti 2075",
+      title: 'Nouvelle Équipe Haïti 2075',
       subtitle: "Restaurer la Dignité. Reconstruire l'Espoir.",
-      joinButton: "Rejoindre le Mouvement",
-      visionButton: "Lire la Vision",
+      joinButton: 'Rejoindre le Mouvement',
+      visionButton: 'Lire la Vision',
     },
     visionary: {
-      heading: "Un Message du Dr. Frantz Lamour",
+      heading: 'Un Message du Dr. Frantz Lamour',
       paragraph:
         "Il ne s'agit pas de politique. Il s'agit de paix, de guérison et d'offrir à nos enfants un avenir meilleur. Nous ne cherchons pas le pouvoir — nous le rendons au peuple.",
     },
     map: {
-      title: "Haïti Unie",
+      title: 'Haïti Unie',
       paragraph1:
         "Notre vision englobe tout Haïti, du nord au sud, de l'est à l'ouest. Nous travaillons à restaurer la paix et la prospérité dans tout le pays, en rassemblant les communautés autour d'une vision partagée d'un avenir meilleur.",
       paragraph2:
         "La Nouvelle Équipe Haïti 2075 s'engage dans des projets qui bénéficient à tous les Haïtiens, indépendamment de leur lieu, de leur origine ou de leur affiliation politique.",
     },
     appeal: {
-      title: "Déposez Vos Armes",
+      title: 'Déposez Vos Armes',
       quote:
-        "Nous appelons tous les groupes armés à nous rejoindre pour reconstruire nos communautés. Ensemble, nous pouvons créer une Haïti où nos enfants peuvent grandir en sécurité et prospérité.",
+        'Nous appelons tous les groupes armés à nous rejoindre pour reconstruire nos communautés. Ensemble, nous pouvons créer une Haïti où nos enfants peuvent grandir en sécurité et prospérité.',
     },
     projects: {
-      title: "Projets de Restauration de la Paix",
+      title: 'Projets de Restauration de la Paix',
       items: [
         {
-          title: "Nettoyage et Assainissement Communautaire",
-          summary: "Améliorer la santé publique par des environnements propres",
+          title: 'Nettoyage et Assainissement Communautaire',
+          summary: 'Améliorer la santé publique par des environnements propres',
         },
         {
           title: "Programmes d'Éducation des Jeunes",
           summary: "Investir dans l'avenir par la connaissance",
         },
         {
-          title: "Reconstruction des Infrastructures",
-          summary: "Restaurer les services et structures essentiels",
+          title: 'Reconstruction des Infrastructures',
+          summary: 'Restaurer les services et structures essentiels',
         },
         {
-          title: "Accès aux Soins de Santé",
-          summary: "Apporter des soins médicaux à toutes les communautés",
+          title: 'Accès aux Soins de Santé',
+          summary: 'Apporter des soins médicaux à toutes les communautés',
         },
         {
-          title: "Développement Agricole",
-          summary: "Assurer la sécurité alimentaire et la durabilité",
+          title: 'Développement Agricole',
+          summary: 'Assurer la sécurité alimentaire et la durabilité',
         },
         {
-          title: "Formation Professionnelle",
+          title: 'Formation Professionnelle',
           summary: "Développer des compétences pour l'indépendance économique",
         },
         {
-          title: "Préservation Culturelle",
-          summary: "Célébrer et protéger le patrimoine haïtien",
+          title: 'Préservation Culturelle',
+          summary: 'Célébrer et protéger le patrimoine haïtien',
         },
         {
-          title: "Résolution des Conflits",
-          summary: "Créer un dialogue pacifique entre les communautés",
+          title: 'Résolution des Conflits',
+          summary: 'Créer un dialogue pacifique entre les communautés',
         },
         {
-          title: "Autonomisation des Femmes",
+          title: 'Autonomisation des Femmes',
           summary: "Soutenir l'égalité des sexes et les opportunités",
         },
         {
@@ -426,249 +424,239 @@ const translations = {
           summary: "Sauvegarder les ressources naturelles d'Haïti",
         },
         {
-          title: "Inclusion Numérique",
-          summary: "Combler le fossé technologique pour tous les Haïtiens",
+          title: 'Inclusion Numérique',
+          summary: 'Combler le fossé technologique pour tous les Haïtiens',
         },
       ],
     },
     team: {
-      title: "Rencontrez Notre Équipe Principale",
-      subtitle:
-        "Des personnes dévouées travaillant ensemble pour construire un Haïti meilleur",
+      title: 'Rencontrez Notre Équipe Principale',
+      subtitle: 'Des personnes dévouées travaillant ensemble pour construire un Haïti meilleur',
       members: [
         {
-          name: "Dr. Frantz Lamour",
-          role: "Fondateur & Visionnaire",
+          name: 'Dr. Frantz Lamour',
+          role: 'Fondateur & Visionnaire',
           bio: "Dr. Frantz Lamour est un leader communautaire respecté avec plus de 20 ans d'expérience dans le développement social et les initiatives de consolidation de la paix. Sa vision d'un Haïti uni guide notre mission.",
           social: {
-            twitter: "#",
-            linkedin: "#",
-            website: "#",
+            twitter: '#',
+            linkedin: '#',
+            website: '#',
           },
         },
         {
-          name: "Marie Joseph",
-          role: "Directrice de Sensibilisation Communautaire",
+          name: 'Marie Joseph',
+          role: 'Directrice de Sensibilisation Communautaire',
           bio: "Marie a consacré sa carrière à l'organisation communautaire et au développement local. Elle dirige nos efforts pour engager les communautés locales et construire des partenariats durables.",
           social: {
-            twitter: "#",
-            linkedin: "#",
+            twitter: '#',
+            linkedin: '#',
           },
         },
         {
-          name: "Jean-Michel Baptiste",
-          role: "Responsable des Programmes Éducatifs",
+          name: 'Jean-Michel Baptiste',
+          role: 'Responsable des Programmes Éducatifs',
           bio: "Avec une formation en politique éducative et en développement de programmes, Jean-Michel supervise nos initiatives d'éducation des jeunes et nos programmes de formation professionnelle.",
           social: {
-            linkedin: "#",
-            website: "#",
+            linkedin: '#',
+            website: '#',
           },
         },
         {
-          name: "Claudette Toussaint",
-          role: "Coordinatrice des Soins de Santé",
+          name: 'Claudette Toussaint',
+          role: 'Coordinatrice des Soins de Santé',
           bio: "Dr. Toussaint apporte son expertise médicale à nos programmes d'accès aux soins de santé, en veillant à ce que les services médicaux essentiels atteignent les communautés mal desservies.",
           social: {
-            twitter: "#",
-            linkedin: "#",
+            twitter: '#',
+            linkedin: '#',
           },
         },
       ],
     },
     cta: {
       heading: "Construisons l'Avenir Ensemble",
-      quote: "Déposez vos armes et prenez vos outils.",
-      volunteerButton: "Devenir Bénévole",
-      shareButton: "Partager Cette Vision",
+      quote: 'Déposez vos armes et prenez vos outils.',
+      volunteerButton: 'Devenir Bénévole',
+      shareButton: 'Partager Cette Vision',
     },
     contact: {
-      title: "Contactez-nous",
-      subtitle:
-        "Vous avez des questions ou souhaitez vous impliquer? Contactez-nous.",
-      name: "Votre Nom",
-      email: "Votre Email",
-      subject: "Sujet",
-      message: "Votre Message",
-      submit: "Envoyer le Message",
-      success: "Message envoyé avec succès! Nous vous répondrons bientôt.",
-      error:
-        "Une erreur s'est produite lors de l'envoi de votre message. Veuillez réessayer.",
-      required: "Ce champ est obligatoire",
-      invalidEmail: "Veuillez entrer une adresse email valide",
-      contactInfo: "Informations de Contact",
-      s: "Port-au-Prince, Haiti",
-      phone: "+509 43607248",
-      phone2: "918-640-8249",
-      emailAddress: "nouvoayiti2075@gmail.com",
+      title: 'Contactez-nous',
+      subtitle: 'Vous avez des questions ou souhaitez vous impliquer? Contactez-nous.',
+      name: 'Votre Nom',
+      email: 'Votre Email',
+      subject: 'Sujet',
+      message: 'Votre Message',
+      submit: 'Envoyer le Message',
+      success: 'Message envoyé avec succès! Nous vous répondrons bientôt.',
+      error: "Une erreur s'est produite lors de l'envoi de votre message. Veuillez réessayer.",
+      required: 'Ce champ est obligatoire',
+      invalidEmail: 'Veuillez entrer une adresse email valide',
+      contactInfo: 'Informations de Contact',
+      s: 'Port-au-Prince, Haiti',
+      phone: '+509 43607248',
+      phone2: '918-640-8249',
+      emailAddress: 'nouvoayiti2075@gmail.com',
     },
     footer: {
-      tagline:
-        "Nouvelle Équipe Haïti 2075 | Pour une Haïti Pacifique, Prospère et Unie",
-      legal:
-        "Ceci est une initiative citoyenne non politique, axée sur la paix.",
-      backToTop: "Retour en haut",
+      tagline: 'Nouvelle Équipe Haïti 2075 | Pour une Haïti Pacifique, Prospère et Unie',
+      legal: 'Ceci est une initiative citoyenne non politique, axée sur la paix.',
+      backToTop: 'Retour en haut',
     },
   },
   es: {
-    language: "Español",
+    language: 'Español',
     nav: {
-      home: "Inicio",
-      vision: "Visión",
-      map: "Mapa de Haití",
-      appeal: "Llamamiento",
-      projects: "Proyectos",
-      team: "Nuestro Equipo",
-      join: "Únete",
-      contact: "Contacto",
+      home: 'Inicio',
+      vision: 'Visión',
+      map: 'Mapa de Haití',
+      appeal: 'Llamamiento',
+      projects: 'Proyectos',
+      team: 'Nuestro Equipo',
+      join: 'Únete',
+      contact: 'Contacto',
     },
     hero: {
-      title: "Nuevo Equipo Haití 2075",
-      subtitle: "Restaurando la Dignidad. Reconstruyendo la Esperanza.",
-      joinButton: "Únete al Movimiento",
-      visionButton: "Lee la Visión",
+      title: 'Nuevo Equipo Haití 2075',
+      subtitle: 'Restaurando la Dignidad. Reconstruyendo la Esperanza.',
+      joinButton: 'Únete al Movimiento',
+      visionButton: 'Lee la Visión',
     },
     visionary: {
-      heading: "Un Mensaje del Dr. Frantz Lamour",
+      heading: 'Un Mensaje del Dr. Frantz Lamour',
       paragraph:
-        "Esto no se trata de política. Se trata de paz, sanación y dar a nuestros hijos un mañana mejor. No buscamos el poder — lo estamos devolviendo al pueblo.",
+        'Esto no se trata de política. Se trata de paz, sanación y dar a nuestros hijos un mañana mejor. No buscamos el poder — lo estamos devolviendo al pueblo.',
     },
     map: {
-      title: "Haití Unido",
+      title: 'Haití Unido',
       paragraph1:
-        "Nuestra visión abarca todo Haití, de norte a sur, de este a oeste. Estamos trabajando para restaurar la paz y la prosperidad en toda la nación, uniendo a las comunidades en una visión compartida de un futuro mejor.",
+        'Nuestra visión abarca todo Haití, de norte a sur, de este a oeste. Estamos trabajando para restaurar la paz y la prosperidad en toda la nación, uniendo a las comunidades en una visión compartida de un futuro mejor.',
       paragraph2:
-        "El Nuevo Equipo Haití 2075 está comprometido con proyectos que beneficien a todos los haitianos, independientemente de su ubicación, origen o afiliación política.",
+        'El Nuevo Equipo Haití 2075 está comprometido con proyectos que beneficien a todos los haitianos, independientemente de su ubicación, origen o afiliación política.',
     },
     appeal: {
-      title: "Depongan Sus Armas",
+      title: 'Depongan Sus Armas',
       quote:
-        "Hacemos un llamado a todos los grupos armados para que se unan a nosotros en la reconstrucción de nuestras comunidades. Juntos, podemos crear un Haití donde nuestros hijos puedan crecer en seguridad y prosperidad.",
+        'Hacemos un llamado a todos los grupos armados para que se unan a nosotros en la reconstrucción de nuestras comunidades. Juntos, podemos crear un Haití donde nuestros hijos puedan crecer en seguridad y prosperidad.',
     },
     projects: {
-      title: "Proyectos de Restauración de la Paz",
+      title: 'Proyectos de Restauración de la Paz',
       items: [
         {
-          title: "Limpieza y Saneamiento Comunitario",
-          summary: "Mejorando la salud pública a través de ambientes limpios",
+          title: 'Limpieza y Saneamiento Comunitario',
+          summary: 'Mejorando la salud pública a través de ambientes limpios',
         },
         {
-          title: "Programas de Educación Juvenil",
-          summary: "Invirtiendo en el futuro a través del conocimiento",
+          title: 'Programas de Educación Juvenil',
+          summary: 'Invirtiendo en el futuro a través del conocimiento',
         },
         {
-          title: "Reconstrucción de Infraestructura",
-          summary: "Restaurando servicios y estructuras esenciales",
+          title: 'Reconstrucción de Infraestructura',
+          summary: 'Restaurando servicios y estructuras esenciales',
         },
         {
-          title: "Acceso a la Atención Médica",
-          summary: "Llevando atención médica a todas las comunidades",
+          title: 'Acceso a la Atención Médica',
+          summary: 'Llevando atención médica a todas las comunidades',
         },
         {
-          title: "Desarrollo Agrícola",
-          summary: "Asegurando la seguridad alimentaria y la sostenibilidad",
+          title: 'Desarrollo Agrícola',
+          summary: 'Asegurando la seguridad alimentaria y la sostenibilidad',
         },
         {
-          title: "Formación Profesional",
-          summary: "Desarrollando habilidades para la independencia económica",
+          title: 'Formación Profesional',
+          summary: 'Desarrollando habilidades para la independencia económica',
         },
         {
-          title: "Preservación Cultural",
-          summary: "Celebrando y protegiendo el patrimonio haitiano",
+          title: 'Preservación Cultural',
+          summary: 'Celebrando y protegiendo el patrimonio haitiano',
         },
         {
-          title: "Resolución de Conflictos",
-          summary: "Creando diálogo pacífico entre comunidades",
+          title: 'Resolución de Conflictos',
+          summary: 'Creando diálogo pacífico entre comunidades',
         },
         {
-          title: "Empoderamiento de la Mujer",
-          summary: "Apoyando la igualdad de género y las oportunidades",
+          title: 'Empoderamiento de la Mujer',
+          summary: 'Apoyando la igualdad de género y las oportunidades',
         },
         {
-          title: "Protección Ambiental",
-          summary: "Salvaguardando los recursos naturales de Haití",
+          title: 'Protección Ambiental',
+          summary: 'Salvaguardando los recursos naturales de Haití',
         },
         {
-          title: "Inclusión Digital",
-          summary: "Cerrando la brecha tecnológica para todos los haitianos",
+          title: 'Inclusión Digital',
+          summary: 'Cerrando la brecha tecnológica para todos los haitianos',
         },
       ],
     },
     team: {
-      title: "Conozca a Nuestro Equipo Principal",
-      subtitle:
-        "Personas dedicadas trabajando juntas para construir un Haití mejor",
+      title: 'Conozca a Nuestro Equipo Principal',
+      subtitle: 'Personas dedicadas trabajando juntas para construir un Haití mejor',
       members: [
         {
-          name: "Dr. Frantz Lamour",
-          role: "Fundador y Visionario",
-          bio: "El Dr. Frantz Lamour es un respetado líder comunitario con más de 20 años de experiencia en desarrollo social e iniciativas de construcción de paz. Su visión de un Haití unido impulsa nuestra misión.",
+          name: 'Dr. Frantz Lamour',
+          role: 'Fundador y Visionario',
+          bio: 'El Dr. Frantz Lamour es un respetado líder comunitario con más de 20 años de experiencia en desarrollo social e iniciativas de construcción de paz. Su visión de un Haití unido impulsa nuestra misión.',
           social: {
-            twitter: "#",
-            linkedin: "#",
-            website: "#",
+            twitter: '#',
+            linkedin: '#',
+            website: '#',
           },
         },
         {
-          name: "Marie Joseph",
-          role: "Directora de Alcance Comunitario",
-          bio: "Marie ha dedicado su carrera a la organización de base y al desarrollo comunitario. Ella lidera nuestros esfuerzos para interactuar con las comunidades locales y construir asociaciones sostenibles.",
+          name: 'Marie Joseph',
+          role: 'Directora de Alcance Comunitario',
+          bio: 'Marie ha dedicado su carrera a la organización de base y al desarrollo comunitario. Ella lidera nuestros esfuerzos para interactuar con las comunidades locales y construir asociaciones sostenibles.',
           social: {
-            twitter: "#",
-            linkedin: "#",
+            twitter: '#',
+            linkedin: '#',
           },
         },
         {
-          name: "Jean-Michel Baptiste",
-          role: "Líder de Programas Educativos",
-          bio: "Con experiencia en política educativa y desarrollo curricular, Jean-Michel supervisa nuestras iniciativas de educación juvenil y programas de formación profesional.",
+          name: 'Jean-Michel Baptiste',
+          role: 'Líder de Programas Educativos',
+          bio: 'Con experiencia en política educativa y desarrollo curricular, Jean-Michel supervisa nuestras iniciativas de educación juvenil y programas de formación profesional.',
           social: {
-            linkedin: "#",
-            website: "#",
+            linkedin: '#',
+            website: '#',
           },
         },
         {
-          name: "Claudette Toussaint",
-          role: "Coordinadora de Atención Médica",
-          bio: "La Dra. Toussaint aporta su experiencia médica a nuestros programas de acceso a la atención médica, asegurando que los servicios médicos esenciales lleguen a las comunidades desatendidas.",
+          name: 'Claudette Toussaint',
+          role: 'Coordinadora de Atención Médica',
+          bio: 'La Dra. Toussaint aporta su experiencia médica a nuestros programas de acceso a la atención médica, asegurando que los servicios médicos esenciales lleguen a las comunidades desatendidas.',
           social: {
-            twitter: "#",
-            linkedin: "#",
+            twitter: '#',
+            linkedin: '#',
           },
         },
       ],
     },
     cta: {
-      heading: "Construyamos el Futuro Juntos",
-      quote: "Depongan sus armas y tomen sus herramientas.",
-      volunteerButton: "Voluntariado",
-      shareButton: "Compartir Esta Visión",
+      heading: 'Construyamos el Futuro Juntos',
+      quote: 'Depongan sus armas y tomen sus herramientas.',
+      volunteerButton: 'Voluntariado',
+      shareButton: 'Compartir Esta Visión',
     },
     contact: {
-      title: "Contáctenos",
-      subtitle:
-        "¿Tiene preguntas o desea involucrarse? Póngase en contacto con nosotros.",
-      name: "Su Nombre",
-      email: "Su Email",
-      subject: "Asunto",
-      message: "Su Mensaje",
-      submit: "Enviar Mensaje",
-      success: "¡Mensaje enviado con éxito! Le responderemos pronto.",
-      error:
-        "Hubo un error al enviar su mensaje. Por favor, inténtelo de nuevo.",
-      required: "Este campo es obligatorio",
-      invalidEmail: "Por favor, introduzca una dirección de email válida",
-      contactInfo: "Información de Contacto",
-      s: "Port-au-Prince, Haiti",
-      phone: "+509 43607248",
-      phone2: "918-640-8249",
-      emailAddress: "nouvoayiti2075@gmail.com",
+      title: 'Contáctenos',
+      subtitle: '¿Tiene preguntas o desea involucrarse? Póngase en contacto con nosotros.',
+      name: 'Su Nombre',
+      email: 'Su Email',
+      subject: 'Asunto',
+      message: 'Su Mensaje',
+      submit: 'Enviar Mensaje',
+      success: '¡Mensaje enviado con éxito! Le responderemos pronto.',
+      error: 'Hubo un error al enviar su mensaje. Por favor, inténtelo de nuevo.',
+      required: 'Este campo es obligatorio',
+      invalidEmail: 'Por favor, introduzca una dirección de email válida',
+      contactInfo: 'Información de Contacto',
+      s: 'Port-au-Prince, Haiti',
+      phone: '+509 43607248',
+      phone2: '918-640-8249',
+      emailAddress: 'nouvoayiti2075@gmail.com',
     },
     footer: {
-      tagline:
-        "Nuevo Equipo Haití 2075 | Por un Haití Pacífico, Próspero y Unido",
-      legal:
-        "Esta es una iniciativa ciudadana no política, impulsada por la paz.",
-      backToTop: "Volver arriba",
+      tagline: 'Nuevo Equipo Haití 2075 | Por un Haití Pacífico, Próspero y Unido',
+      legal: 'Esta es una iniciativa ciudadana no política, impulsada por la paz.',
+      backToTop: 'Volver arriba',
     },
   },
 };
@@ -690,17 +678,17 @@ type FormData = {
 };
 
 export default function Home() {
-  const [language, setLanguage] = useState<"en" | "ht" | "fr" | "es">("en");
+  const [language, setLanguage] = useState<'en' | 'ht' | 'fr' | 'es'>('en');
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [showBackToTop, setShowBackToTop] = useState(false);
   const t = translations[language];
 
   // Form state
   const [formData, setFormData] = useState<FormData>({
-    name: "",
-    email: "",
-    subject: "",
-    message: "",
+    name: '',
+    email: '',
+    subject: '',
+    message: '',
   });
   const [errors, setErrors] = useState<FormErrors>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -730,7 +718,7 @@ export default function Home() {
 
       window.scrollTo({
         top: sectionTop,
-        behavior: "smooth",
+        behavior: 'smooth',
       });
     }
   };
@@ -745,28 +733,26 @@ export default function Home() {
       }
     };
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   // Scroll to top function
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: "smooth",
+      behavior: 'smooth',
     });
   };
 
   // Handle form input changes
-  const handleInputChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
+    setFormData(prev => ({ ...prev, [name]: value }));
 
     // Clear error when user starts typing
     if (errors[name as keyof FormErrors]) {
-      setErrors((prev) => ({ ...prev, [name]: undefined }));
+      setErrors(prev => ({ ...prev, [name]: undefined }));
     }
   };
 
@@ -808,31 +794,29 @@ export default function Home() {
 
     try {
       // Simulate API call with timeout
-      await new Promise((resolve) => setTimeout(resolve, 1000));
+      await new Promise(resolve => setTimeout(resolve, 1000));
 
       // Show success message
       toast({
-        title: "Success",
+        title: 'Success',
         description: t.contact.success,
-        variant: "default",
+        variant: 'default',
       });
 
       // Reset form
       setFormData({
-        name: "",
-        email: "",
-        subject: "",
-        message: "",
+        name: '',
+        email: '',
+        subject: '',
+        message: '',
       });
     } catch (error) {
       // Show error message
       toast({
-        title: "Error",
+        title: 'Error',
         description: t.contact.error,
-        variant: "destructive",
-        action: (
-          <ToastAction altText="Try again">{t.contact.submit}</ToastAction>
-        ),
+        variant: 'destructive',
+        action: <ToastAction altText="Try again">{t.contact.submit}</ToastAction>,
       });
     } finally {
       setIsSubmitting(false);
@@ -859,56 +843,56 @@ export default function Home() {
           <nav className="hidden md:flex items-center gap-6">
             <a
               href="#home"
-              onClick={(e) => handleNavClick(e, homeRef)}
+              onClick={e => handleNavClick(e, homeRef)}
               className="text-sm font-medium hover:text-[#00209F] transition-colors"
             >
               {t.nav.home}
             </a>
             <a
               href="#vision"
-              onClick={(e) => handleNavClick(e, visionRef)}
+              onClick={e => handleNavClick(e, visionRef)}
               className="text-sm font-medium hover:text-[#00209F] transition-colors"
             >
               {t.nav.vision}
             </a>
             <a
               href="#map"
-              onClick={(e) => handleNavClick(e, mapRef)}
+              onClick={e => handleNavClick(e, mapRef)}
               className="text-sm font-medium hover:text-[#00209F] transition-colors"
             >
               {t.nav.map}
             </a>
             <a
               href="#appeal"
-              onClick={(e) => handleNavClick(e, appealRef)}
+              onClick={e => handleNavClick(e, appealRef)}
               className="text-sm font-medium hover:text-[#00209F] transition-colors"
             >
               {t.nav.appeal}
             </a>
             <a
               href="#projects"
-              onClick={(e) => handleNavClick(e, projectsRef)}
+              onClick={e => handleNavClick(e, projectsRef)}
               className="text-sm font-medium hover:text-[#00209F] transition-colors"
             >
               {t.nav.projects}
             </a>
             <a
               href="#team"
-              onClick={(e) => handleNavClick(e, teamRef)}
+              onClick={e => handleNavClick(e, teamRef)}
               className="text-sm font-medium hover:text-[#00209F] transition-colors"
             >
               {t.nav.team}
             </a>
             <a
               href="#join"
-              onClick={(e) => handleNavClick(e, joinRef)}
+              onClick={e => handleNavClick(e, joinRef)}
               className="text-sm font-medium hover:text-[#00209F] transition-colors"
             >
               {t.nav.join}
             </a>
             <a
               href="#contact"
-              onClick={(e) => handleNavClick(e, contactRef)}
+              onClick={e => handleNavClick(e, contactRef)}
               className="text-sm font-medium hover:text-[#00209F] transition-colors"
             >
               {t.nav.contact}
@@ -924,18 +908,12 @@ export default function Home() {
                 </Button>
               </DropdownMenuTrigger>
               <DropdownMenuContent align="end">
-                <DropdownMenuItem onClick={() => setLanguage("en")}>
-                  English
-                </DropdownMenuItem>
-                <DropdownMenuItem onClick={() => setLanguage("ht")}>
+                <DropdownMenuItem onClick={() => setLanguage('en')}>English</DropdownMenuItem>
+                <DropdownMenuItem onClick={() => setLanguage('ht')}>
                   Kreyòl Ayisyen
                 </DropdownMenuItem>
-                <DropdownMenuItem onClick={() => setLanguage("fr")}>
-                  Français
-                </DropdownMenuItem>
-                <DropdownMenuItem onClick={() => setLanguage("es")}>
-                  Español
-                </DropdownMenuItem>
+                <DropdownMenuItem onClick={() => setLanguage('fr')}>Français</DropdownMenuItem>
+                <DropdownMenuItem onClick={() => setLanguage('es')}>Español</DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
           </nav>
@@ -953,18 +931,12 @@ export default function Home() {
                 </Button>
               </DropdownMenuTrigger>
               <DropdownMenuContent align="end">
-                <DropdownMenuItem onClick={() => setLanguage("en")}>
-                  English
-                </DropdownMenuItem>
-                <DropdownMenuItem onClick={() => setLanguage("ht")}>
+                <DropdownMenuItem onClick={() => setLanguage('en')}>English</DropdownMenuItem>
+                <DropdownMenuItem onClick={() => setLanguage('ht')}>
                   Kreyòl Ayisyen
                 </DropdownMenuItem>
-                <DropdownMenuItem onClick={() => setLanguage("fr")}>
-                  Français
-                </DropdownMenuItem>
-                <DropdownMenuItem onClick={() => setLanguage("es")}>
-                  Español
-                </DropdownMenuItem>
+                <DropdownMenuItem onClick={() => setLanguage('fr')}>Français</DropdownMenuItem>
+                <DropdownMenuItem onClick={() => setLanguage('es')}>Español</DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
 
@@ -974,11 +946,7 @@ export default function Home() {
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               aria-label="Toggle menu"
             >
-              {mobileMenuOpen ? (
-                <X className="h-5 w-5" />
-              ) : (
-                <Menu className="h-5 w-5" />
-              )}
+              {mobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
             </Button>
           </div>
         </div>
@@ -988,56 +956,56 @@ export default function Home() {
           <nav className="md:hidden bg-white border-t py-4 px-4 flex flex-col gap-4">
             <a
               href="#home"
-              onClick={(e) => handleNavClick(e, homeRef)}
+              onClick={e => handleNavClick(e, homeRef)}
               className="text-sm font-medium hover:text-[#00209F] transition-colors"
             >
               {t.nav.home}
             </a>
             <a
               href="#vision"
-              onClick={(e) => handleNavClick(e, visionRef)}
+              onClick={e => handleNavClick(e, visionRef)}
               className="text-sm font-medium hover:text-[#00209F] transition-colors"
             >
               {t.nav.vision}
             </a>
             <a
               href="#map"
-              onClick={(e) => handleNavClick(e, mapRef)}
+              onClick={e => handleNavClick(e, mapRef)}
               className="text-sm font-medium hover:text-[#00209F] transition-colors"
             >
               {t.nav.map}
             </a>
             <a
               href="#appeal"
-              onClick={(e) => handleNavClick(e, appealRef)}
+              onClick={e => handleNavClick(e, appealRef)}
               className="text-sm font-medium hover:text-[#00209F] transition-colors"
             >
               {t.nav.appeal}
             </a>
             <a
               href="#projects"
-              onClick={(e) => handleNavClick(e, projectsRef)}
+              onClick={e => handleNavClick(e, projectsRef)}
               className="text-sm font-medium hover:text-[#00209F] transition-colors"
             >
               {t.nav.projects}
             </a>
             <a
               href="#team"
-              onClick={(e) => handleNavClick(e, teamRef)}
+              onClick={e => handleNavClick(e, teamRef)}
               className="text-sm font-medium hover:text-[#00209F] transition-colors"
             >
               {t.nav.team}
             </a>
             <a
               href="#join"
-              onClick={(e) => handleNavClick(e, joinRef)}
+              onClick={e => handleNavClick(e, joinRef)}
               className="text-sm font-medium hover:text-[#00209F] transition-colors"
             >
               {t.nav.join}
             </a>
             <a
               href="#contact"
-              onClick={(e) => handleNavClick(e, contactRef)}
+              onClick={e => handleNavClick(e, contactRef)}
               className="text-sm font-medium hover:text-[#00209F] transition-colors"
             >
               {t.nav.contact}
@@ -1048,11 +1016,7 @@ export default function Home() {
 
       <main>
         {/* Hero Section */}
-        <section
-          ref={homeRef}
-          id="home"
-          className="relative h-[50vh] flex items-center"
-        >
+        <section ref={homeRef} id="home" className="relative h-[50vh] flex items-center">
           <div className="absolute inset-0 z-0">
             <Image
               src="/images/haiti-map.png"
@@ -1084,15 +1048,14 @@ export default function Home() {
                 <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
                   <Button
                     className="bg-[#D21034] hover:bg-[#D21034]/80 text-white w-full sm:w-auto transition-colors"
-                    onClick={(e) => {
+                    onClick={e => {
                       e.preventDefault();
                       if (joinRef.current) {
                         const headerHeight = 80;
-                        const sectionTop =
-                          joinRef.current.offsetTop - headerHeight;
+                        const sectionTop = joinRef.current.offsetTop - headerHeight;
                         window.scrollTo({
                           top: sectionTop,
-                          behavior: "smooth",
+                          behavior: 'smooth',
                         });
                       }
                     }}
@@ -1102,15 +1065,14 @@ export default function Home() {
                   <Button
                     variant="outline"
                     className="bg-transparent text-white border-white hover:bg-white/10 w-full sm:w-auto transition-colors"
-                    onClick={(e) => {
+                    onClick={e => {
                       e.preventDefault();
                       if (visionRef.current) {
                         const headerHeight = 80;
-                        const sectionTop =
-                          visionRef.current.offsetTop - headerHeight;
+                        const sectionTop = visionRef.current.offsetTop - headerHeight;
                         window.scrollTo({
                           top: sectionTop,
-                          behavior: "smooth",
+                          behavior: 'smooth',
                         });
                       }
                     }}
@@ -1128,29 +1090,25 @@ export default function Home() {
           <div className="container mx-auto px-4">
             <div className="flex flex-col md:flex-row items-center gap-8">
               <div className="md:w-1/2">
-                <h2 className="text-2xl md:text-3xl font-bold mb-4">
-                  Prezidan Kiyawel
-                </h2>
+                <h2 className="text-2xl md:text-3xl font-bold mb-4">Prezidan Kiyawel</h2>
                 <p className="text-lg mb-4">
-                  Dr. Frantz Lamour discusses the important questions
-                  surrounding Prezidan Kiyawel and the future of Haiti's
-                  leadership.
+                  Dr. Frantz Lamour discusses the important questions surrounding Prezidan Kiyawel
+                  and the future of Haiti's leadership.
                 </p>
                 <p className="text-sm opacity-75 mb-4">
-                  Video by Ayiti Avèk Doktè Lamour: Exploring Haitian politics,
-                  security, and sustainable solutions for Haiti's future.
+                  Video by Ayiti Avèk Doktè Lamour: Exploring Haitian politics, security, and
+                  sustainable solutions for Haiti's future.
                 </p>
                 <Button
                   className="bg-[#D21034] hover:bg-[#D21034]/80 text-white transition-colors"
-                  onClick={(e) => {
+                  onClick={e => {
                     e.preventDefault();
                     if (visionRef.current) {
                       const headerHeight = 80;
-                      const sectionTop =
-                        visionRef.current.offsetTop - headerHeight;
+                      const sectionTop = visionRef.current.offsetTop - headerHeight;
                       window.scrollTo({
                         top: sectionTop,
-                        behavior: "smooth",
+                        behavior: 'smooth',
                       });
                     }
                   }}
@@ -1176,9 +1134,7 @@ export default function Home() {
         {/* Visionary Statement */}
         <section ref={visionRef} id="vision" className="py-16 bg-white">
           <div className="container mx-auto px-4">
-            <p className="text-xl max-w-3xl mx-auto text-center">
-              {t.visionary.paragraph}
-            </p>
+            <p className="text-xl max-w-3xl mx-auto text-center">{t.visionary.paragraph}</p>
           </div>
         </section>
 
@@ -1187,9 +1143,7 @@ export default function Home() {
           <div className="container mx-auto px-4">
             <div className="flex flex-col md:flex-row items-center gap-8">
               <div className="md:w-1/2">
-                <h2 className="text-3xl font-bold mb-6 text-[#00209F]">
-                  {t.map.title}
-                </h2>
+                <h2 className="text-3xl font-bold mb-6 text-[#00209F]">{t.map.title}</h2>
                 <p className="text-lg mb-4">{t.map.paragraph1}</p>
                 <p className="text-lg">{t.map.paragraph2}</p>
               </div>
@@ -1208,11 +1162,7 @@ export default function Home() {
         </section>
 
         {/* Appeal to Armed Groups */}
-        <section
-          ref={appealRef}
-          id="appeal"
-          className="py-16 bg-[#00209F] text-white"
-        >
+        <section ref={appealRef} id="appeal" className="py-16 bg-[#00209F] text-white">
           <div className="container mx-auto px-4 text-center">
             <div className="flex flex-col md:flex-row items-center justify-center gap-8 mb-8">
               <Image
@@ -1320,11 +1270,7 @@ export default function Home() {
         </section> */}
 
         {/* Call to Action */}
-        <section
-          ref={joinRef}
-          id="join"
-          className="py-16 bg-[#D21034] text-white"
-        >
+        <section ref={joinRef} id="join" className="py-16 bg-[#D21034] text-white">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-3xl font-bold mb-4">{t.cta.heading}</h2>
             <p className="text-2xl mb-8 italic">"{t.cta.quote}"</p>
@@ -1348,16 +1294,12 @@ export default function Home() {
             <h2 className="text-3xl font-bold text-center mb-4 text-[#00209F]">
               {t.contact.title}
             </h2>
-            <p className="text-lg text-center mb-12 max-w-2xl mx-auto">
-              {t.contact.subtitle}
-            </p>
+            <p className="text-lg text-center mb-12 max-w-2xl mx-auto">{t.contact.subtitle}</p>
 
             <div className="flex-1 items-center text-cen">
               {/* Contact Information */}
               <div className="lg:col-span-1 bg-white p-6 rounded-lg shadow-md">
-                <h3 className="text-xl font-bold mb-6 text-[#00209F]">
-                  {t.contact.contactInfo}
-                </h3>
+                <h3 className="text-xl font-bold mb-6 text-[#00209F]">{t.contact.contactInfo}</h3>
 
                 <div className="space-y-6">
                   <div className="flex items-start gap-4">
@@ -1399,17 +1341,11 @@ export default function Home() {
 
                 <div className="mt-8 pt-8 border-t">
                   <div className="flex justify-center gap-6">
-                    <a
-                      href="#"
-                      className="text-[#00209F] hover:text-[#D21034] transition-colors"
-                    >
+                    <a href="#" className="text-[#00209F] hover:text-[#D21034] transition-colors">
                       <Facebook className="h-6 w-6" />
                       <span className="sr-only">Facebook</span>
                     </a>
-                    <a
-                      href="#"
-                      className="text-[#00209F] hover:text-[#D21034] transition-colors"
-                    >
+                    <a href="#" className="text-[#00209F] hover:text-[#D21034] transition-colors">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="24"
@@ -1427,10 +1363,7 @@ export default function Home() {
                       </svg>
                       <span className="sr-only">Email</span>
                     </a>
-                    <a
-                      href="#"
-                      className="text-[#00209F] hover:text-[#D21034] transition-colors"
-                    >
+                    <a href="#" className="text-[#00209F] hover:text-[#D21034] transition-colors">
                       <Youtube className="h-6 w-6" />
                       <span className="sr-only">YouTube</span>
                     </a>
