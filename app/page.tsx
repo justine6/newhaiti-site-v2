@@ -1329,7 +1329,7 @@ export default function Home() {
             <h2 className="text-3xl font-bold mb-4">{t.cta.heading}</h2>
             <p className="text-2xl mb-8 italic">"{t.cta.quote}"</p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <Button className="bg-white text-[#D21034] hover:bg-white/90 transition-colors">
+              {/* <Button className="bg-white text-[#D21034] hover:bg-white/90 transition-colors">
                 {t.cta.volunteerButton}
               </Button>
               <Button
@@ -1337,7 +1337,7 @@ export default function Home() {
                 className="bg-transparent text-white border-white hover:bg-white/10 transition-colors"
               >
                 {t.cta.shareButton}
-              </Button>
+              </Button> */}
             </div>
           </div>
         </section>
