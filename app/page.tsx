@@ -1090,9 +1090,9 @@ export default function Home() {
           <div className="container mx-auto px-4">
             <div className="flex flex-col md:flex-row items-center gap-8">
               <div className="md:w-1/2">
-                <h2 className="text-2xl md:text-3xl font-bold mb-4">Prezidan Kiyawel</h2>
+                <h2 className="text-2xl md:text-3xl font-bold mb-4">Prezidan Kiawel</h2>
                 <p className="text-lg mb-4">
-                  Dr. Frantz Lamour discusses the important questions surrounding Prezidan Kiyawel
+                  Dr. Frantz Lamour discusses the important questions surrounding Prezidan Kiawel
                   and the future of Haiti's leadership.
                 </p>
                 <p className="text-sm opacity-75 mb-4">
