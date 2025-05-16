@@ -1118,13 +1118,15 @@ export default function Home() {
               </div>
               <div className="md:w-1/2">
                 <div className="aspect-video rounded-lg overflow-hidden shadow-xl">
-                  <iframe
-                    className="w-full h-full"
-                    src="https://www.youtube.com/embed/3n29GsJmx-Q"
-                    title="Where is Kiawel? What is he doing? Why isn't he talking?"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                  ></iframe>
+                  {/*
+                <iframe
+                  className="w-full h-full"
+                  src="https://www.youtube.com/embed/3n29GsJmx-Q"
+                  title="Where is Kiawel? What is he doing? Why isn't he talking?"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
+              */}
                 </div>
               </div>
             </div>
