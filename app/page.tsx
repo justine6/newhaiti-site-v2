@@ -1161,25 +1161,6 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Appeal to Armed Groups */}
-        <section ref={appealRef} id="appeal" className="py-16 bg-[#00209F] text-white">
-          <div className="container mx-auto px-4 text-center">
-            <div className="flex flex-col md:flex-row items-center justify-center gap-8 mb-8">
-              <Image
-                src="/images/newhaitilogo.png"
-                alt="Lion Logo"
-                width={80}
-                height={180}
-                className="rounded-full"
-              />
-              <h2 className="text-3xl font-bold">{t.appeal.title}</h2>
-            </div>
-            <blockquote className="text-2xl max-w-3xl mx-auto italic">
-              "{t.appeal.quote}"
-            </blockquote>
-          </div>
-        </section>
-
         {/* Peace Restoration Projects */}
         <section ref={projectsRef} id="projects" className="py-16 bg-white">
           <div className="container mx-auto px-4">
