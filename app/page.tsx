@@ -830,7 +830,7 @@ export default function Home() {
         <div className="container mx-auto px-4 py-2 flex justify-between items-center">
           <div className="flex items-center gap-3">
             <Image
-              src="/images/newhaitilogo-1.JPG"
+              src="/images/newhaitilogo.png"
               alt="Lion Logo"
               width={80}
               height={180}
