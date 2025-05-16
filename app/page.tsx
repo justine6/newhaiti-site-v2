@@ -1031,11 +1031,11 @@ export default function Home() {
             <div className="flex flex-col md:flex-row items-center gap-8">
               <div className="md:w-1/4 flex justify-center mb-4 md:mb-0">
                 <Image
-                  src="images/newhaitilogo-1.JPG"
+                  src="images/newhaitilogo.png"
                   alt="Lion Logo"
-                  width={150}
-                  height={150}
-                  className="rounded-full shadow-lg"
+                  width={80}
+                  height={180}
+                  className="rounded-full"
                 />
               </div>
               <div className="md:w-3/4">
@@ -1166,10 +1166,10 @@ export default function Home() {
           <div className="container mx-auto px-4 text-center">
             <div className="flex flex-col md:flex-row items-center justify-center gap-8 mb-8">
               <Image
-                src="/images/newhaitilogo-1.JPG"
+                src="/images/newhaitilogo.png"
                 alt="Lion Logo"
-                width={100}
-                height={100}
+                width={80}
+                height={180}
                 className="rounded-full"
               />
               <h2 className="text-3xl font-bold">{t.appeal.title}</h2>
@@ -1485,10 +1485,10 @@ export default function Home() {
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="flex items-center gap-3 mb-4 md:mb-0">
               <Image
-                src="/images/newhaitilogo-1.JPG"
+                src="/images/newhaitilogo.png"
                 alt="Lion Logo"
-                width={40}
-                height={40}
+                width={80}
+                height={180}
                 className="rounded-full"
               />
               <p className="text-center md:text-left">{t.footer.tagline}</p>
