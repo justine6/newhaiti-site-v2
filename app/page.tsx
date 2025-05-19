@@ -183,7 +183,7 @@ const translations = {
       address: 'Port-au-Prince, Haiti',
       phone: '+509 43607248',
       phone2: '918-640-8249',
-      emailAddress: 'info@nouvoayiti2075.com', 
+      emailAddress: 'info@nouvoayiti2075.com',
     },
     footer: {
       tagline: 'New Haiti Team 2075 | For a Peaceful, Prosperous, and United Haiti',
@@ -828,16 +828,17 @@ export default function Home() {
       {/* Header with language switcher and navigation */}
       <header className="sticky top-0 z-50 bg-white shadow-sm">
         <div className="container mx-auto px-4 py-2 flex justify-between items-center">
-          <div className="flex items-center gap-3">
-            <Image
-              src="/images/newhaitilogo.png"
-              alt="Lion Logo"
-              width={80}
-              height={180}
-              className="rounded-full"
-            />
-            <div className="font-bold text-[#00209F]">New Haiti Team 2075</div>
-          </div>
+          {/* Remove this block from the navbar */}
+          {/* <div className="flex items-center gap-3">
+  <Image
+    src="/images/newhaitilogo.png"
+    alt="Lion Logo"
+    width={80}
+    height={180}
+    className="rounded-full"
+  />
+  <div className="font-bold text-[#00209F]">New Haiti Team 2075</div>
+</div> */}
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-6">
