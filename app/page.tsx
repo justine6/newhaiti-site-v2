@@ -183,7 +183,7 @@ const translations = {
       address: 'Port-au-Prince, Haiti',
       phone: '+509 43607248',
       phone2: '918-640-8249',
-      emailAddress: 'nouvoayiti2075@gmail.com',
+      emailAddress: 'info@nouvoayiti2075.com', 
     },
     footer: {
       tagline: 'New Haiti Team 2075 | For a Peaceful, Prosperous, and United Haiti',
@@ -337,7 +337,7 @@ const translations = {
       s: 'Port-au-Prince, Haiti',
       phone: '+509 43607248',
       phone2: '918-640-8249',
-      emailAddress: 'nouvoayiti2075@gmail.com',
+      emailAddress: 'info@nouvoayiti2075.com',
     },
     footer: {
       tagline: 'Nouvo Ekip Ayiti 2075 | Pou yon Ayiti Pasifik, Pwospè, ak Ini',
@@ -494,7 +494,7 @@ const translations = {
       s: 'Port-au-Prince, Haiti',
       phone: '+509 43607248',
       phone2: '918-640-8249',
-      emailAddress: 'nouvoayiti2075@gmail.com',
+      emailAddress: 'info@nouvoayiti2075.com',
     },
     footer: {
       tagline: 'Nouvelle Équipe Haïti 2075 | Pour une Haïti Pacifique, Prospère et Unie',
@@ -651,7 +651,7 @@ const translations = {
       s: 'Port-au-Prince, Haiti',
       phone: '+509 43607248',
       phone2: '918-640-8249',
-      emailAddress: 'nouvoayiti2075@gmail.com',
+      emailAddress: 'info@nouvoayiti2075.com',
     },
     footer: {
       tagline: 'Nuevo Equipo Haití 2075 | Por un Haití Pacífico, Próspero y Unido',
