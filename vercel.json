@@ -1,0 +1,15 @@
+
+{
+  "rewrites": [
+    {
+      "source": "/",
+      "has": [{ "type": "host", "value": "foundation.nouvoayiti2075.com" }],
+      "destination": "/foundation"
+    },
+    {
+      "source": "/",
+      "has": [{ "type": "host", "value": "solutions.nouvoayiti2075.com" }],
+      "destination": "/solutions"
+    }
+  ]
+}
