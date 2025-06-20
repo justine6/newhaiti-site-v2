@@ -1323,38 +1323,7 @@ export default function Home() {
                   </div>
                 </div>
 
-                <div className="mt-8 pt-8 border-t">
-                  <div className="flex justify-center gap-6">
-                    <a href="#" className="text-[#00209F] hover:text-[#D21034] transition-colors">
-                      <Facebook className="h-6 w-6" />
-                      <span className="sr-only">Facebook</span>
-                    </a>
-                    <a href="#" className="text-[#00209F] hover:text-[#D21034] transition-colors">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="24"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        className="h-6 w-6"
-                      >
-                        <path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z"></path>
-                        <path d="M3 7l9 6l9 -6"></path>
-                      </svg>
-                      <span className="sr-only">Email</span>
-                    </a>
-                    <a href="#" className="text-[#00209F] hover:text-[#D21034] transition-colors">
-                      <Youtube className="h-6 w-6" />
-                      <span className="sr-only">YouTube</span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-
+                
               {/* Contact Form */}
               <div className="lg:col-span-2">
                 {/* <form
