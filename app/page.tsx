@@ -8,43 +8,56 @@ import ScrollToTop from '@/components/ScrollToTop';
 export default function HomePage() {
   return (
     <div className="relative min-h-screen">
-      {/* Hero Section */}
-      <div
-        className="relative min-h-[80vh] bg-no-repeat bg-cover bg-center"
-        style={{ backgroundImage: 'url("/images/haiti-map.jpg")' }}
+{/* Hero Section */}
+<motion.div
+  initial={{ opacity: 0 }}
+  animate={{ opacity: 1 }}
+  transition={{ duration: 0.6 }}
+  className="relative min-h-[80vh] bg-cover bg-center bg-no-repeat flex items-center justify-center"
+  style={{ backgroundImage: 'url("/images/haiti-map.jpg")' }}
+>
+  {/* Dark Overlay */}
+  <div className="absolute inset-0 bg-black/60 z-0" />
+
+  <motion.div
+    initial={{ opacity: 0, y: 30 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ delay: 0.3, duration: 0.8 }}
+    className="relative z-10 flex flex-col items-center justify-center text-white text-center px-4 py-20"
+  >
+    <motion.h1
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ delay: 0.4, duration: 0.6 }}
+      className="text-4xl md:text-6xl font-extrabold mb-4"
+    >
+      New Haiti Team 2075
+    </motion.h1>
+
+    <motion.p
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ delay: 0.5, duration: 0.6 }}
+      className="text-lg md:text-2xl mb-8 max-w-2xl"
+    >
+      Restoring Dignity. Rebuilding Hope.
+    </motion.p>
+
+    <div className="flex gap-4 flex-wrap justify-center">
+      <Button className="bg-red-600 hover:bg-red-700 shadow-lg px-6 py-3 text-lg rounded-full">
+        Join the Movement
+      </Button>
+      <Button
+        variant="outline"
+        className="border-white text-white hover:bg-white/10 px-6 py-3 text-lg rounded-full"
       >
-        <div className="relative z-10 flex flex-col items-center justify-center text-white text-center px-4 pt-32 pb-20 bg-black/60">
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-4xl md:text-6xl font-extrabold mb-4"
-          >
-            New Haiti Team 2075
-          </motion.h1>
+        Read the Vision
+      </Button>
+    </div>
+  </motion.div>
+</motion.div>
 
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3, duration: 0.6 }}
-            className="text-lg md:text-2xl mb-8 max-w-2xl"
-          >
-            Restoring Dignity. Rebuilding Hope.
-          </motion.p>
 
-          <div className="flex gap-4">
-            <Button className="bg-red-600 hover:bg-red-700 shadow-lg px-6 py-3 text-lg rounded-full">
-              Join the Movement
-            </Button>
-            <Button
-              variant="outline"
-              className="border-white text-white hover:bg-white/10 px-6 py-3 text-lg rounded-full"
-            >
-              Read the Vision
-            </Button>
-          </div>
-        </div>
-      </div>
 
       {/* About Section */}
       <motion.section
