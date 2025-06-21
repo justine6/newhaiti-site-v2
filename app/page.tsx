@@ -66,6 +66,71 @@ export default function HomePage() {
       {/* Projects Section */}
       <ProjectsSection />
 
+{/* Call to Action Section */}
+<motion.section
+  initial={{ opacity: 0, y: 40 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.8 }}
+  viewport={{ once: true, amount: 0.3 }}
+  className="bg-red-700 text-white px-6 py-16 text-center"
+>
+  <h2 className="text-3xl md:text-4xl font-bold mb-4">
+    Let’s Build the Future Together
+  </h2>
+  <p className="text-lg italic">
+    "Put down your weapons and pick up your tools."
+  </p>
+</motion.section>
+
+{/* Contact Section */}
+<section className="bg-gray-100 px-6 py-20 text-center">
+  <h3 className="text-3xl md:text-4xl font-bold text-blue-900 mb-4">
+    Get in Touch
+  </h3>
+  <p className="text-lg text-gray-700 mb-10">
+    Have questions or want to get involved? Reach out to us.
+  </p>
+
+  <div className="max-w-2xl mx-auto bg-white p-6 rounded-xl shadow-md">
+    <h4 className="text-xl font-semibold mb-4 text-blue-900 text-left">
+      Contact Information
+    </h4>
+    <ul className="space-y-4 text-left">
+      <li className="flex items-center gap-3">
+        <span className="text-red-600">📍</span>
+        <span>Port-au-Prince, Haiti</span>
+      </li>
+      <li className="flex items-center gap-3">
+        <span className="text-red-600">📞</span>
+        <a
+          href="tel:+50943607248"
+          className="text-blue-700 hover:underline"
+        >
+          +509 43607248
+        </a>
+      </li>
+      <li className="flex items-center gap-3">
+        <span className="text-red-600">📞</span>
+        <a
+          href="tel:9186408249"
+          className="text-blue-700 hover:underline"
+        >
+          918-640-8249
+        </a>
+      </li>
+      <li className="flex items-center gap-3">
+        <span className="text-red-600">✉️</span>
+        <a
+          href="mailto:nouvoayiti2075@gmail.com"
+          className="text-blue-700 hover:underline"
+        >
+          nouvoayiti2075@gmail.com
+        </a>
+      </li>
+    </ul>
+  </div>
+</section>
+
       {/* Scroll to Top */}
       <ScrollToTop />
     </div>
