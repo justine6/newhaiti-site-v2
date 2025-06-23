@@ -32,23 +32,24 @@ export default function HomePage() {
             className="w-[120px] md:w-[180px] h-auto mb-6 rounded-full border-2 border-white shadow-xl bg-white"
           />
 
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4, duration: 0.6 }}
-            className="text-4xl md:text-6xl font-extrabold mb-4"
-          >
-            New Haiti Team 2075
-          </motion.h1>
+<motion.h1
+  initial={{ opacity: 0, y: 20 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ delay: 0.3, duration: 0.6 }}
+  className="text-4xl md:text-6xl font-extrabold mb-4 text-white"
+>
+  New Haiti Team 2075
+</motion.h1>
 
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5, duration: 0.6 }}
-            className="text-lg md:text-2xl mb-8 max-w-2xl"
-          >
-            Restoring Dignity. Rebuilding Hope.
-          </motion.p>
+<motion.p
+  initial={{ opacity: 0, y: 20 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ delay: 0.5, duration: 0.6 }}
+  className="text-lg md:text-2xl mb-8 max-w-2xl text-white"
+>
+  Restoring Dignity. Rebuilding Hope.
+</motion.p>
+
 
           <div className="flex gap-4">
             <Button className="bg-red-600 hover:bg-red-700 shadow-lg px-6 py-3 text-lg rounded-full">
