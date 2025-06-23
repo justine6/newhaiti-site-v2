@@ -1,4 +1,6 @@
-import '../globals.css'; // ✅ This is correct based on your file structure
+
+import '@/styles/globals.css';
+
 
 import type { Metadata } from 'next';
 import { ReactNode } from 'react';
@@ -10,15 +12,21 @@ export const metadata: Metadata = {
   description: 'Restoring Dignity. Rebuilding Hope.',
 };
 
-export default function RootLayout({
+export async function generateStaticParams() {
+  return ['en', 'fr', 'ht', 'es'].map((locale) => ({ locale }));
+}
+
+export default async function RootLayout({
   children,
   params,
 }: {
   children: ReactNode;
   params: { locale: string };
 }) {
+  const locale = params.locale; // Already available in async layout
+
   return (
-    <html lang={params.locale} dir={dir(params.locale)}>
+    <html lang={locale} dir={dir(locale)}>
       <body>
         <Topbar />
         {children}
