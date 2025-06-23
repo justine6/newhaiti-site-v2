@@ -52,15 +52,17 @@ export default function HomePage() {
 
 
           <div className="flex gap-4">
-            <Button className="bg-red-600 hover:bg-red-700 shadow-lg px-6 py-3 text-lg rounded-full">
-              Join the Movement
-            </Button>
-            <Button
-              variant="outline"
-              className="border-white text-white hover:bg-white/10 px-6 py-3 text-lg rounded-full"
-            >
-              Read the Vision
-            </Button>
+<Button className="bg-red-600 hover:bg-red-700 hover:scale-105 transition-transform duration-300 shadow-lg px-6 py-3 text-lg rounded-full">
+  Join the Movement
+</Button>
+
+<Button
+  variant="outline"
+  className="border-white text-white hover:bg-white/10 hover:scale-105 transition-transform duration-300 px-6 py-3 text-lg rounded-full"
+>
+  Read the Vision
+</Button>
+
           </div>
         </motion.div>
       </motion.div>
