@@ -1,4 +1,3 @@
-/** @jsxRuntime automatic */
 
 "use client";  // This component uses state and event handlers
 
