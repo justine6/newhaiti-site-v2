@@ -23,11 +23,17 @@ export default function Navbar({ currentLocale }: { currentLocale: string }) {
         {/* Left side: Brand/Logo and main nav links */}
         <div className="flex items-center space-x-6">
           {/* Logo/Brand (could be an image or text link to home) */}
-          <Link href={`/${currentLocale}/`}>
-            <span className="font-bold text-lg">newhaitilogo.png</span>
-          </Link>
+<Link href={`/${currentLocale}/`}>
+  <img src="/assets/newhaitilogo.png" alt="New Haiti Logo" className="h-8 w-auto" />
+</Link>
+
           {/* Nav links (hidden on mobile, shown on md and up) */}
-          <ul className="hidden md:flex space-x-4">
+{/* Desktop menu */}
+<ul className="hidden md:flex space-x-4">...</ul>
+
+{/* Mobile menu */}
+<div className={`md:hidden ${menuOpen ? "block" : "hidden"}`}>...</div>
+
             {navItems.map(item => (
               <li key={item.href}>
                 <Link href={item.href} className="text-gray-700 hover:text-gray-900 px-2 py-1">
@@ -39,7 +45,8 @@ export default function Navbar({ currentLocale }: { currentLocale: string }) {
         </div>
 
         {/* Right side: Language selector and contact (hidden on mobile) + Hamburger (mobile) */}
-        <div className="flex items-center space-x-4">
+<div className="flex items-center space-x-6">
+
           {/* Language dropdown and contact button for desktop */}
           <div className="hidden md:flex items-center space-x-3">
             {/* Language Switcher Dropdown */}
