@@ -1,167 +1,40 @@
-'use client';
+// app/page.tsx
+import Image from "next/image";
+import NavBar from '@/components/NavBar';
 
-import Image from 'next/image';
-import { motion } from 'framer-motion';
-import { Button } from '@/components/ui/button';
-import ProjectsSection from '@/components/ProjectsSection';
-import ScrollToTop from '@/components/ScrollToTop';
-import { useTranslation } from 'react-i18next';
-import { useEffect } from 'react';
-import i18n from '@/i18n/client'; // we’ll create this file next
-import NewsletterSection from '@/components/NewsletterSection';
+export default function Home() {
+  return (
+    <>
+      <NavBar />
+      <div className="pt-24 min-h-screen bg-gradient-to-b from-blue-100 to-white text-center px-4 py-20">
+        <h1 className="text-4xl md:text-6xl font-bold text-gray-900">Nouvo Ayiti 2075</h1>
+        <p className="mt-4 text-lg md:text-xl text-gray-700 max-w-2xl mx-auto">
+          A bold vision to rebuild dignity, restore hope, and empower a new generation of Haitian leadership.
+        </p>
 
-
-export default function HomePage() {
-  const { t } = useTranslation();
-
-  useEffect(() => {
-    i18n.reloadResources(i18n.language);
-  }, []);
-
-return (
-  <div className="relative min-h-screen">
-    {/* Hero Section */}
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.6 }}
-      className="relative min-h-[80vh] bg-no-repeat bg-cover bg-center"
-      style={{ backgroundImage: 'url("/images/haiti-map.jpg")' }}
-    >
-      <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.3, duration: 0.8 }}
-        className="relative z-10 flex flex-col items-center justify-center text-white text-center px-4 pt-32 pb-20 bg-black/60"
-      >
-        <Image
-          src="/images/newhaitilogo.png"
-          alt="New Haiti 2075 Logo"
-          width={0}
-          height={0}
-          sizes="(min-width: 768px) 180px, 120px"
-          className="w-[120px] md:w-[180px] h-auto mb-6 rounded-full border-2 border-white shadow-xl bg-white"
-        />
-
-        <motion.h1
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.3, duration: 0.6 }}
-          className="text-4xl md:text-6xl font-extrabold mb-4 text-white"
-        >
-          {t('hero.title')}
-        </motion.h1>
-
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.5, duration: 0.6 }}
-          className="text-lg md:text-2xl mb-8 max-w-2xl text-white"
-        >
-          {t('hero.subtitle')}
-        </motion.p>
-
-        <div className="flex gap-4">
-          <Button className="bg-red-600 hover:bg-red-700 hover:scale-105 transition-transform duration-300 shadow-lg px-6 py-3 text-lg rounded-full">
-            {t('buttons.join')}
-          </Button>
-
-          <Button
-            variant="outline"
-            className="border-white text-black hover:bg-white/10 hover:scale-105 transition-transform duration-300 px-6 py-3 text-lg rounded-full"
+        <div className="mt-8">
+          <a
+            href="#"
+            className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-md shadow-md transition duration-200"
           >
-            {t('buttons.read')}
-          </Button>
+            Join the Movement
+          </a>
         </div>
-      </motion.div>
-    </motion.div>
 
+        <section className="mt-24" id="mission">
+          <h2 className="text-3xl font-semibold text-gray-900">Our Mission</h2>
+          <p className="mt-4 text-gray-700 max-w-3xl mx-auto">
+            New Haiti 2075 is a grassroots initiative focused on civic renewal, education, environmental justice,
+            and sustainable development. We believe in empowering local communities to lead the change they want to see.
+          </p>
+        </section>
 
-      {/* About Section */}
-      <motion.section
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        viewport={{ once: true, amount: 0.3 }}
-        className="bg-gradient-to-b from-blue-950 to-black text-white px-6 py-20 text-center"
-      >
-        <h2 className="text-3xl md:text-5xl font-bold mb-6">Prezidan Kiawel</h2>
-        <p className="text-base md:text-lg max-w-3xl mx-auto">
-          Prezidan Kiawel talks about the future of Haiti's leadership.
-        </p>
-        <p className="text-sm md:text-base mt-4 text-blue-200">
-          Video on: Exploring Haitian politics, security, and sustainable solutions for Haiti’s future.
-        </p>
-      </motion.section>
-
-      {/* Projects Section */}
-      <ProjectsSection />
-
-      {/* Call to Action Section */}
-      <motion.section
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        viewport={{ once: true, amount: 0.3 }}
-        className="bg-red-700 text-white px-6 py-16 text-center"
-      >
-        <h2 className="text-3xl md:text-4xl font-bold mb-4">
-          Let’s Build the Future Together
-        </h2>
-        <p className="text-lg italic">
-          "Put down your weapons and pick up your tools."
-        </p>
-      </motion.section>
-
-      {/* Contact Section */}
-      <section className="bg-gray-100 px-6 py-20 text-center">
-        <h3 className="text-3xl md:text-4xl font-bold text-blue-900 mb-4">
-          Get in Touch
-        </h3>
-        <p className="text-lg text-gray-700 mb-10">
-          Have questions or want to get involved? Reach out to us.
-        </p>
-
-        <div className="max-w-2xl mx-auto bg-white p-6 rounded-xl shadow-md">
-          <h4 className="text-xl font-semibold mb-4 text-blue-900 text-left">
-            Contact Information
-          </h4>
-          <ul className="space-y-4 text-left">
-            <li className="flex items-center gap-3">
-              <span className="text-red-600">📍</span>
-              <span>Port-au-Prince, Haiti</span>
-            </li>
-            <li className="flex items-center gap-3">
-              <span className="text-red-600">📞</span>
-<li className="flex items-center gap-3">
-  <span className="text-red-600">📞</span>
-  <a href="tel:+50943607248" className="text-blue-700 hover:underline">
-    &#8206;+509 43607248
-  </a>
-</li>
-<li className="flex items-center gap-3">
-  <span className="text-red-600">📞</span>
-  <a href="tel:9186408249" className="text-blue-700 hover:underline">
-    918-640-8249
-  </a>
-</li>
-
-              </a>
-            </li>
-            <li className="flex items-center gap-3">
-              <span className="text-red-600">✉️</span>
-              <a href="mailto:nouvoayiti2075@gmail.com" className="text-blue-700 hover:underline">
-                nouvoayiti2075@gmail.com
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
-      <NewsletterSection />
-
-
-      {/* Scroll to Top */}
-      <ScrollToTop />
-    </div>
+        <footer className="mt-24 bg-gray-100 py-10">
+          <p className="text-xl font-bold text-gray-800">
+            “Restore Dignity. Rebuild Hope.”
+          </p>
+        </footer>
+      </div>
+    </>
   );
 }
