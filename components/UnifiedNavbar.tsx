@@ -1,4 +1,5 @@
-/** @jsxImportSource react */
+/** @jsxRuntime automatic */
+
 "use client";  // This component uses state and event handlers
 
 import { useState } from "react";
