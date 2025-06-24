@@ -19,12 +19,12 @@ export default async function RootLayout({
   children: ReactNode;
   params: { locale: string };
 }) {
-  const { locale } = await Promise.resolve(params); // ✅ Await params before using
+  const { locale } = params;
 
   return (
     <html lang={locale} dir={dir(locale)}>
       <body>
-        <Topbar />
+        <UnifiedNavbar currentLocale={locale} />
         {children}
       </body>
     </html>
