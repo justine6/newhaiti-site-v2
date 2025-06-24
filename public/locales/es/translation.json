@@ -1,0 +1,23 @@
+{
+  "hero": {
+    "title": "Nuevo Equipo Haití 2075",
+    "subtitle": "Restaurar la dignidad. Reconstruir la esperanza."
+  },
+  "buttons": {
+    "join": "Únete al movimiento",
+    "read": "Leer la visión"
+  },
+  "about": {
+    "heading": "Presidente Kiawel",
+    "description": "Dr. Frantz Lamour aborda cuestiones importantes sobre el Presidente Kiawel y el futuro del liderazgo en Haití.",
+    "source": "Video de Ayiti con el Dr. Lamour: explorando la política haitiana, la seguridad y soluciones sostenibles para el futuro de Haití."
+  },
+  "projects": {
+    "heading": "Nuestros Proyectos",
+    "cta": "Construyamos el futuro juntos"
+  },
+  "contact": {
+    "heading": "Contáctanos",
+    "message": "¿Tienes preguntas o quieres participar? Escríbenos."
+  }
+}

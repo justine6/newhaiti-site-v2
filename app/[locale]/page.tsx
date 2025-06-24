@@ -5,67 +5,77 @@ import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import ProjectsSection from '@/components/ProjectsSection';
 import ScrollToTop from '@/components/ScrollToTop';
+import { useTranslation } from 'react-i18next';
+import { useEffect } from 'react';
+import i18n from '@/i18n/client'; // we’ll create this file next
+import NewsletterSection from '@/components/NewsletterSection';
+
 
 export default function HomePage() {
-  return (
-    <div className="relative min-h-screen">
-      {/* Hero Section */}
+  const { t } = useTranslation();
+
+  useEffect(() => {
+    i18n.reloadResources(i18n.language);
+  }, []);
+
+return (
+  <div className="relative min-h-screen">
+    {/* Hero Section */}
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.6 }}
+      className="relative min-h-[80vh] bg-no-repeat bg-cover bg-center"
+      style={{ backgroundImage: 'url("/images/haiti-map.jpg")' }}
+    >
       <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.6 }}
-        className="relative min-h-[80vh] bg-no-repeat bg-cover bg-center"
-        style={{ backgroundImage: 'url("/images/haiti-map.jpg")' }}
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.3, duration: 0.8 }}
+        className="relative z-10 flex flex-col items-center justify-center text-white text-center px-4 pt-32 pb-20 bg-black/60"
       >
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
+        <Image
+          src="/images/newhaitilogo.png"
+          alt="New Haiti 2075 Logo"
+          width={0}
+          height={0}
+          sizes="(min-width: 768px) 180px, 120px"
+          className="w-[120px] md:w-[180px] h-auto mb-6 rounded-full border-2 border-white shadow-xl bg-white"
+        />
+
+        <motion.h1
+          initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.3, duration: 0.8 }}
-          className="relative z-10 flex flex-col items-center justify-center text-white text-center px-4 pt-32 pb-20 bg-black/60"
+          transition={{ delay: 0.3, duration: 0.6 }}
+          className="text-4xl md:text-6xl font-extrabold mb-4 text-white"
         >
-          <Image
-            src="/images/newhaitilogo.png"
-            alt="New Haiti 2075 Logo"
-            width={0}
-            height={0}
-            sizes="(min-width: 768px) 180px, 120px"
-            className="w-[120px] md:w-[180px] h-auto mb-6 rounded-full border-2 border-white shadow-xl bg-white"
-          />
+          {t('hero.title')}
+        </motion.h1>
 
-<motion.h1
-  initial={{ opacity: 0, y: 20 }}
-  animate={{ opacity: 1, y: 0 }}
-  transition={{ delay: 0.3, duration: 0.6 }}
-  className="text-4xl md:text-6xl font-extrabold mb-4 text-white"
->
-  New Haiti Team 2075
-</motion.h1>
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.5, duration: 0.6 }}
+          className="text-lg md:text-2xl mb-8 max-w-2xl text-white"
+        >
+          {t('hero.subtitle')}
+        </motion.p>
 
-<motion.p
-  initial={{ opacity: 0, y: 20 }}
-  animate={{ opacity: 1, y: 0 }}
-  transition={{ delay: 0.5, duration: 0.6 }}
-  className="text-lg md:text-2xl mb-8 max-w-2xl text-white"
->
-  Restoring Dignity. Rebuilding Hope.
-</motion.p>
+        <div className="flex gap-4">
+          <Button className="bg-red-600 hover:bg-red-700 hover:scale-105 transition-transform duration-300 shadow-lg px-6 py-3 text-lg rounded-full">
+            {t('buttons.join')}
+          </Button>
 
-
-          <div className="flex gap-4">
-<Button className="bg-red-600 hover:bg-red-700 hover:scale-105 transition-transform duration-300 shadow-lg px-6 py-3 text-lg rounded-full">
-  Join the Movement
-</Button>
-
-<Button
-  variant="outline"
-  className="border-white text-white hover:bg-white/10 hover:scale-105 transition-transform duration-300 px-6 py-3 text-lg rounded-full"
->
-  Read the Vision
-</Button>
-
-          </div>
-        </motion.div>
+          <Button
+            variant="outline"
+            className="border-white text-black hover:bg-white/10 hover:scale-105 transition-transform duration-300 px-6 py-3 text-lg rounded-full"
+          >
+            {t('buttons.read')}
+          </Button>
+        </div>
       </motion.div>
+    </motion.div>
+
 
       {/* About Section */}
       <motion.section
@@ -77,10 +87,10 @@ export default function HomePage() {
       >
         <h2 className="text-3xl md:text-5xl font-bold mb-6">Prezidan Kiawel</h2>
         <p className="text-base md:text-lg max-w-3xl mx-auto">
-          Dr. Frantz Lamour discusses the important questions surrounding Prezidan Kiawel and the future of Haiti's leadership.
+          Prezidan Kiawel talks about the future of Haiti's leadership.
         </p>
         <p className="text-sm md:text-base mt-4 text-blue-200">
-          Video by Ayiti Avèk Doktè Lamour: Exploring Haitian politics, security, and sustainable solutions for Haiti’s future.
+          Video on: Exploring Haitian politics, security, and sustainable solutions for Haiti’s future.
         </p>
       </motion.section>
 
@@ -142,6 +152,8 @@ export default function HomePage() {
           </ul>
         </div>
       </section>
+      <NewsletterSection />
+
 
       {/* Scroll to Top */}
       <ScrollToTop />

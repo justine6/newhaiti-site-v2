@@ -1,10 +1,6 @@
-
-import '@/styles/globals.css';
-
-
+import { dir } from 'i18next';
 import type { Metadata } from 'next';
 import { ReactNode } from 'react';
-import { dir } from 'i18next';
 import Topbar from '@/components/Topbar';
 
 export const metadata: Metadata = {
@@ -23,7 +19,7 @@ export default async function RootLayout({
   children: ReactNode;
   params: { locale: string };
 }) {
-  const locale = params.locale; // Already available in async layout
+  const { locale } = await Promise.resolve(params); // ✅ Await params before using
 
   return (
     <html lang={locale} dir={dir(locale)}>
