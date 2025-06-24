@@ -24,6 +24,3 @@ export default function ContactSection() {
     </section>
   );
 }
-export default function ContactSection() {
-  return <section className="p-4">Contact section placeholder</section>;
-}
