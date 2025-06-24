@@ -1,7 +1,7 @@
 import { dir } from 'i18next';
 import type { Metadata } from 'next';
 import { ReactNode } from 'react';
-import Topbar from '@/components/Topbar';
+import UnifiedNavbar from '@/components/UnifiedNavbar';
 
 export const metadata: Metadata = {
   title: 'New Haiti Team 2075',
@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 };
 
 export async function generateStaticParams() {
-  return ['en', 'fr', 'ht', 'es'].map((locale) => ({ locale }));
+  return ['en', 'fr', 'ht', 'es'].map(locale => ({ locale }));
 }
 
 export default async function RootLayout({
