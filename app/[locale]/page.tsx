@@ -133,14 +133,19 @@ return (
             </li>
             <li className="flex items-center gap-3">
               <span className="text-red-600">📞</span>
-              <a href="tel:+50943607248" className="text-blue-700 hover:underline">
-                +509 43607248
-              </a>
-            </li>
-            <li className="flex items-center gap-3">
-              <span className="text-red-600">📞</span>
-              <a href="tel:9186408249" className="text-blue-700 hover:underline">
-                918-640-8249
+<li className="flex items-center gap-3">
+  <span className="text-red-600">📞</span>
+  <a href="tel:+50943607248" className="text-blue-700 hover:underline">
+    &#8206;+509 43607248
+  </a>
+</li>
+<li className="flex items-center gap-3">
+  <span className="text-red-600">📞</span>
+  <a href="tel:9186408249" className="text-blue-700 hover:underline">
+    918-640-8249
+  </a>
+</li>
+
               </a>
             </li>
             <li className="flex items-center gap-3">
