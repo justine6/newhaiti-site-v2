@@ -1,3 +1,4 @@
+// components/NewsletterSection.tsx
 'use client';
 
 import { useState } from 'react';
@@ -19,33 +20,29 @@ export default function NewsletterSection() {
 
   return (
     <section className="bg-blue-50 py-16 px-4 text-center">
-      <h2 className="text-3xl md:text-4xl font-bold mb-6 text-blue-800">
-        {t('newsletter.heading')}
-      </h2>
-      <form
-        onSubmit={handleSubscribe}
-        className="flex flex-col md:flex-row justify-center items-center gap-4 max-w-xl mx-auto"
-      >
-        <input
-          type="email"
-          placeholder={t('newsletter.placeholder') || ''}
-          value={email}
-          onChange={e => setEmail(e.target.value)}
-          className="px-4 py-3 w-full md:w-2/3 rounded-full border border-gray-300 focus:outline-none"
-          required
-        />
-        <Button
-          type="submit"
-          className="px-6 py-3 rounded-full bg-red-600 hover:bg-red-700 text-white"
-        >
-          {t('newsletter.button')}
-        </Button>
-      </form>
-      {submitted && (
-        <p className="mt-4 text-green-600 text-sm">
-          {t('newsletter.confirmation') || 'Thank you for subscribing!'}
-        </p>
-      )}
+      <div className="max-w-xl mx-auto">
+        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-blue-900">
+          {t('newsletterTitle')}
+        </h2>
+        <p className="text-lg text-blue-800 mb-8">{t('newsletterDescription')}</p>
+
+        <form onSubmit={handleSubscribe} className="flex flex-col sm:flex-row gap-4 justify-center">
+          <input
+            type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            placeholder={t('newsletterPlaceholder')}
+            className="px-4 py-3 rounded-md border border-blue-300 focus:outline-none focus:ring-2 focus:ring-blue-500 w-full sm:w-auto"
+          />
+          <Button type="submit" className="bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700 transition">
+            {t('newsletterButton')}
+          </Button>
+        </form>
+
+        {submitted && (
+          <p className="mt-4 text-green-600 font-medium">{t('newsletterSuccessMessage')}</p>
+        )}
+      </div>
     </section>
   );
 }
