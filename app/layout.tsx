@@ -1,27 +1,25 @@
-import Navbar from '@/components/ui/Navbar';
-
-import './globals.css';
-
+import '../globals.css';
 import { dir } from 'i18next';
-import { languages } from '@/i18n/settings';
 import { ReactNode } from 'react';
 
-export function generateStaticParams() {
-  return languages.map(lng => ({ lng }));
-}
+// Optional: safer helper to avoid hydration issues
+const getDirection = (locale: string) => {
+  const rtlLocales = ['ar', 'he', 'fa']; // Add more if needed
+  return rtlLocales.includes(locale) ? 'rtl' : 'ltr';
+};
 
-export default async function RootLayout({
-  children,
-  params,
-}: {
-  children: React.ReactNode;
+type Props = {
+  children: ReactNode;
   params: { locale: string };
-}) {
-  const locale = await Promise.resolve(params.locale);
+};
+
+export default async function RootLayout({ children, params }: Props) {
+  const { locale } = params;
+  const direction = getDirection(locale); // Avoid dynamic behavior inconsistency
 
   return (
-    <html lang={locale} dir={dir(locale)}>
-      ...
+    <html lang={locale} dir={direction}>
+      <body>{children}</body>
     </html>
   );
 }
