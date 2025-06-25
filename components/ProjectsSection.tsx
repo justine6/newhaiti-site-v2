@@ -65,15 +65,17 @@ export default function ProjectsSection() {
       <div className="text-center mb-12">
         <h2 className="text-3xl font-bold text-haiti-blue mb-4">Peace Restoration Projects</h2>
         <p className="text-lg text-gray-700 max-w-3xl mx-auto">
-          This is not about politics. It's about peace, healing, and giving our children a better tomorrow. We don't seek power — we're restoring it to the people.
+          This is not about politics. It's about peace, healing, and giving our children a better
+          tomorrow. We don't seek power — we're restoring it to the people.
         </p>
         <p className="text-lg text-gray-700 max-w-3xl mx-auto mt-2">
-          Our vision encompasses all of Haiti, from north to south, east to west. We are working to restore peace and prosperity across the entire nation.
+          Our vision encompasses all of Haiti, from north to south, east to west. We are working to
+          restore peace and prosperity across the entire nation.
         </p>
       </div>
 
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-        {projects.map((project) => (
+        {projects.map(project => (
           <motion.div
             key={project.number}
             initial={{ opacity: 0, y: 20 }}

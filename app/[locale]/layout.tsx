@@ -1,30 +1,21 @@
+import '@/styles/globals.css';
 import { dir } from 'i18next';
+import Navbar from '@/components/ui/Navbar';
 import type { Metadata } from 'next';
-import { ReactNode } from 'react';
-import UnifiedNavbar from '@/components/UnifiedNavbar';
 
-export const metadata: Metadata = {
-  title: 'New Haiti Team 2075',
-  description: 'Restoring Dignity. Rebuilding Hope.',
+type Props = {
+  children: React.ReactNode;
+  params: { locale: string };
 };
 
-export async function generateStaticParams() {
-  return ['en', 'fr', 'ht', 'es'].map(locale => ({ locale }));
-}
-
-export default async function RootLayout({
-  children,
-  params,
-}: {
-  children: ReactNode;
-  params: { locale: string };
-}) {
-  const { locale } = params;
+export default async function RootLayout(props: Props) {
+  const { children } = props;
+  const { locale } = await Promise.resolve(props.params); // ✅ await the full params object
 
   return (
     <html lang={locale} dir={dir(locale)}>
       <body>
-        <UnifiedNavbar currentLocale={locale} />
+        <Navbar currentLocale={locale} />
         {children}
       </body>
     </html>

@@ -36,10 +36,10 @@ export default function LanguageSwitcher({ className = '' }: { className?: strin
   return (
     <select
       value={selected}
-      onChange={(e) => onChangeLocale(e.target.value)}
+      onChange={e => onChangeLocale(e.target.value)}
       className={`cursor-pointer border rounded px-2 py-1 text-xs md:text-sm transition-all duration-300 ease-in-out hover:shadow-md focus:outline-none focus:ring-2 focus:ring-blue-400 ${className}`}
     >
-      {locales.map((locale) => (
+      {locales.map(locale => (
         <option key={locale.code} value={locale.code}>
           {locale.label}
         </option>

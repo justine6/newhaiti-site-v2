@@ -13,10 +13,7 @@ export default function ContactSection() {
           {t('contact_description', 'Reach out to us for partnership, support, or inquiries.')}
         </p>
         <div className="mt-6">
-          <a
-            href="mailto:info@nouvoayiti2075.com"
-            className="text-blue-600 hover:underline"
-          >
+          <a href="mailto:info@nouvoayiti2075.com" className="text-blue-600 hover:underline">
             info@nouvoayiti2075.com
           </a>
         </div>

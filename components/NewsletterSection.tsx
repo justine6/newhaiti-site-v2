@@ -30,16 +30,21 @@ export default function NewsletterSection() {
           type="email"
           placeholder={t('newsletter.placeholder') || ''}
           value={email}
-          onChange={(e) => setEmail(e.target.value)}
+          onChange={e => setEmail(e.target.value)}
           className="px-4 py-3 w-full md:w-2/3 rounded-full border border-gray-300 focus:outline-none"
           required
         />
-        <Button type="submit" className="px-6 py-3 rounded-full bg-red-600 hover:bg-red-700 text-white">
+        <Button
+          type="submit"
+          className="px-6 py-3 rounded-full bg-red-600 hover:bg-red-700 text-white"
+        >
           {t('newsletter.button')}
         </Button>
       </form>
       {submitted && (
-        <p className="mt-4 text-green-600 text-sm">{t('newsletter.confirmation') || 'Thank you for subscribing!'}</p>
+        <p className="mt-4 text-green-600 text-sm">
+          {t('newsletter.confirmation') || 'Thank you for subscribing!'}
+        </p>
       )}
     </section>
   );

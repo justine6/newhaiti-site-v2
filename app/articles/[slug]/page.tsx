@@ -12,7 +12,7 @@ export default function ArticlePage({ params }: Props) {
   // TODO: Load article content by slug (from file, CMS, or static array)
   const article = {
     title: 'Vision for Haiti 2075',
-    content: 'This is where the future of Haiti begins. Education, healthcare, unity...'
+    content: 'This is where the future of Haiti begins. Education, healthcare, unity...',
   };
 
   if (!article) return notFound();

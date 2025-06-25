@@ -4,7 +4,8 @@ import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import i18n from '@/i18n/client';
 
-import NavBar from '@/components/NavBar';
+import Navbar from '@/components/ui/Navbar';
+
 import HeroSection from '@/components/HeroSection';
 import AboutSection from '@/components/AboutSection';
 import ProjectsSection from '@/components/ProjectsSection';
@@ -21,7 +22,7 @@ export default function HomePage() {
 
   return (
     <div className="relative min-h-screen">
-      <NavBar />
+
       <HeroSection t={t} />
       <AboutSection t={t} />
       <ProjectsSection t={t} />

@@ -1,4 +1,3 @@
-
 // i18n/settings.ts
 
 export const fallbackLng = 'en';

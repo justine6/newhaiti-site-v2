@@ -1,26 +1,27 @@
+import Navbar from '@/components/ui/Navbar';
 
-
-import '@/styles/globals.css';
-
+import './globals.css';
 
 import { dir } from 'i18next';
 import { languages } from '@/i18n/settings';
 import { ReactNode } from 'react';
 
 export function generateStaticParams() {
-  return languages.map((lng) => ({ lng }));
+  return languages.map(lng => ({ lng }));
 }
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
   params,
 }: {
-  children: ReactNode;
-  params: { lng: string };
+  children: React.ReactNode;
+  params: { locale: string };
 }) {
+  const locale = await Promise.resolve(params.locale);
+
   return (
-    <html lang={params.lng} dir={dir(params.lng)}>
-      <body>{children}</body>
+    <html lang={locale} dir={dir(locale)}>
+      ...
     </html>
   );
 }
