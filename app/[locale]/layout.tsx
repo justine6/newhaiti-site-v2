@@ -1,28 +1,18 @@
-import '../globals.css';
+import { dir } from 'i18next';
 import { ReactNode } from 'react';
-import Topbar from '@/components/navigation/Topbar';
 
-// Optional helper to avoid hydration mismatch due to dir()
-const getDirection = (locale: string): 'ltr' | 'rtl' => {
-  const rtlLocales = ['ar', 'he', 'fa']; // Add more RTL languages if needed
-  return rtlLocales.includes(locale) ? 'rtl' : 'ltr';
-};
-
-type Props = {
+export default function LocaleLayout({
+  children,
+  params,
+}: {
   children: ReactNode;
   params: { locale: string };
-};
-
-export default function RootLayout({ children, params }: Props) {
-  const locale = params?.locale ?? 'en';
-  const direction = getDirection(locale);
+}) {
+  const locale = params.locale ?? 'en';
 
   return (
-    <html lang={locale} dir={direction}>
-      <body>
-        <Topbar />
-        {children}
-      </body>
-    </html>
+    <div lang={locale} dir={dir(locale)}>
+      {children}
+    </div>
   );
 }
