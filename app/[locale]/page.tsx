@@ -1,4 +1,6 @@
-import './globals.css';
+import '@/app/globals.css'; // ✅ Correct — uses root alias to reach /app/globals.css
+
+
 import { Metadata } from 'next';
 
 import Topbar from '@/components/navigation/Topbar';

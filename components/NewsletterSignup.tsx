@@ -1,4 +1,3 @@
-
 'use client';
 
 import React, { useState } from 'react';
@@ -16,4 +15,33 @@ export default function NewsletterSignup() {
         <h2 className="text-3xl font-bold text-blue-800 mb-6">Stay Updated</h2>
 
         {submitted ? (
-          <p className="text-green-600 fo
+          <p className="text-green-600 font-medium">Thank you for subscribing!</p>
+        ) : (
+          <form
+            action={GOOGLE_FORM_ACTION}
+            method="POST"
+            target="_blank"
+            onSubmit={() => setSubmitted(true)}
+            className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+          >
+            <input
+              type="email"
+              name={EMAIL_FIELD_NAME}
+              placeholder="Enter your email"
+              required
+              className="w-full sm:w-2/3 px-4 py-3 rounded-full shadow-sm focus:outline-none focus:ring-2"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+            <button
+              type="submit"
+              className="bg-red-600 text-white px-6 py-3 rounded-full font-semibold hover:scale-105 transition"
+            >
+              Subscribe
+            </button>
+          </form>
+        )}
+      </div>
+    </section>
+  );
+}
