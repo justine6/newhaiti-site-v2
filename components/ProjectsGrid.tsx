@@ -1,6 +1,7 @@
+'use client';
 
 import React from 'react';
-import ProjectCard from './ProjectCard';
+import ProjectCard from './ProjectCard.tsx';
 
 const projects = [
   {
@@ -8,41 +9,29 @@ const projects = [
     description: 'Improving public health through clean environments',
   },
   {
-    title: 'Youth Education Programs',
-    description: 'Investing in the future through knowledge',
+    title: 'Reforestation Efforts',
+    description: 'Planting trees to combat erosion and restore nature',
   },
   {
-    title: 'Food & Water Security',
-    description: 'Ensuring access to safe water and sustainable agriculture',
-  },
-  {
-    title: 'Peacebuilding Dialogues',
-    description: 'Creating spaces for reconciliation and healing',
-  },
-  {
-    title: 'Safe Shelters & Housing',
-    description: 'Providing secure homes for vulnerable families',
-  },
-  {
-    title: 'Mental Health Support',
-    description: 'Addressing trauma and promoting emotional wellness',
+    title: 'Youth Empowerment Program',
+    description: 'Training and engaging youth in leadership and tech skills',
   },
 ];
 
 export default function ProjectsGrid() {
   return (
     <section className="py-16 px-4 bg-white">
-      <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-        Peace Restoration Projects
-      </h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-        {projects.map((project, index) => (
-          <ProjectCard
-            key={index}
-            title={project.title}
-            description={project.description}
-          />
-        ))}
+      <div className="max-w-6xl mx-auto">
+        <h2 className="text-3xl font-bold text-center mb-10 text-blue-800">Our Projects</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {projects.map((project, index) => (
+            <ProjectCard
+              key={index}
+              title={project.title}
+              description={project.description}
+            />
+          ))}
+        </div>
       </div>
     </section>
   );
