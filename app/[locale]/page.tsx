@@ -6,6 +6,8 @@ import HeroSection from '@/components/HeroSection';
 import AboutSection from '@/components/AboutSection';
 import MissionSection from '@/components/MissionSection';
 import ProjectsGrid from '@/components/ProjectsGrid';
+import ContactCard from '@/components/ContactCard';
+import NewsletterSignup from '@/components/NewsletterSignup'; // ✅ Added import
 
 export const metadata: Metadata = {
   title: 'New Haiti Team 2075',
@@ -13,7 +15,7 @@ export const metadata: Metadata = {
 };
 
 export default async function Page({ params }: { params: { locale: string } }) {
-  await Promise.resolve(params); // Optional, just here for potential i18n
+  await Promise.resolve(params); // For potential i18n
 
   return (
     <>
@@ -22,6 +24,8 @@ export default async function Page({ params }: { params: { locale: string } }) {
       <ProjectsGrid />
       <AboutSection />
       <MissionSection />
+      <ContactCard />
+      <NewsletterSignup /> {/* ✅ Added component usage */}
     </>
   );
 }
