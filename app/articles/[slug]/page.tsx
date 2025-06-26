@@ -9,11 +9,12 @@ type Props = {
 export default function ArticlePage({ params }: Props) {
   const { slug } = params;
 
-  // TODO: Load article content by slug (from file, CMS, or static array)
-  const article = {
-    title: 'Vision for Haiti 2075',
-    content: 'This is where the future of Haiti begins. Education, healthcare, unity...',
-  };
+  const article = slug === 'vision-for-haiti-2075'
+    ? {
+        title: 'Vision for Haiti 2075',
+        content: 'This is where the future of Haiti begins. Education, healthcare, unity...',
+      }
+    : null;
 
   if (!article) return notFound();
 
@@ -23,4 +24,8 @@ export default function ArticlePage({ params }: Props) {
       <p className="text-lg leading-relaxed">{article.content}</p>
     </div>
   );
+}
+
+export async function generateStaticParams() {
+  return [{ slug: 'vision-for-haiti-2075' }];
 }

@@ -1,4 +1,6 @@
-import '../globals.css';
+import './globals.css';
+
+
 import { dir } from 'i18next';
 import { ReactNode } from 'react';
 
