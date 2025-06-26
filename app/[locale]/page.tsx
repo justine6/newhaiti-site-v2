@@ -1,13 +1,11 @@
-// app/[locale]/page.tsx
+import { Metadata } from 'next';
+import HeroSection from '@/components/HeroSection'; // ✅ Make sure this exists and is correct
+
+export const metadata: Metadata = {
+  title: 'New Haiti Team 2075',
+  description: 'Restoring Dignity. Rebuilding Hope.',
+};
 
 export default function HomePage() {
-  return (
-    <main className="max-w-4xl mx-auto px-4 py-20 text-center">
-      <h1 className="text-5xl font-bold mb-6">Welcome to New Haiti 2075</h1>
-      <p className="text-lg text-gray-700">
-        We’re building a future rooted in dignity, peace, and prosperity.
-        Explore our vision, read our articles, and join the movement to restore unity.
-      </p>
-    </main>
-  );
+  return <HeroSection />; // ✅ Replace the placeholder with the real Hero section
 }
