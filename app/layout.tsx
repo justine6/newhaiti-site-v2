@@ -1,12 +1,8 @@
 import './globals.css';
-
-
-import { dir } from 'i18next';
 import { ReactNode } from 'react';
 
-// Optional: safer helper to avoid hydration issues
 const getDirection = (locale: string) => {
-  const rtlLocales = ['ar', 'he', 'fa']; // Add more if needed
+  const rtlLocales = ['ar', 'he', 'fa'];
   return rtlLocales.includes(locale) ? 'rtl' : 'ltr';
 };
 
@@ -17,11 +13,11 @@ type Props = {
 
 export default async function RootLayout({ children, params }: Props) {
   const { locale } = params;
-  const direction = getDirection(locale); // Avoid dynamic behavior inconsistency
+  const direction = getDirection(locale);
 
   return (
     <html lang={locale} dir={direction}>
-      <body>{children}</body>
+      <body>{children}</body> {/* ✅ No Topbar here */}
     </html>
   );
 }
