@@ -1,28 +1,19 @@
 import fs from 'fs';
 import path from 'path';
-import { compileMDX } from 'next-mdx-remote/rsc';
+import matter from 'gray-matter';
 
-type FrontMatter = {
-  title: string;
-  summary: string;
-};
-
-export async function getArticleContent(locale: string, slug: string) {
-  const filePath = path.join(process.cwd(), 'public', 'articles', locale, `${slug}.mdx`);
-
+export function getArticleContent(locale: string, slug: string) {
+  const filePath = path.join(process.cwd(), 'app/content/articles', locale, `${slug}.mdx`);
+  
   if (!fs.existsSync(filePath)) {
-    throw new Error(`Article not found: ${filePath}`);
+    throw new Error(`Article not found at path: ${filePath}`);
   }
 
-  const source = fs.readFileSync(filePath, 'utf8');
-
-  const { content, frontmatter } = await compileMDX<FrontMatter>({
-    source,
-    options: { parseFrontmatter: true }
-  });
+  const fileContent = fs.readFileSync(filePath, 'utf-8');
+  const { data, content } = matter(fileContent);
 
   return {
-    mdxSource: content,
-    frontMatter: frontmatter
+    metadata: data,
+    content,
   };
 }
