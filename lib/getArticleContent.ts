@@ -1,17 +1,28 @@
 import fs from 'fs';
 import path from 'path';
-import matter from 'gray-matter';
-import { serialize } from 'next-mdx-remote/serialize';
+import { compileMDX } from 'next-mdx-remote/rsc';
+
+type FrontMatter = {
+  title: string;
+  summary: string;
+};
 
 export async function getArticleContent(locale: string, slug: string) {
-  const filePath = path.join(process.cwd(), 'content', 'articles', locale, `${slug}.mdx`);
-  const rawContent = fs.readFileSync(filePath, 'utf-8');
+  const filePath = path.join(process.cwd(), 'public', 'articles', locale, `${slug}.mdx`);
 
-  const { data, content } = matter(rawContent);
-  const mdxSource = await serialize(content);
+  if (!fs.existsSync(filePath)) {
+    throw new Error(`Article not found: ${filePath}`);
+  }
+
+  const source = fs.readFileSync(filePath, 'utf8');
+
+  const { content, frontmatter } = await compileMDX<FrontMatter>({
+    source,
+    options: { parseFrontmatter: true }
+  });
 
   return {
-    frontMatter: data,
-    mdxSource,
+    mdxSource: content,
+    frontMatter: frontmatter
   };
 }
