@@ -1,0 +1,30 @@
+
+{
+  "hero": {
+    "title": "New Haiti Team 2075",
+    "subtitle": "Restoring Dignity. Rebuilding Hope.",
+    "ctaVision": "Read the Vision",
+    "ctaJoin": "Join the Movement"
+  },
+  "about": {
+    "title": "About Us",
+    "description": "We are committed to a generational mission to rebuild Haiti through unity, technology, and community-driven development."
+  },
+  "projects": {
+    "title": "Our Projects",
+    "description": "We are working across 11 mission areas, from education to healthcare, farming to infrastructure. Each project serves a bigger vision of dignity and peace."
+  },
+  "blog": {
+    "title": "Latest from Our Blog",
+    "description": "Catch up on the stories, voices, and updates shaping the New Haiti movement."
+  },
+  "contact": {
+    "title": "Get Involved",
+    "email": "Email Us",
+    "phone": "Call Us"
+  },
+  "footer": {
+    "copyright": "© 2025 New Haiti Team 2075. All rights reserved.",
+    "poweredBy": "Powered by the People"
+  }
+}

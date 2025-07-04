@@ -15,3 +15,6 @@ export function getOptions(lng = fallbackLng, ns = defaultNS) {
     ns: [defaultNS],
   };
 }
+
+// 👇 Add this
+export const locales = ['en', 'fr', 'ht'] as const;

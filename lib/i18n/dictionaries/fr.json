@@ -1,0 +1,29 @@
+{
+  "hero": {
+    "title": "Nouvelle Haïti Équipe 2075",
+    "subtitle": "Restaurer la dignité. Reconstruire l’espoir.",
+    "ctaVision": "Lire la Vision",
+    "ctaJoin": "Rejoindre le Mouvement"
+  },
+  "about": {
+    "title": "À Propos de Nous",
+    "description": "Nous sommes engagés dans une mission générationnelle pour reconstruire Haïti à travers l’unité, la technologie et le développement communautaire."
+  },
+  "projects": {
+    "title": "Nos Projets",
+    "description": "Nous travaillons sur 11 domaines de mission, de l'éducation à la santé, de l'agriculture à l'infrastructure. Chaque projet sert une vision plus grande de dignité et de paix."
+  },
+  "blog": {
+    "title": "Dernières nouvelles du blog",
+    "description": "Découvrez les histoires, les voix et les mises à jour qui façonnent le mouvement Nouvelle Haïti."
+  },
+  "contact": {
+    "title": "S’impliquer",
+    "email": "Nous envoyer un email",
+    "phone": "Nous appeler"
+  },
+  "footer": {
+    "copyright": "© 2025 Nouvelle Haïti Équipe 2075. Tous droits réservés.",
+    "poweredBy": "Propulsé par le Peuple"
+  }
+}

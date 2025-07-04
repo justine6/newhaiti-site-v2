@@ -1,0 +1,30 @@
+
+{
+  "hero": {
+    "title": "Nouvo Ayiti Ekip 2075",
+    "subtitle": "Retabli Dinite. Rebati Lespwa.",
+    "ctaVision": "Li Vizyon an",
+    "ctaJoin": "Antre nan Mouvman an"
+  },
+  "about": {
+    "title": "Sou Nou",
+    "description": "Nou angaje nan yon misyon jenerasyonèl pou rebati Ayiti atravè inite, teknoloji, ak devlopman kominotè."
+  },
+  "projects": {
+    "title": "Pwojè Nou yo",
+    "description": "Nou ap travay sou 11 domèn misyon — soti nan edikasyon rive nan swen sante, agrikilti ak enfrastrikti. Chak pwojè sèvi ak yon vizyon pou diyite ak lapè."
+  },
+  "blog": {
+    "title": "Dènye nouvèl Blog la",
+    "description": "Swiv istwa yo, vwa yo, ak mizajou ki ap fòme mouvman Nouvo Ayiti a."
+  },
+  "contact": {
+    "title": "Angaje w",
+    "email": "Voye yon Imèl",
+    "phone": "Rele nou"
+  },
+  "footer": {
+    "copyright": "© 2025 Nouvo Ayiti Ekip 2075. Tout dwa rezève.",
+    "poweredBy": "Moun yo ki fè l posib"
+  }
+}

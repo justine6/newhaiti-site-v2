@@ -1,37 +1,33 @@
 'use client';
 
-import React from 'react';
-import ProjectCard from './ProjectCard.tsx';
+type ProjectsGridProps = {
+  dictionary: {
+    title: string;
+    description: string;
+    projects: { name: string; summary: string }[];
+  };
+};
 
-const projects = [
-  {
-    title: 'Community Cleaning & Sanitation',
-    description: 'Improving public health through clean environments',
-  },
-  {
-    title: 'Reforestation Efforts',
-    description: 'Planting trees to combat erosion and restore nature',
-  },
-  {
-    title: 'Youth Empowerment Program',
-    description: 'Training and engaging youth in leadership and tech skills',
-  },
-];
-
-export default function ProjectsGrid() {
+export default function ProjectsGrid({ dictionary }: ProjectsGridProps) {
   return (
-    <section className="py-16 px-4 bg-white">
-      <div className="max-w-6xl mx-auto">
-        <h2 className="text-3xl font-bold text-center mb-10 text-blue-800">Our Projects</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project, index) => (
-            <ProjectCard
-              key={index}
-              title={project.title}
-              description={project.description}
-            />
-          ))}
-        </div>
+    <section className="bg-white py-16 px-4 text-center">
+      <h2 className="text-3xl font-bold mb-4">{dictionary.title || 'Our Projects'}</h2>
+      <p className="text-lg text-gray-600 mb-8 max-w-3xl mx-auto">
+        {dictionary.description || 'Explore our mission-aligned development tracks.'}
+      </p>
+
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        {dictionary.projects?.map((project, index) => (
+          <div
+            key={index}
+            className="bg-gray-100 p-6 rounded-lg shadow hover:shadow-lg transition"
+          >
+            <h3 className="text-xl font-semibold mb-2">{project.name}</h3>
+            <p className="text-gray-700">{project.summary}</p>
+          </div>
+        )) || (
+          <p className="text-gray-500 col-span-full">No projects available at this time.</p>
+        )}
       </div>
     </section>
   );

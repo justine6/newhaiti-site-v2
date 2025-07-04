@@ -1,30 +1,46 @@
+'use client';
 
-import React from 'react';
-import { Mail, Phone, MapPin } from 'lucide-react';
+type ContactCardProps = {
+  dictionary: {
+    title: string;
+    emailLabel?: string;
+    emailValue?: string;
+    phoneLabel?: string;
+    phoneValue?: string;
+    addressLabel?: string;
+    addressValue?: string;
+  };
+};
 
-export default function ContactCard() {
+export default function ContactCard({ dictionary }: ContactCardProps) {
   return (
-    <section className="py-16 px-4 bg-gray-100">
-      <div className="max-w-4xl mx-auto bg-white rounded-xl shadow p-6 flex flex-col md:flex-row justify-between items-start md:items-center">
-        <div>
-          <h3 className="text-2xl font-semibold mb-2 text-blue-900">Contact Information</h3>
-          <p className="flex items-center gap-2 text-gray-700">
-            <MapPin size={18} className="text-pink-600" />
-            Port-au-Prince, Haiti
-          </p>
-          <p className="flex items-center gap-2 text-gray-700 mt-2">
-            <Phone size={18} className="text-pink-600" />
-            +509 43607248
-          </p>
-          <p className="flex items-center gap-2 text-gray-700 mt-1">
-            <Phone size={18} className="text-pink-600" />
-            +1 918-640-8249
-          </p>
-          <p className="flex items-center gap-2 text-gray-700 mt-2">
-            <Mail size={18} className="text-purple-600" />
-            nouvoayiti2075@gmail.com
-          </p>
-        </div>
+    <section className="py-16 px-4 bg-gray-100 text-center">
+      <h2 className="text-3xl font-bold mb-6">
+        {dictionary.title || 'Contact Us'}
+      </h2>
+      <div className="max-w-md mx-auto space-y-4 text-left">
+        {dictionary.emailLabel && dictionary.emailValue && (
+          <div>
+            <strong>{dictionary.emailLabel}:</strong>{' '}
+            <a href={`mailto:${dictionary.emailValue}`} className="text-blue-600 hover:underline">
+              {dictionary.emailValue}
+            </a>
+          </div>
+        )}
+        {dictionary.phoneLabel && dictionary.phoneValue && (
+          <div>
+            <strong>{dictionary.phoneLabel}:</strong>{' '}
+            <a href={`tel:${dictionary.phoneValue}`} className="text-blue-600 hover:underline">
+              {dictionary.phoneValue}
+            </a>
+          </div>
+        )}
+        {dictionary.addressLabel && dictionary.addressValue && (
+          <div>
+            <strong>{dictionary.addressLabel}:</strong>{' '}
+            <span>{dictionary.addressValue}</span>
+          </div>
+        )}
       </div>
     </section>
   );

@@ -1,26 +1,22 @@
 'use client';
 
-import Link from 'next/link';
+type FooterProps = {
+  dictionary: {
+    copyright: string;
+    poweredBy?: string;
+  };
+};
 
-export default function Footer() {
-  const year = new Date().getFullYear();
-
+export default function Footer({ dictionary }: FooterProps) {
   return (
-    <footer className="bg-haiti-blue text-white py-6 mt-10 text-sm">
-      <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
-        <p>&copy; {year} New Haiti Team 2075. All rights reserved.</p>
-        <div className="flex space-x-4 mt-2 md:mt-0">
-          <Link href="/privacy" className="hover:underline">
-            Privacy Policy
-          </Link>
-          <Link href="/terms" className="hover:underline">
-            Terms of Service
-          </Link>
-          <Link href="/contact" className="hover:underline">
-            Contact
-          </Link>
-        </div>
-      </div>
+    <footer className="bg-gray-800 text-white py-6 text-center text-sm">
+      <p className="mb-2">
+        {dictionary?.copyright ||
+          '© 2025 New Haiti Team 2075. All rights reserved.'}
+      </p>
+      {dictionary?.poweredBy && (
+        <p className="text-gray-400">{dictionary.poweredBy}</p>
+      )}
     </footer>
   );
 }
