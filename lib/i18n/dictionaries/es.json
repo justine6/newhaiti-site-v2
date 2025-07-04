@@ -1,0 +1,23 @@
+{
+  "hero": {
+    "title": "Equipo Nueva Haití 2075",
+    "subtitle": "Restaurando la dignidad. Reconstruyendo la esperanza.",
+    "ctaVision": "Leer la visión",
+    "ctaJoin": "Únete al movimiento"
+  },
+  "about": {
+    "description": "Nuestra misión es restaurar la dignidad y reconstruir la esperanza."
+  },
+  "projects": {
+    "heading": "Nuestros Proyectos"
+  },
+  "blog": {
+    "latest": "Últimos Artículos"
+  },
+  "contact": {
+    "title": "Contáctanos"
+  },
+  "footer": {
+    "copyright": "© 2075 Equipo Nueva Haití"
+  }
+}

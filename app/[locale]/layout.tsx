@@ -1,30 +1,23 @@
+// app/[locale]/layout.tsx
 import '../globals.css';
-import type { Metadata } from 'next';
-import { ReactNode } from 'react';
-import Topbar from '@/components/navigation/Topbar';
 import { dir } from 'i18next';
+import { ReactNode } from 'react';
+import { locales } from '@/i18n/settings';
 
-export const metadata: Metadata = {
-  title: 'New Haiti Team 2075',
-  description: 'Restoring Dignity. Rebuilding Hope.',
-};
-
-export default async function LocaleLayout({
-  children,
-  params,
-}: {
+type Props = {
   children: ReactNode;
   params: { locale: string };
-}) {
-  const lang = params.locale;
-  const direction = dir(lang); // Optional: await something here if needed
+};
+
+export default async function LocaleLayout({ children, params }: Props) {
+  const { locale } = await Promise.resolve(params);
+  const direction = ['ar', 'he', 'fa'].includes(locale) ? 'rtl' : 'ltr';
 
   return (
-    <html lang={lang} dir={direction}>
-      <body>
-        <Topbar />
-        {children}
-      </body>
+    <html lang={locale} dir={direction}>
+      <body>{children}</body>
     </html>
   );
 }
+
+

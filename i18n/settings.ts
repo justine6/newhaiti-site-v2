@@ -1,7 +1,5 @@
-// i18n/settings.ts
-
 export const fallbackLng = 'en';
-export const languages = ['en', 'fr', 'ht', 'es'];
+export const languages = ['en', 'fr', 'ht', 'es']; // ✅
 
 export const defaultNS = 'translation';
 
@@ -16,5 +14,5 @@ export function getOptions(lng = fallbackLng, ns = defaultNS) {
   };
 }
 
-// 👇 Add this
-export const locales = ['en', 'fr', 'ht'] as const;
+// ✅ This must include 'es' now
+export const locales = ['en', 'fr', 'ht', 'es'] as const;

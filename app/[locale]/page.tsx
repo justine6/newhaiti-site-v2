@@ -1,10 +1,7 @@
 // app/[locale]/page.tsx
-// app/[locale]/page.tsx
-
 import { getDictionary } from '@/lib/i18n/get-dictionary';
 import { locales } from '@/i18n/settings';
 type Locale = (typeof locales)[number];
-
 
 import HeroSection from '@/components/HeroSection';
 import AboutSection from '@/components/AboutSection';
@@ -25,9 +22,10 @@ type Dictionary = {
 export default async function Page({
   params,
 }: {
-  params: { locale: Locale };
+  params: { locale: string };
 }) {
-  const dictionary: Dictionary = await getDictionary(params.locale);
+  const { locale } = await Promise.resolve(params); // ✅ Correct async usage
+  const dictionary = await getDictionary(locale as Locale);
 
   return (
     <main>
