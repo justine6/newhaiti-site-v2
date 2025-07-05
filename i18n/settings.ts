@@ -1,18 +1,15 @@
-export const fallbackLng = 'en';
-export const languages = ['en', 'fr', 'ht', 'es']; // ✅
+// i18n/settings.ts
 
-export const defaultNS = 'translation';
+export const fallbackLng = 'en'; // Default fallback
+export const languages = ['en', 'fr', 'ht', 'es']; // Supported locales
+export const defaultNS = 'translation'; // Optional: default namespace if using i18next namespaces
 
-export function getOptions(lng = fallbackLng, ns = defaultNS) {
+export function getOptions(lng: string = fallbackLng) {
   return {
-    supportedLngs: languages,
-    fallbackLng,
+    // If using i18next
     lng,
-    fallbackNS: defaultNS,
+    fallbackLng,
+    supportedLngs: languages,
     defaultNS,
-    ns: [defaultNS],
   };
 }
-
-// ✅ This must include 'es' now
-export const locales = ['en', 'fr', 'ht', 'es'] as const;
