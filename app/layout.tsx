@@ -1,6 +1,8 @@
 import { dir } from 'i18next';
 import { languages } from '@/i18n/settings';
-import '../globals.css'; // ✅ Because you're one level deep inside /app
+import '@/styles/globals.css';
+
+
 
 
 export async function generateStaticParams() {

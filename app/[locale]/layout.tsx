@@ -1,5 +1,5 @@
 // app/[locale]/layout.tsx
-import '../../globals.css'; // ✅
+import '@/styles/globals.css';
 
 
 import { dir } from 'i18next';
