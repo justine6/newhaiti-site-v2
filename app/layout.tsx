@@ -1,5 +1,6 @@
 // app/layout.tsx
-import './globals.css';
+import '@/styles/globals.css';
+
 
 export const metadata = {
   title: 'New Haiti Team 2075',
