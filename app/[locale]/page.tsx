@@ -3,7 +3,10 @@ import { getDictionary } from '@/lib/i18n/get-dictionary';
 import { locales } from '@/i18n/settings';
 type Locale = (typeof locales)[number];
 
-import HeroSection from '@/components/HeroSection';
+// Use this import in [locale]/page.tsx
+import HeroSection from '@/components/ui/HeroSection';
+
+
 import AboutSection from '@/components/AboutSection';
 import ProjectsGrid from '@/components/ProjectsGrid';
 import BlogPreview from '@/components/BlogPreview';
