@@ -1,18 +1,14 @@
-import { locales } from '@/i18n/settings';
-export type Locale = (typeof locales)[number];
+type Section = 'about' | 'blog' | 'projects';
 
-export const getDictionary = async (locale: string) => {
-  const dictionaries: Record<Locale, () => Promise<any>> = {
-    en: () => import('./dictionaries/en.json').then((m) => m.default),
-    fr: () => import('./dictionaries/fr.json').then((m) => m.default),
-    ht: () => import('./dictionaries/ht.json').then((m) => m.default),
-    es: () => import('./dictionaries/es.json').then((m) => m.default),
-  };
-
-  if (!(locale in dictionaries)) {
-    console.warn(`Skipping unsupported locale: ${locale}`);
-    return dictionaries.en(); // fallback
+export const getDictionary = async (locale: string, section: Section) => {
+  try {
+    const dictionary = await import(`@/lib/i18n/dictionaries/${locale}/${section}`);
+    return dictionary.default;
+  } catch (error) {
+    console.error(
+      `Failed to load dictionary for locale "${locale}" and section "${section}":`,
+      error
+    );
+    return {};
   }
-
-  return await dictionaries[locale as Locale]();
 };
