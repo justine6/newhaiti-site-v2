@@ -1,5 +1,6 @@
 // app/[locale]/layout.tsx
-import '../globals.css';
+import '../globals.css'; // ✅ Because you're one level deep inside /app
+
 import { dir } from 'i18next';
 import { ReactNode } from 'react';
 import { locales } from '@/i18n/settings';

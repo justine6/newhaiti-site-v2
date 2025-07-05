@@ -1,6 +1,7 @@
 import { dir } from 'i18next';
 import { languages } from '@/i18n/settings';
-import '../globals.css'; // Correct path from layout.tsx inside /app
+import '../globals.css'; // ✅ Because you're one level deep inside /app
+
 
 export async function generateStaticParams() {
   return languages.map((lng) => ({ locale: lng }));
