@@ -1,29 +1,19 @@
-import { dir } from 'i18next';
-import { languages } from '@/i18n/settings';
-import '@/styles/globals.css';
+// app/layout.tsx
+import './globals.css';
 
+export const metadata = {
+  title: 'New Haiti Team 2075',
+  description: 'Restoring Dignity. Rebuilding Hope.',
+};
 
-
-
-export async function generateStaticParams() {
-  return languages.map((lng) => ({ locale: lng }));
-}
-
-export default function LocaleLayout({
+export default function RootLayout({
   children,
-  params,
 }: {
   children: React.ReactNode;
-  params: { locale: string };
 }) {
-  const lang = params.locale;
-  const direction = dir(lang);
-
   return (
-    <html lang={lang} dir={direction}>
-      <body className="bg-background text-foreground">
-        {children}
-      </body>
+    <html>
+      <body>{children}</body>
     </html>
   );
 }
