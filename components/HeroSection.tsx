@@ -1,4 +1,4 @@
-'use client';
+// components/HeroSection.tsx
 
 import Link from 'next/link';
 
