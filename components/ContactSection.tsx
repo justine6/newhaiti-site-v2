@@ -1,26 +1,17 @@
-// components/ContactSection.tsx
 'use client';
 
-type ContactSectionProps = {
-  t: (key: string) => string;
+type HeroProps = {
+  dictionary: {
+    title: string;
+    subtitle: string;
+  };
 };
 
-export default function ContactSection({ t }: ContactSectionProps) {
+export default function HeroSection({ dictionary }: HeroProps) {
   return (
-    <section id="contact" className="py-16 bg-white text-center">
-      <div className="max-w-2xl mx-auto">
-        <h2 className="text-3xl font-semibold text-gray-900">{t('contactTitle')}</h2>
-        <p className="mt-4 text-gray-600">{t('contactDescription')}</p>
-
-        <div className="mt-6">
-          <a
-            href="mailto:info@nouvoayiti2075.com"
-            className="text-blue-600 hover:underline text-lg"
-          >
-            info@nouvoayiti2075.com
-          </a>
-        </div>
-      </div>
+    <section className="text-center py-20">
+      <h1 className="text-4xl font-bold">{dictionary.title}</h1>
+      <p className="text-xl mt-4">{dictionary.subtitle}</p>
     </section>
   );
 }
