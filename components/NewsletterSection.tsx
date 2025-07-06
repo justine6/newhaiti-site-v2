@@ -10,7 +10,7 @@ type Props = {
 };
 
 export default async function NewsletterSection({ locale }: Props) {
-  const t = await getDictionary(locale);
+  const t = await getDictionary(locale, 'newsletter');
 
   return (
     <section className="bg-blue-50 py-16 px-4 text-center">
@@ -18,7 +18,9 @@ export default async function NewsletterSection({ locale }: Props) {
         <h2 className="text-3xl md:text-4xl font-bold mb-4 text-blue-900">
           {t.newsletterTitle}
         </h2>
-        <p className="text-lg text-blue-800 mb-8">{t.newsletterDescription}</p>
+        <p className="text-lg text-blue-800 mb-8">
+          {t.newsletterDescription}
+        </p>
 
         <NewsletterFormClient
           placeholder={t.newsletterPlaceholder}
