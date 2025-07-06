@@ -1,0 +1,29 @@
+{
+  "hero": {
+    "title": "Nuevo Haití 2075",
+    "subtitle": "Restaurar la dignidad. Reconstruir la esperanza.",
+    "readMore": "Leer la visión",
+    "joinNow": "Únete al movimiento"
+  },
+  "mission": {
+    "title": "Nuestra Misión",
+    "description": "Comprometidos a construir un futuro sostenible y unido para Haití."
+  },
+  "newsletter": {
+    "newsletterTitle": "Mantente informado",
+    "newsletterDescription": "Suscríbete a nuestro boletín para recibir noticias de nuestra misión.",
+    "newsletterPlaceholder": "Ingresa tu correo electrónico",
+    "newsletterButton": "Suscribirse",
+    "newsletterSuccessMessage": "¡Gracias por suscribirte!"
+  },
+  "contact": {
+    "title": "Contáctanos",
+    "emailLabel": "Tu correo electrónico",
+    "messageLabel": "Tu mensaje",
+    "sendButton": "Enviar"
+  },
+  "footer": {
+    "copyright": "© 2025 Nouvo Ayiti 2075. Todos los derechos reservados.",
+    "poweredBy": "Desarrollado por Vercel & Next.js"
+  }
+}
