@@ -1,17 +1,20 @@
-
 const projects = {
-  heading: 'Nuestros Proyectos',
-  intro: 'Cada proyecto del Equipo 2075 aborda un área vital del desarrollo nacional. Explora las iniciativas que están moldeando el futuro de Haití.',
+  heading: "Nuestros 11 Proyectos",
+  intro: "Cada proyecto aborda una necesidad crítica para la transformación de Haití.",
   categories: {
-    water: 'Agua Potable y Saneamiento',
-    health: 'Salud Comunitaria',
-    education: 'Educación para Todos',
-    tech: 'Tecnología e Innovación',
-    farming: 'Agricultura Sostenible',
-    housing: 'Vivienda Resiliente',
-    youth: 'Empoderamiento Juvenil',
+    education: "Educación para Todos",
+    health: "Salud Comunitaria",
+    infrastructure: "Reconstrucción de Infraestructura",
+    agriculture: "Agricultura Sostenible",
+    economy: "Emprendimiento y Empleo",
+    cleanWater: "Acceso a Agua Potable",
+    housing: "Vivienda Asequible",
+    energy: "Energía Verde",
+    culture: "Arte y Cultura",
+    digital: "Innovación Digital",
+    governance: "Liderazgo y Justicia",
   },
-  callToAction: 'Únete a nosotros para construir una nueva Haití — un proyecto a la vez.',
+  callToAction: "Únete a nosotros para construir el futuro de Haití juntos.",
 };
 
 export default projects;

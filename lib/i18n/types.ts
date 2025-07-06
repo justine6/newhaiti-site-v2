@@ -21,12 +21,13 @@ export type BlogDictionary = {
   readMore: string;
 };
 
-// Projects dictionary structure
 export type ProjectsDictionary = {
-  title: string;
-  description: string;
+  heading: string;
+  intro: string;
   categories: Record<string, string>;
+  callToAction: string; // ✅ Fixes red underline
 };
+
 
 // ✅ New: Home dictionary structure
 export type HomeDictionary = {

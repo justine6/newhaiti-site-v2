@@ -1,17 +1,20 @@
-
 const projects = {
-  heading: 'Pwojè Nou yo',
-  intro: 'Chak pwojè nan Ekip 2075 la adrese yon domèn esansyèl pou devlopman peyi a. Dekouvri inisyativ k ap fòme avni Ayiti.',
+  heading: "11 Pwogram Nou Yo",
+  intro: "Chak pwojè adrese yon bezwen enpòtan pou transfòmasyon Ayiti.",
   categories: {
-    water: 'Dlo Pwòp & Sanitasyon',
-    health: 'Sante Kominotè',
-    education: 'Edikasyon pou Tout Moun',
-    tech: 'Teknoloji & Inovasyon',
-    farming: 'Agrikilti Dirab',
-    housing: 'Lojman Rezistan',
-    youth: 'Otonomi pou Jèn yo',
+    education: "Edikasyon pou Tout Moun",
+    health: "Sante Kominotè",
+    infrastructure: "Rekonstriksyon Enfrastrikti",
+    agriculture: "Agrikilti Dirab",
+    economy: "Antreprenarya ak Travay",
+    cleanWater: "Aksè ak Dlo Potab",
+    housing: "Lojman Abòdab",
+    energy: "Enèji Vèt",
+    culture: "Atizay ak Kilti",
+    digital: "Inovasyon Dijital",
+    governance: "Lidèchip ak Jistis",
   },
-  callToAction: 'Vin patisipe ak nou pou bati yon nouvo Ayiti — youn pwojè chak fwa.',
+  callToAction: "An n mete tèt ansanm pou bati lavni Ayiti.",
 };
 
 export default projects;

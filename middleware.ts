@@ -8,7 +8,7 @@ const PUBLIC_FILE = /\.(.*)$/;
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
-  // ✅ Exclude static files and favicon
+  // ✅ Ignore static files, API, and favicon
   if (
     pathname.startsWith('/_next') ||
     pathname.startsWith('/api') ||
@@ -26,7 +26,9 @@ export function middleware(request: NextRequest) {
   return NextResponse.next();
 }
 
-// ✅ Ensure matcher avoids static files
 export const config = {
-  matcher: ['/((?!api|_next|.*\\..*).*)'],
+  matcher: [
+    // ✅ Match all routes except API, _next, static files, and favicon
+    '/((?!api|_next|favicon.ico|.*\\..*).*)',
+  ],
 };
