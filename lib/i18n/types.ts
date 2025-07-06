@@ -1,5 +1,7 @@
 // Defines the supported sections used for dictionary loading
-export const sections = ['home', 'about', 'projects', 'blog', 'newsletter'] as const;
+export const sections = ['home', 'about', 'projects', 'blog', 'newsletter', 'join'] as const;
+
+
 export type Section = typeof sections[number];
 
 
@@ -44,4 +46,16 @@ export type HomeDictionary = {
     success: string;
   };
 };
+// ✅ New: Join dictionary structure
+export type JoinDictionary = {
+  heading: string;
+  intro: string;
+  steps: {
+    step1: string;
+    step2: string;
+    step3: string;
+  };
+  callToAction: string;
+};
+
 
