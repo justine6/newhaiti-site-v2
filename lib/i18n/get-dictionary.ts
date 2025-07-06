@@ -2,22 +2,20 @@ import fs from 'fs';
 import path from 'path';
 import type { Section } from './types';
 
+const supportedLocales = ['en', 'fr', 'ht', 'es'];
+
 export const getDictionary = async (locale: string, section: Section) => {
-  const supportedLocales = ['en', 'fr', 'ht', 'es'];
-  
   if (!supportedLocales.includes(locale)) {
     console.warn(`❌ Skipping invalid locale: "${locale}"`);
     return null;
   }
 
-  const filePath = path.join(
-    process.cwd(),
-    'app',
-    'content',
-    'articles',
-    locale,
-    `${section}.json`
-  );
+  // Determine path based on section
+  const isHome = section === 'home';
+
+  const filePath = isHome
+    ? path.join(process.cwd(), 'content', 'home', `${locale}.json`)
+    : path.join(process.cwd(), 'content', 'articles', locale, `${section}.json`);
 
   try {
     if (!fs.existsSync(filePath)) {

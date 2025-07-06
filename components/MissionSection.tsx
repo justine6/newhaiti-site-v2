@@ -1,15 +1,23 @@
 // components/MissionSection.tsx
-'use client';
 
-import React from 'react';
+type MissionSectionProps = {
+  dictionary: {
+    title: string;
+    points: string[];
+  };
+};
 
-export default function MissionSection() {
+export default function MissionSection({ dictionary }: MissionSectionProps) {
   return (
-    <section className="py-16 px-4 text-center">
-      <h2 className="text-3xl font-bold mb-4">Our Mission</h2>
-      <p className="max-w-2xl mx-auto text-lg">
-        We aim to restore dignity, empower citizens, and lead Haiti into a new era of hope and resilience.
-      </p>
+    <section className="py-10 px-4 max-w-5xl mx-auto">
+      <h2 className="text-3xl font-bold mb-4 text-center">
+        {dictionary.title || "Our Mission"}
+      </h2>
+      <ul className="list-disc list-inside space-y-2 text-lg">
+        {dictionary.points.map((point, index) => (
+          <li key={index}>{point}</li>
+        ))}
+      </ul>
     </section>
   );
 }
