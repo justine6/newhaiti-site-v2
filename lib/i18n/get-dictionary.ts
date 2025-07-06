@@ -1,16 +1,26 @@
 import fs from 'fs';
 import path from 'path';
-import type { Section } from './types';
+import type { Section, JoinDictionary, AboutDictionary, BlogDictionary, HomeDictionary, ProjectsDictionary } from './types';
 
 const supportedLocales = ['en', 'fr', 'ht', 'es'];
 
-export const getDictionary = async (locale: string, section: Section) => {
+export const getDictionary = async (
+  locale: string,
+  section: Section
+):
+  Promise<
+    | JoinDictionary
+    | AboutDictionary
+    | BlogDictionary
+    | HomeDictionary
+    | ProjectsDictionary
+    | null
+  > => {
   if (!supportedLocales.includes(locale)) {
     console.warn(`❌ Skipping invalid locale: "${locale}"`);
     return null;
   }
 
-  // Determine path based on section
   const isHome = section === 'home';
 
   const filePath = isHome
