@@ -9,8 +9,9 @@ type Props = {
   params: { locale: Locale };
 };
 
-export default async function Page({ params }: Props) {
-  const locale = params.locale; // ✅ use directly, no await
+export default async function Page(props: Props) {
+  const { params } = props; // ✅ Safe destructuring
+  const locale = params.locale;
 
   const t = (await getDictionary(locale, 'home')) as HomeDictionary;
 

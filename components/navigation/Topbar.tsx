@@ -1,13 +1,17 @@
 'use client';
+
 import LanguageSwitcher from './LanguageSwitcher';
-
-
 import Link from 'next/link';
 import Image from 'next/image';
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 
-export default function Topbar() {
+// ✅ Accept locale as a prop (even if unused for now)
+type TopbarProps = {
+  locale: string;
+};
+
+export default function Topbar({ locale }: TopbarProps) {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => setIsOpen(!isOpen);
@@ -26,36 +30,34 @@ export default function Topbar() {
         {/* Logo */}
         <Link href="/">
           <div className="flex items-center gap-2">
-<Image
-  src="/images/newhaitilogo.png"
-  alt="Nouvo Ayiti 2075"
-  width={40}
-  height={40}
-  className="rounded-full"
-/>
-
+            <Image
+              src="/images/newhaitilogo.png"
+              alt="Nouvo Ayiti 2075"
+              width={40}
+              height={40}
+              className="rounded-full"
+            />
             <span className="font-bold text-lg tracking-wide text-gray-800">
               Nouvo Ayiti 2075
             </span>
           </div>
         </Link>
 
-{/* Desktop Nav + Language Switcher */}
-<nav className="hidden md:flex space-x-6 items-center">
-  {navLinks.map((link) => (
-    <Link
-      key={link.href}
-      href={link.href}
-      className="text-gray-700 hover:text-blue-600 font-medium transition"
-    >
-      {link.label}
-    </Link>
-  ))}
+        {/* Desktop Nav + Language Switcher */}
+        <nav className="hidden md:flex space-x-6 items-center">
+          {navLinks.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              className="text-gray-700 hover:text-blue-600 font-medium transition"
+            >
+              {link.label}
+            </Link>
+          ))}
 
-  {/* Language Switcher */}
-  <LanguageSwitcher />
-</nav>
-
+          {/* Language Switcher */}
+          <LanguageSwitcher />
+        </nav>
 
         {/* Mobile Menu Toggle */}
         <div className="md:hidden">
