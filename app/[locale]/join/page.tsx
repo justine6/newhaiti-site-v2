@@ -1,11 +1,13 @@
-// app/[locale]/join/page.tsx
-
 import { getDictionary } from '@/lib/i18n/get-dictionary';
 import type { Locale } from '@/lib/i18n/types';
+import type { JoinDictionary } from '@/lib/i18n/types';
 
-
-export default async function JoinPage({ params }: { params: { locale: Locale } }) {
-  const dictionary = await getDictionary(params.locale, 'join');
+export default async function JoinPage({
+  params,
+}: {
+  params: { locale: Locale };
+}) {
+  const dictionary = (await getDictionary(params.locale, 'join')) as JoinDictionary | null;
 
   if (!dictionary) {
     return (
