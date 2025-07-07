@@ -16,13 +16,14 @@ export default function Topbar({ locale }: TopbarProps) {
 
   const toggleMenu = () => setIsOpen(!isOpen);
 
-  const navLinks = [
-    { href: '/', label: 'Home' },
-    { href: '/#about', label: 'About' },
-    { href: '/#projects', label: 'Projects' },
-    { href: '/blog', label: 'Blog' },
-    { href: '/#contact', label: 'Contact' },
-  ];
+const navLinks = [
+  { href: `/${locale}`, label: 'Home' },
+  { href: `/${locale}/#about`, label: 'About' },
+  { href: `/${locale}/#projects`, label: 'Projects' },
+  { href: `/${locale}/blog`, label: 'Blog' },
+  { href: `/${locale}/#contact`, label: 'Contact' },
+];
+
 
   return (
     <header className="bg-white/90 backdrop-blur-md shadow-md sticky top-0 z-50">

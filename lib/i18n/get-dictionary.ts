@@ -1,6 +1,13 @@
 import fs from 'fs';
 import path from 'path';
-import type { Section, JoinDictionary, AboutDictionary, BlogDictionary, HomeDictionary, ProjectsDictionary } from './types';
+import type {
+  Section,
+  JoinDictionary,
+  AboutDictionary,
+  BlogDictionary,
+  HomeDictionary,
+  ProjectsDictionary,
+} from './types';
 
 const supportedLocales = ['en', 'fr', 'ht', 'es'];
 
@@ -22,7 +29,6 @@ export const getDictionary = async (
   }
 
   const isHome = section === 'home';
-
   const filePath = isHome
     ? path.join(process.cwd(), 'content', 'home', `${locale}.json`)
     : path.join(process.cwd(), 'content', 'articles', locale, `${section}.json`);
@@ -34,7 +40,13 @@ export const getDictionary = async (
     }
 
     const fileContent = fs.readFileSync(filePath, 'utf-8');
-    return JSON.parse(fileContent);
+
+    try {
+      return JSON.parse(fileContent);
+    } catch (parseError) {
+      console.error(`❌ Failed to parse JSON for ${locale}/${section}:`, parseError);
+      return null;
+    }
   } catch (error) {
     console.error(`❌ Failed to load dictionary for ${locale}/${section}:`, error);
     return null;
