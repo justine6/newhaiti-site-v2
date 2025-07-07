@@ -23,6 +23,11 @@ export function middleware(request: NextRequest) {
     return NextResponse.redirect(new URL('/en', request.url));
   }
 
+  // ✅ Redirect top-level join route to default locale
+  if (pathname === '/join') {
+    return NextResponse.redirect(new URL('/en/join', request.url));
+  }
+
   return NextResponse.next();
 }
 
