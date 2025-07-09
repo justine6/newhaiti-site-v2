@@ -1,14 +1,12 @@
 // Defines the supported sections used for dictionary loading
 export const sections = ['home', 'about', 'projects', 'blog', 'newsletter', 'join'] as const;
 
-
 export type Section = typeof sections[number];
-
 
 // Locale type already used in the routing and i18n logic
 export type Locale = 'en' | 'fr' | 'ht' | 'es';
 
-// About dictionary structure
+// ✅ About dictionary structure
 export type AboutDictionary = {
   heading: string;
   intro: string;
@@ -16,37 +14,22 @@ export type AboutDictionary = {
   callToAction: string;
 };
 
-// Blog dictionary structure
+// ✅ Blog dictionary structure
 export type BlogDictionary = {
   title: string;
   recentPosts: string;
   readMore: string;
 };
 
+// ✅ Projects dictionary structure
 export type ProjectsDictionary = {
   heading: string;
   intro: string;
   categories: Record<string, string>;
-  callToAction: string; // ✅ Fixes red underline
+  callToAction: string;
 };
 
-
-// ✅ New: Home dictionary structure
-export type HomeDictionary = {
-  hero: {
-    title: string;
-    subtitle: string;
-    button: string;
-  };
-  newsletter: {
-    heading: string;
-    description: string;
-    placeholder: string;
-    cta: string;
-    success: string;
-  };
-};
-// ✅ New: Join dictionary structure
+// ✅ Join dictionary structure
 export type JoinDictionary = {
   heading: string;
   intro: string;
@@ -58,4 +41,37 @@ export type JoinDictionary = {
   callToAction: string;
 };
 
-
+// ✅ Home dictionary structure (updated to fix errors)
+export type HomeDictionary = {
+  hero: {
+    title: string;
+    subtitle: string;
+    button: string;
+  };
+  mission: {
+    title: string;
+    points: string[];
+  };
+  newsletter: {
+    newsletterTitle: string;
+    newsletterDescription: string;
+    newsletterPlaceholder: string;
+    newsletterButton: string;
+    newsletterSuccessMessage: string;
+  };
+  contact: {
+    heading: string;
+    description: string;
+    placeholder: string;
+    cta: string;
+    success: string;
+  };
+  footer: {
+    rights: string;
+    links: {
+      about: string;
+      contact: string;
+      privacy: string;
+    };
+  };
+};

@@ -1,5 +1,6 @@
 import { getDictionary } from '@/lib/i18n/get-dictionary';
 import type { Locale } from '@/lib/i18n/settings';
+import type { HomeDictionary } from '@/lib/i18n/types';
 
 import HeroSection from '@/components/HeroSection';
 import MissionSection from '@/components/MissionSection';
@@ -12,7 +13,7 @@ type Props = {
 };
 
 export default async function HomePage({ params }: Props) {
-  const dictionary = await getDictionary(params.locale, 'home');
+  const dictionary = await getDictionary(params.locale, 'home') as HomeDictionary;
 
   return (
     <>

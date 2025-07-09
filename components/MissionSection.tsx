@@ -8,7 +8,7 @@ type MissionSectionProps = {
 };
 
 export default function MissionSection({ dictionary }: MissionSectionProps) {
-  if (!dictionary?.points || !Array.isArray(dictionary.points)) return null; // ✅ Early exit for safety
+  if (!dictionary?.points || !Array.isArray(dictionary.points)) return null;
 
   return (
     <section className="py-10 px-4 max-w-5xl mx-auto">
@@ -23,6 +23,4 @@ export default function MissionSection({ dictionary }: MissionSectionProps) {
       </ul>
     </section>
   );
-}
-
 }

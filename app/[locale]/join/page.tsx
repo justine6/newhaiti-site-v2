@@ -1,13 +1,14 @@
+import { use } from 'react';
 import { getDictionary } from '@/lib/i18n/get-dictionary';
 import type { Locale } from '@/lib/i18n/types';
 import type { JoinDictionary } from '@/lib/i18n/types';
 
-export default async function JoinPage({
-  params,
-}: {
+export default function JoinPage(props: {
   params: { locale: Locale };
 }) {
-  const dictionary = (await getDictionary(params.locale, 'join')) as JoinDictionary | null;
+  // ✅ Unwrap params using `use()` to satisfy Next.js 15 rules
+  const { locale } = use(Promise.resolve(props.params));
+  const dictionary = use(getDictionary(locale, 'join')) as JoinDictionary | null;
 
   if (!dictionary) {
     return (

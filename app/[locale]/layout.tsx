@@ -4,7 +4,8 @@ import { ReactNode } from 'react';
 import { dir } from 'i18next';
 import type { Locale } from '@/lib/i18n/settings';
 
-import Topbar from '@/components/navigation/Topbar'; // ✅ Make sure this path is correct
+import { use } from 'react'; // ✅ Needed for unwrapping params
+import Topbar from '@/components/navigation/Topbar';
 
 export async function generateMetadata() {
   return {
@@ -13,21 +14,18 @@ export async function generateMetadata() {
   };
 }
 
-export default async function LocaleLayout({
-  children,
-  params,
-}: {
+export default function LocaleLayout(props: {
   children: ReactNode;
   params: { locale: string };
 }) {
-  const locale = params.locale as Locale;
-  const direction = dir(locale);
+  const { locale } = use(Promise.resolve(props.params)); // ✅ Safe unwrap
+  const direction = dir(locale as Locale);
 
   return (
     <html lang={locale} dir={direction}>
       <body>
-        <Topbar locale={locale} /> {/* ✅ Topbar now shows on all pages */}
-        {children}
+        <Topbar locale={locale} />
+        {props.children}
       </body>
     </html>
   );
