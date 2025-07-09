@@ -15,7 +15,13 @@ export default function HeroSection({ dictionary }: HeroSectionProps) {
   return (
     <section
       className="relative bg-cover bg-center text-white min-h-screen flex flex-col items-center justify-center text-center px-4"
-      style={{ backgroundImage: "url('/images/haiti-hero-map.jpg')" }}
+style={{
+  backgroundImage: "url('/images/haiti-hero-map.jpg')",
+  backgroundSize: 'contain',
+  backgroundRepeat: 'no-repeat',
+  backgroundPosition: 'center',
+}}
+
     >
       {/* Dark overlay */}
       <div className="absolute inset-0 bg-black/40" />
