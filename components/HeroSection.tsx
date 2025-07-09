@@ -14,14 +14,15 @@ type HeroSectionProps = {
 export default function HeroSection({ dictionary }: HeroSectionProps) {
   return (
     <section
-      className="relative bg-cover bg-center text-white min-h-screen flex flex-col items-center justify-center text-center px-4"
-style={{
-  backgroundImage: "url('/images/haiti-hero-map.jpg')",
-  backgroundSize: 'contain',
-  backgroundRepeat: 'no-repeat',
-  backgroundPosition: 'center',
-}}
-
+      className="relative text-white flex flex-col items-center justify-center text-center px-4"
+      style={{
+        backgroundImage: "url('/images/haiti-hero-map.jpg')",
+        backgroundSize: 'cover',               // fills width
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'center',
+        height: '90vh',                        // controls vertical height
+        maxHeight: '100vh',                    // keeps it responsive
+      }}
     >
       {/* Dark overlay */}
       <div className="absolute inset-0 bg-black/40" />
