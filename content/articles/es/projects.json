@@ -1,0 +1,18 @@
+{
+  "heading": "Nuestros Proyectos",
+  "intro": "Nos enfocamos en once proyectos transformadores para reconstruir Haití de forma sostenible y equitativa.",
+  "categories": {
+    "sanitation": "Agua y Saneamiento",
+    "education": "Educación y Alfabetización",
+    "infrastructure": "Infraestructura y Caminos",
+    "healthcare": "Acceso a la Salud",
+    "housing": "Vivienda y Refugio",
+    "agriculture": "Agricultura y Seguridad Alimentaria",
+    "environment": "Medio Ambiente y Resiliencia",
+    "commerce": "Comercio Local e Innovación",
+    "arts": "Artes, Cultura e Identidad",
+    "technology": "Transformación Digital",
+    "governance": "Gobernanza Transparente"
+  },
+  "callToAction": "Descubre cómo puedes apoyar o liderar una de estas iniciativas."
+}
