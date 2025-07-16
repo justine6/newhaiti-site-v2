@@ -6,5 +6,15 @@
     "step2": "Chwazi yon domèn pwojè ou vle ede ladan.",
     "step3": "Soumèt epi n ap kontakte ou pou etap ki vin apre yo."
   },
-  "callToAction": "Ann mete tèt ansanm pou rebati Ayiti!"
+  "form": {
+    "name": "Non ou",
+    "email": "Adrès imèl ou",
+    "phone": "Nimewo telefòn",
+    "location": "Kote ou ye",
+    "message": "Ti mesaj (opsyonèl)",
+    "submit": "Voye",
+    "success": "Mèsi! Ou pral resevwa yon konfimasyon byento.",
+    "error": "Gen yon erè. Tanpri eseye ankò."
+  },
+  "callToAction": "Ann mete tèt ansanm pou rebati Ayiti !"
 }

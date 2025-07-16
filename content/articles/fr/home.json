@@ -2,7 +2,26 @@
   "hero": {
     "title": "Nouvelle Équipe Haïti 2075",
     "subtitle": "Restaurer la dignité. Reconstruire l'espoir.",
-    "ctaText": "Rejoignez le mouvement",
-    "ctaLink": "/fr/join"
+    "readMore": "Lire la vision",
+    "joinNow": "Rejoindre le mouvement"
+  },
+  "mission": {
+    "heading": "Notre Mission",
+    "paragraph": "Nous reconstruisons Haïti avec dignité, innovation et vision partagée."
+  },
+  "newsletter": {
+    "title": "Restez Connecté",
+    "description": "Abonnez-vous pour recevoir des nouvelles et des histoires d’espoir."
+  },
+  "contact": {
+    "heading": "Contactez-nous",
+    "description": "Contactez-nous pour partager vos idées, questions ou propositions de partenariat.",
+    "placeholder": "Votre message",
+    "cta": "Envoyer le message",
+    "success": "Merci de nous avoir contactés !"
+  },
+  "footer": {
+    "copyright": "© 2025 Nouvelle Équipe Haïti 2075",
+    "poweredBy": "Propulsé par le peuple haïtien"
   }
 }

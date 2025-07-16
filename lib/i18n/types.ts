@@ -46,32 +46,23 @@ export type HomeDictionary = {
   hero: {
     title: string;
     subtitle: string;
-    button: string;
+    readMore: string;
+    joinNow: string;
   };
   mission: {
-    title: string;
-    points: string[];
+    heading: string;
+    paragraph: string;
   };
   newsletter: {
-    newsletterTitle: string;
-    newsletterDescription: string;
-    newsletterPlaceholder: string;
-    newsletterButton: string;
-    newsletterSuccessMessage: string;
+    title: string;
+    description: string;
   };
   contact: {
     heading: string;
-    description: string;
-    placeholder: string;
-    cta: string;
-    success: string;
+    paragraph: string;
   };
   footer: {
-    rights: string;
-    links: {
-      about: string;
-      contact: string;
-      privacy: string;
-    };
+    copyright: string;
+    poweredBy: string;
   };
 };

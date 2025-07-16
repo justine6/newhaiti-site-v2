@@ -1,8 +1,27 @@
 {
   "hero": {
     "title": "Nouvo Ekip Ayiti 2075",
-    "subtitle": "Retabli Dinite. Rebati Lespwa.",
-    "ctaText": "Antre nan mouvman an",
-    "ctaLink": "/ht/join"
+    "subtitle": "Reta Dinite. Rebati Espwa.",
+    "readMore": "Li Vizyonda",
+    "joinNow": "Antre nan mouvman an"
+  },
+  "mission": {
+    "heading": "Misyon Nou",
+    "paragraph": "Nou ap rebati Ayiti atravè dinite, inovasyon ak vizyon pataje."
+  },
+  "newsletter": {
+    "title": "Rete Konekte",
+    "description": "Abònman pou resevwa mizajou ak istwa espwa yo."
+  },
+  "contact": {
+    "heading": "Kontakte Nou",
+    "description": "Voye mesaj ou, kesyon ou oswa opòtinite kolaborasyon yo.",
+    "placeholder": "Mesaj ou",
+    "cta": "Voye mesaj la",
+    "success": "Mèsi dèske ou kontakte nou!"
+  },
+  "footer": {
+    "copyright": "© 2025 Nouvo Ekip Ayiti 2075",
+    "poweredBy": "Pouse pa pèp Ayisyen an"
   }
 }

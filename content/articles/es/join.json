@@ -3,8 +3,18 @@
   "intro": "Sé parte del movimiento para reconstruir Haití con dignidad y esperanza.",
   "steps": {
     "step1": "Completa el formulario de membresía con tu información.",
-    "step2": "Elige un área de proyecto donde deseas contribuir.",
-    "step3": "Envíalo y nos pondremos en contacto contigo con los siguientes pasos."
+    "step2": "Elige un área de proyecto en la que te gustaría contribuir.",
+    "step3": "Envíalo y nos pondremos en contacto contigo con los próximos pasos."
+  },
+  "form": {
+    "name": "Tu nombre",
+    "email": "Tu correo electrónico",
+    "phone": "Número de teléfono",
+    "location": "Tu ubicación",
+    "message": "Mensaje corto (opcional)",
+    "submit": "Enviar",
+    "success": "¡Gracias! Recibirás una confirmación en breve.",
+    "error": "Ocurrió un problema. Por favor, inténtalo de nuevo."
   },
   "callToAction": "¡Construyamos juntos un Haití más fuerte!"
 }

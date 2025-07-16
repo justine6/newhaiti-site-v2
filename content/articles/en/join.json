@@ -6,5 +6,15 @@
     "step2": "Choose a project area where you would like to contribute.",
     "step3": "Submit and we will get in touch with next steps."
   },
+  "form": {
+    "name": "Your Name",
+    "email": "Your Email",
+    "phone": "Phone Number",
+    "location": "Your Location",
+    "message": "Short Message (optional)",
+    "submit": "Submit",
+    "success": "Thank you! You'll receive a confirmation shortly.",
+    "error": "There was a problem. Please try again."
+  },
   "callToAction": "Let us build a stronger Haiti—together!"
 }

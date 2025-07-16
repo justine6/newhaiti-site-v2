@@ -2,6 +2,7 @@
 
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
+import { defaultLocale } from './lib/i18n/settings'; // ✅ import your actual setting
 
 const PUBLIC_FILE = /\.(.*)$/;
 
@@ -20,12 +21,12 @@ export function middleware(request: NextRequest) {
 
   // ✅ Redirect root to default locale
   if (pathname === '/') {
-    return NextResponse.redirect(new URL('/en', request.url));
+    return NextResponse.redirect(new URL(`/${defaultLocale}`, request.url));
   }
 
-  // ✅ Redirect top-level join route to default locale
+  // ✅ Redirect top-level /join to default locale
   if (pathname === '/join') {
-    return NextResponse.redirect(new URL('/en/join', request.url));
+    return NextResponse.redirect(new URL(`/${defaultLocale}/join`, request.url));
   }
 
   return NextResponse.next();

@@ -1,8 +1,27 @@
 {
   "hero": {
     "title": "Nuevo Equipo Haití 2075",
-    "subtitle": "Restaurando la Dignidad. Reconstruyendo la Esperanza.",
-    "ctaText": "Únete al Movimiento",
-    "ctaLink": "/es/join"
+    "subtitle": "Restaurando Dignidad. Reconstruyendo Esperanza.",
+    "readMore": "Leer la Visión",
+    "joinNow": "Únete al Movimiento"
+  },
+  "mission": {
+    "heading": "Nuestra Misión",
+    "paragraph": "Estamos reconstruyendo Haití con dignidad, innovación y una visión compartida."
+  },
+  "newsletter": {
+    "title": "Mantente Conectado",
+    "description": "Suscríbete para recibir actualizaciones e historias de esperanza."
+  },
+  "contact": {
+    "heading": "Contáctanos",
+    "description": "Comunícate para compartir tus ideas, preguntas u oportunidades de colaboración.",
+    "placeholder": "Tu mensaje",
+    "cta": "Enviar mensaje",
+    "success": "¡Gracias por contactarnos!"
+  },
+  "footer": {
+    "copyright": "© 2025 Nuevo Equipo Haití 2075",
+    "poweredBy": "Impulsado por el pueblo de Haití"
   }
 }

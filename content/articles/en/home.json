@@ -2,7 +2,26 @@
   "hero": {
     "title": "New Haiti Team 2075",
     "subtitle": "Restoring Dignity. Rebuilding Hope.",
-    "ctaText": "Join the Movement",
-    "ctaLink": "/en/join"
+    "readMore": "Read the Vision",
+    "joinNow": "Join the Movement"
+  },
+  "mission": {
+    "heading": "Our Mission",
+    "paragraph": "We are rebuilding Haiti through dignity, innovation, and shared vision."
+  },
+  "newsletter": {
+    "title": "Stay Connected",
+    "description": "Subscribe to receive updates and stories of hope."
+  },
+  "contact": {
+    "heading": "Contact Us",
+    "description": "Reach out to share your ideas, questions, or partnership opportunities.",
+    "placeholder": "Your message",
+    "cta": "Send Message",
+    "success": "Thank you for contacting us!"
+  },
+  "footer": {
+    "copyright": "© 2025 New Haiti Team 2075",
+    "poweredBy": "Powered by the people of Haiti"
   }
 }
