@@ -59,6 +59,7 @@ export async function POST(req: NextRequest) {
       { success: true, message: 'Submission received and emails sent.' },
       { status: 200 }
     );
+
   } catch (error) {
     console.error('❌ Error in /api/join:', error);
     return NextResponse.json(
