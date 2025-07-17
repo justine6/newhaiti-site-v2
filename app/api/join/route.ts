@@ -1,6 +1,7 @@
 import { Resend } from 'resend';
 import { NextRequest, NextResponse } from 'next/server';
 import { rateLimit } from '@/lib/rateLimiter';
+import logger from '@/lib/logger';
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 const ADMIN_EMAIL = 'info@nouvoayiti2075.com';
@@ -15,10 +16,10 @@ export async function POST(req: NextRequest) {
   try {
     const ip = getClientIP(req);
     const tier = 'public';
-    console.log(`[JOIN_SUBMISSION] Request received from IP: ${ip}`);
+    logger.info(`[JOIN_SUBMISSION] Request received from IP: ${ip}`);
 
     if (!rateLimit(ip, tier)) {
-      console.warn(`[RATE_LIMIT_BLOCKED] IP: ${ip} exceeded tier '${tier}'`);
+      logger.warn(`[RATE_LIMIT_BLOCKED] IP: ${ip} exceeded tier '${tier}'`);
       return NextResponse.json(
         { error: 'Too many requests. Please try again later.' },
         { status: 429 }
@@ -54,7 +55,7 @@ export async function POST(req: NextRequest) {
       `,
     });
 
-    console.log(`[EMAIL_SENT] Confirmation sent to: ${email}`);
+    logger.info(`[EMAIL_SENT] Confirmation sent to: ${email}`);
 
     // Notify admin
     await resend.emails.send({
@@ -73,7 +74,7 @@ export async function POST(req: NextRequest) {
       `,
     });
 
-    console.log(`[ADMIN_ALERT] Notification sent to admin for: ${email}`);
+    logger.info(`[ADMIN_ALERT] Notification sent to admin for: ${email}`);
 
     return NextResponse.json(
       { success: true, message: 'Submission received and emails sent.' },
@@ -81,7 +82,7 @@ export async function POST(req: NextRequest) {
     );
   } catch (error) {
     const ip = getClientIP(req);
-    console.error(`[JOIN_ERROR] Failed to process submission from IP: ${ip}`, error);
+    logger.error(`[JOIN_ERROR] Failed to process submission from IP: ${ip}`, error);
     return NextResponse.json(
       { error: 'Internal Server Error' },
       { status: 500 }
