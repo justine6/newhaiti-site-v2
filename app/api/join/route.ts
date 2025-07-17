@@ -11,14 +11,14 @@ function getClientIP(req: NextRequest): string {
   return forwarded ? forwarded.split(',')[0].trim() : 'unknown';
 }
 
-
 export async function POST(req: NextRequest) {
   try {
     const ip = getClientIP(req);
-    const tier = 'public'; // You can later infer 'member' or 'admin' via session/token
+    const tier = 'public';
+    console.log(`[JOIN_SUBMISSION] Request received from IP: ${ip}`);
 
-    // Apply rate limiting
     if (!rateLimit(ip, tier)) {
+      console.warn(`[RATE_LIMIT_BLOCKED] IP: ${ip} exceeded tier '${tier}'`);
       return NextResponse.json(
         { error: 'Too many requests. Please try again later.' },
         { status: 429 }
@@ -35,7 +35,7 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    // Send confirmation email to user
+    // Send confirmation email to the user
     await resend.emails.send({
       from: 'Nouvo Ayiti 2075 <info@nouvoayiti2075.com>',
       to: [email],
@@ -54,6 +54,8 @@ export async function POST(req: NextRequest) {
       `,
     });
 
+    console.log(`[EMAIL_SENT] Confirmation sent to: ${email}`);
+
     // Notify admin
     await resend.emails.send({
       from: 'Nouvo Ayiti Bot <info@nouvoayiti2075.com>',
@@ -71,12 +73,15 @@ export async function POST(req: NextRequest) {
       `,
     });
 
+    console.log(`[ADMIN_ALERT] Notification sent to admin for: ${email}`);
+
     return NextResponse.json(
       { success: true, message: 'Submission received and emails sent.' },
       { status: 200 }
     );
   } catch (error) {
-    console.error('❌ Error in /api/join:', error);
+    const ip = getClientIP(req);
+    console.error(`[JOIN_ERROR] Failed to process submission from IP: ${ip}`, error);
     return NextResponse.json(
       { error: 'Internal Server Error' },
       { status: 500 }
