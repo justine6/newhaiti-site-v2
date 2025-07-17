@@ -1,8 +1,13 @@
 'use client';
 
 import { useState } from 'react';
+import type { JoinDictionary } from '@/lib/i18n/types';
 
-export default function JoinForm() {
+type JoinFormProps = {
+  dictionary: JoinDictionary;
+};
+
+export default function JoinForm({ dictionary }: JoinFormProps) {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -33,15 +38,15 @@ export default function JoinForm() {
 
       if (res.ok) {
         setStatus('success');
-        setResponseMessage(data.message);
+        setResponseMessage(dictionary.successMessage);
         setFormData({ name: '', email: '', phone: '', location: '', message: '' });
       } else {
         setStatus('error');
-        setResponseMessage(data.error || 'Something went wrong.');
+        setResponseMessage(data.error || dictionary.errorMessage);
       }
     } catch (error) {
       setStatus('error');
-      setResponseMessage('Network error. Please try again later.');
+      setResponseMessage(dictionary.errorMessage);
     }
   };
 
@@ -50,12 +55,12 @@ export default function JoinForm() {
       onSubmit={handleSubmit}
       className="max-w-xl mx-auto p-4 bg-white shadow-md rounded-md space-y-4"
     >
-      <h2 className="text-2xl font-bold text-center">Join the Movement</h2>
+      <h2 className="text-2xl font-bold text-center">{dictionary.heading}</h2>
 
       <input
         type="text"
         name="name"
-        placeholder="Full Name"
+        placeholder={dictionary.form.name}
         value={formData.name}
         onChange={handleChange}
         required
@@ -64,7 +69,7 @@ export default function JoinForm() {
       <input
         type="email"
         name="email"
-        placeholder="Email Address"
+        placeholder={dictionary.form.email}
         value={formData.email}
         onChange={handleChange}
         required
@@ -73,7 +78,7 @@ export default function JoinForm() {
       <input
         type="tel"
         name="phone"
-        placeholder="Phone Number"
+        placeholder={dictionary.form.phone}
         value={formData.phone}
         onChange={handleChange}
         required
@@ -82,7 +87,7 @@ export default function JoinForm() {
       <input
         type="text"
         name="location"
-        placeholder="Your Location"
+        placeholder={dictionary.form.location}
         value={formData.location}
         onChange={handleChange}
         required
@@ -90,7 +95,7 @@ export default function JoinForm() {
       />
       <textarea
         name="message"
-        placeholder="Optional Message"
+        placeholder={dictionary.form.message}
         value={formData.message}
         onChange={handleChange}
         rows={4}
@@ -102,7 +107,7 @@ export default function JoinForm() {
         className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 rounded"
         disabled={status === 'loading'}
       >
-        {status === 'loading' ? 'Submitting...' : 'Join Now'}
+        {status === 'loading' ? '...' : dictionary.form.button}
       </button>
 
       {status !== 'idle' && (

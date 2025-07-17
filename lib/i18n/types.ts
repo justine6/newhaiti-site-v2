@@ -39,6 +39,16 @@ export type JoinDictionary = {
     step3: string;
   };
   callToAction: string;
+  form: {
+    name: string;
+    email: string;
+    phone: string;
+    location: string;
+    message: string;
+    button: string;
+  };
+  successMessage: string;
+  errorMessage: string;
 };
 
 // ✅ Home dictionary structure (updated to fix errors)

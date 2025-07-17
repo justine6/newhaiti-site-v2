@@ -1,14 +1,10 @@
-import { use } from 'react';
 import { getDictionary } from '@/lib/i18n/get-dictionary';
 import type { Locale } from '@/lib/i18n/types';
 import type { JoinDictionary } from '@/lib/i18n/types';
-import JoinForm from '@/components/JoinForm'; // ✅ Make sure this import is correct
+import JoinForm from '@/components/JoinForm';
 
-export default function JoinPage(props: {
-  params: { locale: Locale };
-}) {
-  const { locale } = use(Promise.resolve(props.params));
-  const dictionary = use(getDictionary(locale, 'join')) as JoinDictionary | null;
+export default async function JoinPage({ params }: { params: { locale: Locale } }) {
+  const dictionary = (await getDictionary(params.locale, 'join')) as JoinDictionary | null;
 
   if (!dictionary) {
     return (
@@ -19,7 +15,7 @@ export default function JoinPage(props: {
     );
   }
 
-  const { heading, intro, steps, callToAction } = dictionary;
+  const { heading, intro, steps, callToAction, form, successMessage, errorMessage } = dictionary;
 
   return (
     <main className="max-w-3xl mx-auto py-10 px-4 space-y-8">
@@ -36,9 +32,8 @@ export default function JoinPage(props: {
         <div className="mt-8 text-blue-600 font-semibold">{callToAction}</div>
       </section>
 
-      {/* ✅ Join Form Section */}
       <section className="pt-6">
-        <JoinForm />
+        <JoinForm dictionary={dictionary} />
       </section>
     </main>
   );

@@ -6,5 +6,15 @@
     "step2": "Share our vision with your community.",
     "step3": "Contribute your time, skills, or resources."
   },
-  "callToAction": "Together, we can make a difference."
+  "callToAction": "Together, we can make a difference.",
+  "form": {
+    "name": "Full Name",
+    "email": "Email Address",
+    "phone": "Phone Number",
+    "location": "Your Location",
+    "message": "Optional Message",
+    "button": "Join Now"
+  },
+  "successMessage": "Thank you for joining! We will contact you soon.",
+  "errorMessage": "Oops! Something went wrong. Please try again."
 }

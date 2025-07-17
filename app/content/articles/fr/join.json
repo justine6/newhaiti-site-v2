@@ -1,10 +1,20 @@
 {
   "heading": "Rejoignez Notre Mission",
-  "intro": "Voici comment vous pouvez aider à restaurer la dignité et reconstruire l’espoir.",
+  "intro": "Voici comment vous pouvez aider à restaurer la dignité et à reconstruire l’espoir.",
   "steps": {
     "step1": "Inscrivez-vous à notre newsletter.",
     "step2": "Partagez notre vision avec votre communauté.",
     "step3": "Contribuez avec votre temps, vos compétences ou vos ressources."
   },
-  "callToAction": "Ensemble, nous pouvons faire la différence."
+  "callToAction": "Ensemble, nous pouvons faire la différence.",
+  "form": {
+    "name": "Nom Complet",
+    "email": "Adresse Email",
+    "phone": "Numéro de Téléphone",
+    "location": "Votre Localisation",
+    "message": "Message Optionnel",
+    "button": "Rejoindre Maintenant"
+  },
+  "successMessage": "Merci de nous avoir rejoints ! Nous vous contacterons bientôt.",
+  "errorMessage": "Oups ! Une erreur s'est produite. Veuillez réessayer."
 }
