@@ -2,7 +2,7 @@ import '../../styles/globals.css';
 
 import { ReactNode } from 'react';
 import { dir } from 'i18next';
-import { use } from 'react'; // ✅ Needed for use(Promise.resolve(...))
+import { use } from 'react';
 import { languages, type Locale } from '@/lib/i18n/settings';
 import Topbar from '@/components/navigation/Topbar';
 
@@ -24,13 +24,19 @@ export default function LocaleLayout({
   children: ReactNode;
   params: { locale: string };
 }) {
-  const { locale } = use(Promise.resolve(params)); // ✅ This is what Next.js 15 expects
-  const direction = dir(locale as Locale);
+  const { locale } = use(Promise.resolve(params));
+
+  // ✅ Validate locale and fallback to 'en'
+  const safeLocale: Locale = languages.includes(locale as Locale)
+    ? (locale as Locale)
+    : 'en';
+
+  const direction = dir(safeLocale);
 
   return (
-    <html lang={locale} dir={direction}>
+    <html lang={safeLocale} dir={direction}>
       <body>
-        <Topbar locale={locale} />
+        <Topbar locale={safeLocale} />
         {children}
       </body>
     </html>

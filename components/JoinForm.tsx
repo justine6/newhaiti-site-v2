@@ -1,118 +1,115 @@
 'use client';
 
 import { useState } from 'react';
-import type { JoinDictionary } from '@/lib/i18n/types';
 
-type JoinFormProps = {
-  dictionary: JoinDictionary;
-};
-
-export default function JoinForm({ dictionary }: JoinFormProps) {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    location: '',
-    message: '',
-  });
-
-  const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
-  const [responseMessage, setResponseMessage] = useState('');
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
+export default function JoinForm() {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [phone, setPhone] = useState('');
+  const [location, setLocation] = useState('');
+  const [message, setMessage] = useState('');
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setStatus('loading');
+    setIsSubmitting(true);
+    setError(null);
 
     try {
       const res = await fetch('/api/join', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({ name, email, phone, location, message }),
       });
 
-      const data = await res.json();
-
       if (res.ok) {
-        setStatus('success');
-        setResponseMessage(dictionary.successMessage);
-        setFormData({ name: '', email: '', phone: '', location: '', message: '' });
+        setIsSubmitted(true);
+        setName('');
+        setEmail('');
+        setPhone('');
+        setLocation('');
+        setMessage('');
       } else {
-        setStatus('error');
-        setResponseMessage(data.error || dictionary.errorMessage);
+        const result = await res.json();
+        setError(result.error || 'Something went wrong. Please try again.');
       }
-    } catch (error) {
-      setStatus('error');
-      setResponseMessage(dictionary.errorMessage);
+    } catch (err: any) {
+      setError('Network error. Please try again.');
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
   return (
-    <form
-      onSubmit={handleSubmit}
-      className="max-w-xl mx-auto p-4 bg-white shadow-md rounded-md space-y-4"
-    >
-      <h2 className="text-2xl font-bold text-center">{dictionary.heading}</h2>
+    <form onSubmit={handleSubmit} className="space-y-4">
+      <div>
+        <label className="block text-sm font-medium">Name</label>
+        <input
+          className="w-full border p-2 rounded"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+          required
+        />
+      </div>
 
-      <input
-        type="text"
-        name="name"
-        placeholder={dictionary.form.name}
-        value={formData.name}
-        onChange={handleChange}
-        required
-        className="w-full p-2 border rounded"
-      />
-      <input
-        type="email"
-        name="email"
-        placeholder={dictionary.form.email}
-        value={formData.email}
-        onChange={handleChange}
-        required
-        className="w-full p-2 border rounded"
-      />
-      <input
-        type="tel"
-        name="phone"
-        placeholder={dictionary.form.phone}
-        value={formData.phone}
-        onChange={handleChange}
-        required
-        className="w-full p-2 border rounded"
-      />
-      <input
-        type="text"
-        name="location"
-        placeholder={dictionary.form.location}
-        value={formData.location}
-        onChange={handleChange}
-        required
-        className="w-full p-2 border rounded"
-      />
-      <textarea
-        name="message"
-        placeholder={dictionary.form.message}
-        value={formData.message}
-        onChange={handleChange}
-        rows={4}
-        className="w-full p-2 border rounded"
-      />
+      <div>
+        <label className="block text-sm font-medium">Email</label>
+        <input
+          className="w-full border p-2 rounded"
+          type="email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          required
+        />
+      </div>
+
+      <div>
+        <label className="block text-sm font-medium">Phone</label>
+        <input
+          className="w-full border p-2 rounded"
+          value={phone}
+          onChange={(e) => setPhone(e.target.value)}
+        />
+      </div>
+
+      <div>
+        <label className="block text-sm font-medium">Location</label>
+        <input
+          className="w-full border p-2 rounded"
+          value={location}
+          onChange={(e) => setLocation(e.target.value)}
+        />
+      </div>
+
+      <div>
+        <label className="block text-sm font-medium">Message (optional)</label>
+        <textarea
+          className="w-full border p-2 rounded"
+          value={message}
+          onChange={(e) => setMessage(e.target.value)}
+          rows={4}
+        />
+      </div>
 
       <button
         type="submit"
-        className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 rounded"
-        disabled={status === 'loading'}
+        className="bg-blue-600 text-white px-4 py-2 rounded disabled:opacity-50"
+        disabled={isSubmitting}
       >
-        {status === 'loading' ? '...' : dictionary.form.button}
+        {isSubmitting ? 'Submitting...' : 'Join Now'}
       </button>
 
-      {status !== 'idle' && (
-        <p className={`text-center ${status === 'success' ? 'text-green-600' : 'text-red-600'}`}>
-          {responseMessage}
+      {isSubmitted && (
+        <p className="mt-4 text-green-600 text-sm font-medium">
+          ✅ Thank you for joining! You will receive a confirmation email shortly.
+        </p>
+      )}
+
+      {error && (
+        <p className="mt-4 text-red-500 text-sm font-medium">
+          ❌ {error}
         </p>
       )}
     </form>
