@@ -4,7 +4,9 @@ import type { JoinDictionary } from '@/lib/i18n/types';
 import JoinForm from '@/components/JoinForm';
 
 export default async function JoinPage({ params }: { params: { locale: Locale } }) {
-  const dictionary = (await getDictionary(params.locale, 'join')) as JoinDictionary | null;
+  // ✅ Fix for Next.js 15 dynamic route param handling
+  const { locale } = await Promise.resolve(params);
+  const dictionary = (await getDictionary(locale, 'join')) as JoinDictionary | null;
 
   if (!dictionary) {
     return (
@@ -15,7 +17,7 @@ export default async function JoinPage({ params }: { params: { locale: Locale } 
     );
   }
 
-  const { heading, intro, steps, callToAction, form, successMessage, errorMessage } = dictionary;
+  const { heading, intro, steps, callToAction } = dictionary;
 
   return (
     <main className="max-w-3xl mx-auto py-10 px-4 space-y-8">
