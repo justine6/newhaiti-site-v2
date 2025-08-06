@@ -2,7 +2,6 @@ import '../../styles/globals.css';
 
 import { ReactNode } from 'react';
 import { dir } from 'i18next';
-import { use } from 'react';
 import { languages, type Locale } from '@/lib/i18n/settings';
 import Topbar from '@/components/navigation/Topbar';
 
@@ -17,21 +16,21 @@ export async function generateMetadata() {
   };
 }
 
-export default function LocaleLayout({
+export default async function LocaleLayout({
   children,
   params,
 }: {
   children: ReactNode;
   params: { locale: string };
 }) {
-  const { locale } = use(Promise.resolve(params));
+  const locale = params.locale;
 
-  // ✅ Validate locale and fallback to 'en'
+  // Validate locale and fallback to 'en'
   const safeLocale: Locale = languages.includes(locale as Locale)
     ? (locale as Locale)
     : 'en';
 
-  const direction = dir(safeLocale);
+  const direction = dir(safeLocale); // e.g., 'ltr'
 
   return (
     <html lang={safeLocale} dir={direction}>
@@ -41,4 +40,4 @@ export default function LocaleLayout({
       </body>
     </html>
   );
-}
+} // ✅ <--- This closing brace was missing

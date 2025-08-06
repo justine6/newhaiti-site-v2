@@ -1,74 +1,77 @@
 'use client';
 
-export default function Hero() {
+import Link from 'next/link';
+
+type HeroSectionProps = {
+  locale: string;
+  dictionary: {
+    title: string;
+    subtitle: string;
+    ctaVision: string;
+    ctaJoin: string;
+  };
+};
+
+export default function HeroSection({ locale, dictionary }: HeroSectionProps) {
   return (
     <section className="relative text-white min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background image with one-time zoom animation */}
+      {/* Haiti map background image */}
       <div
-        className="absolute inset-0 bg-cover bg-center animate-zoom-once"
+        className="absolute inset-0 bg-no-repeat animate-zoom-once"
         style={{
-          backgroundImage: "url(/images/haiti-hero-map.jpg)", // Your map
+          backgroundImage: "url(/images/haiti-hero-map.jpg)",
+          backgroundSize: "contain",
+          backgroundPosition: "center",
         }}
       />
 
-      {/* Semi-transparent overlay to preserve flag colors */}
+      {/* Overlays */}
       <div className="absolute inset-0 bg-black/20" />
-
-      {/* Radial gradient fade behind text */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(0,0,0,0.6)_0%,transparent_70%)]" />
 
-      {/* Content container with fade-in animation */}
+      {/* Content */}
       <div className="relative z-10 text-center px-4 md:px-6 lg:px-8 animate-fade-in">
-        {/* Logo */}
         <img
           src="/images/newhaitilogo.png"
           alt="New Haiti Logo"
           className="w-32 h-32 md:w-40 md:h-40 rounded-full shadow-lg mx-auto mb-6"
         />
-
-        {/* Title */}
         <h1 className="text-4xl md:text-6xl font-extrabold mb-2 drop-shadow-lg">
-          Nouvo Ayiti 2075
+          {dictionary.title}
         </h1>
-
-        {/* Subtitle */}
         <p className="text-lg md:text-2xl mb-8 drop-shadow-md">
-          Restaurer la dignité. Reconstruire l’espoir.
+          {dictionary.subtitle}
         </p>
-
-        {/* Buttons with scale-in + breathing animation */}
         <div className="flex flex-wrap justify-center gap-4 animate-buttons">
-          <a
-            href="#vision"
+          <Link
+            href={`/${locale}/blog`}
             className="bg-white text-black px-6 py-3 rounded-full font-semibold hover:scale-105 transition animate-breathing"
           >
-            Lire la vision
-          </a>
-          <a
-            href="#join"
+            {dictionary.ctaVision}
+          </Link>
+          <Link
+            href={`/${locale}/join`}
             className="bg-red-600 text-white px-6 py-3 rounded-full font-semibold hover:scale-105 transition animate-breathing"
           >
-            Rejoindre le mouvement
-          </a>
+            {dictionary.ctaJoin}
+          </Link>
         </div>
       </div>
 
-      {/* Tailwind animation styles */}
+      {/* Animations */}
       <style jsx global>{`
-        /* Background zoom */
         @keyframes zoom-once {
           0% {
             transform: scale(1);
           }
           100% {
-            transform: scale(1.1);
+            transform: scale(1.05);
           }
         }
         .animate-zoom-once {
           animation: zoom-once 15s ease-in-out forwards;
         }
 
-        /* Fade in for text */
         @keyframes fade-in {
           0% {
             opacity: 0;
@@ -84,7 +87,6 @@ export default function Hero() {
           opacity: 0;
         }
 
-        /* Button scale-up after text */
         @keyframes scale-in {
           0% {
             opacity: 0;
@@ -100,7 +102,6 @@ export default function Hero() {
           opacity: 0;
         }
 
-        /* Continuous breathing effect */
         @keyframes breathing {
           0% {
             transform: scale(1);

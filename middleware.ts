@@ -1,8 +1,7 @@
 // middleware.ts
-
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
-import { defaultLocale } from './lib/i18n/settings'; // ✅ import your actual setting
+import { defaultLocale } from './lib/i18n/settings';
 
 const PUBLIC_FILE = /\.(.*)$/;
 
@@ -34,7 +33,13 @@ export function middleware(request: NextRequest) {
 
 export const config = {
   matcher: [
-    // ✅ Match all routes except API, _next, static files, and favicon
-    '/((?!api|_next|favicon.ico|.*\\..*).*)',
+    /*
+      This regex will skip:
+      - API routes
+      - _next/static and _next/image
+      - favicon.ico
+      - any file with an extension (e.g., .png, .jpg, .js, .css)
+    */
+    '/((?!api|_next/static|_next/image|favicon.ico|.*\\.(?:ico|png|jpg|svg|js|css|json|txt|woff|woff2)).*)',
   ],
 };

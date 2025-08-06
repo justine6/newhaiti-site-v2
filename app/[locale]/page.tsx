@@ -50,7 +50,7 @@ export default async function HomePage(props: Props) {
 
 return (
   <>
-    <HeroSection dictionary={homeDict.hero} />
+    <HeroSection dictionary={homeDict.hero} locale={locale} />
     <MissionSection dictionary={homeDict.mission} />
     <NewsletterSection dictionary={homeDict.newsletter} />
     <ContactSection dictionary={homeDict.contact} />
