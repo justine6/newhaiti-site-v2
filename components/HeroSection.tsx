@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 
 type HeroSectionProps = {
   locale: string;
@@ -31,10 +32,12 @@ export default function HeroSection({ locale, dictionary }: HeroSectionProps) {
 
       {/* Content */}
       <div className="relative z-10 text-center px-4 md:px-6 lg:px-8 animate-fade-in">
-        <img
+        <Image
           src="/images/newhaitilogo.png"
           alt="New Haiti Logo"
-          className="w-32 h-32 md:w-40 md:h-40 rounded-full shadow-lg mx-auto mb-6"
+          width={160}
+          height={160}
+          className="rounded-full shadow-lg mx-auto mb-6"
         />
         <h1 className="text-4xl md:text-6xl font-extrabold mb-2 drop-shadow-lg">
           {dictionary.title}
@@ -57,66 +60,6 @@ export default function HeroSection({ locale, dictionary }: HeroSectionProps) {
           </Link>
         </div>
       </div>
-
-      {/* Animations */}
-      <style jsx global>{`
-        @keyframes zoom-once {
-          0% {
-            transform: scale(1);
-          }
-          100% {
-            transform: scale(1.05);
-          }
-        }
-        .animate-zoom-once {
-          animation: zoom-once 15s ease-in-out forwards;
-        }
-
-        @keyframes fade-in {
-          0% {
-            opacity: 0;
-            transform: translateY(20px);
-          }
-          100% {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-        .animate-fade-in {
-          animation: fade-in 2s ease-out 1.5s forwards;
-          opacity: 0;
-        }
-
-        @keyframes scale-in {
-          0% {
-            opacity: 0;
-            transform: scale(0.9);
-          }
-          100% {
-            opacity: 1;
-            transform: scale(1);
-          }
-        }
-        .animate-buttons {
-          animation: scale-in 0.8s ease-out 3.8s forwards;
-          opacity: 0;
-        }
-
-        @keyframes breathing {
-          0% {
-            transform: scale(1);
-          }
-          50% {
-            transform: scale(1.05);
-          }
-          100% {
-            transform: scale(1);
-          }
-        }
-        .animate-breathing {
-          animation: breathing 4s ease-in-out infinite;
-        }
-      `}</style>
     </section>
   );
 }

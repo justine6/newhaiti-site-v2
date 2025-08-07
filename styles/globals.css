@@ -1,9 +1,63 @@
+/* styles/globals.css */
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Optional custom styles */
-body {
-  font-family: system-ui, sans-serif;
+/* === Custom Animations === */
+@keyframes zoom-once {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.05);
+  }
+}
+.animate-zoom-once {
+  animation: zoom-once 15s ease-in-out forwards;
 }
 
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate-fade-in {
+  animation: fade-in 2s ease-out 1.5s forwards;
+  opacity: 0;
+}
+
+@keyframes scale-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.animate-buttons {
+  animation: scale-in 0.8s ease-out 3.8s forwards;
+  opacity: 0;
+}
+
+@keyframes breathing {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.animate-breathing {
+  animation: breathing 4s ease-in-out infinite;
+}
