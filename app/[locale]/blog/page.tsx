@@ -5,7 +5,8 @@ type Props = {
   params: { locale: Locale };
 };
 
-export default async function BlogPage({ params: { locale } }: Props) {
+export default async function BlogPage(props: Props) {
+  const { locale } = await Promise.resolve(props.params);
   const blog = await getDictionary(locale, 'blog');
 
   return (

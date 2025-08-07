@@ -5,6 +5,7 @@ import { dir } from 'i18next';
 import { languages, type Locale } from '@/lib/i18n/settings';
 import Topbar from '@/components/navigation/Topbar';
 
+
 export async function generateStaticParams() {
   return languages.map((locale) => ({ locale }));
 }
@@ -16,14 +17,12 @@ export async function generateMetadata() {
   };
 }
 
-export default async function LocaleLayout({
-  children,
-  params,
-}: {
+export default async function LocaleLayout({ children, params }: {
   children: ReactNode;
   params: { locale: string };
 }) {
-  const locale = params.locale;
+  const { locale } = await Promise.resolve(params);
+
 
   // Validate locale and fallback to 'en'
   const safeLocale: Locale = languages.includes(locale as Locale)

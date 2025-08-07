@@ -21,8 +21,8 @@ type Props = {
   };
 };
 
-export default async function HomePage(props: Props) {
-  const { locale } = await Promise.resolve(props.params);
+export default async function HomePage({ params }: Props) {
+  const { locale } = await Promise.resolve(params);
   const dictionary = await getDictionary(locale as Locale, 'home');
 
   // Validate all required sections exist
@@ -48,13 +48,13 @@ export default async function HomePage(props: Props) {
 
   const homeDict = dictionary as HomeDictionary;
 
-return (
-  <>
-    <HeroSection dictionary={homeDict.hero} locale={locale} />
-    <MissionSection dictionary={homeDict.mission} />
-    <NewsletterSection dictionary={homeDict.newsletter} />
-    <ContactSection dictionary={homeDict.contact} />
-    <Footer dictionary={homeDict.footer} />
-  </>
-);
-} // ← ✅ This closing brace was missing
+  return (
+    <>
+      <HeroSection dictionary={homeDict.hero} locale={locale} />
+      <MissionSection dictionary={homeDict.mission} />
+      <NewsletterSection dictionary={homeDict.newsletter} />
+      <ContactSection dictionary={homeDict.contact} />
+      <Footer dictionary={homeDict.footer} />
+    </>
+  );
+}
