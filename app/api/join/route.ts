@@ -3,8 +3,16 @@ import { NextRequest, NextResponse } from 'next/server';
 import { rateLimit } from '@/lib/rateLimiter';
 import logger from '@/lib/logger';
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-const ADMIN_EMAIL = 'info@nouvoayiti2075.com';
+const resendApiKey = process.env.RESEND_API_KEY;
+
+if (!resendApiKey) {
+  throw new Error("Missing RESEND_API_KEY in environment variables");
+}
+
+const resend = new Resend(resendApiKey);
+
+// ✅ Multiple admin emails
+const ADMIN_EMAILS = ['info@nouvoayiti2075.com', 'nouvoayiti2075@gmail.com'];
 
 // Helper: Get IP address from request
 function getClientIP(req: NextRequest): string {
@@ -57,10 +65,10 @@ export async function POST(req: NextRequest) {
 
     logger.info(`[EMAIL_SENT] Confirmation sent to: ${email}`);
 
-    // Notify admin
+    // Notify admins
     await resend.emails.send({
       from: 'Nouvo Ayiti Bot <info@nouvoayiti2075.com>',
-      to: [ADMIN_EMAIL],
+      to: ADMIN_EMAILS, // ✅ Send to both emails here
       subject: 'Nouvel adhérent - Nouvo Ayiti 2075',
       html: `
         <p>📥 Nouvelle demande d’adhésion :</p>
@@ -74,7 +82,7 @@ export async function POST(req: NextRequest) {
       `,
     });
 
-    logger.info(`[ADMIN_ALERT] Notification sent to admin for: ${email}`);
+    logger.info(`[ADMIN_ALERT] Notification sent to admins for: ${email}`);
 
     return NextResponse.json(
       { success: true, message: 'Submission received and emails sent.' },
