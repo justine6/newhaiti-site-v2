@@ -5,53 +5,51 @@ import Link from 'next/link';
 
 type NewsletterSectionProps = {
   locale: string;
-  dict: {
-    newsletter: {
-      title: string;
-      description: string;
-      placeholder: string;
-      subscribe: string;
-    };
-    hero: {
-      readVision: string;
-      joinMovement: string;
-    };
+  dictionary: {
+    newsletterTitle: string;
+    newsletterDescription: string;
+    newsletterPlaceholder: string;
+    newsletterButton: string;
   };
+  joinLabel: string;
 };
 
-export default function NewsletterSection({ locale, dict }: NewsletterSectionProps) {
+export default function NewsletterSection({
+  locale,
+  dictionary,
+  joinLabel,
+}: NewsletterSectionProps) {
   const [email, setEmail] = useState('');
 
   const handleSubscribe = (e: React.FormEvent) => {
     e.preventDefault();
-    // Optional: implement client-side feedback
+    // TODO: Send email to backend
+    setEmail('');
   };
 
   return (
     <section className="bg-blue-50 py-16 text-center px-4">
-      {/* --- Buttons Section --- */}
+      {/* Join Button */}
       <div className="flex justify-center gap-4 mb-8 flex-wrap">
-        <Link href={`/${locale}/blog`}>
-          <button className="bg-white text-black font-semibold px-6 py-2 rounded-full hover:scale-105 transition">
-            {dict.hero.readVision}
-          </button>
-        </Link>
         <Link href={`/${locale}/join`}>
-          <button className="bg-red-600 text-white font-semibold px-6 py-2 rounded-full hover:scale-105 transition">
-            {dict.hero.joinMovement}
-          </button>
+          <span className="inline-block bg-red-600 text-white font-semibold px-6 py-2 rounded-full shadow hover:scale-105 hover:bg-red-700 transition-transform cursor-pointer">
+            {joinLabel}
+          </span>
         </Link>
       </div>
 
-      {/* --- Newsletter Text --- */}
-      <h2 className="text-4xl font-bold text-blue-900">{dict.newsletter.title}</h2>
-      <p className="mt-4 text-blue-800 text-lg">{dict.newsletter.description}</p>
+      {/* Newsletter Text */}
+      <h2 className="text-4xl font-bold text-blue-900">{dictionary.newsletterTitle}</h2>
+      <p className="mt-4 text-blue-800 text-lg">{dictionary.newsletterDescription}</p>
 
-      {/* --- Newsletter Form --- */}
-      <form onSubmit={handleSubscribe} className="mt-8 flex justify-center items-center flex-wrap gap-4 max-w-xl mx-auto">
+      {/* Newsletter Form */}
+      <form
+        onSubmit={handleSubscribe}
+        className="mt-8 flex justify-center items-center flex-wrap gap-4 max-w-xl mx-auto"
+      >
         <input
           type="email"
-          placeholder={dict.newsletter.placeholder}
+          placeholder={dictionary.newsletterPlaceholder}
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           required
@@ -61,7 +59,7 @@ export default function NewsletterSection({ locale, dict }: NewsletterSectionPro
           type="submit"
           className="bg-blue-600 text-white px-6 py-3 rounded-md font-semibold hover:bg-blue-700 transition"
         >
-          {dict.newsletter.subscribe}
+          {dictionary.newsletterButton}
         </button>
       </form>
     </section>

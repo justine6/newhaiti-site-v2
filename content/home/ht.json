@@ -1,29 +1,26 @@
 {
   "hero": {
     "title": "Nouvo Ayiti 2075",
-    "subtitle": "Retabli Dinite. Rekonstwi Lespwa.",
-    "readMore": "Li Vizyon an",
+    "subtitle": "Retabli diyite. Rebati lespwa.",
     "joinNow": "Antre nan mouvman an"
   },
   "mission": {
-    "title": "Misyon Nou",
-    "description": "Angaje pou bati yon Ayiti dirab ak ini."
+    "heading": "Misyon Nou",
+    "points": ["Inite", "Geri", "Inovasyon"]
   },
   "newsletter": {
     "newsletterTitle": "Rete konekte",
-    "newsletterDescription": "Abònman ak bilten nou pou jwenn nouvèl sou misyon nou.",
-    "newsletterPlaceholder": "Antre adrès imel ou",
+    "newsletterDescription": "Abònman pou resevwa mizajou ak nouvèl.",
+    "newsletterPlaceholder": "Antre imel ou",
     "newsletterButton": "Abònman",
-    "newsletterSuccessMessage": "Mèsi paske ou abònman!"
+    "newsletterSuccessMessage": "Mèsi paske w abònman!"
   },
   "contact": {
-    "title": "Kontakte Nou",
-    "emailLabel": "Imel ou",
-    "messageLabel": "Mesaj ou",
-    "sendButton": "Voye"
+    "heading": "Kontakte Nou",
+    "description": "Nou la pou nou koute epi kolabore."
   },
   "footer": {
     "copyright": "© 2025 Nouvo Ayiti 2075. Tout dwa rezève.",
-    "poweredBy": "Sipòte pa Vercel & Next.js"
+    "poweredBy": "Soutni pa Vercel & Next.js"
   }
 }

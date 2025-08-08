@@ -25,7 +25,6 @@ export default async function HomePage({ params }: Props) {
   const { locale } = await Promise.resolve(params);
   const dictionary = await getDictionary(locale as Locale, 'home');
 
-  // Validate all required sections exist
   const hasRequiredSections =
     dictionary &&
     'hero' in dictionary &&
@@ -52,7 +51,14 @@ export default async function HomePage({ params }: Props) {
     <>
       <HeroSection dictionary={homeDict.hero} locale={locale} />
       <MissionSection dictionary={homeDict.mission} />
-      <NewsletterSection dictionary={homeDict.newsletter} />
+
+      {/* ✅ Updated NewsletterSection block inserted here */}
+      <NewsletterSection
+        dictionary={homeDict.newsletter}
+        joinLabel={homeDict.hero.joinNow}
+        locale={locale}
+      />
+
       <ContactSection dictionary={homeDict.contact} />
       <Footer dictionary={homeDict.footer} />
     </>

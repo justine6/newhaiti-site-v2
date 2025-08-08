@@ -1,12 +1,12 @@
 {
   "hero": {
-    "readVision": "Li Vizyon an",
-    "joinMovement": "Antre nan Mouvman an"
+    "readVision": "Li vizyon an",
+    "joinMovement": "Antre nan mouvman an"
   },
   "newsletter": {
-    "title": "Abònman ak Bilten Nou",
-    "description": "Rete enfòme sou misyon nou ak aksyon nou yo",
+    "title": "Rete konekte",
+    "description": "Abòne pou w resevwa mizajou, anons, ak enspirasyon soti nan Nouvo Ayiti 2075.",
     "placeholder": "Antre imèl ou",
-    "subscribe": "Abònman"
+    "subscribe": "Abòne"
   }
 }

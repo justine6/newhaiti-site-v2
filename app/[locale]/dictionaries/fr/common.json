@@ -1,4 +1,12 @@
 {
-  "readVision": "Lire la vision",
-  "joinMovement": "Rejoindre le mouvement"
+  "hero": {
+    "readVision": "Lire la vision",
+    "joinMovement": "Rejoindre le mouvement"
+  },
+  "newsletter": {
+    "title": "Restez connecté",
+    "description": "Abonnez-vous pour recevoir des mises à jour, des annonces et de l’inspiration de Nouvo Ayiti 2075.",
+    "placeholder": "Entrez votre email",
+    "subscribe": "S’abonner"
+  }
 }

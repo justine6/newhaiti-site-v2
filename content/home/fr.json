@@ -1,26 +1,23 @@
 {
   "hero": {
-    "title": "Nouvo Ayiti 2075",
-    "subtitle": "Restaurer la dignité. Reconstruire l'espoir.",
-    "readMore": "Lire la vision",
+    "title": "Nouvel Haïti 2075",
+    "subtitle": "Restaurer la dignité. Reconstruire l’espoir.",
     "joinNow": "Rejoindre le mouvement"
   },
   "mission": {
-    "title": "Notre Mission",
-    "description": "Engagés à construire un avenir durable et unifié pour Haïti."
+    "heading": "Notre mission",
+    "points": ["Unité", "Guérison", "Innovation"]
   },
   "newsletter": {
-    "newsletterTitle": "Restez informé",
-    "newsletterDescription": "Abonnez-vous à notre lettre d'information pour recevoir des nouvelles de notre mission.",
-    "newsletterPlaceholder": "Entrez votre adresse e-mail",
-    "newsletterButton": "S'abonner",
-    "newsletterSuccessMessage": "Merci de vous être abonné !"
+    "newsletterTitle": "Restez connecté",
+    "newsletterDescription": "Abonnez-vous pour recevoir des mises à jour et des nouvelles.",
+    "newsletterPlaceholder": "Entrez votre email",
+    "newsletterButton": "S’abonner",
+    "newsletterSuccessMessage": "Merci pour votre abonnement !"
   },
   "contact": {
-    "title": "Contactez-nous",
-    "emailLabel": "Votre e-mail",
-    "messageLabel": "Votre message",
-    "sendButton": "Envoyer"
+    "heading": "Contactez-nous",
+    "description": "Nous sommes là pour écouter et collaborer."
   },
   "footer": {
     "copyright": "© 2025 Nouvo Ayiti 2075. Tous droits réservés.",
