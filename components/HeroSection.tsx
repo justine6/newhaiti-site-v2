@@ -9,10 +9,9 @@ type HeroSectionProps = {
     title: string;
     subtitle: string;
     ctaJoin: string;
-    ctaRead: string; // ✅ Add this line
+    ctaRead: string;
   };
 };
-
 
 export default function HeroSection({ locale, dictionary }: HeroSectionProps) {
   return (
@@ -22,7 +21,7 @@ export default function HeroSection({ locale, dictionary }: HeroSectionProps) {
         className="absolute inset-0 bg-no-repeat animate-zoom-once"
         style={{
           backgroundImage: "url(/images/haiti-hero-map.jpg)",
-          backgroundSize: "contain",
+          backgroundSize: "cover", // ✅ Updated to cover
           backgroundPosition: "center",
         }}
       />
@@ -47,15 +46,21 @@ export default function HeroSection({ locale, dictionary }: HeroSectionProps) {
           {dictionary.subtitle}
         </p>
 
-        <div className="flex justify-center animate-buttons mt-6">
+        <div className="flex flex-col md:flex-row gap-4 justify-center animate-buttons mt-6">
+          <Link
+            href={`/${locale}/vision`}
+            className="bg-white text-red-600 px-8 py-4 text-lg md:text-xl rounded-full font-bold shadow-xl hover:scale-110 hover:shadow-2xl transition duration-300 focus:outline-none focus:ring-4 focus:ring-red-400"
+          >
+            {dictionary.ctaRead}
+          </Link>
           <Link
             href={`/${locale}/join`}
-            className="bg-red-600 text-white px-8 py-4 text-lg md:text-xl rounded-full font-bold shadow-xl hover:scale-110 hover:shadow-2xl transition duration-300 focus:outline-none focus:ring-4 focus:ring-red-400 animate-breathing"
+            className="bg-red-600 text-white px-8 py-4 text-lg md:text-xl rounded-full font-bold shadow-xl hover:scale-110 hover:shadow-2xl transition duration-300 focus:outline-none focus:ring-4 focus:ring-red-400"
           >
             {dictionary.ctaJoin}
           </Link>
         </div>
-      </div> {/* content wrapper */}
-    </section>
+      </div> {/* ✅ closes content wrapper */}
+    </section>  // ✅ closes HeroSection
   );
 }
