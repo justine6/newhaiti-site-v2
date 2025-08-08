@@ -1,5 +1,6 @@
-import { getDictionary } from '@/lib/getDictionary';
-import { Locale } from '@/i18n-config';
+import { getDictionary } from '../../../lib/getDictionary';
+import { Locale } from '../../../i18n-config';
+
 
 type Props = {
   params: { locale: Locale };
