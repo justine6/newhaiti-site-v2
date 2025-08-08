@@ -66,6 +66,7 @@ export default function HeroSection({ locale, dictionary }: HeroSectionProps) {
     {dictionary.ctaRead}
   </Link>
 </div>
-</div> {/* ← closing the content wrapper */}
-</section> {/* ← closing the <section> properly */}
-); {/* ← closing the return function */}
+      </div> {/* content wrapper */}
+    </section> {/* hero section */}
+  );
+}
