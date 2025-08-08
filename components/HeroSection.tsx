@@ -63,6 +63,9 @@ export default function HeroSection({ locale, dictionary }: HeroSectionProps) {
     rel="noopener noreferrer"
     className="bg-blue-600 text-white px-8 py-4 text-lg md:text-xl rounded-full font-bold shadow-xl hover:scale-110 hover:shadow-2xl transition duration-300 focus:outline-none focus:ring-4 focus:ring-blue-400 animate-breathing"
   >
-    Read the Vision
+    {dictionary.ctaRead}
   </Link>
 </div>
+</div> {/* ← closing the content wrapper */}
+</section> {/* ← closing the <section> properly */}
+); {/* ← closing the return function */}
