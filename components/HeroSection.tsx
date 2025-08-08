@@ -47,26 +47,15 @@ export default function HeroSection({ locale, dictionary }: HeroSectionProps) {
           {dictionary.subtitle}
         </p>
 
-<div className="flex flex-wrap justify-center gap-4 animate-buttons mt-6">
-  {/* Join the Movement */}
-  <Link
-    href={`/${locale}/join`}
-    className="bg-red-600 text-white px-8 py-4 text-lg md:text-xl rounded-full font-bold shadow-xl hover:scale-110 hover:shadow-2xl transition duration-300 focus:outline-none focus:ring-4 focus:ring-red-400 animate-breathing"
-  >
-    {dictionary.ctaJoin}
-  </Link>
-
-  {/* Read the Vision */}
-  <Link
-    href="https://blog.nouvoayiti2075.com"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="bg-blue-600 text-white px-8 py-4 text-lg md:text-xl rounded-full font-bold shadow-xl hover:scale-110 hover:shadow-2xl transition duration-300 focus:outline-none focus:ring-4 focus:ring-blue-400 animate-breathing"
-  >
-    {dictionary.ctaRead}
-  </Link>
-</div>
+        <div className="flex justify-center animate-buttons mt-6">
+          <Link
+            href={`/${locale}/join`}
+            className="bg-red-600 text-white px-8 py-4 text-lg md:text-xl rounded-full font-bold shadow-xl hover:scale-110 hover:shadow-2xl transition duration-300 focus:outline-none focus:ring-4 focus:ring-red-400 animate-breathing"
+          >
+            {dictionary.ctaJoin}
+          </Link>
+        </div>
       </div> {/* content wrapper */}
-    </section> {/* hero section */}
+    </section>
   );
 }
