@@ -45,17 +45,22 @@ export default function HeroSection({ locale, dictionary }: HeroSectionProps) {
         <p className="text-lg md:text-2xl mb-8 drop-shadow-md">
           {dictionary.subtitle}
         </p>
-<div className="flex flex-wrap justify-center gap-6 animate-buttons mt-6">
-  <Link
-    href={`/${locale}/blog`}
-    className="bg-white text-black px-8 py-4 text-lg md:text-xl rounded-full font-bold shadow-xl hover:scale-110 hover:shadow-2xl transition duration-300 focus:outline-none focus:ring-4 focus:ring-black/30 animate-breathing"
-  >
-    {dictionary.ctaVision}
-  </Link>
-  <Link
-    href={`/${locale}/join`}
-    className="bg-red-600 text-white px-8 py-4 text-lg md:text-xl rounded-full font-bold shadow-xl hover:scale-110 hover:shadow-2xl transition duration-300 focus:outline-none focus:ring-4 focus:ring-red-400 animate-breathing"
-  >
-    {dictionary.ctaJoin}
-  </Link>
-</div>
+
+        <div className="flex flex-wrap justify-center gap-6 animate-buttons mt-6">
+          <Link
+            href={`/${locale}/blog`}
+            className="bg-white text-black px-8 py-4 text-lg md:text-xl rounded-full font-bold shadow-xl hover:scale-110 hover:shadow-2xl transition duration-300 focus:outline-none focus:ring-4 focus:ring-black/30 animate-breathing"
+          >
+            {dictionary.ctaVision}
+          </Link>
+          <Link
+            href={`/${locale}/join`}
+            className="bg-red-600 text-white px-8 py-4 text-lg md:text-xl rounded-full font-bold shadow-xl hover:scale-110 hover:shadow-2xl transition duration-300 focus:outline-none focus:ring-4 focus:ring-red-400 animate-breathing"
+          >
+            {dictionary.ctaJoin}
+          </Link>
+        </div>
+      </div>
+    </section>
+  );
+}
