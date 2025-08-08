@@ -1,0 +1,12 @@
+{
+  "hero": {
+    "readVision": "Read the Vision",
+    "joinMovement": "Join the Movement"
+  },
+  "newsletter": {
+    "title": "Subscribe to Our Newsletter",
+    "description": "Get updates on our mission and actions",
+    "placeholder": "Enter your email",
+    "subscribe": "Subscribe"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "hero": {
+    "readVision": "Leer la Visión",
+    "joinMovement": "Únete al Movimiento"
+  },
+  "newsletter": {
+    "title": "Suscríbete a Nuestro Boletín",
+    "description": "Recibe actualizaciones sobre nuestra misión y acciones",
+    "placeholder": "Introduce tu correo electrónico",
+    "subscribe": "Suscribirse"
+  }
+}

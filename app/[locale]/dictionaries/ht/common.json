@@ -1,0 +1,12 @@
+{
+  "hero": {
+    "readVision": "Li Vizyon an",
+    "joinMovement": "Antre nan Mouvman an"
+  },
+  "newsletter": {
+    "title": "Abònman ak Bilten Nou",
+    "description": "Rete enfòme sou misyon nou ak aksyon nou yo",
+    "placeholder": "Antre imèl ou",
+    "subscribe": "Abònman"
+  }
+}
