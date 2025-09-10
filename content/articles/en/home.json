@@ -1,65 +1,27 @@
 {
-"topbar": {
-  "home": "Home",
-  "about": "About",
-  "projects": "Projects",
-  "blog": "Blog",
-  "contact": "Contact",
-  "vision": "Vision",
-  "language": "Language"
-},
-"hero": {
-  "title": "New Haiti Team 2075",
-  "subtitle": "Restoring Dignity. Rebuilding Hope.",
-  "readMore": "Read the Vision",
-  "joinNow": "Join the Movement",
-  "watchVideos": "Watch Videos"
-},
-
+  "hero": {
+    "title": "New Haiti Team 2075",
+    "subtitle": "Restoring Dignity. Rebuilding Hope.",
+    "readMore": "Read the Vision",
+    "joinNow": "Join the Movement"
+  },
   "mission": {
     "heading": "Our Mission",
     "paragraph": "We are rebuilding Haiti with dignity, innovation, and a shared vision."
   },
+  "projects": {
+    "title": "Our Projects",
+    "intro": "Discover our key initiatives across the country.",
+    "motto": "Each project is a promise to the future.",
+    "items": [
+      { "title": "Healthcare for All", "description": "Accessible, community-first care.", "category": "Health" },
+      { "title": "Quality Education", "description": "Equip the next generation.", "category": "Education" },
+      { "title": "Reforestation", "description": "Restore our environment.", "category": "Environment" }
+    ]
+  },
   "newsletter": {
     "title": "Stay Connected",
     "description": "Subscribe to receive updates, news, and stories of hope."
-  },
-  "projects": {
-    "title": "Our Projects",
-    "intro": "Discover our key initiatives to restore dignity, rebuild hope, and renew vision across Haiti.",
-    "motto": "Each project is a promise to the future.",
-    "items": [
-      {
-        "title": "Healthcare for All",
-        "description": "Community clinics providing accessible care for everyone.",
-        "category": "Health"
-      },
-      {
-        "title": "Quality Education",
-        "description": "Well-equipped schools preparing the next generation.",
-        "category": "Education"
-      },
-      {
-        "title": "National Reforestation",
-        "description": "Planting millions of trees to combat deforestation.",
-        "category": "Environment"
-      },
-      {
-        "title": "Youth Empowerment",
-        "description": "Mentorship programs for personal and professional growth.",
-        "category": "Youth"
-      },
-      {
-        "title": "Resilient Infrastructure",
-        "description": "Building durable roads, bridges, and housing.",
-        "category": "Innovation"
-      },
-      {
-        "title": "Community Leadership",
-        "description": "Encouraging civic engagement and local governance.",
-        "category": "Youth"
-      }
-    ]
   },
   "contact": {
     "heading": "Contact Us",

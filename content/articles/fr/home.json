@@ -1,74 +1,37 @@
 {
-"topbar": {
-  "home": "Accueil",
-  "about": "À propos",
-  "projects": "Projets",
-  "blog": "Blog",
-  "contact": "Contact",
-  "vision": "Vision",
-  "language": "Langue"
-},
-"hero": {
-  "title": "Nouvelle Équipe Haïti 2075",
-  "subtitle": "Restaurer la dignité. Reconstruire l'espoir.",
-  "readMore": "Lire la Vision",
-  "joinNow": "Rejoindre le Mouvement",
-  "watchVideos": "Regarder les Vidéos"
-},
-  "mission": {
-    "heading": "Notre Mission",
-    "paragraph": "Nous reconstruisons Haïti avec dignité, innovation et une vision partagée."
+  "hero": {
+    "title": "Nouvo Ayiti 2075",
+    "subtitle": "Restaurer la dignité. Reconstruire l’espoir.",
+    "readMore": "Lire la Vision",
+    "joinNow": "Rejoindre le mouvement"
   },
-  "newsletter": {
-    "title": "Restez Connecté",
-    "description": "Abonnez-vous pour recevoir des mises à jour et des histoires porteuses d'espoir."
+  "mission": {
+    "heading": "Notre mission",
+    "paragraph": "Nous rebâtissons Haïti avec dignité, innovation et vision partagée."
   },
   "projects": {
-    "title": "Nos Projets",
-    "intro": "Découvrez nos principales initiatives visant à restaurer la dignité, reconstruire l'espoir et renouveler la vision en Haïti.",
-    "motto": "Chaque projet est une promesse pour l'avenir.",
+    "title": "Nos projets",
+    "intro": "Découvrez nos initiatives clés à travers le pays.",
+    "motto": "Chaque projet est une promesse pour l’avenir.",
     "items": [
-      {
-        "title": "Soins de Santé pour Tous",
-        "description": "Des cliniques communautaires offrant des soins accessibles à tous.",
-        "category": "Santé"
-      },
-      {
-        "title": "Éducation de Qualité",
-        "description": "Des écoles bien équipées pour préparer la prochaine génération.",
-        "category": "Éducation"
-      },
-      {
-        "title": "Reforestation Nationale",
-        "description": "Planter des millions d’arbres pour lutter contre la déforestation.",
-        "category": "Environnement"
-      },
-      {
-        "title": "Autonomisation des Jeunes",
-        "description": "Des programmes de mentorat pour le développement personnel et professionnel.",
-        "category": "Jeunesse"
-      },
-      {
-        "title": "Infrastructures Résilientes",
-        "description": "Construire des routes, des ponts et des logements durables.",
-        "category": "Innovation"
-      },
-      {
-        "title": "Leadership Communautaire",
-        "description": "Encourager la participation civique et la gouvernance locale.",
-        "category": "Jeunesse"
-      }
+      { "title": "Santé pour tous", "description": "Des soins accessibles et de proximité.", "category": "Santé" },
+      { "title": "Éducation de qualité", "description": "Former la prochaine génération.", "category": "Éducation" },
+      { "title": "Reboisement", "description": "Restaurer notre environnement.", "category": "Environnement" }
     ]
   },
+  "newsletter": {
+    "title": "Restez connecté",
+    "description": "Abonnez-vous pour recevoir des nouvelles et des histoires d’espoir."
+  },
   "contact": {
-    "heading": "Contactez-Nous",
-    "description": "Écrivez-nous pour partager vos idées, questions ou opportunités de collaboration.",
+    "heading": "Contactez-nous",
+    "description": "Partagez vos idées, questions ou opportunités de collaboration.",
     "placeholder": "Votre message",
     "cta": "Envoyer le message",
-    "success": "Merci de nous avoir contactés !"
+    "success": "Merci pour votre message !"
   },
   "footer": {
-    "copyright": "© 2025 Nouvelle Équipe Haïti 2075",
+    "copyright": "© 2025 Nouvo Ayiti 2075",
     "poweredBy": "Propulsé par le peuple haïtien"
   }
 }

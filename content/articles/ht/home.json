@@ -1,74 +1,37 @@
 {
-"topbar": {
-  "home": "Akèy",
-  "about": "Sou nou",
-  "projects": "Pwojè",
-  "blog": "Blogo",
-  "contact": "Kontak",
-  "vision": "Vizyon",
-  "language": "Lang"
-},
-"hero": {
-  "title": "Nouvo Ekip Ayiti 2075",
-  "subtitle": "Reta Dinyite. Rekonstwi Lespwa.",
-  "readMore": "Li Vizyon an",
-  "joinNow": "Antre nan Mouvman an",
-  "watchVideos": "Gade Videyo yo"
+  "hero": {
+    "title": "Nouvo Ayiti 2075",
+    "subtitle": "Retabli Dinyite. Rebati Lespwa.",
+    "readMore": "Li Vizyon an",
+    "joinNow": "Antre nan mouvman an"
   },
   "mission": {
-    "heading": "Misyon Nou",
-    "paragraph": "Nou ap rebati Ayiti ak dinyite, inovasyon, ak yon vizyon pataje."
-  },
-  "newsletter": {
-    "title": "Rete Konekte",
-    "description": "Abònman pou resevwa nouvèl, mizajou, ak istwa espwa."
+    "heading": "Misyon nou",
+    "paragraph": "Nou ap rebati Ayiti ak diyite, inovasyon, ak yon vizyon pataje."
   },
   "projects": {
-    "title": "Pwojè Nou yo",
-    "intro": "Dekouvri inisyativ kle nou yo pou retabli dinyite, rebati espwa, ak renouvle vizyon Ayiti.",
+    "title": "Pwojè nou yo",
+    "intro": "Dekouvri inisyativ enpòtan nou yo toupatou nan peyi a.",
     "motto": "Chak pwojè se yon pwomès pou lavni.",
     "items": [
-      {
-        "title": "Swen Sante pou Tout Moun",
-        "description": "Klinik kominotè ki bay swen fasil pou tout moun.",
-        "category": "Sante"
-      },
-      {
-        "title": "Edikasyon Kalite",
-        "description": "Lekòl byen ekipe pou prepare jenerasyon kap vini yo.",
-        "category": "Edikasyon"
-      },
-      {
-        "title": "Reforestasyon Nasyonal",
-        "description": "Plante milyon pyebwa pou konbat deforestasyon.",
-        "category": "Anviwònman"
-      },
-      {
-        "title": "Ankadreman Jèn yo",
-        "description": "Pwogram mentora pou devlopman pèsonèl ak pwofesyonèl.",
-        "category": "Jèn"
-      },
-      {
-        "title": "Enfrastrikti Rezilyan",
-        "description": "Konstriksyon wout, pon, ak kay dirab.",
-        "category": "Inovasyon"
-      },
-      {
-        "title": "Lidèchip Kominotè",
-        "description": "Ankouraje patisipasyon sivil ak bon jan gouvènans lokal.",
-        "category": "Jèn"
-      }
+      { "title": "Sante pou tout moun", "description": "Swiv swen kominotè ki aksesib.", "category": "Sante" },
+      { "title": "Edikasyon bon kalite", "description": "Prepare pwochen jenerasyon an.", "category": "Edikasyon" },
+      { "title": "Rebozman", "description": "Ranje anviwònman nou.", "category": "Anviwònman" }
     ]
   },
+  "newsletter": {
+    "title": "Rete konekte",
+    "description": "Abònman pou resevwa nouvèl ak istwa espwa."
+  },
   "contact": {
-    "heading": "Kontakte Nou",
-    "description": "Ekri nou pou pataje ide w, kesyon oswa opòtinite kolaborasyon.",
+    "heading": "Kontakte nou",
+    "description": "Voye kesyon, ide, oswa opòtinite kolaborasyon ou.",
     "placeholder": "Mesaj ou",
-    "cta": "Voye Mesaj",
+    "cta": "Voye mesaj la",
     "success": "Mèsi paske ou kontakte nou!"
   },
   "footer": {
-    "copyright": "© 2025 Nouvo Ekip Ayiti 2075",
-    "poweredBy": "Sipòte pa pèp Ayisyen an"
+    "copyright": "© 2025 Nouvo Ayiti 2075",
+    "poweredBy": "Pouse pa pèp Ayisyen an"
   }
 }
