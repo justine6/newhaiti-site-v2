@@ -1,0 +1,10 @@
+{
+  "title": "Kontakte Nou",
+  "intro": "Nou ta renmen tande pale de ou. Ranpli fòm nan epi n ap reponn ou pi vit posib.",
+  "form": {
+    "name": "Non ou",
+    "email": "Imèl ou",
+    "message": "Mesaj ou",
+    "submit": "Voye Mesaj"
+  }
+}

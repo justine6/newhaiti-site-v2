@@ -1,0 +1,10 @@
+{
+  "title": "Contáctanos",
+  "intro": "Nos encantaría saber de ti. Completa el formulario y te responderemos lo antes posible.",
+  "form": {
+    "name": "Tu nombre",
+    "email": "Tu correo electrónico",
+    "message": "Tu mensaje",
+    "submit": "Enviar mensaje"
+  }
+}

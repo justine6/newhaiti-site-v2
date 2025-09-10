@@ -1,0 +1,10 @@
+{
+  "title": "Contactez-nous",
+  "intro": "Nous serions ravis d’avoir de vos nouvelles. Remplissez le formulaire et nous vous répondrons dès que possible.",
+  "form": {
+    "name": "Votre nom",
+    "email": "Votre email",
+    "message": "Votre message",
+    "submit": "Envoyer le message"
+  }
+}
