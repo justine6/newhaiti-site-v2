@@ -1,7 +1,15 @@
 // lib/i18n/types.ts
 
 /** Sections supported by the dictionary system */
-export type Section = 'home' | 'about' | 'blog' | 'projects' | 'join' | 'teamDocs' | 'vision';
+export type Section =
+  | 'home'
+  | 'about'
+  | 'blog'
+  | 'projects'
+  | 'join'
+  | 'teamDocs'
+  | 'vision'
+  | 'contact'; // ✅ added
 
 /** Team Docs (/[locale]/team-docs) */
 export type TeamDocsDictionary = {
@@ -19,6 +27,7 @@ export type HomeDictionary = {
     subtitle: string;
     readMore: string;
     joinNow: string;
+    watchVideos?: string; // optional, for future use
   };
   mission: {
     heading: string;
@@ -52,13 +61,13 @@ export type HomeDictionary = {
   };
 };
 
-/** About page (keep minimal unless you add more fields) */
+/** About page */
 export type AboutDictionary = {
   heading: string;
   content: string;
 };
 
-/** Blog landing (sample structure, adjust to your needs) */
+/** Blog landing */
 export type BlogDictionary = {
   title: string;
   posts: {
@@ -68,16 +77,16 @@ export type BlogDictionary = {
   }[];
 };
 
-/** Projects page (/[locale]/projects) — matches your ProjectsPage component  */
+/** Projects page (/[locale]/projects) */
 export type ProjectsDictionary = {
   heading: string;
   intro: string;
-  /** Keys must match your categoryIcons slugs (e.g., "education", "sanitation", etc.) */
+  /** Keys must match your categoryIcons slugs */
   categories: Record<string, string>;
   callToAction: string;
 };
 
-/** Join page (form labels / texts) */
+/** Join page */
 export type JoinDictionary = {
   title: string;
   description: string;
@@ -92,7 +101,7 @@ export type JoinDictionary = {
   success: string;
 };
 
-/** Vision page (/[locale]/vision) */
+/** Vision page */
 export type VisionDictionary = {
   title: string;
   intro: string;
@@ -107,6 +116,18 @@ export type VisionDictionary = {
   }[];
 };
 
+/** ✅ Contact page (/[locale]/contact) */
+export type ContactDictionary = {
+  title: string;
+  intro: string;
+  form: {
+    name: string;
+    email: string;
+    message: string;
+    submit: string;
+  };
+};
+
 /** Mapping for precise return typing in getDictionary<T>() */
 export type DictionaryBySection = {
   home: HomeDictionary;
@@ -115,6 +136,6 @@ export type DictionaryBySection = {
   projects: ProjectsDictionary;
   join: JoinDictionary;
   teamDocs: TeamDocsDictionary;
-  vision: VisionDictionary;   // ✅ add this line
+  vision: VisionDictionary;
+  contact: ContactDictionary; // ✅ added
 };
-
