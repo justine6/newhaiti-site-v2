@@ -1,4 +1,5 @@
 // lib/i18n/get-dictionary.ts
+import 'server-only';
 import fs from 'fs';
 import path from 'path';
 import { languages, type Locale } from './settings';
