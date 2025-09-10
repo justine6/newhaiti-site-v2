@@ -1,0 +1,38 @@
+{
+  "title": "Nouvo Ayiti 2075 — Notre Vision Partagée",
+  "intro": "D’ici 2075, Haïti se tient comme une nation de dignité, de résilience et de prospérité partagée—bâtie par les communautés au pays et dans la diaspora.",
+  "sections": [
+    {
+      "heading": "La Dignité d’Abord",
+      "content": "Nous plaçons la dignité humaine au cœur des décisions—justice, sécurité et accès aux services essentiels pour chacun."
+    },
+    {
+      "heading": "Opportunité & Éducation",
+      "content": "De la petite enfance aux compétences techniques et à l’université, chaque Haïtien peut apprendre, construire et diriger."
+    },
+    {
+      "heading": "Résilience & Infrastructures",
+      "content": "Nous investissons dans les routes, le logement, l’eau potable, les cliniques et le numérique—des systèmes qui résistent aux chocs et servent tous."
+    },
+    {
+      "heading": "Une Économie Verte et Prospère",
+      "content": "Agriculture locale, reboisement et entrepreneuriat alimentent l’emploi, les exportations et une croissance sobre en carbone."
+    },
+    {
+      "heading": "Unité avec la Diaspora",
+      "content": "Les Haïtiens d’ici et d’ailleurs co-investissent, co-créent et co-gouvernent—reliant talents, capitaux et espoir."
+    }
+  ],
+  "videos": [
+    {
+      "title": "Bienvenue à Nouvo Ayiti 2075",
+      "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+      "caption": "Une brève introduction à notre vision à long terme."
+    },
+    {
+      "title": "Résilience Communautaire",
+      "url": "https://vimeo.com/76979871",
+      "caption": "Histoires de leadership local et d’action collective."
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "title": "Nuestra Visión para Nouvo Ayiti 2075",
+  "intro": "Un futuro basado en la dignidad, la resiliencia y el progreso colectivo.",
+  "sections": [
+    { "heading": "Dignidad", "content": "Poner a las personas en el centro de cada decisión." },
+    { "heading": "Resiliencia", "content": "Construir comunidades y sistemas que prosperen ante el cambio." },
+    { "heading": "Unidad", "content": "Movilizar a los haitianos dentro y fuera del país." }
+  ],
+  "videos": [
+    {
+      "title": "Bienvenidos a Nouvo Ayiti 2075",
+      "url": "https://vimeo.com/123456789",
+      "caption": "Una breve introducción a nuestra visión."
+    }
+  ]
+}
