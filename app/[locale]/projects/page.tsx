@@ -1,5 +1,4 @@
-'use client';
-
+// app/[locale]/projects/page.tsx
 import { getDictionary } from '@/lib/i18n/get-dictionary';
 import type { Locale } from '@/lib/i18n/settings';
 import type { ProjectsDictionary } from '@/lib/i18n/types';
@@ -18,13 +17,11 @@ import {
   BadgeCheck,
 } from 'lucide-react';
 
-import { motion } from 'framer-motion';
-
 type Props = {
   params: { locale: Locale };
 };
 
-const categoryIcons: Record<string, React.ReactNode> = {
+const categoryIcons: Record<string, JSX.Element> = {
   sanitation: <Globe className="w-8 h-8 text-blue-600 dark:text-blue-400" />,
   education: <BookOpen className="w-8 h-8 text-yellow-600 dark:text-yellow-400" />,
   infrastructure: <Building className="w-8 h-8 text-gray-600 dark:text-gray-400" />,
@@ -45,46 +42,29 @@ export default async function ProjectsPage({ params: { locale } }: Props) {
     return (
       <main className="max-w-4xl mx-auto py-10 px-4 text-red-600">
         <h1 className="text-2xl font-bold mb-2">Projects unavailable</h1>
-        <p>Please check your locale or the translation file for "projects".</p>
+        <p>Please check your locale or the translation file for “projects”.</p>
       </main>
     );
   }
 
   return (
     <main className="max-w-5xl mx-auto py-10 px-4">
-      <motion.h1
-        className="text-3xl font-bold mb-4 text-center md:text-left"
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-      >
-        {projects.heading}
-      </motion.h1>
-
-      <motion.p
-        className="text-lg text-muted-foreground mb-8 text-center md:text-left"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.2, duration: 0.4 }}
-      >
+      <h1 className="text-3xl font-bold mb-4 text-center md:text-left">{projects.heading}</h1>
+      <p className="text-lg text-muted-foreground mb-8 text-center md:text-left">
         {projects.intro}
-      </motion.p>
+      </p>
 
       <section className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-        {Object.entries(projects.categories).map(([key, value], index) => (
-          <motion.div
+        {Object.entries(projects.categories).map(([key, value]) => (
+          <div
             key={key}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.3, delay: index * 0.1 }}
-            viewport={{ once: true }}
             className="p-6 border border-gray-200 dark:border-zinc-700 rounded-xl shadow-sm hover:shadow-lg transition-shadow duration-300"
           >
             <div className="flex items-center justify-center mb-4">
               {categoryIcons[key] || <Globe className="w-8 h-8 text-gray-400" />}
             </div>
             <h3 className="text-lg font-semibold text-center">{value}</h3>
-          </motion.div>
+          </div>
         ))}
       </section>
 
