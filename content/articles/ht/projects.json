@@ -1,18 +1,18 @@
 {
-  "heading": "Pwojè Nou yo",
-  "intro": "Nou konsantre sou onz pwojè transfòmasyon pou rebati Ayiti dirabman ak ekite.",
+  "heading": "Zòn Pwojè Enpòtan",
+  "intro": "Dekouvri tèm priyoritè Nouvo Ayiti 2075 yo: sante, edikasyon, anviwònman, enfrastrikti, elatriye.",
   "categories": {
-    "sanitation": "Dlo ak Asenisman",
-    "education": "Edikasyon ak Alfabetizasyon",
-    "infrastructure": "Enfrastrikti ak Wout",
-    "healthcare": "Aksè ak Swen Sante",
-    "housing": "Lojman ak Abri",
-    "agriculture": "Agrikilti ak Sekirite Alimantè",
-    "environment": "Anviwònman ak Rezilyans",
-    "commerce": "Komès Lokal ak Inovasyon",
-    "arts": "Lart, Kilti ak Idantite",
-    "technology": "Transformasyon Dijital",
-    "governance": "Gouvènans Transparan"
+    "sanitation": "Swen Ijyèn & Dlo Pwòp",
+    "education": "Edikasyon",
+    "infrastructure": "Enfrastrikti",
+    "healthcare": "Sante",
+    "housing": "Lojman",
+    "agriculture": "Agrikilti",
+    "environment": "Anviwònman & Reforestasyon",
+    "commerce": "Komès & Ekonomi Lokal",
+    "arts": "Laj & Kilti",
+    "technology": "Teknoloji & Inovasyon",
+    "governance": "Lidèchip & Gouvènans"
   },
-  "callToAction": "Dekouvri kijan ou ka sipòte oswa dirije youn nan inisyativ sa yo."
+  "callToAction": "Pilye sa yo gide misyon nou—vini ede nou fè yo tounen reyalite."
 }

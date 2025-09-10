@@ -1,26 +1,69 @@
-
-// components/ProjectsSection.tsx
 'use client';
 
-type ProjectsSectionProps = {
-  t: (key: string) => string;
+import { motion } from 'framer-motion';
+import { HomeDictionary } from '@/lib/i18n/types';
+import { Lightbulb, Heart, Globe, School, Users } from 'lucide-react';
+
+type Props = {
+  dictionary: HomeDictionary['projects'];
 };
 
-export default function ProjectsSection({ t }: ProjectsSectionProps) {
-  return (
-    <section className="py-20 px-4 bg-gray-100 text-black text-center">
-      <h2 className="text-3xl md:text-4xl font-bold mb-6">{t('projectsTitle')}</h2>
-      <p className="text-lg md:text-xl max-w-3xl mx-auto mb-10">
-        {t('projectsDescription')}
-      </p>
+const icons = [
+  <Lightbulb key="lightbulb" className="w-6 h-6 text-primary" />,
+  <Heart key="heart" className="w-6 h-6 text-red-500" />,
+  <Globe key="globe" className="w-6 h-6 text-green-500" />,
+  <School key="school" className="w-6 h-6 text-yellow-500" />,
+  <Users key="users" className="w-6 h-6 text-blue-500" />,
+];
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-        <div className="p-6 border rounded-lg shadow bg-white">{t('project1')}</div>
-        <div className="p-6 border rounded-lg shadow bg-white">{t('project2')}</div>
-        <div className="p-6 border rounded-lg shadow bg-white">{t('project3')}</div>
-        <div className="p-6 border rounded-lg shadow bg-white">{t('project4')}</div>
-        <div className="p-6 border rounded-lg shadow bg-white">{t('project5')}</div>
-        <div className="p-6 border rounded-lg shadow bg-white">{t('project6')}</div>
+export default function ProjectsSection({ dictionary }: Props) {
+  return (
+    <section className="py-16 px-4 bg-gray-50 dark:bg-zinc-900">
+      <div className="max-w-6xl mx-auto text-center">
+        <motion.h2
+          className="text-3xl font-bold mb-4"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+        >
+          {dictionary.title}
+        </motion.h2>
+
+        <motion.p
+          className="text-muted-foreground max-w-3xl mx-auto mb-8 whitespace-pre-line"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2 }}
+        >
+          {dictionary.intro}
+        </motion.p>
+
+        <motion.blockquote
+          className="italic font-medium text-xl text-primary mb-12"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ delay: 0.4 }}
+        >
+          {dictionary.motto}
+        </motion.blockquote>
+
+        <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3 text-left">
+          {dictionary.items.map((item, index) => (
+            <motion.div
+              key={item.title}
+              className="bg-white dark:bg-zinc-800 rounded-xl shadow-md p-6 hover:scale-105 transition-transform"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.1 * index }}
+            >
+              <div className="flex items-center mb-3">
+                {icons[index % icons.length]}
+                <h3 className="text-lg font-semibold ml-2">{item.title}</h3>
+              </div>
+              <p className="text-sm text-muted-foreground">{item.description}</p>
+            </motion.div>
+          ))}
+        </div>
       </div>
     </section>
   );

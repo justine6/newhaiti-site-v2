@@ -1,37 +1,30 @@
+// lib/i18n/get-dictionary.ts
 import fs from 'fs';
 import path from 'path';
+import { languages, type Locale } from './settings';
 import type {
   Section,
-  JoinDictionary,
-  AboutDictionary,
-  BlogDictionary,
-  HomeDictionary,
-  ProjectsDictionary,
+  DictionaryBySection,
 } from './types';
 
-const supportedLocales = ['en', 'fr', 'ht', 'es'];
+const supportedLocales: readonly Locale[] = languages;
 
-export const getDictionary = async (
-  locale: string,
-  section: Section
-):
-  Promise<
-    | JoinDictionary
-    | AboutDictionary
-    | BlogDictionary
-    | HomeDictionary
-    | ProjectsDictionary
-    | null
-  > => {
+export const getDictionary = async <T extends Section>(
+  locale: Locale,
+  section: T
+): Promise<DictionaryBySection[T] | null> => {
   if (!supportedLocales.includes(locale)) {
     console.warn(`❌ Skipping invalid locale: "${locale}"`);
     return null;
   }
 
-  const isHome = section === 'home';
-  const filePath = isHome
-    ? path.join(process.cwd(), 'content', 'home', `${locale}.json`)
-    : path.join(process.cwd(), 'content', 'articles', locale, `${section}.json`);
+  const filePath = path.join(
+    process.cwd(),
+    'content',
+    'articles',
+    locale,
+    `${section}.json`
+  );
 
   try {
     if (!fs.existsSync(filePath)) {
@@ -42,7 +35,7 @@ export const getDictionary = async (
     const fileContent = fs.readFileSync(filePath, 'utf-8');
 
     try {
-      return JSON.parse(fileContent);
+      return JSON.parse(fileContent) as DictionaryBySection[T];
     } catch (parseError) {
       console.error(`❌ Failed to parse JSON for ${locale}/${section}:`, parseError);
       return null;

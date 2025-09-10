@@ -45,7 +45,7 @@
     "cmdk": "1.0.4",
     "date-fns": "^3.6.0",
     "embla-carousel-react": "8.5.1",
-    "framer-motion": "^12.18.1",
+    "framer-motion": "^12.23.12",
     "gray-matter": "^4.0.3",
     "i18next": "^25.2.1",
     "i18next-resources-to-backend": "^1.2.1",

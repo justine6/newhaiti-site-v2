@@ -1,18 +1,18 @@
 {
-  "heading": "Our Projects",
-  "intro": "We focus on eleven transformative projects to rebuild Haiti sustainably and equitably.",
+  "heading": "Key Project Areas",
+  "intro": "Explore the priority themes guiding Nouvo Ayiti 2075 across health, education, environment, infrastructure, and more.",
   "categories": {
-    "sanitation": "Water & Sanitation",
-    "education": "Education & Literacy",
-    "infrastructure": "Infrastructure & Roads",
-    "healthcare": "Healthcare Access",
-    "housing": "Housing & Shelter",
-    "agriculture": "Agriculture & Food Security",
-    "environment": "Environment & Resilience",
-    "commerce": "Local Commerce & Innovation",
-    "arts": "Arts, Culture & Identity",
-    "technology": "Digital Transformation",
-    "governance": "Transparent Governance"
+    "sanitation": "Sanitation & Clean Water",
+    "education": "Education",
+    "infrastructure": "Infrastructure",
+    "healthcare": "Healthcare",
+    "housing": "Housing",
+    "agriculture": "Agriculture",
+    "environment": "Environment & Reforestation",
+    "commerce": "Commerce & Local Economy",
+    "arts": "Arts & Culture",
+    "technology": "Technology & Innovation",
+    "governance": "Leadership & Governance"
   },
-  "callToAction": "Discover how you can support or lead one of these initiatives."
+  "callToAction": "These pillars guide our mission—join us to help turn them into reality."
 }

@@ -1,6 +1,8 @@
 import { getDictionary } from '@/lib/i18n/get-dictionary';
 import type { Locale } from '@/lib/i18n/settings';
 import type { HomeDictionary } from '@/lib/i18n/types';
+import ProjectsSection from '@/components/ProjectsSection';
+
 
 import HeroSection from '@/components/HeroSection';
 import MissionSection from '@/components/MissionSection';
@@ -29,6 +31,7 @@ export default async function HomePage({ params }: Props) {
     dictionary &&
     'hero' in dictionary &&
     'mission' in dictionary &&
+    'projects' in dictionary &&
     'newsletter' in dictionary &&
     'contact' in dictionary &&
     'footer' in dictionary;
@@ -51,16 +54,14 @@ export default async function HomePage({ params }: Props) {
     <>
       <HeroSection dictionary={homeDict.hero} locale={locale} />
       <MissionSection dictionary={homeDict.mission} />
-
-      {/* ✅ Updated NewsletterSection block inserted here */}
+      <ProjectsSection dictionary={homeDict.projects} />
       <NewsletterSection
         dictionary={homeDict.newsletter}
         joinLabel={homeDict.hero.joinNow}
         locale={locale}
       />
-
       <ContactSection dictionary={homeDict.contact} />
       <Footer dictionary={homeDict.footer} />
     </>
   );
-}
+} // ✅ Add this to close the HomePage function

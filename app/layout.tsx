@@ -1,7 +1,6 @@
 // app/layout.tsx
 import '@/styles/globals.css';
 
-
 export const metadata = {
   title: 'New Haiti Team 2075',
   description: 'Restoring Dignity. Rebuilding Hope.',
@@ -13,7 +12,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html>
+    <html lang="en" dir="ltr">
       <body>{children}</body>
     </html>
   );
