@@ -1,27 +1,74 @@
 {
-  "hero": {
-    "title": "Nuevo Equipo Haití 2075",
-    "subtitle": "Restaurando Dignidad. Reconstruyendo Esperanza.",
-    "readMore": "Leer la Visión",
-    "joinNow": "Únete al Movimiento"
-  },
+"topbar": {
+  "home": "Inicio",
+  "about": "Acerca de",
+  "projects": "Proyectos",
+  "blog": "Blog",
+  "contact": "Contacto",
+  "vision": "Visión",
+  "language": "Idioma"
+},
+"hero": {
+  "title": "Nuevo Equipo Haití 2075",
+  "subtitle": "Restaurar la dignidad. Reconstruir la esperanza.",
+  "readMore": "Leer la Visión",
+  "joinNow": "Unirse al Movimiento",
+  "watchVideos": "Ver Videos"
+},
   "mission": {
     "heading": "Nuestra Misión",
     "paragraph": "Estamos reconstruyendo Haití con dignidad, innovación y una visión compartida."
   },
   "newsletter": {
     "title": "Mantente Conectado",
-    "description": "Suscríbete para recibir actualizaciones e historias de esperanza."
+    "description": "Suscríbete para recibir noticias, actualizaciones e historias inspiradoras."
+  },
+  "projects": {
+    "title": "Nuestros Proyectos",
+    "intro": "Descubre nuestras principales iniciativas para restaurar la dignidad, reconstruir la esperanza y renovar la visión de Haití.",
+    "motto": "Cada proyecto es una promesa para el futuro.",
+    "items": [
+      {
+        "title": "Atención Médica para Todos",
+        "description": "Clínicas comunitarias que brindan atención accesible a todos.",
+        "category": "Salud"
+      },
+      {
+        "title": "Educación de Calidad",
+        "description": "Escuelas bien equipadas para preparar a la próxima generación.",
+        "category": "Educación"
+      },
+      {
+        "title": "Reforestación Nacional",
+        "description": "Plantar millones de árboles para combatir la deforestación.",
+        "category": "Medio Ambiente"
+      },
+      {
+        "title": "Empoderamiento Juvenil",
+        "description": "Programas de mentoría para el desarrollo personal y profesional.",
+        "category": "Juventud"
+      },
+      {
+        "title": "Infraestructura Resiliente",
+        "description": "Construcción de carreteras, puentes y viviendas sostenibles.",
+        "category": "Innovación"
+      },
+      {
+        "title": "Liderazgo Comunitario",
+        "description": "Fomentar la participación cívica y la gobernanza local.",
+        "category": "Juventud"
+      }
+    ]
   },
   "contact": {
     "heading": "Contáctanos",
-    "description": "Comunícate para compartir tus ideas, preguntas u oportunidades de colaboración.",
+    "description": "Escríbenos para compartir ideas, preguntas u oportunidades de colaboración.",
     "placeholder": "Tu mensaje",
-    "cta": "Enviar mensaje",
+    "cta": "Enviar Mensaje",
     "success": "¡Gracias por contactarnos!"
   },
   "footer": {
     "copyright": "© 2025 Nuevo Equipo Haití 2075",
-    "poweredBy": "Impulsado por el pueblo de Haití"
+    "poweredBy": "Impulsado por el pueblo haitiano"
   }
 }
