@@ -1,6 +1,6 @@
 const home = {
   hero: {
-    title: 'Welcome to Haiti 2075',
+    title: 'Welcome to Team Haiti 2075',
     subtitle: 'Restoring dignity. Rebuilding hope.',
     button: 'Join the Mission',
     readMore: 'Read the Vision',
@@ -70,4 +70,5 @@ We are working to restore peace and prosperity across the entire nation.`,
 };
 
 export default home;
+
 

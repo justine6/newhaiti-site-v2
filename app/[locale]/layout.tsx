@@ -11,7 +11,7 @@ export async function generateStaticParams() {
 
 export async function generateMetadata() {
   return {
-    title: 'Haiti 2075',
+    title: 'Team Haiti 2075',
     description: 'Restoring Dignity. Rebuilding Hope.',
   };
 }
@@ -49,4 +49,5 @@ export default async function LocaleLayout(props: Props) {
     </>
   );
 }
+
 

@@ -27,7 +27,7 @@ const home = {
     success: "We’ve received your message!",
   },
   footer: {
-    rights: "© 2025 Haiti 2075. All rights reserved.",
+    rights: "© 2025 Team Haiti 2075. All rights reserved.",
     links: {
       about: "About",
       contact: "Contact",
@@ -37,4 +37,5 @@ const home = {
 };
 
 export default home;
+
 

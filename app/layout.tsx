@@ -2,7 +2,7 @@
 import '@/styles/globals.css';
 
 export const metadata = {
-  title: 'Haiti 2075',
+  title: 'Team Haiti 2075',
   description: 'Restoring Dignity. Rebuilding Hope.',
 };
 
@@ -17,4 +17,5 @@ export default function RootLayout({
     </html>
   );
 }
+
 
