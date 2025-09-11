@@ -50,18 +50,18 @@ export default async function HomePage({ params }: Props) {
 
   const homeDict = dictionary as HomeDictionary;
 
-  return (
-    <>
-      <HeroSection dictionary={homeDict.hero} locale={locale} />
-      <MissionSection dictionary={homeDict.mission} />
-      <ProjectsSection dictionary={homeDict.projects} />
-      <NewsletterSection
-        dictionary={homeDict.newsletter}
-        joinLabel={homeDict.hero.joinNow}
-        locale={locale}
-      />
-      <ContactSection dictionary={homeDict.contact} />
-      <Footer dictionary={homeDict.footer} />
-    </>
-  );
-} // ✅ Add this to close the HomePage function
+return (
+  <>
+    <HeroSection dictionary={homeDict.hero} locale={locale} />
+    <MissionSection dictionary={homeDict.mission} />
+    <ProjectsSection dictionary={homeDict.projects} />
+    <NewsletterSection
+      dictionary={homeDict.newsletter}
+      joinLabel={homeDict.hero.joinNow}
+      locale={locale}
+    />
+    <ContactSection dictionary={homeDict.contact} locale={locale} />
+    <Footer dictionary={homeDict.footer} />
+  </>
+);
+} // ✅ closes the HomePage function
