@@ -1,5 +1,5 @@
 {
-  "title": "Our Vision for Nouvo Ayiti 2075",
+  "title": "Our Vision for Ayiti 2075",
   "intro": "A future grounded in dignity, resilience, and collective progress.",
   "sections": [
     { "heading": "Dignity", "content": "Center people in every decision we make." },
@@ -8,7 +8,7 @@
   ],
   "videos": [
     {
-      "title": "Welcome to Nouvo Ayiti 2075",
+      "title": "Welcome to Ayiti 2075",
       "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
       "caption": "A brief introduction to our long-term vision."
     },
@@ -19,3 +19,4 @@
     }
   ]
 }
+

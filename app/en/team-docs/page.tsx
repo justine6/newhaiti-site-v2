@@ -4,14 +4,14 @@ import { useEffect } from 'react';
 
 export default function TeamDocsPage() {
   useEffect(() => {
-    document.title = 'Team Document Hub – Nouvo Ayiti 2075';
+    document.title = 'Team Document Hub – Ayiti 2075';
   }, []);
 
   return (
     <main className="max-w-7xl mx-auto px-4 py-10">
       <h1 className="text-3xl font-bold mb-4 text-center">📂 Team Document Hub</h1>
       <p className="text-lg text-gray-700 mb-6 text-center">
-        Access and collaborate on shared files for the Nouvo Ayiti 2075 movement.
+        Access and collaborate on shared files for the Ayiti 2075 movement.
       </p>
 
       <div className="border border-gray-300 rounded-lg overflow-hidden">
@@ -25,3 +25,4 @@ export default function TeamDocsPage() {
     </main>
   );
 }
+

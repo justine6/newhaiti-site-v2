@@ -1,6 +1,6 @@
 {
   "hero": {
-    "title": "Nouvo Ayiti 2075",
+    "title": "Ayiti 2075",
     "subtitle": "Retabli diyite. Rebati lespwa.",
     "joinNow": "Antre nan mouvman an"
   },
@@ -20,7 +20,8 @@
     "description": "Nou la pou nou koute epi kolabore."
   },
   "footer": {
-    "copyright": "© 2025 Nouvo Ayiti 2075. Tout dwa rezève.",
+    "copyright": "© 2025 Ayiti 2075. Tout dwa rezève.",
     "poweredBy": "Soutni pa Vercel & Next.js"
   }
 }
+

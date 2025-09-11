@@ -1,6 +1,6 @@
 {
   "hero": {
-    "title": "Nuevo Haití 2075",
+    "title": "Ayiti 2075",
     "subtitle": "Restaurar la dignidad. Reconstruir la esperanza.",
     "joinNow": "Únete al movimiento"
   },
@@ -20,7 +20,8 @@
     "description": "We’re here to listen and collaborate."
   },
   "footer": {
-    "copyright": "© 2025 Nouvo Ayiti 2075. All rights reserved.",
+    "copyright": "© 2025 Ayiti 2075. All rights reserved.",
     "poweredBy": "Powered by Vercel & Next.js"
   }
 }
+

@@ -42,13 +42,13 @@ export default function Topbar({ locale, labels }: TopbarProps) {
           <div className="flex items-center gap-2">
             <Image
               src="/images/newhaitilogo.png"
-              alt="Nouvo Ayiti 2075"
+              alt="Ayiti 2075"
               width={40}
               height={40}
               className="rounded-full"
             />
             <span className="font-bold text-lg tracking-wide text-gray-800">
-              Nouvo Ayiti 2075
+              Ayiti 2075
             </span>
           </div>
         </Link>
@@ -96,3 +96,4 @@ export default function Topbar({ locale, labels }: TopbarProps) {
     </header>
   );
 }
+

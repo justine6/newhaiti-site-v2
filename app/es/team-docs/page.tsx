@@ -5,14 +5,14 @@ import { useEffect } from 'react';
 
 export default function TeamDocsPage() {
   useEffect(() => {
-    document.title = 'Centro de Documentos – Nouvo Ayiti 2075';
+    document.title = 'Centro de Documentos – Ayiti 2075';
   }, []);
 
   return (
     <main className="max-w-7xl mx-auto px-4 py-10">
       <h1 className="text-3xl font-bold mb-4 text-center">📂 Centro de Documentos del Equipo</h1>
       <p className="text-lg text-gray-700 mb-6 text-center">
-        Accede y colabora en archivos compartidos para el movimiento Nouvo Ayiti 2075.
+        Accede y colabora en archivos compartidos para el movimiento Ayiti 2075.
       </p>
 
       <div className="border border-gray-300 rounded-lg overflow-hidden">
@@ -26,3 +26,4 @@ export default function TeamDocsPage() {
     </main>
   );
 }
+

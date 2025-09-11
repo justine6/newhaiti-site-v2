@@ -27,7 +27,7 @@ const home = {
     success: "Nou resevwa mesaj ou!",
   },
   footer: {
-    rights: "© 2025 Ekip Nouvo Ayiti 2075. Tout dwa rezève.",
+    rights: "© 2025 Ekip Ayiti 2075. Tout dwa rezève.",
     links: {
       about: "Konsènan nou",
       contact: "Kontak",
@@ -37,3 +37,4 @@ const home = {
 };
 
 export default home;
+

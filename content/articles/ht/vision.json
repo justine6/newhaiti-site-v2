@@ -1,5 +1,5 @@
 {
-  "title": "Vizyo Nou pou Nouvo Ayiti 2075",
+  "title": "Vizyo Nou pou Ayiti 2075",
   "intro": "Yon lavni ki chita sou diyite, rezilyans, ak pwogrè kolektif.",
   "sections": [
     { "heading": "Diyite", "content": "Mete moun nan sant chak desizyon n ap pran." },
@@ -8,9 +8,10 @@
   ],
   "videos": [
     {
-      "title": "Byenveni nan Nouvo Ayiti 2075",
+      "title": "Byenveni nan Ayiti 2075",
       "url": "https://youtu.be/dQw4w9WgXcQ",
       "caption": "Yon entwodiksyon kout sou vizyon nou."
     }
   ]
 }
+

@@ -1,7 +1,7 @@
 
 {
   "hero": {
-    "title": "Nouvo Ayiti Ekip 2075",
+    "title": "Ayiti Ekip 2075",
     "subtitle": "Retabli Dinite. Rebati Lespwa.",
     "ctaVision": "Li Vizyon an",
     "ctaJoin": "Antre nan Mouvman an"
@@ -16,7 +16,7 @@
   },
   "blog": {
     "title": "Dènye nouvèl Blog la",
-    "description": "Swiv istwa yo, vwa yo, ak mizajou ki ap fòme mouvman Nouvo Ayiti a."
+    "description": "Swiv istwa yo, vwa yo, ak mizajou ki ap fòme mouvman Ayiti a."
   },
   "contact": {
     "title": "Angaje w",
@@ -24,7 +24,8 @@
     "phone": "Rele nou"
   },
   "footer": {
-    "copyright": "© 2025 Nouvo Ayiti Ekip 2075. Tout dwa rezève.",
+    "copyright": "© 2025 Ayiti Ekip 2075. Tout dwa rezève.",
     "poweredBy": "Moun yo ki fè l posib"
   }
 }
+

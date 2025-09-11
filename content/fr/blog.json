@@ -1,18 +1,19 @@
 {
   "heading": "Notre blog",
-  "intro": "Dernières nouvelles et histoires de Nouvo Ayiti 2075.",
+  "intro": "Dernières nouvelles et histoires de Ayiti 2075.",
   "featured": "Article en vedette",
   "noPosts": "Aucun article disponible pour le moment.",
   "posts": [
     {
-      "title": "Bienvenue sur le blog de Nouvo Ayiti 2075",
+      "title": "Bienvenue sur le blog de Ayiti 2075",
       "date": "2023-10-01",
-      "content": "Nous sommes ravis de vous accueillir sur notre blog, où nous partagerons les dernières nouvelles et histoires de Nouvo Ayiti 2075."
+      "content": "Nous sommes ravis de vous accueillir sur notre blog, où nous partagerons les dernières nouvelles et histoires de Ayiti 2075."
     },
     {
       "title": "Les avancées technologiques en 2075",
       "date": "2023-10-15",
-      "content": "Découvrez comment la technologie a transformé la vie quotidienne à Nouvo Ayiti, avec des innovations qui améliorent la durabilité et l'efficacité."
+      "content": "Découvrez comment la technologie a transformé la vie quotidienne à Ayiti, avec des innovations qui améliorent la durabilité et l'efficacité."
     }
   ]
 }
+

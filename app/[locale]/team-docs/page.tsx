@@ -13,7 +13,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const dict = await getDictionary(params.locale, 'teamDocs');
 
   return {
-    title: dict?.metaTitle || 'Nouvo Ayiti 2075',
+    title: dict?.metaTitle || 'Ayiti 2075',
     description: dict?.metaDescription || '',
   };
 }
@@ -52,3 +52,4 @@ export default async function TeamDocsPage({ params }: Props) {
     </div>
   );
 }
+

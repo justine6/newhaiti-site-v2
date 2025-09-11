@@ -16,7 +16,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   try {
     const result = await resend.emails.send({
-      from: 'Nouvo Ayiti 2075 <info@nouvoayiti2075.com>',
+      from: 'Ayiti 2075 <info@nouvoayiti2075.com>',
       to: ['info@nouvoayiti2075.com'],
       subject: 'New Join Form Submission',
       html: `
@@ -35,3 +35,4 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     res.status(500).json({ success: false, error: 'Email failed to send' });
   }
 }
+

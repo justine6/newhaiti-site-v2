@@ -62,9 +62,9 @@ export async function POST(req: NextRequest) {
 
     // Send confirmation to user
     await resend.emails.send({
-      from: 'Nouvo Ayiti 2075 <info@nouvoayiti2075.com>',
+      from: 'Ayiti 2075 <info@nouvoayiti2075.com>',
       to: [email],
-      subject: 'Nouvo Ayiti 2075: Confirmation de votre inscription',
+      subject: 'Ayiti 2075: Confirmation de votre inscription',
       html: `
         <p>Bonjour ${name},</p>
         <p>Merci de nous avoir rejoints dans la mission de renouvellement d’Haïti à l’horizon 2075.</p>
@@ -75,7 +75,7 @@ export async function POST(req: NextRequest) {
           <li><strong>Localisation :</strong> ${location}</li>
           <li><strong>Message :</strong> ${message || '—'}</li>
         </ul>
-        <p>L’équipe Nouvo Ayiti 2075</p>
+        <p>L’équipe Ayiti 2075</p>
       `,
     });
 
@@ -83,9 +83,9 @@ export async function POST(req: NextRequest) {
 
     // Notify admins
     await resend.emails.send({
-      from: 'Nouvo Ayiti Bot <info@nouvoayiti2075.com>',
+      from: 'Ayiti Bot <info@nouvoayiti2075.com>',
       to: ADMIN_EMAILS,
-      subject: 'Nouvel adhérent - Nouvo Ayiti 2075',
+      subject: 'Nouvel adhérent - Ayiti 2075',
       html: `
         <p>📥 Nouvelle demande d’adhésion :</p>
         <ul>
@@ -110,3 +110,4 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: 'Internal Server Error' }, { status: 500 });
   }
 }
+
