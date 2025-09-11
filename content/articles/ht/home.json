@@ -9,7 +9,7 @@
   "language": "Lang"
 },
 "hero": {
-  "title": "Nouvo Ekip Ayiti 2075",
+  "title": "Ekip Ayiti 2075",
   "subtitle": "Reta Dinyite. Rekonstwi Lespwa.",
   "readMore": "Li Vizyon an",
   "joinNow": "Antre nan Mouvman an",
@@ -68,7 +68,8 @@
     "success": "Mèsi paske ou kontakte nou!"
   },
   "footer": {
-    "copyright": "© 2025 Nouvo Ekip Ayiti 2075",
+    "copyright": "© 2025 Ekip Ayiti 2075",
     "poweredBy": "Sipòte pa pèp Ayisyen an"
   }
 }
+
