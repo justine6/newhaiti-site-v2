@@ -12,7 +12,7 @@ import Footer from '@/components/Footer';
 
 export async function generateMetadata() {
   return {
-    title: 'New Haiti Team 2075',
+    title: 'Haiti 2075',
     description: 'Restoring Dignity. Rebuilding Hope.',
   };
 }
@@ -65,3 +65,4 @@ return (
   </>
 );
 } // ✅ closes the HomePage function
+

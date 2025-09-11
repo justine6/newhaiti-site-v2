@@ -7,7 +7,7 @@ export default function Topbar() {
       <Link href="/">
         <Image
           src="/images/newhaitilogo.png"
-          alt="New Haiti Logo"
+          alt="Haiti Logo"
           width={50}
           height={50}
         />
@@ -16,3 +16,4 @@ export default function Topbar() {
     </div>
   );
 }
+

@@ -14,12 +14,12 @@ export default function Navbar({ currentLocale }: Props) {
       <div className="flex items-center gap-2">
         <Image
           src="/images/newhaitilogo.png"
-          alt="New Haiti Logo"
+          alt="Haiti Logo"
           width={40}
           height={40}
           className="rounded-full"
         />
-        <span className="text-lg font-bold text-gray-800">New Haiti</span>
+        <span className="text-lg font-bold text-gray-800">Haiti</span>
       </div>
 
       {/* Navigation Links */}
@@ -40,3 +40,4 @@ export default function Navbar({ currentLocale }: Props) {
     </nav>
   );
 }
+

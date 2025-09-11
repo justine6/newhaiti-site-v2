@@ -1,7 +1,7 @@
 
 {
   "hero": {
-    "title": "New Haiti Team 2075",
+    "title": "Haiti 2075",
     "subtitle": "Restoring Dignity. Rebuilding Hope.",
     "ctaVision": "Read the Vision",
     "ctaJoin": "Join the Movement"
@@ -16,7 +16,7 @@
   },
   "blog": {
     "title": "Latest from Our Blog",
-    "description": "Catch up on the stories, voices, and updates shaping the New Haiti movement."
+    "description": "Catch up on the stories, voices, and updates shaping the Haiti movement."
   },
   "contact": {
     "title": "Get Involved",
@@ -24,7 +24,8 @@
     "phone": "Call Us"
   },
   "footer": {
-    "copyright": "© 2025 New Haiti Team 2075. All rights reserved.",
+    "copyright": "© 2025 Haiti 2075. All rights reserved.",
     "poweredBy": "Powered by the People"
   }
 }
+

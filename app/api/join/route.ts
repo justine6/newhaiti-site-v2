@@ -1,29 +1,26 @@
-import { Resend } from 'resend';
+// app/api/join/route.ts
 import { NextRequest, NextResponse } from 'next/server';
+import { Resend } from 'resend';
 import { rateLimit } from '@/lib/rateLimiter';
 import logger from '@/lib/logger';
 
-const resendApiKey = process.env.RESEND_API_KEY;
+// Ensure this API route is always dynamic (no pre-exec during build)
+export const dynamic = 'force-dynamic';
 
-if (!resendApiKey) {
-  throw new Error("Missing RESEND_API_KEY in environment variables");
-}
-
-const resend = new Resend(resendApiKey);
-
-// ✅ Multiple admin emails
+// Multiple admin emails
 const ADMIN_EMAILS = ['info@nouvoayiti2075.com', 'nouvoayiti2075@gmail.com'];
 
-// Helper: Get IP address from request
+// Helper: Get IP address
 function getClientIP(req: NextRequest): string {
-  const forwarded = req.headers.get('x-forwarded-for');
-  return forwarded ? forwarded.split(',')[0].trim() : 'unknown';
+  const fwd = req.headers.get('x-forwarded-for');
+  return fwd ? fwd.split(',')[0].trim() : 'unknown';
 }
 
 export async function POST(req: NextRequest) {
   try {
     const ip = getClientIP(req);
     const tier = 'public';
+
     logger.info(`[JOIN_SUBMISSION] Request received from IP: ${ip}`);
 
     if (!rateLimit(ip, tier)) {
@@ -34,8 +31,7 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    const body = await req.json();
-    const { name, email, phone, location, message } = body;
+    const { name, email, phone, location, message } = await req.json();
 
     if (!name || !email || !phone || !location) {
       return NextResponse.json(
@@ -44,7 +40,27 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    // Send confirmation email to the user
+    // ✅ Read & validate the API key **inside** the handler (no top-level throw)
+    const resendApiKey = process.env.RESEND_API_KEY;
+
+    if (!resendApiKey) {
+      // Don’t crash builds or previews — just log and return success
+      logger.warn(
+        '[JOIN_WARNING] RESEND_API_KEY is not set. Skipping email send but returning success.'
+      );
+      return NextResponse.json(
+        {
+          success: true,
+          message:
+            'Submission received. (Email sending temporarily disabled on this environment.)',
+        },
+        { status: 200 }
+      );
+    }
+
+    const resend = new Resend(resendApiKey);
+
+    // Send confirmation to user
     await resend.emails.send({
       from: 'Nouvo Ayiti 2075 <info@nouvoayiti2075.com>',
       to: [email],
@@ -68,7 +84,7 @@ export async function POST(req: NextRequest) {
     // Notify admins
     await resend.emails.send({
       from: 'Nouvo Ayiti Bot <info@nouvoayiti2075.com>',
-      to: ADMIN_EMAILS, // ✅ Send to both emails here
+      to: ADMIN_EMAILS,
       subject: 'Nouvel adhérent - Nouvo Ayiti 2075',
       html: `
         <p>📥 Nouvelle demande d’adhésion :</p>
@@ -82,7 +98,7 @@ export async function POST(req: NextRequest) {
       `,
     });
 
-    logger.info(`[ADMIN_ALERT] Notification sent to admins for: ${email}`);
+    logger.info(`[ADMIN_ALERT] Notification sent for: ${email}`);
 
     return NextResponse.json(
       { success: true, message: 'Submission received and emails sent.' },
@@ -91,9 +107,6 @@ export async function POST(req: NextRequest) {
   } catch (error) {
     const ip = getClientIP(req);
     logger.error(`[JOIN_ERROR] Failed to process submission from IP: ${ip}`, error);
-    return NextResponse.json(
-      { error: 'Internal Server Error' },
-      { status: 500 }
-    );
+    return NextResponse.json({ error: 'Internal Server Error' }, { status: 500 });
   }
 }

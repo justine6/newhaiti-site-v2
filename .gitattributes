@@ -1,1 +1,13 @@
-* text=auto
+* text=auto eol=lf
+
+# images/binaries
+*.png binary
+*.jpg binary
+*.gif binary
+*.pdf binary
+*.ico binary
+
+# lockfiles/bundles (no EOL changes)
+package-lock.json -text
+pnpm-lock.yaml   -text
+yarn.lock        -text

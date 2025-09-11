@@ -23,7 +23,7 @@ export default function Hero({ dictionary, locale }: Props) {
       <div className="relative z-10 flex flex-col items-center justify-center text-center py-32 px-4">
         <img
           src="/images/newhaitilogo.png"
-          alt="New Haiti Logo"
+          alt="Haiti Logo"
           className="w-40 h-40 rounded-full shadow-lg mb-6"
         />
         <h1 className="text-4xl md:text-6xl font-extrabold">
@@ -48,3 +48,4 @@ export default function Hero({ dictionary, locale }: Props) {
     </section>
   );
 }
+

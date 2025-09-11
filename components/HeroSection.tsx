@@ -34,7 +34,7 @@ export default function HeroSection({ locale, dictionary }: HeroSectionProps) {
       <div className="relative z-10 text-center px-4 md:px-6 lg:px-8 animate-fade-in">
         <Image
           src="/images/newhaitilogo.png"
-          alt="New Haiti Logo"
+          alt="Haiti Logo"
           width={160}
           height={160}
           className="rounded-full shadow-lg mx-auto mb-6"
@@ -64,3 +64,4 @@ export default function HeroSection({ locale, dictionary }: HeroSectionProps) {
     </section>  // ✅ closes HeroSection
   );
 }
+
