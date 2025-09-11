@@ -26,3 +26,24 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 .vercel
+# Backup files
+*.bak
+
+# Node / Next.js
+node_modules/
+.next/
+out/
+dist/
+build/
+.vercel/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Editor
+.vscode/
+.DS_Store
+*.swp
