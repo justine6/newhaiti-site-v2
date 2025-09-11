@@ -9,7 +9,7 @@
   "language": "Langue"
 },
 "hero": {
-  "title": "Nouvelle Équipe Haïti 2075",
+  "title": "Équipe Haïti 2075",
   "subtitle": "Restaurer la dignité. Reconstruire l'espoir.",
   "readMore": "Lire la Vision",
   "joinNow": "Rejoindre le Mouvement",
@@ -68,7 +68,8 @@
     "success": "Merci de nous avoir contactés !"
   },
   "footer": {
-    "copyright": "© 2025 Nouvelle Équipe Haïti 2075",
+    "copyright": "© 2025 Équipe Haïti 2075",
     "poweredBy": "Propulsé par le peuple haïtien"
   }
 }
+
