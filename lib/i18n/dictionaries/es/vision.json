@@ -1,0 +1,21 @@
+{
+  "title": "Our Vision for Ayiti 2075",
+  "intro": "A future grounded in dignity, resilience, and collective progress.",
+  "sections": [
+    { "heading": "Dignity", "content": "Center people in every decision we make." },
+    { "heading": "Resilience", "content": "Build communities and systems that thrive through change." },
+    { "heading": "Unity", "content": "Mobilize Haitians at home and across the diaspora." }
+  ],
+  "videos": [
+    {
+      "title": "Welcome to Ayiti 2075",
+      "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+      "caption": "A brief introduction to our long-term vision."
+    },
+    {
+      "title": "Community Resilience",
+      "url": "https://vimeo.com/123456789",
+      "caption": "Stories of local leadership and collective action."
+    }
+  ]
+}
