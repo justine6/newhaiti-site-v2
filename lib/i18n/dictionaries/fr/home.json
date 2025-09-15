@@ -12,20 +12,37 @@
     "title": "Nouvelle Équipe Haïti 2075",
     "subtitle": "Restaurer la dignité. Reconstruire l'espoir.",
     "readMore": "Lire la Vision",
-    "joinNow": "Rejoindre le Mouvement",
-    "watchVideos": "Regarder les Vidéos"
+    "joinNow": "Rejoindre le Mouvement"
   },
   "mission": {
     "heading": "Notre Mission",
     "paragraph": "Nous reconstruisons Haïti avec dignité, innovation et une vision partagée."
   },
-  "newsletter": {
-    "title": "Restez Connecté",
-    "description": "Abonnez-vous pour recevoir des mises à jour, des nouvelles et des histoires porteuses d'espoir."
-  },
   "projects": {
     "title": "Nos Projets",
-    "intro": "Découvrez nos principales initiatives visant à restaurer la dignité, reconstruire l'espoir et renouveler la vision en Haïti.",
-    "motto": "Chaque projet est une promesse pour l'avenir."
+    "intro": "Découvrez nos initiatives clés pour restaurer la dignité, reconstruire l'espoir et renouveler la vision.",
+    "motto": "Chaque projet est une promesse pour l'avenir.",
+    "items": [
+      { "title": "Eau potable", "description": "Fournir de l'eau potable." },
+      { "title": "Éducation", "description": "Des écoles pour la future génération." }
+    ]
+  },
+  "newsletter": {
+    "title": "Restez Connecté",
+    "description": "Abonnez-vous pour recevoir des mises à jour, des nouvelles et des histoires porteuses d'espoir.",
+    "placeholder": "Entrez votre email",
+    "subscribe": "S'abonner"
+  },
+  "contact": {
+    "title": "Contactez-nous",
+    "description": "Nous serions ravis de vous entendre. Écrivez-nous à tout moment."
+  },
+  "footer": {
+    "rights": "© 2025 Nouvelle Haïti 2075. Tous droits réservés.",
+    "social": {
+      "facebook": "Suivez-nous sur Facebook",
+      "twitter": "Suivez-nous sur Twitter",
+      "youtube": "Regardez sur YouTube"
+    }
   }
 }

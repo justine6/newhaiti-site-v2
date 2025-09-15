@@ -1,31 +1,48 @@
 {
   "topbar": {
-    "home": "Lakay",
-    "about": "Konsènan",
-    "projects": "Pwojè yo",
+    "home": "Accueil",
+    "about": "À propos",
+    "projects": "Projets",
     "blog": "Blog",
-    "contact": "Kontak",
-    "vision": "Vizion",
-    "language": "Lang"
+    "contact": "Contact",
+    "vision": "Vision",
+    "language": "Langue"
   },
   "hero": {
-    "title": "Nouvo Ekip Ayiti 2075",
-    "subtitle": "Rete Djanm. Rebati Espwa.",
-    "readMore": "Li Vizion an",
-    "joinNow": "Antre nan Mouvman an",
-    "watchVideos": "Gade Videyo yo"
+    "title": "Nouvelle Équipe Haïti 2075",
+    "subtitle": "Restaurer la dignité. Reconstruire l'espoir.",
+    "readMore": "Lire la Vision",
+    "joinNow": "Rejoindre le Mouvement"
   },
   "mission": {
-    "heading": "Misyo Nou",
-    "paragraph": "Nou ap rebati Ayiti ak diyite, inovasyon, ak yon vizyon pataje."
-  },
-  "newsletter": {
-    "title": "Rete Konekte",
-    "description": "Abònman pou resevwa nouvèl, mizajou, ak istwa espwa."
+    "heading": "Notre Mission",
+    "paragraph": "Nous reconstruisons Haïti avec dignité, innovation et une vision partagée."
   },
   "projects": {
-    "title": "Pwojè Nou yo",
-    "intro": "Dekouvri prensipal inisyativ nou yo pou retabli diyite, rebati espwa, ak renouvle vizyon an atravè Ayiti.",
-    "motto": "Chak pwojè se yon pwomès pou lavni."
+    "title": "Nos Projets",
+    "intro": "Découvrez nos initiatives clés pour restaurer la dignité, reconstruire l'espoir et renouveler la vision.",
+    "motto": "Chaque projet est une promesse pour l'avenir.",
+    "items": [
+      { "title": "Eau potable", "description": "Fournir de l'eau potable." },
+      { "title": "Éducation", "description": "Des écoles pour la future génération." }
+    ]
+  },
+  "newsletter": {
+    "title": "Restez Connecté",
+    "description": "Abonnez-vous pour recevoir des mises à jour, des nouvelles et des histoires porteuses d'espoir.",
+    "placeholder": "Entrez votre email",
+    "subscribe": "S'abonner"
+  },
+  "contact": {
+    "title": "Contactez-nous",
+    "description": "Nous serions ravis de vous entendre. Écrivez-nous à tout moment."
+  },
+  "footer": {
+    "rights": "© 2025 Nouvelle Haïti 2075. Tous droits réservés.",
+    "social": {
+      "facebook": "Suivez-nous sur Facebook",
+      "twitter": "Suivez-nous sur Twitter",
+      "youtube": "Regardez sur YouTube"
+    }
   }
 }

@@ -12,20 +12,37 @@
     "title": "New Haiti Team 2075",
     "subtitle": "Restoring Dignity. Rebuilding Hope.",
     "readMore": "Read the Vision",
-    "joinNow": "Join the Movement",
-    "watchVideos": "Watch Videos"
+    "joinNow": "Join the Movement"
   },
   "mission": {
     "heading": "Our Mission",
     "paragraph": "We are rebuilding Haiti with dignity, innovation, and a shared vision."
   },
-  "newsletter": {
-    "title": "Stay Connected",
-    "description": "Subscribe to receive updates, news, and stories of hope."
-  },
   "projects": {
     "title": "Our Projects",
     "intro": "Discover our key initiatives to restore dignity, rebuild hope, and renew vision across Haiti.",
-    "motto": "Each project is a promise to the future."
+    "motto": "Each project is a promise to the future.",
+    "items": [
+      { "title": "Clean Water", "description": "Providing safe drinking water." },
+      { "title": "Education", "description": "Schools for the future generation." }
+    ]
+  },
+  "newsletter": {
+    "title": "Stay Connected",
+    "description": "Subscribe to receive updates, news, and stories of hope.",
+    "placeholder": "Enter your email",
+    "subscribe": "Subscribe"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "description": "We would love to hear from you. Reach out anytime."
+  },
+  "footer": {
+    "rights": "© 2025 New Haiti 2075. All rights reserved.",
+    "social": {
+      "facebook": "Follow us on Facebook",
+      "twitter": "Follow us on Twitter",
+      "youtube": "Watch on YouTube"
+    }
   }
 }

@@ -9,23 +9,40 @@
     "language": "Idioma"
   },
   "hero": {
-    "title": "Nuevo Equipo Haití 2075",
-    "subtitle": "Restaurar la dignidad. Reconstruir la esperanza.",
+    "title": "Nuevo Haití 2075",
+    "subtitle": "Restaurando la dignidad. Reconstruyendo la esperanza.",
     "readMore": "Leer la Visión",
-    "joinNow": "Unirse al Movimiento",
-    "watchVideos": "Ver Videos"
+    "joinNow": "Unirse al Movimiento"
   },
   "mission": {
     "heading": "Nuestra Misión",
     "paragraph": "Estamos reconstruyendo Haití con dignidad, innovación y una visión compartida."
   },
-  "newsletter": {
-    "title": "Mantente Conectado",
-    "description": "Suscríbete para recibir actualizaciones, noticias e historias de esperanza."
-  },
   "projects": {
     "title": "Nuestros Proyectos",
-    "intro": "Descubre nuestras principales iniciativas para restaurar la dignidad, reconstruir la esperanza y renovar la visión en Haití.",
-    "motto": "Cada proyecto es una promesa para el futuro."
+    "intro": "Descubra nuestras iniciativas clave para restaurar la dignidad, reconstruir la esperanza y renovar la visión.",
+    "motto": "Cada proyecto es una promesa para el futuro.",
+    "items": [
+      { "title": "Agua Limpia", "description": "Proporcionar agua potable segura." },
+      { "title": "Educación", "description": "Escuelas para la próxima generación." }
+    ]
+  },
+  "newsletter": {
+    "title": "Mantente Conectado",
+    "description": "Suscríbete para recibir actualizaciones, noticias e historias de esperanza.",
+    "placeholder": "Introduce tu correo electrónico",
+    "subscribe": "Suscribirse"
+  },
+  "contact": {
+    "title": "Contáctanos",
+    "description": "Nos encantaría saber de ti. Escríbenos en cualquier momento."
+  },
+  "footer": {
+    "rights": "© 2025 Nuevo Haití 2075. Todos los derechos reservados.",
+    "social": {
+      "facebook": "Síguenos en Facebook",
+      "twitter": "Síguenos en Twitter",
+      "youtube": "Míranos en YouTube"
+    }
   }
 }
