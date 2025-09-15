@@ -1,0 +1,13 @@
+{
+  "title": "Join the Movement",
+  "description": "Be part of Ayiti 2075. Sign up to volunteer, support, or stay connected.",
+  "cta": "Join the Movement",
+  "form": {
+    "name": "Your Name",
+    "email": "Your Email",
+    "phone": "Your Phone",
+    "location": "Your Location",
+    "message": "Optional Message",
+    "submit": "Join Now"
+  }
+}

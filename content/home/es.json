@@ -1,0 +1,13 @@
+{
+  "title": "Únete al Movimiento",
+  "description": "Sé parte de Ayiti 2075. Regístrate para ser voluntario, apoyar o mantenerte conectado.",
+  "cta": "Únete al Movimiento",
+  "form": {
+    "name": "Tu Nombre",
+    "email": "Tu Correo Electrónico",
+    "phone": "Tu Teléfono",
+    "location": "Tu Ubicación",
+    "message": "Mensaje Opcional",
+    "submit": "Unirse Ahora"
+  }
+}

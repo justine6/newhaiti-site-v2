@@ -1,0 +1,13 @@
+{
+  "title": "Rejoignez le Mouvement",
+  "description": "Faites partie d'Ayiti 2075. Inscrivez-vous pour être bénévole, soutenir ou rester connecté.",
+  "cta": "Rejoindre le Mouvement",
+  "form": {
+    "name": "Votre Nom",
+    "email": "Votre Email",
+    "phone": "Votre Téléphone",
+    "location": "Votre Localisation",
+    "message": "Message Optionnel",
+    "submit": "Rejoindre Maintenant"
+  }
+}
