@@ -26,20 +26,6 @@
   "projects": {
     "title": "Our Projects",
     "intro": "Discover our key initiatives to restore dignity, rebuild hope, and renew vision across Haiti.",
-    "motto": "Each project is a promise to the future.",
-    "items": [
-      {
-        "title": "Education for All",
-        "description": "Expanding access to quality education across Haiti."
-      },
-      {
-        "title": "Healthcare Access",
-        "description": "Improving hospitals, clinics, and medical outreach."
-      },
-      {
-        "title": "Clean Water & Sanitation",
-        "description": "Ensuring every community has access to safe drinking water."
-      }
-    ]
+    "motto": "Each project is a promise to the future."
   }
 }

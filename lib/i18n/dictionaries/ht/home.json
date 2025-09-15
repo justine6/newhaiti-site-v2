@@ -1,6 +1,6 @@
 {
   "topbar": {
-    "home": "Akèy",
+    "home": "Lakay",
     "about": "Konsènan",
     "projects": "Pwojè yo",
     "blog": "Blog",
@@ -9,7 +9,7 @@
     "language": "Lang"
   },
   "hero": {
-    "title": "Nouvo Ayiti 2075",
+    "title": "Nouvo Ekip Ayiti 2075",
     "subtitle": "Rete Djanm. Rebati Espwa.",
     "readMore": "Li Vizion an",
     "joinNow": "Antre nan Mouvman an",
@@ -21,11 +21,11 @@
   },
   "newsletter": {
     "title": "Rete Konekte",
-    "description": "Abòne pou resevwa nouvèl, mizajou, ak istwa espwa."
+    "description": "Abònman pou resevwa nouvèl, mizajou, ak istwa espwa."
   },
   "projects": {
     "title": "Pwojè Nou yo",
-    "intro": "Dekouvri prensipal inisyativ nou yo pou retabli diyite, rebati espwa, ak renouvle vizyon atravè Ayiti.",
+    "intro": "Dekouvri prensipal inisyativ nou yo pou retabli diyite, rebati espwa, ak renouvle vizyon an atravè Ayiti.",
     "motto": "Chak pwojè se yon pwomès pou lavni."
   }
 }

@@ -21,11 +21,11 @@
   },
   "newsletter": {
     "title": "Restez Connecté",
-    "description": "Abonnez-vous pour recevoir des mises à jour et des histoires porteuses d'espoir."
+    "description": "Abonnez-vous pour recevoir des mises à jour, des nouvelles et des histoires porteuses d'espoir."
   },
   "projects": {
     "title": "Nos Projets",
-    "intro": "Découvrez nos principales initiatives visant à restaurer la dignité, reconstruire l'espoir et renouveler la vision à travers Haïti.",
+    "intro": "Découvrez nos principales initiatives visant à restaurer la dignité, reconstruire l'espoir et renouveler la vision en Haïti.",
     "motto": "Chaque projet est une promesse pour l'avenir."
   }
 }
