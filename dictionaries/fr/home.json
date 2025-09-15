@@ -1,0 +1,36 @@
+
+{
+  "hero": {
+    "title": "Bienvenue à Team Haïti 2075",
+    "subtitle": "Restaurer la dignité. Reconstruire l'espoir.",
+    "button": "Rejoindre la Mission",
+    "readMore": "Lire la Vision",
+    "joinNow": "Rejoindre le Mouvement"
+  },
+  "newsletter": {
+    "heading": "Abonnez-vous à notre newsletter",
+    "description": "Recevez des nouvelles sur nos projets, nos histoires et le progrès de la communauté.",
+    "placeholder": "Entrez votre email",
+    "cta": "S'abonner",
+    "success": "Merci pour votre abonnement !"
+  },
+  "projects": {
+    "title": "Projets de Restauration de la Paix",
+    "intro": "Ce n’est pas une question de politique. C’est une question de paix, de guérison et d’offrir un avenir meilleur à nos enfants.\nNous ne cherchons pas le pouvoir — nous le rendons au peuple.\nNotre vision englobe tout Haïti, du nord au sud, de l’est à l’ouest.\nNous travaillons à restaurer la paix et la prospérité dans toute la nation.",
+    "motto": "« Déposez vos armes et prenez vos outils. »",
+    "items": [
+      { "title": "Nettoyage & Assainissement Communautaire", "description": "Améliorer la santé publique grâce à des environnements propres" },
+      { "title": "Programmes d'Éducation des Jeunes", "description": "Investir dans l’avenir par la connaissance" },
+      { "title": "Reconstruction des Infrastructures", "description": "Restaurer les services et structures essentiels" },
+      { "title": "Accès aux Soins de Santé", "description": "Apporter des soins médicaux à toutes les communautés" },
+      { "title": "Développement Agricole", "description": "Assurer la sécurité alimentaire et la durabilité" },
+      { "title": "Formation Professionnelle", "description": "Développer des compétences pour l’indépendance économique" },
+      { "title": "Préservation Culturelle", "description": "Célébrer et protéger le patrimoine haïtien" },
+      { "title": "Résolution de Conflits", "description": "Créer un dialogue pacifique entre les communautés" },
+      { "title": "Autonomisation des Femmes", "description": "Soutenir l’égalité et les opportunités" },
+      { "title": "Protection de l’Environnement", "description": "Protéger les ressources naturelles d’Haïti" },
+      { "title": "Inclusion Numérique", "description": "Réduire la fracture technologique pour tous les Haïtiens" }
+    ]
+  }
+}
+

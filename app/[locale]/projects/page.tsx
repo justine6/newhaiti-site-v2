@@ -1,7 +1,7 @@
 // app/[locale]/projects/page.tsx
-import { getDictionary } from '@/lib/i18n/get-dictionary';
-import type { Locale } from '@/lib/i18n/settings';
-import type { ProjectsDictionary } from '@/lib/i18n/types';
+import { getDictionary } from "@/lib/i18n/get-dictionary";
+import type { Locale } from "@/lib/i18n/settings";
+import type { ProjectsDictionary } from "@/lib/i18n/types";
 
 import {
   Globe,
@@ -15,11 +15,7 @@ import {
   Palette,
   Cpu,
   BadgeCheck,
-} from 'lucide-react';
-
-type Props = {
-  params: { locale: Locale };
-};
+} from "lucide-react";
 
 const categoryIcons: Record<string, JSX.Element> = {
   sanitation: <Globe className="w-8 h-8 text-blue-600 dark:text-blue-400" />,
@@ -35,8 +31,11 @@ const categoryIcons: Record<string, JSX.Element> = {
   governance: <BadgeCheck className="w-8 h-8 text-purple-600 dark:text-purple-400" />,
 };
 
-export default async function ProjectsPage({ params: { locale } }: Props) {
-  const projects = (await getDictionary(locale, 'projects')) as ProjectsDictionary | null;
+export default async function ProjectsPage({ params }: { params: { locale: string } }) {
+  // ✅ Fix: resolve params first
+  const { locale } = await Promise.resolve(params);
+
+  const projects = (await getDictionary(locale as Locale, "projects")) as ProjectsDictionary | null;
 
   if (!projects) {
     return (

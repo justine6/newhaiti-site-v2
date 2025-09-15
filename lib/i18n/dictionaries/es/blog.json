@@ -1,0 +1,8 @@
+{
+  "title": "Nuestro Blog",
+  "intro": "Lee historias, ideas y actualizaciones del movimiento Ayiti 2075.",
+  "posts": [
+    { "title": "Bienvenidos a Ayiti 2075", "excerpt": "Una introducción a nuestra visión y misión.", "author": "Equipo Editorial", "date": "2025-01-01" },
+    { "title": "Voces de la Comunidad", "excerpt": "Historias de haitianos que están moldeando el movimiento.", "author": "Escritores Comunitarios", "date": "2025-02-01" }
+  ]
+}

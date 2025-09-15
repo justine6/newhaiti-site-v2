@@ -1,0 +1,16 @@
+{
+  "title": "Vidéos",
+  "intro": "Découvrez nos vidéos qui illustrent la vision et les projets d’Haïti 2075.",
+  "videos": [
+    {
+      "title": "Discours d'ouverture",
+      "url": "https://www.youtube.com/embed/VIDEO_ID_1",
+      "caption": "Présentation officielle de l'équipe."
+    },
+    {
+      "title": "Projet Santé",
+      "url": "https://www.youtube.com/embed/VIDEO_ID_2",
+      "caption": "Un aperçu de nos initiatives en matière de soins de santé."
+    }
+  ]
+}

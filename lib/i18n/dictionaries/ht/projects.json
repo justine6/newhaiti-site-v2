@@ -1,0 +1,19 @@
+{
+  "title": "Pwojè Nou yo",
+  "intro": "Eksplore pwojè misyon nou yo pou lavni Ayiti.",
+  "motto": "Chak pwojè se yon pwomès pou lavni.",
+  "items": [
+    {
+      "title": "Edikasyon pou Tout Moun",
+      "description": "Bay aksè ak bon jan edikasyon nan tout Ayiti."
+    },
+    {
+      "title": "Swen Sante",
+      "description": "Amelyore lopital, klinik, ak sèvis medikal."
+    },
+    {
+      "title": "Dlo Pwòp ak Asenisman",
+      "description": "Asire tout kominote gen dlo potab."
+    }
+  ]
+}

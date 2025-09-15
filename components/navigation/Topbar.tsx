@@ -30,7 +30,7 @@ export default function Topbar({ locale, labels }: TopbarProps) {
     { href: `/${locale}/#about`, label: labels.about },
     { href: `/${locale}/#projects`, label: labels.projects },
     { href: `/${locale}/blog`, label: labels.blog },
-    { href: `/${locale}/vision`, label: labels.vision },
+ 
     { href: `/${locale}/vision#videos`, label: '🎥 ' + labels.vision }, // optional direct jump
     { href: `/${locale}/#contact`, label: labels.contact },
   ];

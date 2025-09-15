@@ -1,0 +1,8 @@
+{
+  "title": "Blog nou",
+  "intro": "Li istwa, refleksyon, ak nouvèl ki sòti nan mouvman Ayiti 2075.",
+  "posts": [
+    { "title": "Byenveni nan Ayiti 2075", "excerpt": "Yon entwodiksyon sou vizyon ak misyon nou.", "author": "Ekip Editoryal", "date": "2025-01-01" },
+    { "title": "Vwa Kominote a", "excerpt": "Istwa moun Ayiti ki ap fòme mouvman an.", "author": "Ekritè Kominotè yo", "date": "2025-02-01" }
+  ]
+}

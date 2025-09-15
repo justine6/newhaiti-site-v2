@@ -1,0 +1,45 @@
+{
+  "topbar": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "blog": "Blog",
+    "contact": "Contact",
+    "vision": "Vision",
+    "language": "Language"
+  },
+  "hero": {
+    "title": "New Haiti Team 2075",
+    "subtitle": "Restoring Dignity. Rebuilding Hope.",
+    "readMore": "Read the Vision",
+    "joinNow": "Join the Movement",
+    "watchVideos": "Watch Videos"
+  },
+  "mission": {
+    "heading": "Our Mission",
+    "paragraph": "We are rebuilding Haiti with dignity, innovation, and a shared vision."
+  },
+  "newsletter": {
+    "title": "Stay Connected",
+    "description": "Subscribe to receive updates, news, and stories of hope."
+  },
+  "projects": {
+    "title": "Our Projects",
+    "intro": "Discover our key initiatives to restore dignity, rebuild hope, and renew vision across Haiti.",
+    "motto": "Each project is a promise to the future.",
+    "items": [
+      {
+        "title": "Education for All",
+        "description": "Expanding access to quality education across Haiti."
+      },
+      {
+        "title": "Healthcare Access",
+        "description": "Improving hospitals, clinics, and medical outreach."
+      },
+      {
+        "title": "Clean Water & Sanitation",
+        "description": "Ensuring every community has access to safe drinking water."
+      }
+    ]
+  }
+}

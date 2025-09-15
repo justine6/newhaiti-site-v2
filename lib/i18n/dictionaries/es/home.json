@@ -1,0 +1,31 @@
+{
+  "topbar": {
+    "home": "Inicio",
+    "about": "Acerca de",
+    "projects": "Proyectos",
+    "blog": "Blog",
+    "contact": "Contacto",
+    "vision": "Visión",
+    "language": "Idioma"
+  },
+  "hero": {
+    "title": "Nuevo Haití 2075",
+    "subtitle": "Restaurando la Dignidad. Reconstruyendo la Esperanza.",
+    "readMore": "Leer la Visión",
+    "joinNow": "Únete al Movimiento",
+    "watchVideos": "Ver Videos"
+  },
+  "mission": {
+    "heading": "Nuestra Misión",
+    "paragraph": "Estamos reconstruyendo Haití con dignidad, innovación y una visión compartida."
+  },
+  "newsletter": {
+    "title": "Mantente Conectado",
+    "description": "Suscríbete para recibir actualizaciones, noticias e historias de esperanza."
+  },
+  "projects": {
+    "title": "Nuestros Proyectos",
+    "intro": "Descubre nuestras principales iniciativas para restaurar la dignidad, reconstruir la esperanza y renovar la visión en Haití.",
+    "motto": "Cada proyecto es una promesa para el futuro."
+  }
+}

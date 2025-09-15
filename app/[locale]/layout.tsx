@@ -1,53 +1,43 @@
-// app/[locale]/layout.tsx
-import '../../styles/globals.css';
-import { ReactNode } from 'react';
-import Topbar from '@/components/navigation/Topbar';
-import { languages, type Locale } from '@/lib/i18n/settings';
-import { getDictionary } from '@/lib/i18n/get-dictionary';
-
-export async function generateStaticParams() {
-  return languages.map((locale) => ({ locale }));
-}
-
-export async function generateMetadata() {
-  return {
-    title: 'Team Haiti 2075',
-    description: 'Restoring Dignity. Rebuilding Hope.',
-  };
-}
+import "../../styles/globals.css";
+import { ReactNode } from "react";
+import Topbar from "@/components/navigation/Topbar";
+import { locales, type Locale } from "@/lib/i18n/settings";
+import { getDictionary } from "@/lib/i18n/get-dictionary";
 
 type Props = {
   children: ReactNode;
   params: { locale: string };
 };
 
-export default async function LocaleLayout(props: Props) {
-  // ✅ Next 15 dynamic API rule
-  const { locale } = await Promise.resolve(props.params);
+export default async function LocaleLayout({ children, params }: Props) {
+  // ✅ Next.js 15 requires awaiting params
+  const { locale: rawLocale } = await Promise.resolve(params);
 
-  const safeLocale: Locale = (languages as readonly string[]).includes(locale)
-    ? (locale as Locale)
-    : 'en';
+  const safeLocale: Locale =
+    rawLocale && locales.includes(rawLocale as Locale)
+      ? (rawLocale as Locale)
+      : "en"; // fallback to English
 
-  // Load localized topbar labels from the home dictionary
-  const homeDict = await getDictionary(safeLocale, 'home') as any;
+  const homeDict = (await getDictionary(safeLocale, "home")) as any;
+
   const topbarLabels =
     homeDict?.topbar ?? {
-      home: 'Home',
-      about: 'About',
-      projects: 'Projects',
-      blog: 'Blog',
-      contact: 'Contact',
-      vision: 'Vision',
-      language: 'Language',
+      home: "Home",
+      about: "About",
+      projects: "Projects",
+      blog: "Blog",
+      contact: "Contact",
+      vision: "Vision",
+      videos: "Videos",
+      language: "Language"
     };
 
   return (
-    <>
-      <Topbar locale={safeLocale} labels={topbarLabels} />
-      {props.children}
-    </>
+    <html lang={safeLocale} suppressHydrationWarning>
+      <body>
+        <Topbar locale={safeLocale} labels={topbarLabels} />
+        {children}
+      </body>
+    </html>
   );
 }
-
-

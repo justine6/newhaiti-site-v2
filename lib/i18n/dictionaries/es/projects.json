@@ -1,0 +1,19 @@
+{
+  "title": "Nuestros Proyectos",
+  "intro": "Explora nuestros proyectos que dan forma al futuro de Haití.",
+  "motto": "Cada proyecto es una promesa para el futuro.",
+  "items": [
+    {
+      "title": "Educación para Todos",
+      "description": "Ampliar el acceso a una educación de calidad en Haití."
+    },
+    {
+      "title": "Acceso a la Salud",
+      "description": "Mejorar hospitales, clínicas y servicios médicos."
+    },
+    {
+      "title": "Agua Potable y Saneamiento",
+      "description": "Garantizar acceso universal a agua potable."
+    }
+  ]
+}

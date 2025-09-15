@@ -3,11 +3,17 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "predev": "npm run translate-projects && npm run check-dicts",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "check-dicts": "node scripts/check-dictionaries.js",
+    "translate-projects": "node scripts/translate-projects.js",
+    "fix-imports": "ts-node scripts/fix-locale-imports.ts",
+    "fix-imports:apply": "ts-node scripts/fix-locale-imports.ts --apply",
+    "fill-vision": "node scripts/harmonize-vision.js --translate"
   },
   "dependencies": {
     "@fontsource/inter": "^5.2.6",
@@ -70,7 +76,6 @@
     "tailwind-merge": "^2.5.5",
     "tailwindcss-animate": "^1.0.7",
     "zod": "^3.24.1"
-    
   },
   "devDependencies": {
     "@types/node": "^22",
@@ -84,8 +89,8 @@
     "postcss-load-config": "^6.0.1",
     "prettier": "^3.5.3",
     "tailwindcss": "^3.4.17",
-    "typescript": "^5"
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.2"
   },
   "packageManager": "pnpm@10.12.1"
 }
-

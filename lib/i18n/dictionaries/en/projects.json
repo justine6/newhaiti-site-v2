@@ -1,0 +1,10 @@
+{
+  "title": "Our Projects",
+  "intro": "Discover the key initiatives shaping the future of Haiti.",
+  "motto": "Each project is a promise to the future.",
+  "items": [
+    { "name": "Education", "description": "Improving schools, training teachers, and empowering youth." },
+    { "name": "Healthcare", "description": "Expanding access to quality healthcare across communities." },
+    { "name": "Infrastructure", "description": "Building resilient roads, water systems, and energy networks." }
+  ]
+}

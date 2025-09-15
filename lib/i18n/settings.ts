@@ -1,10 +1,7 @@
 // lib/i18n/settings.ts
 
-// All supported languages
-export const languages = ['en', 'fr', 'ht', 'es'] as const;
+export const locales = ["en", "fr", "ht", "es"] as const;
+export type Locale = (typeof locales)[number];
 
-// Locale type = one of the values from `languages`
-export type Locale = typeof languages[number];
-
-// Default locale
-export const defaultLocale: Locale = 'en';
+// 👇 Add this
+export const defaultLocale: Locale = "en";

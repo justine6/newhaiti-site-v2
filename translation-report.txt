@@ -1,0 +1,32 @@
+✅ en/home.json is valid
+✅ en/about.json is valid
+✅ en/projects.json is valid
+✅ en/blog.json is valid
+✅ en/newsletter.json is valid
+✅ en/contact.json is valid
+✅ en/vision.json is valid
+⚠️ Missing 'form' object in en/join.json
+✅ fr/home.json is valid
+✅ fr/about.json is valid
+✅ fr/projects.json is valid
+✅ fr/blog.json is valid
+✅ fr/newsletter.json is valid
+✅ fr/contact.json is valid
+✅ fr/vision.json is valid
+⚠️ Missing 'form' object in fr/join.json
+✅ ht/home.json is valid
+✅ ht/about.json is valid
+✅ ht/projects.json is valid
+✅ ht/blog.json is valid
+✅ ht/newsletter.json is valid
+✅ ht/contact.json is valid
+✅ ht/vision.json is valid
+⚠️ Missing 'form' object in ht/join.json
+✅ es/home.json is valid
+✅ es/about.json is valid
+✅ es/projects.json is valid
+✅ es/blog.json is valid
+✅ es/newsletter.json is valid
+✅ es/contact.json is valid
+✅ es/vision.json is valid
+⚠️ Missing 'form' object in es/join.json

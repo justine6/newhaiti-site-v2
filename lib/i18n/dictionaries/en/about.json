@@ -1,0 +1,8 @@
+{
+  "title": "About Us",
+  "intro": "Learn about our mission, vision, and the people driving Ayiti 2075.",
+  "sections": [
+    { "heading": "Our Mission", "content": "To restore dignity, rebuild hope, and renew vision across Haiti." },
+    { "heading": "Our Vision", "content": "A united, innovative, and sustainable Haiti by 2075." }
+  ]
+}

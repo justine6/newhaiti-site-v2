@@ -1,48 +1,60 @@
-// lib/i18n/get-dictionary.ts
+import fs from "fs";
+import path from "path";
 
-import fs from 'fs';
-import path from 'path';
-import { languages, type Locale } from './settings';
-import type {
-  Section,
-  DictionaryBySection,
-} from './types';
+export type Locale = "en" | "fr" | "ht" | "es";
 
-const supportedLocales: readonly Locale[] = languages;
+const basePath = path.join(process.cwd(), "lib", "i18n", "dictionaries");
 
-export const getDictionary = async <T extends Section>(
-  locale: Locale,
-  section: T
-): Promise<DictionaryBySection[T] | null> => {
-  if (!supportedLocales.includes(locale)) {
-    console.warn(`❌ Skipping invalid locale: "${locale}"`);
-    return null;
-  }
 
-  const filePath = path.join(
-    process.cwd(),
-    'content',
-    'articles',
-    locale,
-    `${section}.json`
-  );
+// 🔑 Required sections (optional but helpful for sanity checks)
+const requiredSections = ["topbar", "hero", "mission", "newsletter", "projects"];
+
+export async function getDictionary(locale: Locale, section: string) {
+  const filePath = path.join(basePath, locale, `${section}.json`);
 
   try {
     if (!fs.existsSync(filePath)) {
-      console.warn(`❌ Dictionary not found: ${filePath}`);
-      return null;
+      throw new Error(`Missing translation file: ${locale}/${section}.json`);
     }
 
-    const fileContent = fs.readFileSync(filePath, 'utf-8');
+    const raw = fs.readFileSync(filePath, "utf-8");
+    const parsed = JSON.parse(raw);
 
-    try {
-      return JSON.parse(fileContent) as DictionaryBySection[T];
-    } catch (parseError) {
-      console.error(`❌ Failed to parse JSON for ${locale}/${section}:`, parseError);
-      return null;
+    if (!parsed || typeof parsed !== "object") {
+      throw new Error(`Invalid JSON in: ${locale}/${section}.json`);
     }
-  } catch (error) {
-    console.error(`❌ Failed to load dictionary for ${locale}/${section}:`, error);
-    return null;
+
+    // 🔎 Extra check: verify required sections exist in `home.json`
+    if (section === "home") {
+      const missingKeys = requiredSections.filter((k) => !(k in parsed));
+      if (missingKeys.length > 0) {
+        console.warn(
+          `⚠️ ${locale}/${section}.json is missing keys → ${missingKeys.join(", ")}`
+        );
+      }
+    }
+
+    return parsed;
+  } catch (err: any) {
+    console.error(
+      `🚨 Error loading ${locale}/${section}.json → ${err.message}`
+    );
+    if (process.env.NODE_ENV !== "production") {
+  (global as any).__setTranslationWarning?.(
+    `Error in ${locale}/${section}.json → ${err.message}`
+  );
+}
+
+
+    // Fallback: try English dictionary instead of empty object
+    if (locale !== "en") {
+      const fallbackPath = path.join(basePath, "en", `${section}.json`);
+      if (fs.existsSync(fallbackPath)) {
+        console.warn(`👉 Falling back to en/${section}.json`);
+        return JSON.parse(fs.readFileSync(fallbackPath, "utf-8"));
+      }
+    }
+
+    return {}; // minimal fallback so app still renders
   }
-};
+}

@@ -16,7 +16,11 @@
     "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "preserve",
+    "jsx": "preserve", // ✅ instead of "preserve"
+    "types": [
+      "node",
+      "react"
+    ], // ✅ add this line
     "incremental": true,
     "plugins": [
       {
@@ -33,7 +37,8 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    ".next/types/**/*.ts"
+    ".next/types/**/*.ts",
+    "lib/i18n/debug-translations.js"
   ],
   "exclude": [
     "node_modules"

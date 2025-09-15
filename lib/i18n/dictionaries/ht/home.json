@@ -1,0 +1,31 @@
+{
+  "topbar": {
+    "home": "Akèy",
+    "about": "Konsènan",
+    "projects": "Pwojè yo",
+    "blog": "Blog",
+    "contact": "Kontak",
+    "vision": "Vizion",
+    "language": "Lang"
+  },
+  "hero": {
+    "title": "Nouvo Ayiti 2075",
+    "subtitle": "Rete Djanm. Rebati Espwa.",
+    "readMore": "Li Vizion an",
+    "joinNow": "Antre nan Mouvman an",
+    "watchVideos": "Gade Videyo yo"
+  },
+  "mission": {
+    "heading": "Misyo Nou",
+    "paragraph": "Nou ap rebati Ayiti ak diyite, inovasyon, ak yon vizyon pataje."
+  },
+  "newsletter": {
+    "title": "Rete Konekte",
+    "description": "Abòne pou resevwa nouvèl, mizajou, ak istwa espwa."
+  },
+  "projects": {
+    "title": "Pwojè Nou yo",
+    "intro": "Dekouvri prensipal inisyativ nou yo pou retabli diyite, rebati espwa, ak renouvle vizyon atravè Ayiti.",
+    "motto": "Chak pwojè se yon pwomès pou lavni."
+  }
+}

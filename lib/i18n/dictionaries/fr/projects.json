@@ -1,0 +1,19 @@
+{
+  "title": "Nos Projets",
+  "intro": "Explorez nos projets axés sur l'avenir d'Haïti.",
+  "motto": "Chaque projet est une promesse pour l'avenir.",
+  "items": [
+    {
+      "title": "Éducation pour Tous",
+      "description": "Élargir l'accès à une éducation de qualité en Haïti."
+    },
+    {
+      "title": "Accès aux Soins",
+      "description": "Améliorer les hôpitaux, les cliniques et les soins médicaux."
+    },
+    {
+      "title": "Eau Potable et Assainissement",
+      "description": "Garantir un accès universel à l'eau potable."
+    }
+  ]
+}

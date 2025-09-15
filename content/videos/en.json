@@ -1,0 +1,16 @@
+{
+  "title": "Videos",
+  "intro": "Explore our videos showcasing the vision and projects of Team Haiti 2075.",
+  "videos": [
+    {
+      "title": "Opening Speech",
+      "url": "https://www.youtube.com/embed/VIDEO_ID_1",
+      "caption": "Official presentation of the team."
+    },
+    {
+      "title": "Healthcare Project",
+      "url": "https://www.youtube.com/embed/VIDEO_ID_2",
+      "caption": "An overview of our healthcare initiatives."
+    }
+  ]
+}

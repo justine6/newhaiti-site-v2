@@ -1,45 +1,36 @@
-// middleware.ts
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
-import { defaultLocale } from './lib/i18n/settings';
-
-const PUBLIC_FILE = /\.(.*)$/;
+import { locales, defaultLocale } from '@/lib/i18n/settings';
 
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
-  // ✅ Ignore static files, API, and favicon
+  // ✅ Skip middleware for static files and images
   if (
     pathname.startsWith('/_next') ||
+    pathname.startsWith('/images') ||
     pathname.startsWith('/api') ||
-    pathname === '/favicon.ico' ||
-    PUBLIC_FILE.test(pathname)
+    pathname === '/favicon.ico'
   ) {
     return NextResponse.next();
   }
 
-  // ✅ Redirect root to default locale
+  // ✅ Redirect root `/` to default locale
   if (pathname === '/') {
     return NextResponse.redirect(new URL(`/${defaultLocale}`, request.url));
   }
 
-  // ✅ Redirect top-level /join to default locale
-  if (pathname === '/join') {
-    return NextResponse.redirect(new URL(`/${defaultLocale}/join`, request.url));
+  // ✅ Check if pathname already has a locale
+  const hasLocale = locales.some(
+    (locale) => pathname === `/${locale}` || pathname.startsWith(`/${locale}/`)
+  );
+
+  if (!hasLocale) {
+    // Redirect to default locale while keeping original path
+    return NextResponse.redirect(
+      new URL(`/${defaultLocale}${pathname}`, request.url)
+    );
   }
 
   return NextResponse.next();
 }
-
-export const config = {
-  matcher: [
-    /*
-      This regex will skip:
-      - API routes
-      - _next/static and _next/image
-      - favicon.ico
-      - any file with an extension (e.g., .png, .jpg, .js, .css)
-    */
-    '/((?!api|_next/static|_next/image|favicon.ico|.*\\.(?:ico|png|jpg|svg|js|css|json|txt|woff|woff2)).*)',
-  ],
-};

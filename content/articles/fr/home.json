@@ -1,20 +1,22 @@
 {
-"topbar": {
-  "home": "Accueil",
-  "about": "À propos",
-  "projects": "Projets",
-  "blog": "Blog",
-  "contact": "Contact",
-  "vision": "Vision",
-  "language": "Langue"
-},
-"hero": {
-  "title": "Équipe Haïti 2075",
-  "subtitle": "Restaurer la dignité. Reconstruire l'espoir.",
-  "readMore": "Lire la Vision",
-  "joinNow": "Rejoindre le Mouvement",
-  "watchVideos": "Regarder les Vidéos"
-},
+  "topbar": {
+    "home": "Accueil",
+    "about": "À propos",
+    "projects": "Projets",
+    "blog": "Blog",
+    "contact": "Contact",
+    "vision": "Vision",
+    "language": "Langue"
+  },
+  "hero": {
+    "title": "Équipe Haïti 2075",
+    "subtitle": "Restaurer la dignité. Reconstruire l'espoir.",
+    "readMore": "Lire la Vision",
+    "joinNow": "Rejoindre le Mouvement",
+    "watchVideos": "Regarder les Vidéos",
+    "ctaPrimaryHref": "/fr/join",
+    "ctaSecondaryHref": "/fr/vision"
+  },
   "mission": {
     "heading": "Notre Mission",
     "paragraph": "Nous reconstruisons Haïti avec dignité, innovation et une vision partagée."
@@ -72,4 +74,3 @@
     "poweredBy": "Propulsé par le peuple haïtien"
   }
 }
-

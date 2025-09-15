@@ -1,7 +1,13 @@
-// lib/i18n/types.ts
-
 /** Sections supported by the dictionary system */
-export type Section = 'home' | 'about' | 'blog' | 'projects' | 'join' | 'teamDocs' | 'vision';
+export type Section =
+  | 'home'
+  | 'about'
+  | 'blog'
+  | 'projects'
+  | 'join'
+  | 'teamDocs'
+  | 'vision'
+  | 'videos'; // ✅ added
 
 /** Team Docs (/[locale]/team-docs) */
 export type TeamDocsDictionary = {
@@ -19,6 +25,7 @@ export type HomeDictionary = {
     subtitle: string;
     readMore: string;
     joinNow: string;
+    watchVideos: string; // ✅ already added
   };
   mission: {
     heading: string;
@@ -39,7 +46,6 @@ export type HomeDictionary = {
     copyright: string;
     poweredBy: string;
   };
-  /** Used only on the homepage “Our Projects” preview */
   projects: {
     title: string;
     intro: string;
@@ -107,6 +113,17 @@ export type VisionDictionary = {
   }[];
 };
 
+/** Videos page (/[locale]/videos) */
+export type VideosDictionary = {
+  title: string;
+  intro: string;
+  videos: {
+    title: string;
+    url: string;
+    caption?: string;
+  }[];
+};
+
 /** Mapping for precise return typing in getDictionary<T>() */
 export type DictionaryBySection = {
   home: HomeDictionary;
@@ -115,6 +132,6 @@ export type DictionaryBySection = {
   projects: ProjectsDictionary;
   join: JoinDictionary;
   teamDocs: TeamDocsDictionary;
-  vision: VisionDictionary;   // ✅ add this line
+  vision: VisionDictionary;
+  videos: VideosDictionary; // ✅ added
 };
-

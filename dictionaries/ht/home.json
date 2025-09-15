@@ -1,0 +1,36 @@
+
+{
+  "hero": {
+    "title": "Byenveni nan Ekip Ayiti 2075",
+    "subtitle": "Rete diyite. Rebati espwa.",
+    "button": "Antre nan Misyon an",
+    "readMore": "Li Vizyon an",
+    "joinNow": "Antre nan Mouvman an"
+  },
+  "newsletter": {
+    "heading": "Abòne ak bilten nou an",
+    "description": "Resevwa nouvèl sou pwojè nou yo, istwa yo, ak pwogrè kominote a.",
+    "placeholder": "Antre imèl ou",
+    "cta": "Abòne",
+    "success": "Mèsi paske ou abòne!"
+  },
+  "projects": {
+    "title": "Pwojè pou Restaure Lapè",
+    "intro": "Sa a pa sou politik. Sa se sou lapè, geri, ak bay pitit nou yo yon demen miyò.\nNou pa chèche pouvwa — nou ap retounen li bay pèp la.\nVizyon nou an kouvri tout Ayiti, soti nan nò rive nan sid, soti nan lès rive nan lwès.\nNou ap travay pou retabli lapè ak pwosperite nan tout nasyon an.",
+    "motto": "« Lage zam ou epi pran zouti ou. »",
+    "items": [
+      { "title": "Netwayaj & Asenisman Kominotè", "description": "Amelyore sante piblik atravè anviwònman pwòp" },
+      { "title": "Pwogram Edikasyon Jèn yo", "description": "Envesti nan lavni atravè konesans" },
+      { "title": "Rekonstriksyon Enfrastrikti", "description": "Retabli sèvis ak estrikti esansyèl yo" },
+      { "title": "Aksè ak Swen Sante", "description": "Pote swen medikal pou tout kominote yo" },
+      { "title": "Devlopman Agrikilti", "description": "Asire sekirite alimantè ak dirabilite" },
+      { "title": "Fòmasyon Pwofesyonèl", "description": "Bati ladrès pou endepandans ekonomik" },
+      { "title": "Pwoteksyon Kiltirèl", "description": "Selebre ak pwoteje eritaj ayisyen" },
+      { "title": "Rezolisyon Konfli", "description": "Kreye dyalòg lapè ant kominote yo" },
+      { "title": "Otonomizasyon Fanm yo", "description": "Sipòte egalite ak opòtinite" },
+      { "title": "Pwoteksyon Anviwònman", "description": "Pwoteje resous natirèl Ayiti" },
+      { "title": "Enklizyon Dijital", "description": "Fèmen diferans teknoloji pou tout Ayisyen" }
+    ]
+  }
+}
+

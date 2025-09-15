@@ -1,0 +1,16 @@
+{
+  "title": "Videyo yo",
+  "intro": "Dekouvri videyo nou yo ki montre vizyon ak pwojè Ayiti 2075.",
+  "videos": [
+    {
+      "title": "Diskou ouvèti",
+      "url": "https://www.youtube.com/embed/VIDEO_ID_1",
+      "caption": "Prezantasyon ofisyèl ekip la."
+    },
+    {
+      "title": "Pwojè Sante",
+      "url": "https://www.youtube.com/embed/VIDEO_ID_2",
+      "caption": "Yon apèsi sou inisyativ swen sante nou yo."
+    }
+  ]
+}
