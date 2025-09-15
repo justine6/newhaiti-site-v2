@@ -2,5 +2,12 @@
   "title": "TODO: translate title",
   "description": "TODO: translate description",
   "cta": "TODO: translate cta",
-  "form": "TODO: translate form"
+  "form": {
+    "name": "[ht] TODO: translate name",
+    "email": "[ht] TODO: translate email",
+    "phone": "[ht] TODO: translate phone",
+    "location": "[ht] TODO: translate location",
+    "message": "[ht] TODO: translate message",
+    "submit": "[ht] TODO: translate submit"
+  }
 }
