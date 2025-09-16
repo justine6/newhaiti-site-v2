@@ -24,7 +24,11 @@
     "motto": "Each project is a promise to the future.",
     "items": [
       { "title": "Clean Water", "description": "Providing safe drinking water." },
-      { "title": "Education", "description": "Schools for the future generation." }
+      { "title": "Education", "description": "Schools for the future generation." },
+      { "title": "Healthcare", "description": "Access to medical centers." },
+      { "title": "Infrastructure", "description": "Rebuilding roads and bridges." },
+      { "title": "Agriculture", "description": "Supporting local farmers." },
+      { "title": "Technology", "description": "Digital inclusion programs." }
     ]
   },
   "newsletter": {

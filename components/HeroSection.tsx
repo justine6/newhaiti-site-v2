@@ -18,30 +18,30 @@ export default function HeroSection({
   dictionary: HeroDict;
   locale: string | Locale;
 }) {
-  // Localized base path
   const base = typeof locale === "string" && locale !== "en" ? `/${locale}` : "";
 
-  // All links localized
   const joinHref = `${base}/join`;
   const visionHref = `${base}/vision`;
   const videosHref = `${base}/videos`;
 
   return (
-    <section className="relative isolate overflow-hidden min-h-[80vh]">
-      {/* Background Bliss Map with Blur */}
-      <div className="absolute inset-0 -z-10">
-        <Image
-          src="/images/haiti-hero-map1.jpg"
-          alt="Haiti Map Background"
-          fill
-          priority
-          className="absolute inset-0 w-full h-full object-cover opacity-30 -z-10"
-          style={{ objectPosition: "center top" }}
-        />
+    <section className="relative isolate overflow-hidden min-h-[80vh] bg-black">
+      {/* Haiti Map Background */}
+      <div className="absolute inset-0 -z-10 flex items-center justify-center">
+<Image
+  src="/images/haiti-hero-map1.jpg"
+  alt="Haiti Map Background"
+  fill
+  priority
+  className="absolute inset-0 w-full h-full object-cover opacity-35 -z-10"
+  style={{ objectPosition: "center 40%" }} // Centered, nudged slightly down
+/>
+
         {/* Dark overlay for readability */}
-        <div className="absolute inset-0 bg-black/40" aria-hidden="true" />
+        <div className="absolute inset-0 bg-black/30" aria-hidden="true" />
       </div>
 
+      {/* Content */}
       <div className="relative mx-auto flex max-w-5xl flex-col items-center px-4 py-24 text-center sm:py-36">
         <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-6xl drop-shadow-lg">
           {dictionary.title}
