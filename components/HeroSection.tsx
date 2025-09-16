@@ -25,20 +25,17 @@ export default function HeroSection({
   const videosHref = `${base}/videos`;
 
   return (
-    <section className="relative isolate overflow-hidden min-h-[80vh] bg-black">
+    <section className="relative isolate overflow-hidden min-h-[80vh]">
       {/* Haiti Map Background */}
-      <div className="absolute inset-0 -z-10 flex items-center justify-center">
+      <div className="absolute inset-0 -z-10">
         <Image
           src="/images/haiti-hero-map1.jpg"
           alt="Haiti Map Background"
           fill
           priority
-          className="absolute inset-0 w-full h-full object-contain opacity-35 -z-10 bg-black"
+          className="w-full h-full object-cover" // cover instead of contain
           style={{ objectPosition: "center" }}
         />
-
-        {/* Dark overlay for readability */}
-        <div className="absolute inset-0 bg-black/30" aria-hidden="true" />
       </div>
 
       {/* Content */}
@@ -46,7 +43,7 @@ export default function HeroSection({
         <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-6xl drop-shadow-lg">
           {dictionary.title}
         </h1>
-        <p className="mt-4 max-w-2xl text-lg text-white/90 sm:text-xl drop-shadow">
+        <p className="mt-4 max-w-2xl text-lg text-white sm:text-xl drop-shadow">
           {dictionary.subtitle}
         </p>
 
