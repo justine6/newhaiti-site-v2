@@ -1,6 +1,5 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-# Run translation checks before every commit
+# Auto-fix + validate dictionaries before commit
 npm run sync-projects && npm run check-dicts
-
