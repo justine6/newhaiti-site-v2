@@ -1,19 +1,18 @@
 {
-  "heading": "Axes de Projets Prioritaires",
-  "intro": "Découvrez les thèmes prioritaires qui guident Ayiti 2075 : santé, éducation, environnement, infrastructures, et plus encore.",
+  "heading": "Domaines Clés du Projet",
+  "intro": "Découvrez les thèmes prioritaires guidant Ayiti 2075 dans les domaines de la santé, de l’éducation, de l’environnement, des infrastructures et plus encore.",
   "categories": {
-    "sanitation": "Assainissement & Eau Potable",
+    "sanitation": "Assainissement et Eau Potable",
     "education": "Éducation",
     "infrastructure": "Infrastructures",
     "healthcare": "Santé",
     "housing": "Logement",
     "agriculture": "Agriculture",
-    "environment": "Environnement & Reboisement",
-    "commerce": "Commerce & Économie Locale",
-    "arts": "Arts & Culture",
-    "technology": "Technologie & Innovation",
-    "governance": "Leadership & Gouvernance"
+    "environment": "Environnement et Reboisement",
+    "commerce": "Commerce et Économie Locale",
+    "arts": "Arts et Culture",
+    "technology": "Technologie et Innovation",
+    "governance": "Leadership et Gouvernance"
   },
-  "callToAction": "Ces piliers guident notre mission—rejoignez-nous pour les transformer en réalité."
+  "callToAction": "Ces piliers guident notre mission — rejoignez-nous pour les transformer en réalité."
 }
-

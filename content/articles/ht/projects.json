@@ -1,19 +1,18 @@
 {
-  "heading": "Zòn Pwojè Enpòtan",
-  "intro": "Dekouvri tèm priyoritè Ayiti 2075 yo: sante, edikasyon, anviwònman, enfrastrikti, elatriye.",
+  "heading": "Zòn Kle nan Pwojè yo",
+  "intro": "Dekouvri tèm priyoritè ki ap gide Ayiti 2075 nan lasante, edikasyon, anviwònman, enfrastrikti ak plis toujou.",
   "categories": {
-    "sanitation": "Swen Ijyèn & Dlo Pwòp",
+    "sanitation": "Asenisman ak Dlo Pwòp",
     "education": "Edikasyon",
     "infrastructure": "Enfrastrikti",
-    "healthcare": "Sante",
+    "healthcare": "Swen Lasante",
     "housing": "Lojman",
     "agriculture": "Agrikilti",
-    "environment": "Anviwònman & Reforestasyon",
-    "commerce": "Komès & Ekonomi Lokal",
-    "arts": "Laj & Kilti",
-    "technology": "Teknoloji & Inovasyon",
-    "governance": "Lidèchip & Gouvènans"
+    "environment": "Anviwònman ak Rebwazman",
+    "commerce": "Komès ak Ekonomi Lokal",
+    "arts": "Atizay ak Kilti",
+    "technology": "Teknoloji ak Inovasyon",
+    "governance": "Lidèchip ak Gouvènans"
   },
-  "callToAction": "Pilye sa yo gide misyon nou—vini ede nou fè yo tounen reyalite."
+  "callToAction": "Pilye sa yo ap gide misyon nou — vin ansanm avèk nou pou fè yo tounen reyalite."
 }
-

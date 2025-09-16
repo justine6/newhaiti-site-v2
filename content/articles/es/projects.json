@@ -1,6 +1,6 @@
 {
-  "heading": "Áreas Clave de Proyectos",
-  "intro": "Explora los temas prioritarios de Ayiti 2075: salud, educación, medio ambiente, infraestructura y más.",
+  "heading": "Áreas Clave del Proyecto",
+  "intro": "Explora los temas prioritarios que guían Ayiti 2075 en salud, educación, medio ambiente, infraestructura y más.",
   "categories": {
     "sanitation": "Saneamiento y Agua Potable",
     "education": "Educación",
@@ -14,6 +14,5 @@
     "technology": "Tecnología e Innovación",
     "governance": "Liderazgo y Gobernanza"
   },
-  "callToAction": "Estos pilares guían nuestra misión — súmate para convertirlos en realidad."
+  "callToAction": "Estos pilares guían nuestra misión — únete a nosotros para hacerlos realidad."
 }
-

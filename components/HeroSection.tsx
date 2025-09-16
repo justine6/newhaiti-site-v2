@@ -28,14 +28,14 @@ export default function HeroSection({
     <section className="relative isolate overflow-hidden min-h-[80vh] bg-black">
       {/* Haiti Map Background */}
       <div className="absolute inset-0 -z-10 flex items-center justify-center">
-<Image
-  src="/images/haiti-hero-map1.jpg"
-  alt="Haiti Map Background"
-  fill
-  priority
-  className="absolute inset-0 w-full h-full object-cover opacity-35 -z-10"
-  style={{ objectPosition: "center 40%" }} // Centered, nudged slightly down
-/>
+        <Image
+          src="/images/haiti-hero-map1.jpg"
+          alt="Haiti Map Background"
+          fill
+          priority
+          className="absolute inset-0 w-full h-full object-contain opacity-35 -z-10 bg-black"
+          style={{ objectPosition: "center" }}
+        />
 
         {/* Dark overlay for readability */}
         <div className="absolute inset-0 bg-black/30" aria-hidden="true" />
