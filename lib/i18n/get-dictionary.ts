@@ -5,8 +5,7 @@ export type Locale = "en" | "fr" | "ht" | "es";
 
 const basePath = path.join(process.cwd(), "lib", "i18n", "dictionaries");
 
-
-// 🔑 Required sections (optional but helpful for sanity checks)
+// 🔑 Required sections inside home.json
 const requiredSections = ["topbar", "hero", "mission", "newsletter", "projects"];
 
 export async function getDictionary(locale: Locale, section: string) {
@@ -24,7 +23,7 @@ export async function getDictionary(locale: Locale, section: string) {
       throw new Error(`Invalid JSON in: ${locale}/${section}.json`);
     }
 
-    // 🔎 Extra check: verify required sections exist in `home.json`
+    // ✅ If checking home.json, make sure it has all required sections
     if (section === "home") {
       const missingKeys = requiredSections.filter((k) => !(k in parsed));
       if (missingKeys.length > 0) {
@@ -36,17 +35,16 @@ export async function getDictionary(locale: Locale, section: string) {
 
     return parsed;
   } catch (err: any) {
-    console.error(
-      `🚨 Error loading ${locale}/${section}.json → ${err.message}`
-    );
+    console.error(`🚨 Error loading ${locale}/${section}.json → ${err.message}`);
+
+    // Dev helper: surface warning in hot reload
     if (process.env.NODE_ENV !== "production") {
-  (global as any).__setTranslationWarning?.(
-    `Error in ${locale}/${section}.json → ${err.message}`
-  );
-}
+      (global as any).__setTranslationWarning?.(
+        `Error in ${locale}/${section}.json → ${err.message}`
+      );
+    }
 
-
-    // Fallback: try English dictionary instead of empty object
+    // 🔄 Fallback to English if available
     if (locale !== "en") {
       const fallbackPath = path.join(basePath, "en", `${section}.json`);
       if (fs.existsSync(fallbackPath)) {
@@ -55,6 +53,6 @@ export async function getDictionary(locale: Locale, section: string) {
       }
     }
 
-    return {}; // minimal fallback so app still renders
+    return {}; // minimal fallback
   }
 }

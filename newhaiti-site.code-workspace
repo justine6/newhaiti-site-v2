@@ -1,0 +1,41 @@
+{
+  "folders": [
+    {
+      "path": "."
+    }
+  ],
+  "settings": {
+    "files.exclude": {
+      "**/.git": true,
+      "**/.DS_Store": true,
+      "**/node_modules": true
+    },
+    "editor.formatOnSave": true
+  },
+  "tasks": {
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "Check Dictionaries",
+        "type": "shell",
+        "command": "npm run check-dicts",
+        "group": "build",
+        "problemMatcher": []
+      },
+      {
+        "label": "Fix Dictionaries",
+        "type": "shell",
+        "command": "npm run fix-dicts",
+        "group": "build",
+        "problemMatcher": []
+      },
+      {
+        "label": "Translate Projects",
+        "type": "shell",
+        "command": "npm run translate-projects",
+        "group": "build",
+        "problemMatcher": []
+      }
+    ]
+  }
+}

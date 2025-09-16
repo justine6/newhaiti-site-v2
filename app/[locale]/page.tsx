@@ -28,6 +28,7 @@ export default async function HomePage({ params }: Props) {
 
   const dictionary = await getDictionary(locale as Locale, "home");
 
+  // ✅ Ensure all required sections exist
   if (
     !dictionary ||
     !("hero" in dictionary) ||
@@ -41,8 +42,8 @@ export default async function HomePage({ params }: Props) {
       <main className="p-10 text-red-600">
         <h1>Missing or invalid home.json translation</h1>
         <p>
-          Check <code>content/home/{locale}.json</code> and ensure all required
-          sections exist.
+          Check <code>lib/i18n/dictionaries/{locale}/home.json</code> and ensure
+          all required sections exist.
         </p>
       </main>
     );
@@ -57,19 +58,22 @@ export default async function HomePage({ params }: Props) {
         dictionary={{
           title: homeDict.hero.title,
           subtitle: homeDict.hero.subtitle,
-          ctaPrimaryLabel: homeDict.hero.joinNow,     // → Join button
-          ctaSecondaryLabel: homeDict.hero.readMore,  // → Vision button
+          ctaPrimaryLabel: homeDict.hero.joinNow, // → Join button
+          ctaSecondaryLabel: homeDict.hero.readMore, // → Vision button
         }}
         locale={locale}
       />
 
       <MissionSection dictionary={homeDict.mission} />
       <ProjectsSection dictionary={homeDict.projects} />
+
+      {/* ✅ Corrected prop: joinLabel (capital L) */}
       <NewsletterSection
         dictionary={homeDict.newsletter}
         joinLabel={homeDict.hero.joinNow}
         locale={locale}
       />
+
       <ContactSection dictionary={homeDict.contact} locale={locale} />
       <Footer dictionary={homeDict.footer} />
     </>

@@ -4,16 +4,34 @@
   "motto": "Cada proyecto es una promesa para el futuro.",
   "items": [
     {
-      "title": "Educación para Todos",
-      "description": "Ampliar el acceso a una educación de calidad en Haití."
+      "title": "Clean Water",
+      "description": "Providing safe drinking water.",
+      "icon": "droplet"
     },
     {
-      "title": "Acceso a la Salud",
-      "description": "Mejorar hospitales, clínicas y servicios médicos."
+      "title": "Education",
+      "description": "Schools for the future generation.",
+      "icon": "graduation-cap"
     },
     {
-      "title": "Agua Potable y Saneamiento",
-      "description": "Garantizar acceso universal a agua potable."
+      "title": "Healthcare",
+      "description": "Access to medical facilities.",
+      "icon": "hospital"
+    },
+    {
+      "title": "Infrastructure",
+      "description": "Rebuilding roads and bridges.",
+      "icon": "building"
+    },
+    {
+      "title": "Agriculture",
+      "description": "Supporting local farmers.",
+      "icon": "leaf"
+    },
+    {
+      "title": "Technology",
+      "description": "Digital inclusion programs.",
+      "icon": "cpu"
     }
   ]
 }

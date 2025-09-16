@@ -4,16 +4,34 @@
   "motto": "Chak pwojè se yon pwomès pou lavni.",
   "items": [
     {
-      "title": "Edikasyon pou Tout Moun",
-      "description": "Bay aksè ak bon jan edikasyon nan tout Ayiti."
+      "title": "Clean Water",
+      "description": "Providing safe drinking water.",
+      "icon": "droplet"
     },
     {
-      "title": "Swen Sante",
-      "description": "Amelyore lopital, klinik, ak sèvis medikal."
+      "title": "Education",
+      "description": "Schools for the future generation.",
+      "icon": "graduation-cap"
     },
     {
-      "title": "Dlo Pwòp ak Asenisman",
-      "description": "Asire tout kominote gen dlo potab."
+      "title": "Healthcare",
+      "description": "Access to medical facilities.",
+      "icon": "hospital"
+    },
+    {
+      "title": "Infrastructure",
+      "description": "Rebuilding roads and bridges.",
+      "icon": "building"
+    },
+    {
+      "title": "Agriculture",
+      "description": "Supporting local farmers.",
+      "icon": "leaf"
+    },
+    {
+      "title": "Technology",
+      "description": "Digital inclusion programs.",
+      "icon": "cpu"
     }
   ]
 }

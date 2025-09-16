@@ -1,5 +1,5 @@
 import { getDictionary } from '@/lib/i18n/get-dictionary';
-import { Locale, languages } from '@/lib/i18n/settings';
+import { Locale, locales } from '@/lib/i18n/settings';
 
 import { Metadata } from 'next';
 
@@ -19,7 +19,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export default async function TeamDocsPage({ params }: Props) {
-  const locale = languages.includes(params.locale) ? params.locale : 'en';
+  const locale = locales.includes(params.locale) ? params.locale : 'en';
   const dict = await getDictionary(locale, 'teamDocs');
 
   if (!dict) {

@@ -1,10 +1,13 @@
 {
   "title": "Our Projects",
-  "intro": "Discover the key initiatives shaping the future of Haiti.",
+  "intro": "Discover our key initiatives...",
   "motto": "Each project is a promise to the future.",
   "items": [
-    { "name": "Education", "description": "Improving schools, training teachers, and empowering youth." },
-    { "name": "Healthcare", "description": "Expanding access to quality healthcare across communities." },
-    { "name": "Infrastructure", "description": "Building resilient roads, water systems, and energy networks." }
+    { "title": "Clean Water", "description": "Providing safe drinking water.", "icon": "droplet" },
+    { "title": "Education", "description": "Schools for the future generation.", "icon": "graduation-cap" },
+    { "title": "Healthcare", "description": "Access to medical facilities.", "icon": "hospital" },
+    { "title": "Infrastructure", "description": "Rebuilding roads and bridges.", "icon": "building" },
+    { "title": "Agriculture", "description": "Supporting local farmers.", "icon": "leaf" },
+    { "title": "Technology", "description": "Digital inclusion programs.", "icon": "cpu" }
   ]
 }

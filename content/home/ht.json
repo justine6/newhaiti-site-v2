@@ -1,13 +1,13 @@
 {
   "title": "Antre nan Mouvman an",
-  "description": "Vin yon pati nan Ayiti 2075. Enskri pou vin volontè, sipòte, oswa rete konekte.",
-  "cta": "Antre nan Mouvman an",
+  "description": "Vin yon pati nan transfòmasyon Ayiti a. Enskri anba a pou patisipe.",
+  "cta": "Kòmanse",
   "form": {
     "name": "Non Ou",
     "email": "Imèl Ou",
-    "phone": "Telefòn Ou",
+    "phone": "Nimewo Telefòn Ou",
     "location": "Kote Ou",
-    "message": "Mesaj Opsyonèl",
+    "message": "Mesaj Ou",
     "submit": "Antre Kounye a"
   }
 }

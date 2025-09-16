@@ -1,13 +1,13 @@
 {
   "title": "Join the Movement",
-  "description": "Be part of Ayiti 2075. Sign up to volunteer, support, or stay connected.",
-  "cta": "Join the Movement",
+  "description": "Be part of Haiti's transformation. Sign up below to participate.",
+  "cta": "Get Started",
   "form": {
     "name": "Your Name",
     "email": "Your Email",
-    "phone": "Your Phone",
+    "phone": "Your Phone Number",
     "location": "Your Location",
-    "message": "Optional Message",
+    "message": "Your Message",
     "submit": "Join Now"
   }
 }

@@ -1,19 +1,18 @@
-// lib/i18n/get-dictionary.ts
-import fs from "fs";
-import path from "path";
-import type { Locale } from "../types";
+import fs from 'fs';
+import path from 'path';
+import type { Locale } from './types';
 
+// Base path for home translations
+const basePath = path.join(process.cwd(), 'content', 'home');
 
-
-const basePath = path.join(process.cwd(), "lib", "i18n", "dictionaries");
-
-export async function getDictionary(locale: Locale, section: string) {
-  const filePath = path.join(basePath, locale, `${section}.json`);
+export async function getDictionary(locale: Locale) {
+  // Build path like lib/i18n/dictionaries/en.json, fr.json, ht.json, es.json
+  const filePath = path.join(basePath, `${locale}.json`);
 
   if (!fs.existsSync(filePath)) {
-    throw new Error(`❌ Missing translation file: ${locale}/${section}.json`);
+    throw new Error(`❌ Missing translation file: ${locale}.json`);
   }
 
-  const raw = fs.readFileSync(filePath, "utf-8");
+  const raw = fs.readFileSync(filePath, 'utf-8');
   return JSON.parse(raw);
 }
