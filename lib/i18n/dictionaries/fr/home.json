@@ -4,15 +4,19 @@
     "about": "À propos",
     "projects": "Projets",
     "blog": "Blog",
-    "contact": "Contact",
     "vision": "Vision",
+    "contact": "Contact",
     "language": "Langue"
   },
   "hero": {
-    "title": "Nouvelle Équipe Haïti 2075",
+    "title": "Équipe Haïti 2075",
     "subtitle": "Restaurer la dignité. Reconstruire l'espoir.",
     "readMore": "Lire la Vision",
     "joinNow": "Rejoindre le Mouvement"
+  },
+  "about": {
+    "title": "À propos de nous",
+    "description": "Découvrez notre mission, notre vision et les personnes qui portent le renouveau d’Haïti."
   },
   "mission": {
     "heading": "Notre Mission",
@@ -20,22 +24,42 @@
   },
   "projects": {
     "title": "Nos Projets",
-    "intro": "Découvrez nos initiatives clés pour restaurer la dignité, reconstruire l'espoir et renouveler la vision.",
+    "intro": "Découvrez nos principales initiatives visant à restaurer la dignité, reconstruire l'espoir et renouveler la vision en Haïti.",
     "motto": "Chaque projet est une promesse pour l'avenir.",
     "items": [
-      { "title": "Eau potable", "description": "Fournir de l'eau potable." },
-      { "title": "Éducation", "description": "Des écoles pour la future génération." }
+      { "title": "Eau potable", "description": "Fournir de l’eau potable sûre." },
+      { "title": "Éducation", "description": "Des écoles pour la future génération." },
+      { "title": "Santé", "description": "Accès aux centres médicaux." },
+      { "title": "Infrastructures", "description": "Reconstruction des routes et des ponts." },
+      { "title": "Agriculture", "description": "Soutien aux agriculteurs locaux." },
+      { "title": "Technologie", "description": "Programmes d’inclusion numérique." }
     ]
+  },
+  "blog": {
+    "title": "Notre Blog",
+    "description": "Lisez les dernières histoires, réflexions et mises à jour du mouvement Ayiti 2075."
   },
   "newsletter": {
     "title": "Restez Connecté",
-    "description": "Abonnez-vous pour recevoir des mises à jour, des nouvelles et des histoires porteuses d'espoir.",
+    "description": "Abonnez-vous pour recevoir des mises à jour, des nouvelles et des histoires porteuses d’espoir.",
     "placeholder": "Entrez votre email",
     "subscribe": "S'abonner"
   },
+  "join": {
+    "title": "Rejoindre le Mouvement",
+    "description": "Faites partie de la vision. Inscrivez-vous dès aujourd’hui pour nous soutenir et vous connecter.",
+    "form": {
+      "name": "Nom complet",
+      "email": "Adresse e-mail",
+      "phone": "Numéro de téléphone",
+      "location": "Localisation",
+      "message": "Message (optionnel)",
+      "submit": "Rejoindre"
+    }
+  },
   "contact": {
     "title": "Contactez-nous",
-    "description": "Nous serions ravis de vous entendre. Écrivez-nous à tout moment."
+    "description": "Nous serions ravis de vous entendre. Contactez-nous à tout moment."
   },
   "footer": {
     "rights": "© 2025 Nouvelle Haïti 2075. Tous droits réservés.",

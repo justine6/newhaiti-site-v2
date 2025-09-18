@@ -4,15 +4,19 @@
     "about": "Acerca de",
     "projects": "Proyectos",
     "blog": "Blog",
-    "contact": "Contacto",
     "vision": "Visión",
+    "contact": "Contacto",
     "language": "Idioma"
   },
   "hero": {
-    "title": "Nuevo Haití 2075",
-    "subtitle": "Restaurando la dignidad. Reconstruyendo la esperanza.",
+    "title": "Equipo Haití 2075",
+    "subtitle": "Restaurar la dignidad. Reconstruir la esperanza.",
     "readMore": "Leer la Visión",
-    "joinNow": "Unirse al Movimiento"
+    "joinNow": "Únete al Movimiento"
+  },
+  "about": {
+    "title": "Acerca de Nosotros",
+    "description": "Conozca más sobre nuestra misión, visión y las personas que impulsan la renovación de Haití."
   },
   "mission": {
     "heading": "Nuestra Misión",
@@ -20,29 +24,49 @@
   },
   "projects": {
     "title": "Nuestros Proyectos",
-    "intro": "Descubra nuestras iniciativas clave para restaurar la dignidad, reconstruir la esperanza y renovar la visión.",
+    "intro": "Descubra nuestras iniciativas clave para restaurar la dignidad, reconstruir la esperanza y renovar la visión en todo Haití.",
     "motto": "Cada proyecto es una promesa para el futuro.",
     "items": [
-      { "title": "Agua Limpia", "description": "Proporcionar agua potable segura." },
-      { "title": "Educación", "description": "Escuelas para la próxima generación." }
+      { "title": "Agua Potable", "description": "Proveer agua potable segura." },
+      { "title": "Educación", "description": "Escuelas para la próxima generación." },
+      { "title": "Salud", "description": "Acceso a centros médicos." },
+      { "title": "Infraestructura", "description": "Reconstrucción de carreteras y puentes." },
+      { "title": "Agricultura", "description": "Apoyo a los agricultores locales." },
+      { "title": "Tecnología", "description": "Programas de inclusión digital." }
     ]
+  },
+  "blog": {
+    "title": "Nuestro Blog",
+    "description": "Lea las últimas historias, ideas y actualizaciones del movimiento Ayiti 2075."
   },
   "newsletter": {
     "title": "Mantente Conectado",
     "description": "Suscríbete para recibir actualizaciones, noticias e historias de esperanza.",
-    "placeholder": "Introduce tu correo electrónico",
+    "placeholder": "Ingresa tu correo electrónico",
     "subscribe": "Suscribirse"
+  },
+  "join": {
+    "title": "Únete al Movimiento",
+    "description": "Sé parte de la visión. Regístrate hoy para apoyarnos y conectarte con nosotros.",
+    "form": {
+      "name": "Nombre completo",
+      "email": "Correo electrónico",
+      "phone": "Número de teléfono",
+      "location": "Ubicación",
+      "message": "Mensaje (opcional)",
+      "submit": "Unirse ahora"
+    }
   },
   "contact": {
     "title": "Contáctanos",
-    "description": "Nos encantaría saber de ti. Escríbenos en cualquier momento."
+    "description": "Nos encantaría saber de ti. Contáctanos en cualquier momento."
   },
   "footer": {
     "rights": "© 2025 Nuevo Haití 2075. Todos los derechos reservados.",
     "social": {
       "facebook": "Síguenos en Facebook",
       "twitter": "Síguenos en Twitter",
-      "youtube": "Míranos en YouTube"
+      "youtube": "Míralo en YouTube"
     }
   }
 }

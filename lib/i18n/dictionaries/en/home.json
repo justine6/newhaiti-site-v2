@@ -4,15 +4,19 @@
     "about": "About",
     "projects": "Projects",
     "blog": "Blog",
-    "contact": "Contact",
     "vision": "Vision",
+    "contact": "Contact",
     "language": "Language"
   },
   "hero": {
-    "title": "New Haiti Team 2075",
+    "title": "Haiti Team 2075",
     "subtitle": "Restoring Dignity. Rebuilding Hope.",
     "readMore": "Read the Vision",
     "joinNow": "Join the Movement"
+  },
+  "about": {
+    "title": "About Us",
+    "description": "Learn more about our mission, our vision, and the people driving Haiti’s renewal."
   },
   "mission": {
     "heading": "Our Mission",
@@ -31,11 +35,27 @@
       { "title": "Technology", "description": "Digital inclusion programs." }
     ]
   },
+  "blog": {
+    "title": "Our Blog",
+    "description": "Read the latest stories, insights, and updates from the Ayiti 2075 movement."
+  },
   "newsletter": {
     "title": "Stay Connected",
     "description": "Subscribe to receive updates, news, and stories of hope.",
     "placeholder": "Enter your email",
     "subscribe": "Subscribe"
+  },
+  "join": {
+    "title": "Join the Movement",
+    "description": "Be part of the vision. Sign up today to support and connect with us.",
+    "form": {
+      "name": "Full Name",
+      "email": "Email Address",
+      "phone": "Phone Number",
+      "location": "Location",
+      "message": "Message (optional)",
+      "submit": "Join Now"
+    }
   },
   "contact": {
     "title": "Contact Us",
