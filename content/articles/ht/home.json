@@ -1,75 +1,83 @@
 {
-"topbar": {
-  "home": "Akèy",
-  "about": "Sou nou",
-  "projects": "Pwojè",
-  "blog": "Blogo",
-  "contact": "Kontak",
-  "vision": "Vizyon",
-  "language": "Lang"
-},
-"hero": {
-  "title": "Ekip Ayiti 2075",
-  "subtitle": "Reta Dinyite. Rekonstwi Lespwa.",
-  "readMore": "Li Vizyon an",
-  "joinNow": "Antre nan Mouvman an",
-  "watchVideos": "Gade Videyo yo"
+  "topbar": {
+    "home": "Lakay",
+    "about": "Sou nou",
+    "projects": "Pwojè",
+    "blog": "Blog",
+    "contact": "Kontak",
+    "vision": "Vizyond",
+    "language": "Lang"
+  },
+  "hero": {
+    "title": "Ekip Ayiti 2075",
+    "subtitle": "Rete respekte diyite. Rebati espwa.",
+    "readMore": "Li Vizyond lan",
+    "joinNow": "Antre nan mouvman an",
+    "watchVideos": "Gade videyo yo"
   },
   "mission": {
-    "heading": "Misyon Nou",
-    "paragraph": "Nou ap rebati Ayiti ak dinyite, inovasyon, ak yon vizyon pataje."
+    "heading": "Misyo Nou",
+    "paragraph": "Nou ap rebati Ayiti ak diyite, inovasyon, ak yon vizyon pataje."
   },
   "newsletter": {
     "title": "Rete Konekte",
     "description": "Abònman pou resevwa nouvèl, mizajou, ak istwa espwa."
   },
+  "blogSection": {
+    "title": "Soti nan Blog Nou",
+    "paragraph": "Eksplore refleksyon, istwa, ak nouvèl sou mouvman Ayiti 2075.",
+    "cta": "Vizite Blog Nou",
+    "readMore": "Li plis →",
+    "fallbackNotice": "Nou montre atik an Anglè jiskaske tradiksyon yo disponib.",
+    "blogUnavailable": "Nou pa t ka chaje atik blog yo nan moman sa a. Tanpri eseye ankò pita."
+
+  },
   "projects": {
     "title": "Pwojè Nou yo",
-    "intro": "Dekouvri inisyativ kle nou yo pou retabli dinyite, rebati espwa, ak renouvle vizyon Ayiti.",
+    "intro": "Dekouvri inisyativ kle nou yo pou retabli diyite, rebati espwa, epi renouvle vizyon atravè Ayiti.",
     "motto": "Chak pwojè se yon pwomès pou lavni.",
     "items": [
       {
-        "title": "Swen Sante pou Tout Moun",
-        "description": "Klinik kominotè ki bay swen fasil pou tout moun.",
+        "title": "Sante pou Tout Moun",
+        "description": "Klinik kominotè ki disponib pou tout moun.",
         "category": "Sante"
       },
       {
         "title": "Edikasyon Kalite",
-        "description": "Lekòl byen ekipe pou prepare jenerasyon kap vini yo.",
+        "description": "Lekòl byen ekipe pou prepare pwochen jenerasyon an.",
         "category": "Edikasyon"
       },
       {
-        "title": "Reforestasyon Nasyonal",
+        "title": "Rebozman Nasyonal",
         "description": "Plante milyon pyebwa pou konbat deforestasyon.",
         "category": "Anviwònman"
       },
       {
-        "title": "Ankadreman Jèn yo",
-        "description": "Pwogram mentora pou devlopman pèsonèl ak pwofesyonèl.",
+        "title": "Otonomizasyon Jèn yo",
+        "description": "Pwogram mantora pou kwasans pèsonèl ak pwofesyonèl.",
         "category": "Jèn"
       },
       {
-        "title": "Enfrastrikti Rezilyan",
-        "description": "Konstriksyon wout, pon, ak kay dirab.",
+        "title": "Enfrastrikti Rezistan",
+        "description": "Bati wout, pon, ak lojman ki dirab.",
         "category": "Inovasyon"
       },
       {
         "title": "Lidèchip Kominotè",
-        "description": "Ankouraje patisipasyon sivil ak bon jan gouvènans lokal.",
+        "description": "Ankouraje patisipasyon sivik ak gouvènans lokal.",
         "category": "Jèn"
       }
     ]
   },
   "contact": {
     "heading": "Kontakte Nou",
-    "description": "Ekri nou pou pataje ide w, kesyon oswa opòtinite kolaborasyon.",
+    "description": "Ekri nou pou pataje lide ou, kesyon ou, oswa opòtinite pou kolabore.",
     "placeholder": "Mesaj ou",
-    "cta": "Voye Mesaj",
+    "cta": "Voye",
     "success": "Mèsi paske ou kontakte nou!"
   },
   "footer": {
     "copyright": "© 2025 Ekip Ayiti 2075",
-    "poweredBy": "Sipòte pa pèp Ayisyen an"
+    "poweredBy": "Pouse pa pèp Ayisyen an"
   }
 }
-
