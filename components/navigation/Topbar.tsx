@@ -33,9 +33,10 @@ const DEFAULT_LABELS: TopbarLabels = {
   language: "Language",
 };
 
-// External blog base – we’ll send all “Blog” traffic there
+// External blog base – visitors should land on blog HOME
 const BLOG_BASE_URL =
-  process.env.NEXT_PUBLIC_BLOG_BASE_URL ?? "https://blogs.nouvoayiti2075.com";
+  process.env.NEXT_PUBLIC_BLOG_BASE_URL ??
+  "https://blogs.nouvoayiti2075.com";
 
 export default function Topbar({ locale, labels }: TopbarProps) {
   const [isOpen, setIsOpen] = useState(false);
@@ -48,18 +49,20 @@ export default function Topbar({ locale, labels }: TopbarProps) {
     { href: `/${locale}`, label: safeLabels.home },
     { href: `/${locale}/#about`, label: safeLabels.about },
     { href: `/${locale}/#projects`, label: safeLabels.projects },
-    // 🔗 Send Blog to the external blog site (locale-aware)
+
+    // 🔗 Blog → external blog HOME (no /en/blog)
     {
-      href: `${BLOG_BASE_URL}/${locale}/blog`,
+      href: BLOG_BASE_URL,
       label: safeLabels.blog,
       external: true,
     },
-    // 🎥 Vision – also to external blog/videos for now
+
+    // 🎥 Vision → internal Vision page
     {
-      href: `${BLOG_BASE_URL}/${locale}/blog`,
-      label: "🎥 " + safeLabels.vision,
-      external: true,
+      href: `/${locale}/vision`,
+      label: safeLabels.vision,
     },
+
     { href: `/${locale}/#contact`, label: safeLabels.contact },
   ];
 
@@ -117,7 +120,7 @@ export default function Topbar({ locale, labels }: TopbarProps) {
         </div>
       </div>
 
-      {/* Mobile menu (keep simple for now) */}
+      {/* Mobile menu */}
       {isOpen && (
         <div className="md:hidden bg-white shadow-sm px-4 py-3 space-y-2">
           {navLinks.map((link) =>
