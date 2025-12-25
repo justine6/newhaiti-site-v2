@@ -1,10 +1,10 @@
-'use client';
+"use client";
 
-import LanguageSwitcher from './LanguageSwitcher';
-import Link from 'next/link';
-import Image from 'next/image';
-import { useState } from 'react';
-import { Menu, X } from 'lucide-react';
+import Link from "next/link";
+import Image from "next/image";
+import { useState } from "react";
+import { Menu, X } from "lucide-react";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
 
 type TopbarLabels = {
   home: string;
@@ -21,17 +21,22 @@ type TopbarProps = {
   labels: TopbarLabels;
 };
 
+// External blog base – we’ll send all “Blog” traffic there
+const BLOG_BASE_URL =
+  process.env.NEXT_PUBLIC_BLOG_BASE_URL ?? "https://blogs.nouvoayiti2075.com";
+
 export default function Topbar({ locale, labels }: TopbarProps) {
   const [isOpen, setIsOpen] = useState(false);
   const toggleMenu = () => setIsOpen((v) => !v);
 
-  const navLinks = [
+  const navLinks: { href: string; label: string; external?: boolean }[] = [
     { href: `/${locale}`, label: labels.home },
     { href: `/${locale}/#about`, label: labels.about },
     { href: `/${locale}/#projects`, label: labels.projects },
-    { href: `/${locale}/blog`, label: labels.blog },
- 
-    { href: `/${locale}/vision#videos`, label: '🎥 ' + labels.vision }, // optional direct jump
+    // 🔗 Send Blog to the external blog site (locale-aware)
+    { href: `${BLOG_BASE_URL}/${locale}/blog`, label: labels.blog, external: true },
+    // 🎥 Vision can *also* go to the blog site if you want consistency
+    { href: `${BLOG_BASE_URL}/${locale}/blog`, label: "🎥 " + labels.vision, external: true },
     { href: `/${locale}/#contact`, label: labels.contact },
   ];
 
@@ -55,21 +60,35 @@ export default function Topbar({ locale, labels }: TopbarProps) {
 
         {/* Desktop */}
         <nav className="hidden md:flex space-x-6 items-center">
-          {navLinks.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className="text-gray-700 hover:text-blue-600 font-medium transition"
-            >
-              {link.label}
-            </Link>
-          ))}
+          {navLinks.map((link) =>
+            link.external ? (
+              <a
+                key={link.href}
+                href={link.href}
+                className="text-gray-700 hover:text-blue-600 font-medium transition"
+              >
+                {link.label}
+              </a>
+            ) : (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="text-gray-700 hover:text-blue-600 font-medium transition"
+              >
+                {link.label}
+              </Link>
+            )
+          )}
           <LanguageSwitcher />
         </nav>
 
         {/* Mobile toggle */}
         <div className="md:hidden">
-          <button onClick={toggleMenu} className="text-gray-700" aria-label="Toggle menu">
+          <button
+            onClick={toggleMenu}
+            className="text-gray-700"
+            aria-label="Toggle menu"
+          >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
@@ -78,16 +97,27 @@ export default function Topbar({ locale, labels }: TopbarProps) {
       {/* Mobile menu */}
       {isOpen && (
         <div className="md:hidden bg-white shadow-sm px-4 py-3 space-y-2">
-          {navLinks.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className="block text-gray-800 hover:text-blue-600 font-medium transition"
-              onClick={() => setIsOpen(false)}
-            >
-              {link.label}
-            </Link>
-          ))}
+          {navLinks.map((link) =>
+            link.external ? (
+              <a
+                key={link.href}
+                href={link.href}
+                className="block text-gray-800 hover:text-blue-600 font-medium transition"
+                onClick={() => setIsOpen(false)}
+              >
+                {link.label}
+              </a>
+            ) : (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="block text-gray-800 hover:text-blue-600 font-medium transition"
+                onClick={() => setIsOpen(false)}
+              >
+                {link.label}
+              </Link>
+            )
+          )}
           <div className="pt-2 border-t">
             <LanguageSwitcher />
           </div>
@@ -96,4 +126,3 @@ export default function Topbar({ locale, labels }: TopbarProps) {
     </header>
   );
 }
-
