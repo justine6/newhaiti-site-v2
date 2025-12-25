@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
-import LanguageSwitcher from "@/components/LanguageSwitcher";
+import LanguageSwitcher from "@/components/navigation/LanguageSwitcher";
 
 type TopbarLabels = {
   home: string;
@@ -18,7 +18,19 @@ type TopbarLabels = {
 
 type TopbarProps = {
   locale: string;
-  labels: TopbarLabels;
+  // 🔐 Make labels optional, allow partials
+  labels?: Partial<TopbarLabels>;
+};
+
+// ✅ Safe English defaults (used when dictionary is missing)
+const DEFAULT_LABELS: TopbarLabels = {
+  home: "Home",
+  about: "About",
+  projects: "Projects",
+  blog: "Blog",
+  contact: "Contact",
+  vision: "Vision",
+  language: "Language",
 };
 
 // External blog base – we’ll send all “Blog” traffic there
@@ -29,15 +41,26 @@ export default function Topbar({ locale, labels }: TopbarProps) {
   const [isOpen, setIsOpen] = useState(false);
   const toggleMenu = () => setIsOpen((v) => !v);
 
+  // 🛟 Merge whatever came in with safe defaults
+  const safeLabels: TopbarLabels = { ...DEFAULT_LABELS, ...(labels ?? {}) };
+
   const navLinks: { href: string; label: string; external?: boolean }[] = [
-    { href: `/${locale}`, label: labels.home },
-    { href: `/${locale}/#about`, label: labels.about },
-    { href: `/${locale}/#projects`, label: labels.projects },
+    { href: `/${locale}`, label: safeLabels.home },
+    { href: `/${locale}/#about`, label: safeLabels.about },
+    { href: `/${locale}/#projects`, label: safeLabels.projects },
     // 🔗 Send Blog to the external blog site (locale-aware)
-    { href: `${BLOG_BASE_URL}/${locale}/blog`, label: labels.blog, external: true },
-    // 🎥 Vision can *also* go to the blog site if you want consistency
-    { href: `${BLOG_BASE_URL}/${locale}/blog`, label: "🎥 " + labels.vision, external: true },
-    { href: `/${locale}/#contact`, label: labels.contact },
+    {
+      href: `${BLOG_BASE_URL}/${locale}/blog`,
+      label: safeLabels.blog,
+      external: true,
+    },
+    // 🎥 Vision – also to external blog/videos for now
+    {
+      href: `${BLOG_BASE_URL}/${locale}/blog`,
+      label: "🎥 " + safeLabels.vision,
+      external: true,
+    },
+    { href: `/${locale}/#contact`, label: safeLabels.contact },
   ];
 
   return (
@@ -94,7 +117,7 @@ export default function Topbar({ locale, labels }: TopbarProps) {
         </div>
       </div>
 
-      {/* Mobile menu */}
+      {/* Mobile menu (keep simple for now) */}
       {isOpen && (
         <div className="md:hidden bg-white shadow-sm px-4 py-3 space-y-2">
           {navLinks.map((link) =>
@@ -102,8 +125,7 @@ export default function Topbar({ locale, labels }: TopbarProps) {
               <a
                 key={link.href}
                 href={link.href}
-                className="block text-gray-800 hover:text-blue-600 font-medium transition"
-                onClick={() => setIsOpen(false)}
+                className="block text-gray-700 hover:text-blue-600 font-medium transition"
               >
                 {link.label}
               </a>
@@ -111,15 +133,14 @@ export default function Topbar({ locale, labels }: TopbarProps) {
               <Link
                 key={link.href}
                 href={link.href}
-                className="block text-gray-800 hover:text-blue-600 font-medium transition"
-                onClick={() => setIsOpen(false)}
+                className="block text-gray-700 hover:text-blue-600 font-medium transition"
               >
                 {link.label}
               </Link>
             )
           )}
-          <div className="pt-2 border-t">
-            <LanguageSwitcher />
+          <div className="pt-2">
+            <LanguageSwitcher className="w-full" />
           </div>
         </div>
       )}
