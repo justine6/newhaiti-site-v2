@@ -1,3 +1,4 @@
+// app/[locale]/vision/page.tsx
 import Link from "next/link";
 import { getDictionary } from "@/lib/i18n/get-dictionary";
 
@@ -6,27 +7,25 @@ type VisionPageProps = {
 };
 
 export default async function VisionPage({ params }: VisionPageProps) {
-  // ✅ simple, safe fallback – no normalizeLocale
-  const locale = (params.locale ?? "en") as string;
+  const locale = (params?.locale ?? "en") as string;
 
-  const dict = await getDictionary(locale);
-
-  const vision = (dict as any).vision ?? {};
-  const home = (dict as any).home ?? {};
+  // Load vision.json for this locale – safe even if file is missing
+  const vision = (await getDictionary(locale, "vision")) ?? {};
+  const home = (await getDictionary(locale, "home")) ?? {};
   const hero = (home as any).hero ?? {};
 
   const title =
-    vision.title ?? "Our Vision for a New Haiti";
+    (vision as any).title ?? "Our Vision for a New Haiti";
 
   const description =
-    vision.description ??
+    (vision as any).description ??
     "We believe in unity, dignity, and long-term nation building through community-led projects.";
 
   const joinLabel =
-    vision.cta ?? hero.joinNow ?? "Join the Movement";
+    (vision as any).cta ?? hero.joinNow ?? "Join the Movement";
 
-  const highlights: string[] = Array.isArray(vision.highlights)
-    ? vision.highlights
+  const highlights: string[] = Array.isArray((vision as any).highlights)
+    ? (vision as any).highlights
     : [];
 
   return (
