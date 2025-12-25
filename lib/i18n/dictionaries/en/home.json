@@ -22,17 +22,43 @@
     "heading": "Our Mission",
     "paragraph": "We are rebuilding Haiti with dignity, innovation, and a shared vision."
   },
+  "blogSection": {
+    "title": "From Our Blog",
+    "paragraph": "Explore insights, stories, and updates from the Ayiti 2075 movement.",
+    "cta": "Visit Our Blog",
+    "readMore": "[en] TODO: translate readMore",
+    "fallbackNotice": "[en] TODO: translate fallbackNotice",
+    "blogUnavailable": "[en] TODO: translate blogUnavailable"
+  },
   "projects": {
     "title": "Our Projects",
     "intro": "Discover our key initiatives to restore dignity, rebuild hope, and renew vision across Haiti.",
     "motto": "Each project is a promise to the future.",
     "items": [
-      { "title": "Clean Water", "description": "Providing safe drinking water." },
-      { "title": "Education", "description": "Schools for the future generation." },
-      { "title": "Healthcare", "description": "Access to medical centers." },
-      { "title": "Infrastructure", "description": "Rebuilding roads and bridges." },
-      { "title": "Agriculture", "description": "Supporting local farmers." },
-      { "title": "Technology", "description": "Digital inclusion programs." }
+      {
+        "title": "Clean Water",
+        "description": "Providing safe drinking water."
+      },
+      {
+        "title": "Education",
+        "description": "Schools for the future generation."
+      },
+      {
+        "title": "Healthcare",
+        "description": "Access to medical centers."
+      },
+      {
+        "title": "Infrastructure",
+        "description": "Rebuilding roads and bridges."
+      },
+      {
+        "title": "Agriculture",
+        "description": "Supporting local farmers."
+      },
+      {
+        "title": "Technology",
+        "description": "Digital inclusion programs."
+      }
     ]
   },
   "blog": {

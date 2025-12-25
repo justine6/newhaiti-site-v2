@@ -2,64 +2,90 @@
   "topbar": {
     "home": "Akèy",
     "about": "Konsènan",
-    "projects": "Pwojè yo",
+    "projects": "Pwojè",
     "blog": "Blog",
-    "vision": "Vizion",
+    "vision": "Vizyond",
     "contact": "Kontak",
     "language": "Lang"
   },
   "hero": {
     "title": "Ekip Ayiti 2075",
-    "subtitle": "Rete Djanm. Rebati Espwa.",
-    "readMore": "Li Vizion an",
+    "subtitle": "Rete Djanm nan Dinyite. Rebati Espwa.",
+    "readMore": "Li Vizyond lan",
     "joinNow": "Antre nan Mouvman an"
   },
   "about": {
     "title": "Konsènan Nou",
-    "description": "Aprann plis sou misyon nou, vizyon nou, ak moun k ap pote renouvèlman Ayiti a."
+    "description": "Aprann plis sou misyon nou, vizyon nou, ak moun ki ap mennen renouvèlman Ayiti."
   },
   "mission": {
     "heading": "Misyon Nou",
-    "paragraph": "Nou ap rebati Ayiti ak diyite, inovasyon, ak yon vizyon pataje."
+    "paragraph": "Nou ap rebati Ayiti avèk diyite, inovasyon, ak yon vizyon pataje."
+  },
+  "blogSection": {
+    "title": "Soti nan Blog Nou an",
+    "paragraph": "Eksplore refleksyon, istwa, ak nouvèl sou mouvman Ayiti 2075.",
+    "cta": "Vizite Blog Nou an",
+    "readMore": "[ht] TODO: translate readMore",
+    "fallbackNotice": "[ht] TODO: translate fallbackNotice",
+    "blogUnavailable": "[ht] TODO: translate blogUnavailable"
   },
   "projects": {
     "title": "Pwojè Nou yo",
-    "intro": "Dekouvri inisyativ prensipal nou yo pou retabli diyite, rebati espwa, epi renouvle vizyon nan tout Ayiti.",
+    "intro": "Dekouvri prensipal inisyativ nou yo pou retabli diyite, rebati espwa, ak renouvle vizyon atravè Ayiti.",
     "motto": "Chak pwojè se yon pwomès pou lavni.",
     "items": [
-      { "title": "Dlo Pwòp", "description": "Bay dlo potab ki an sekirite." },
-      { "title": "Edikasyon", "description": "Lekòl pou jenerasyon kap vini an." },
-      { "title": "Sante", "description": "Aksè ak sant medikal yo." },
-      { "title": "Enfrastrikti", "description": "Rebati wout ak pon yo." },
-      { "title": "Agrikilti", "description": "Sipò pou peyizan lokal yo." },
-      { "title": "Teknoloji", "description": "Pwogram enklizyon dijital." }
+      {
+        "title": "Dlo Pwòp",
+        "description": "Bay dlo potab ki an sekirite."
+      },
+      {
+        "title": "Edikasyon",
+        "description": "Lekòl pou jenerasyon k ap vini yo."
+      },
+      {
+        "title": "Swen Sante",
+        "description": "Swen medikal aksesib pou tout moun."
+      },
+      {
+        "title": "Enfrastrikti",
+        "description": "Rebati wout ak lojman yo."
+      },
+      {
+        "title": "Agrikilti",
+        "description": "Sipòte peyizan yo ak sekirite alimantè."
+      },
+      {
+        "title": "Teknoloji",
+        "description": "Zouti dijital pou pwogrè."
+      }
     ]
   },
   "blog": {
     "title": "Blog Nou",
-    "description": "Li dènye istwa yo, refleksyon yo, ak nouvèl sou mouvman Ayiti 2075 la."
+    "description": "Li dènye istwa yo, panse yo ak nouvèl sou mouvman Ayiti 2075."
   },
   "newsletter": {
     "title": "Rete Konekte",
-    "description": "Abònman pou resevwa nouvèl, mizajou, ak istwa espwa.",
+    "description": "Abòne pou resevwa nouvèl, mizajou, ak istwa espwa.",
     "placeholder": "Antre imel ou",
     "subscribe": "Abòne"
   },
   "join": {
     "title": "Antre nan Mouvman an",
-    "description": "Vin fè pati vizyon an. Enskri jodi a pou sipòte ak konekte avèk nou.",
+    "description": "Fè pati vizyon an. Enskri jodi a pou sipòte ak konekte avèk nou.",
     "form": {
       "name": "Non konplè",
-      "email": "Adrès imel",
-      "phone": "Nimewo telefòn",
+      "email": "Adrès Imèl",
+      "phone": "Nimewo Telefòn",
       "location": "Kote",
       "message": "Mesaj (opsyonèl)",
-      "submit": "Antre kounye a"
+      "submit": "Antre Kounye a"
     }
   },
   "contact": {
     "title": "Kontakte Nou",
-    "description": "Nou ta renmen tande w. Kontakte nou nenpòt ki lè."
+    "description": "Nou ta renmen tande nouvèl ou. Kontakte nou nenpòt ki lè."
   },
   "footer": {
     "rights": "© 2025 Nouvo Ayiti 2075. Tout dwa rezève.",

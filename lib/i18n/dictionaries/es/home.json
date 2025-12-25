@@ -27,12 +27,30 @@
     "intro": "Descubra nuestras iniciativas clave para restaurar la dignidad, reconstruir la esperanza y renovar la visión en todo Haití.",
     "motto": "Cada proyecto es una promesa para el futuro.",
     "items": [
-      { "title": "Agua Potable", "description": "Proveer agua potable segura." },
-      { "title": "Educación", "description": "Escuelas para la próxima generación." },
-      { "title": "Salud", "description": "Acceso a centros médicos." },
-      { "title": "Infraestructura", "description": "Reconstrucción de carreteras y puentes." },
-      { "title": "Agricultura", "description": "Apoyo a los agricultores locales." },
-      { "title": "Tecnología", "description": "Programas de inclusión digital." }
+      {
+        "title": "Agua Potable",
+        "description": "Proveer agua potable segura."
+      },
+      {
+        "title": "Educación",
+        "description": "Escuelas para la próxima generación."
+      },
+      {
+        "title": "Salud",
+        "description": "Acceso a centros médicos."
+      },
+      {
+        "title": "Infraestructura",
+        "description": "Reconstrucción de carreteras y puentes."
+      },
+      {
+        "title": "Agricultura",
+        "description": "Apoyo a los agricultores locales."
+      },
+      {
+        "title": "Tecnología",
+        "description": "Programas de inclusión digital."
+      }
     ]
   },
   "blog": {
@@ -68,5 +86,13 @@
       "twitter": "Síguenos en Twitter",
       "youtube": "Míralo en YouTube"
     }
+  },
+  "blogSection": {
+    "title": "[es] TODO: translate blog title",
+    "paragraph": "[es] TODO: translate blog paragraph",
+    "cta": "[es] TODO: translate blog cta",
+    "readMore": "[es] TODO: translate readMore",
+    "fallbackNotice": "[es] TODO: translate fallbackNotice",
+    "blogUnavailable": "[es] TODO: translate blogUnavailable"
   }
 }

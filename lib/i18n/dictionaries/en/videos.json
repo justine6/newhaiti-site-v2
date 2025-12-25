@@ -1,0 +1,14 @@
+{
+  "title": "Videos",
+  "description": "This is where we’ll showcase stories, updates, and events in video format.",
+  "items": [
+    {
+      "title": "Welcome to Ayiti 2075",
+      "embedUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ"
+    },
+    {
+      "title": "Our Mission Explained",
+      "embedUrl": "https://www.youtube.com/embed/abcd1234"
+    }
+  ]
+}

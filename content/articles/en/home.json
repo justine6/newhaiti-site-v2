@@ -1,21 +1,20 @@
 {
-"topbar": {
-  "home": "Home",
-  "about": "About",
-  "projects": "Projects",
-  "blog": "Blog",
-  "contact": "Contact",
-  "vision": "Vision",
-  "language": "Language"
-},
-"hero": {
-  "title": "Team Haiti 2075",
-  "subtitle": "Restoring Dignity. Rebuilding Hope.",
-  "readMore": "Read the Vision",
-  "joinNow": "Join the Movement",
-  "watchVideos": "Watch Videos"
-},
-
+  "topbar": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "blog": "Blog",
+    "contact": "Contact",
+    "vision": "Vision",
+    "language": "Language"
+  },
+  "hero": {
+    "title": "Team Haiti 2075",
+    "subtitle": "Restoring Dignity. Rebuilding Hope.",
+    "readMore": "Read the Vision",
+    "joinNow": "Join the Movement",
+    "watchVideos": "Watch Videos"
+  },
   "mission": {
     "heading": "Our Mission",
     "paragraph": "We are rebuilding Haiti with dignity, innovation, and a shared vision."
@@ -24,24 +23,33 @@
     "title": "Stay Connected",
     "description": "Subscribe to receive updates, news, and stories of hope."
   },
+  "blogSection": {
+    "title": "From Our Blog",
+    "paragraph": "Explore insights, stories, and updates from the Ayiti 2075 movement.",
+    "cta": "Visit Our Blog",
+    "readMore": "Read more →",
+    "fallbackNotice": "Showing English posts until translations are available.",
+    "blogUnavailable": "We couldn’t load blog posts at the moment. Please try again later."
+
+  },
   "projects": {
     "title": "Our Projects",
     "intro": "Discover our key initiatives to restore dignity, rebuild hope, and renew vision across Haiti.",
     "motto": "Each project is a promise to the future.",
     "items": [
       {
-        "title": "Healthcare for All",
-        "description": "Community clinics providing accessible care for everyone.",
+        "title": "Health for All",
+        "description": "Community clinics accessible to everyone.",
         "category": "Health"
       },
       {
         "title": "Quality Education",
-        "description": "Well-equipped schools preparing the next generation.",
+        "description": "Well-equipped schools to prepare the next generation.",
         "category": "Education"
       },
       {
         "title": "National Reforestation",
-        "description": "Planting millions of trees to combat deforestation.",
+        "description": "Planting millions of trees to fight deforestation.",
         "category": "Environment"
       },
       {
@@ -56,7 +64,7 @@
       },
       {
         "title": "Community Leadership",
-        "description": "Encouraging civic engagement and local governance.",
+        "description": "Encouraging civic participation and local governance.",
         "category": "Youth"
       }
     ]
@@ -65,13 +73,11 @@
     "heading": "Contact Us",
     "description": "Reach out to share your ideas, questions, or collaboration opportunities.",
     "placeholder": "Your message",
-    "cta": "Send Message",
+    "cta": "Send",
     "success": "Thank you for contacting us!"
   },
   "footer": {
     "copyright": "© 2025 Team Haiti 2075",
-    "poweredBy": "Powered by the people of Haiti"
+    "poweredBy": "Powered by the Haitian people"
   }
 }
-
-

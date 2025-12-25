@@ -5,8 +5,19 @@ export type Locale = "en" | "fr" | "ht" | "es";
 
 const basePath = path.join(process.cwd(), "lib", "i18n", "dictionaries");
 
-// 🔑 Required sections inside home.json
-const requiredSections = ["topbar", "hero", "mission", "newsletter", "projects"];
+// 🔑 Required sections inside home.json only
+const requiredSections = [
+  "topbar",
+  "hero",
+  "about",
+  "mission",
+  "projects",
+  "blog",
+  "newsletter",
+  "join",
+  "contact",
+  "footer"
+];
 
 export async function getDictionary(locale: Locale, section: string) {
   const filePath = path.join(basePath, locale, `${section}.json`);
@@ -23,7 +34,7 @@ export async function getDictionary(locale: Locale, section: string) {
       throw new Error(`Invalid JSON in: ${locale}/${section}.json`);
     }
 
-    // ✅ If checking home.json, make sure it has all required sections
+    // ✅ Extra check for home.json only
     if (section === "home") {
       const missingKeys = requiredSections.filter((k) => !(k in parsed));
       if (missingKeys.length > 0) {
@@ -44,7 +55,7 @@ export async function getDictionary(locale: Locale, section: string) {
       );
     }
 
-    // 🔄 Fallback to English if available
+    // 🔄 Fallback to English if the file exists
     if (locale !== "en") {
       const fallbackPath = path.join(basePath, "en", `${section}.json`);
       if (fs.existsSync(fallbackPath)) {
@@ -53,6 +64,6 @@ export async function getDictionary(locale: Locale, section: string) {
       }
     }
 
-    return {}; // minimal fallback
+    return {}; // minimal fallback to prevent crash
   }
 }

@@ -1,13 +1,13 @@
 /** Sections supported by the dictionary system */
 export type Section =
-  | 'home'
-  | 'about'
-  | 'blog'
-  | 'projects'
-  | 'join'
-  | 'teamDocs'
-  | 'vision'
-  | 'videos'; // ✅ added
+  | "home"
+  | "about"
+  | "blog"
+  | "projects"
+  | "join"
+  | "teamDocs"
+  | "vision"
+  | "videos";
 
 /** Team Docs (/[locale]/team-docs) */
 export type TeamDocsDictionary = {
@@ -25,7 +25,7 @@ export type HomeDictionary = {
     subtitle: string;
     readMore: string;
     joinNow: string;
-    watchVideos: string; // ✅ already added
+    watchVideos: string;
   };
   mission: {
     heading: string;
@@ -56,15 +56,32 @@ export type HomeDictionary = {
       category?: string;
     }[];
   };
+
+  /** ✅ New blog preview section */
+  blogPreview: {
+    title: string;
+    subtitle?: string;
+    readMore: string;
+  };
+
+  /** ✅ Blog section for homepage feed */
+  blogSection: {
+    title: string;
+    paragraph: string;
+    cta: string;
+    readMore: string;
+    fallbackNotice: string;
+    blogUnavailable: string;
+  };
 };
 
-/** About page (keep minimal unless you add more fields) */
+/** About page (/[locale]/about) */
 export type AboutDictionary = {
   heading: string;
   content: string;
 };
 
-/** Blog landing (sample structure, adjust to your needs) */
+/** Blog landing (/[locale]/blog) */
 export type BlogDictionary = {
   title: string;
   posts: {
@@ -74,16 +91,16 @@ export type BlogDictionary = {
   }[];
 };
 
-/** Projects page (/[locale]/projects) — matches your ProjectsPage component  */
+/** Projects page (/[locale]/projects) */
 export type ProjectsDictionary = {
   heading: string;
   intro: string;
-  /** Keys must match your categoryIcons slugs (e.g., "education", "sanitation", etc.) */
+  /** Keys must match your categoryIcons slugs */
   categories: Record<string, string>;
   callToAction: string;
 };
 
-/** Join page (form labels / texts) */
+/** Join page (/[locale]/join) */
 export type JoinDictionary = {
   title: string;
   description: string;
@@ -124,7 +141,7 @@ export type VideosDictionary = {
   }[];
 };
 
-/** Mapping for precise return typing in getDictionary<T>() */
+/** ✅ Mapping for precise return typing in getDictionary<T>() */
 export type DictionaryBySection = {
   home: HomeDictionary;
   about: AboutDictionary;
@@ -133,5 +150,5 @@ export type DictionaryBySection = {
   join: JoinDictionary;
   teamDocs: TeamDocsDictionary;
   vision: VisionDictionary;
-  videos: VideosDictionary; // ✅ added
+  videos: VideosDictionary;
 };

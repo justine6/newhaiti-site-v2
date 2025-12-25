@@ -1,5 +1,3 @@
-// app/[locale]/page.tsx
-
 import { getDictionary } from "@/lib/i18n/get-dictionary";
 import type { Locale } from "@/lib/i18n/settings";
 import type { HomeDictionary } from "@/lib/i18n/types";
@@ -10,6 +8,7 @@ import ProjectsSection from "@/components/ProjectsSection";
 import NewsletterSection from "@/components/NewsletterSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
+import BlogSection from "@/components/BlogSection"; // ✅ import properly
 
 export async function generateMetadata() {
   return {
@@ -18,17 +17,14 @@ export async function generateMetadata() {
   };
 }
 
-// ✅ Make params async-compatible
 type Props = {
   params: Promise<{ locale: string }>;
 };
 
 export default async function HomePage({ params }: Props) {
   const { locale } = await params;
-
   const dictionary = await getDictionary(locale as Locale, "home");
 
-  // ✅ Ensure all required sections exist
   if (
     !dictionary ||
     !("hero" in dictionary) ||
@@ -53,27 +49,26 @@ export default async function HomePage({ params }: Props) {
 
   return (
     <>
-      {/* ✅ Universal mapping for HeroSection across EN/FR/HT/ES */}
       <HeroSection
         dictionary={{
           title: homeDict.hero.title,
           subtitle: homeDict.hero.subtitle,
-          ctaPrimaryLabel: homeDict.hero.joinNow, // → Join button
-          ctaSecondaryLabel: homeDict.hero.readMore, // → Vision button
+          ctaPrimaryLabel: homeDict.hero.joinNow,
+          ctaSecondaryLabel: homeDict.hero.readMore,
         }}
         locale={locale}
       />
 
+      {/* ✅ Only this BlogSection */}
+      <BlogSection dictionary={homeDict.blogSection} locale={locale} />
+
       <MissionSection dictionary={homeDict.mission} />
       <ProjectsSection dictionary={homeDict.projects} />
-
-      {/* ✅ Corrected prop: joinLabel (capital L) */}
       <NewsletterSection
         dictionary={homeDict.newsletter}
         joinLabel={homeDict.hero.joinNow}
         locale={locale}
       />
-
       <ContactSection dictionary={homeDict.contact} locale={locale} />
       <Footer dictionary={homeDict.footer} />
     </>

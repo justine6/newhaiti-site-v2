@@ -1,36 +1,45 @@
 {
-"topbar": {
-  "home": "Inicio",
-  "about": "Acerca de",
-  "projects": "Proyectos",
-  "blog": "Blog",
-  "contact": "Contacto",
-  "vision": "Visión",
-  "language": "Idioma"
-},
-"hero": {
-  "title": "Nuevo Equipo Haití 2075",
-  "subtitle": "Restaurar la dignidad. Reconstruir la esperanza.",
-  "readMore": "Leer la Visión",
-  "joinNow": "Unirse al Movimiento",
-  "watchVideos": "Ver Videos"
-},
+  "topbar": {
+    "home": "Inicio",
+    "about": "Acerca de",
+    "projects": "Proyectos",
+    "blog": "Blog",
+    "contact": "Contacto",
+    "vision": "Visión",
+    "language": "Idioma"
+  },
+  "hero": {
+    "title": "Equipo Haití 2075",
+    "subtitle": "Restaurando la dignidad. Reconstruyendo la esperanza.",
+    "readMore": "Leer la Visión",
+    "joinNow": "Únete al Movimiento",
+    "watchVideos": "Ver Videos"
+  },
   "mission": {
     "heading": "Nuestra Misión",
     "paragraph": "Estamos reconstruyendo Haití con dignidad, innovación y una visión compartida."
   },
   "newsletter": {
     "title": "Mantente Conectado",
-    "description": "Suscríbete para recibir noticias, actualizaciones e historias inspiradoras."
+    "description": "Suscríbete para recibir actualizaciones, noticias e historias de esperanza."
+  },
+  "blogSection": {
+    "title": "Desde Nuestro Blog",
+    "paragraph": "Explora reflexiones, historias y actualizaciones del movimiento Ayiti 2075.",
+    "cta": "Visita Nuestro Blog",
+    "readMore": "Leer más →",
+    "fallbackNotice": "Mostrando publicaciones en inglés hasta que las traducciones estén disponibles.",
+    "blogUnavailable": "No pudimos cargar las publicaciones del blog en este momento. Inténtalo de nuevo más tarde."
+ 
   },
   "projects": {
     "title": "Nuestros Proyectos",
-    "intro": "Descubre nuestras principales iniciativas para restaurar la dignidad, reconstruir la esperanza y renovar la visión de Haití.",
+    "intro": "Descubre nuestras iniciativas clave para restaurar la dignidad, reconstruir la esperanza y renovar la visión en Haití.",
     "motto": "Cada proyecto es una promesa para el futuro.",
     "items": [
       {
-        "title": "Atención Médica para Todos",
-        "description": "Clínicas comunitarias que brindan atención accesible a todos.",
+        "title": "Salud para Todos",
+        "description": "Clínicas comunitarias accesibles para todos.",
         "category": "Salud"
       },
       {
@@ -45,12 +54,12 @@
       },
       {
         "title": "Empoderamiento Juvenil",
-        "description": "Programas de mentoría para el desarrollo personal y profesional.",
+        "description": "Programas de mentoría para el crecimiento personal y profesional.",
         "category": "Juventud"
       },
       {
         "title": "Infraestructura Resiliente",
-        "description": "Construcción de carreteras, puentes y viviendas sostenibles.",
+        "description": "Construir carreteras, puentes y viviendas duraderas.",
         "category": "Innovación"
       },
       {
@@ -62,13 +71,13 @@
   },
   "contact": {
     "heading": "Contáctanos",
-    "description": "Escríbenos para compartir ideas, preguntas u oportunidades de colaboración.",
+    "description": "Escríbenos para compartir tus ideas, preguntas u oportunidades de colaboración.",
     "placeholder": "Tu mensaje",
-    "cta": "Enviar Mensaje",
+    "cta": "Enviar",
     "success": "¡Gracias por contactarnos!"
   },
   "footer": {
-    "copyright": "© 2025 Nuevo Equipo Haití 2075",
+    "copyright": "© 2025 Equipo Haití 2075",
     "poweredBy": "Impulsado por el pueblo haitiano"
   }
 }

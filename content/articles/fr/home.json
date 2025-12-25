@@ -10,12 +10,10 @@
   },
   "hero": {
     "title": "Équipe Haïti 2075",
-    "subtitle": "Restaurer la dignité. Reconstruire l'espoir.",
+    "subtitle": "Restaurer la dignité. Reconstruire l’espoir.",
     "readMore": "Lire la Vision",
     "joinNow": "Rejoindre le Mouvement",
-    "watchVideos": "Regarder les Vidéos",
-    "ctaPrimaryHref": "/fr/join",
-    "ctaSecondaryHref": "/fr/vision"
+    "watchVideos": "Regarder les vidéos"
   },
   "mission": {
     "heading": "Notre Mission",
@@ -23,16 +21,25 @@
   },
   "newsletter": {
     "title": "Restez Connecté",
-    "description": "Abonnez-vous pour recevoir des mises à jour et des histoires porteuses d'espoir."
+    "description": "Abonnez-vous pour recevoir des mises à jour, des nouvelles et des histoires d’espoir."
+  },
+  "blogSection": {
+    "title": "Depuis notre Blog",
+    "paragraph": "Explorez des réflexions, des histoires et des mises à jour du mouvement Ayiti 2075.",
+    "cta": "Visitez notre Blog",
+    "readMore": "Lire plus →",
+    "fallbackNotice": "Affichage des articles en anglais jusqu’à ce que les traductions soient disponibles.",
+    "blogUnavailable": "Impossible de charger les articles du blog pour le moment. Veuillez réessayer plus tard."
+
   },
   "projects": {
     "title": "Nos Projets",
-    "intro": "Découvrez nos principales initiatives visant à restaurer la dignité, reconstruire l'espoir et renouveler la vision en Haïti.",
-    "motto": "Chaque projet est une promesse pour l'avenir.",
+    "intro": "Découvrez nos initiatives clés pour restaurer la dignité, reconstruire l’espoir et renouveler la vision à travers Haïti.",
+    "motto": "Chaque projet est une promesse pour l’avenir.",
     "items": [
       {
-        "title": "Soins de Santé pour Tous",
-        "description": "Des cliniques communautaires offrant des soins accessibles à tous.",
+        "title": "Santé pour Tous",
+        "description": "Des cliniques communautaires accessibles à tous.",
         "category": "Santé"
       },
       {
@@ -41,18 +48,18 @@
         "category": "Éducation"
       },
       {
-        "title": "Reforestation Nationale",
+        "title": "Reboisement National",
         "description": "Planter des millions d’arbres pour lutter contre la déforestation.",
         "category": "Environnement"
       },
       {
         "title": "Autonomisation des Jeunes",
-        "description": "Des programmes de mentorat pour le développement personnel et professionnel.",
+        "description": "Programmes de mentorat pour la croissance personnelle et professionnelle.",
         "category": "Jeunesse"
       },
       {
         "title": "Infrastructures Résilientes",
-        "description": "Construire des routes, des ponts et des logements durables.",
+        "description": "Construire des routes, ponts et logements durables.",
         "category": "Innovation"
       },
       {
@@ -63,10 +70,10 @@
     ]
   },
   "contact": {
-    "heading": "Contactez-Nous",
-    "description": "Écrivez-nous pour partager vos idées, questions ou opportunités de collaboration.",
+    "heading": "Contactez-nous",
+    "description": "Contactez-nous pour partager vos idées, vos questions ou des opportunités de collaboration.",
     "placeholder": "Votre message",
-    "cta": "Envoyer le message",
+    "cta": "Envoyer",
     "success": "Merci de nous avoir contactés !"
   },
   "footer": {

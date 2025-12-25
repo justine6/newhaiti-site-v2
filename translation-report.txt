@@ -1,28 +1,4 @@
-✅ en/home.json is valid
-✅ en/about.json is valid
-✅ en/projects.json has 6 projects
-✅ en/blog.json is valid
-✅ en/newsletter.json is valid
-✅ en/contact.json is valid
-✅ en/vision.json is valid
-✅ fr/home.json is valid
-✅ fr/about.json is valid
-✅ fr/projects.json has 6 projects
-✅ fr/blog.json is valid
-✅ fr/newsletter.json is valid
-✅ fr/contact.json is valid
-✅ fr/vision.json is valid
-✅ ht/home.json is valid
-✅ ht/about.json is valid
-✅ ht/projects.json has 6 projects
-✅ ht/blog.json is valid
-✅ ht/newsletter.json is valid
-✅ ht/contact.json is valid
-✅ ht/vision.json is valid
-✅ es/home.json is valid
-✅ es/about.json is valid
-✅ es/projects.json has 6 projects
-✅ es/blog.json is valid
-✅ es/newsletter.json is valid
-✅ es/contact.json is valid
-✅ es/vision.json is valid
+✅ === Checking locale: en ===
+✅ === Checking locale: es ===
+✅ === Checking locale: fr ===
+✅ === Checking locale: ht ===

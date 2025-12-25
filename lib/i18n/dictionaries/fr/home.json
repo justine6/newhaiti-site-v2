@@ -15,42 +15,68 @@
     "joinNow": "Rejoindre le Mouvement"
   },
   "about": {
-    "title": "À propos de nous",
+    "title": "À Propos",
     "description": "Découvrez notre mission, notre vision et les personnes qui portent le renouveau d’Haïti."
   },
   "mission": {
     "heading": "Notre Mission",
     "paragraph": "Nous reconstruisons Haïti avec dignité, innovation et une vision partagée."
   },
+  "blogSection": {
+    "title": "Depuis Notre Blog",
+    "paragraph": "Découvrez des idées, des histoires et des mises à jour du mouvement Ayiti 2075.",
+    "cta": "Visitez Notre Blog",
+    "readMore": "[fr] TODO: translate readMore",
+    "fallbackNotice": "[fr] TODO: translate fallbackNotice",
+    "blogUnavailable": "[fr] TODO: translate blogUnavailable"
+  },
   "projects": {
     "title": "Nos Projets",
-    "intro": "Découvrez nos principales initiatives visant à restaurer la dignité, reconstruire l'espoir et renouveler la vision en Haïti.",
+    "intro": "Découvrez nos initiatives clés pour restaurer la dignité, reconstruire l'espoir et renouveler la vision à travers Haïti.",
     "motto": "Chaque projet est une promesse pour l'avenir.",
     "items": [
-      { "title": "Eau potable", "description": "Fournir de l’eau potable sûre." },
-      { "title": "Éducation", "description": "Des écoles pour la future génération." },
-      { "title": "Santé", "description": "Accès aux centres médicaux." },
-      { "title": "Infrastructures", "description": "Reconstruction des routes et des ponts." },
-      { "title": "Agriculture", "description": "Soutien aux agriculteurs locaux." },
-      { "title": "Technologie", "description": "Programmes d’inclusion numérique." }
+      {
+        "title": "Eau potable",
+        "description": "Fournir de l’eau potable sécurisée."
+      },
+      {
+        "title": "Éducation",
+        "description": "Des écoles pour la future génération."
+      },
+      {
+        "title": "Santé",
+        "description": "Des soins accessibles pour tous."
+      },
+      {
+        "title": "Infrastructures",
+        "description": "Reconstruction des routes et des logements."
+      },
+      {
+        "title": "Agriculture",
+        "description": "Soutenir les agriculteurs et la sécurité alimentaire."
+      },
+      {
+        "title": "Technologie",
+        "description": "Outils numériques pour le progrès."
+      }
     ]
   },
   "blog": {
     "title": "Notre Blog",
-    "description": "Lisez les dernières histoires, réflexions et mises à jour du mouvement Ayiti 2075."
+    "description": "Lisez les dernières histoires, idées et mises à jour du mouvement Ayiti 2075."
   },
   "newsletter": {
     "title": "Restez Connecté",
-    "description": "Abonnez-vous pour recevoir des mises à jour, des nouvelles et des histoires porteuses d’espoir.",
+    "description": "Abonnez-vous pour recevoir des mises à jour, des nouvelles et des histoires d'espoir.",
     "placeholder": "Entrez votre email",
     "subscribe": "S'abonner"
   },
   "join": {
-    "title": "Rejoindre le Mouvement",
-    "description": "Faites partie de la vision. Inscrivez-vous dès aujourd’hui pour nous soutenir et vous connecter.",
+    "title": "Rejoignez le Mouvement",
+    "description": "Faites partie de la vision. Inscrivez-vous dès aujourd'hui pour nous soutenir et vous connecter avec nous.",
     "form": {
       "name": "Nom complet",
-      "email": "Adresse e-mail",
+      "email": "Adresse email",
       "phone": "Numéro de téléphone",
       "location": "Localisation",
       "message": "Message (optionnel)",
@@ -58,11 +84,11 @@
     }
   },
   "contact": {
-    "title": "Contactez-nous",
-    "description": "Nous serions ravis de vous entendre. Contactez-nous à tout moment."
+    "title": "Contactez-Nous",
+    "description": "Nous aimerions avoir de vos nouvelles. Contactez-nous à tout moment."
   },
   "footer": {
-    "rights": "© 2025 Nouvelle Haïti 2075. Tous droits réservés.",
+    "rights": "© 2025 Nouvel Haïti 2075. Tous droits réservés.",
     "social": {
       "facebook": "Suivez-nous sur Facebook",
       "twitter": "Suivez-nous sur Twitter",
