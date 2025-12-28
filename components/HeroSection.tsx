@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 
 type HeroSectionProps = {
   dictionary?: {
@@ -19,30 +18,32 @@ export default function HeroSection({ dictionary, locale }: HeroSectionProps) {
   const joinNowLabel = dictionary?.joinNow ?? "Join the Movement";
 
   return (
-    <section className="relative overflow-hidden">
-      {/* 🔵🔴 Haiti flag + map background */}
-      <div className="absolute inset-0 -z-10">
-        {/* Flag gradient base */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[#002b7f] to-[#d21034]" />
+    <section
+      className="
+        relative overflow-hidden
+        bg-gradient-to-b from-blue-900 via-purple-800 to-red-700
+        text-center
+      "
+    >
+      {/* 🔵🔴 Map background, edge to edge */}
+      <div
+        className="
+          absolute inset-0 -z-10
+          bg-[url('/images/haiti-map-bg.png')]
+          bg-cover bg-center bg-no-repeat
+        "
+      />
 
-        {/* Map image overlay */}
-        <Image
-          src="/images/haiti-map-bg.png"
-          alt="Map of Haiti over the national flag"
-          fill
-          priority
-          className="object-contain object-center opacity-90 mix-blend-normal pointer-events-none select-none"
-          sizes="100vw"
-        />
-      </div>
+      {/* Dark overlay so text stays readable */}
+      <div className="absolute inset-0 -z-10 bg-black/25" />
 
       {/* Content */}
-      <div className="relative mx-auto flex max-w-5xl flex-col items-center px-4 py-24 text-center sm:py-36">
-        <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-6xl drop-shadow-lg">
+      <div className="relative mx-auto flex max-w-5xl flex-col items-center px-4 py-24 sm:py-40">
+        <h1 className="text-4xl sm:text-6xl font-extrabold tracking-tight text-white drop-shadow-xl">
           {title}
         </h1>
 
-        <p className="mt-4 max-w-2xl text-lg text-white sm:text-xl drop-shadow">
+        <p className="mt-4 max-w-2xl text-lg sm:text-xl text-white drop-shadow">
           {subtitle}
         </p>
 

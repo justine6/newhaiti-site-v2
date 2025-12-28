@@ -48,12 +48,15 @@ export default function NewYear2026Section({
           </div>
 
           {/* Heading */}
-          <p className="text-xs tracking-[0.2em] text-red-700 mb-1 uppercase">
+          <p className="text-xs sm:text-sm tracking-[0.25em] text-red-700 mb-1">
             BON LANNE 2026
           </p>
-          <p className="text-[11px] uppercase tracking-[0.25em] text-gray-500 mb-6">
+
+          <h2 className="text-3xl sm:text-4xl font-extrabold tracking-wide text-gray-800 mb-5 text-center">
             NOUVO AYITI 2075
-          </p>
+          </h2>
+
+          <div className="mx-auto mb-6 h-1 w-24 rounded-full bg-gradient-to-r from-red-700 via-red-500 to-black" />
 
           {/* Main Creole message */}
           <div className="space-y-4 text-left text-[13px] sm:text-[14px] leading-relaxed text-gray-800">
