@@ -1,3 +1,4 @@
+// components/JoinForm.tsx
 'use client';
 
 import { useState } from 'react';
@@ -8,15 +9,14 @@ export default function JoinForm() {
   const [phone, setPhone] = useState('');
   const [location, setLocation] = useState('');
   const [message, setMessage] = useState('');
-  const [successMessage, setSuccessMessage] = useState<string | null>(null);
-  const [error, setError] = useState<string | null>(null);
+  const [isSubmitted, setIsSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     setError(null);
-    setSuccessMessage(null);
 
     try {
       const res = await fetch('/api/join', {
@@ -25,25 +25,22 @@ export default function JoinForm() {
         body: JSON.stringify({ name, email, phone, location, message }),
       });
 
-      const data = await res.json();
-
-      if (!res.ok || !data?.success) {
-        throw new Error(data?.error || 'Something went wrong. Please try again.');
+      if (res.ok) {
+        setIsSubmitted(true);
+        setName('');
+        setEmail('');
+        setPhone('');
+        setLocation('');
+        setMessage('');
+      } else {
+        const result = await res.json().catch(() => ({}));
+        setError(
+          result.error ||
+            'Something went wrong on the server. Please try again later.'
+        );
       }
-
-      setSuccessMessage(
-        data?.message ??
-          'Mèsi anpil! Your registration was received. Please check your email for confirmation.'
-      );
-
-      // reset fields
-      setName('');
-      setEmail('');
-      setPhone('');
-      setLocation('');
-      setMessage('');
-    } catch (err: any) {
-      setError(err.message || 'Network error. Please try again.');
+    } catch (_err) {
+      setError('Network error. Please check your connection and try again.');
     } finally {
       setIsSubmitting(false);
     }
@@ -51,7 +48,7 @@ export default function JoinForm() {
 
   return (
     <form onSubmit={handleSubmit} className="space-y-4">
-      {/* your fields stay the same… */}
+      {/* … your fields exactly as you have them … */}
 
       <button
         type="submit"
@@ -61,16 +58,15 @@ export default function JoinForm() {
         {isSubmitting ? 'Submitting…' : 'Join Now'}
       </button>
 
-      {successMessage && (
+      {isSubmitted && !error && (
         <p className="mt-4 text-green-600 text-sm font-medium">
-          ✅ {successMessage}
+          ✅ Thank you for joining! If everything is configured correctly,
+          you’ll receive a confirmation email shortly.
         </p>
       )}
 
       {error && (
-        <p className="mt-4 text-red-500 text-sm font-medium">
-          ❌ {error}
-        </p>
+        <p className="mt-4 text-red-500 text-sm font-medium">❌ {error}</p>
       )}
     </form>
   );
