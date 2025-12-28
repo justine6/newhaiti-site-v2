@@ -21,10 +21,11 @@ export default function HeroSection({ dictionary, locale }: HeroSectionProps) {
     <section
       className="relative overflow-hidden text-center"
       style={{
+        // gradient + map combined so Tailwind can't purge it
         backgroundImage:
-          "linear-gradient(to bottom, rgba(0,43,127,0.95), rgba(210,16,52,0.95)), url('/images/haiti-map-bg.png')",
+          "linear-gradient(to bottom, rgba(0,43,127,0.65), rgba(210,16,52,0.80)), url('/images/haiti-map-bg.png')",
         backgroundSize: "cover",
-        backgroundPosition: "center",
+        backgroundPosition: "center 5%",
         backgroundRepeat: "no-repeat",
       }}
     >
