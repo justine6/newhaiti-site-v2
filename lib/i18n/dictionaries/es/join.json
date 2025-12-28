@@ -2,8 +2,8 @@
   "hero": {
     "eyebrow": "Únete al movimiento",
     "title": "Apoya a Nouvo Ayiti 2075",
-    "subtitle": "Comparte tus datos de contacto para recibir información sobre proyectos, eventos y maneras de colaborar.",
-    "highlight": "Juntos reconstruimos Haití con dignidad y esperanza."
+    "subtitle": "Comparte tus datos de contacto para mantenerte informado sobre proyectos, eventos y formas de contribuir.",
+    "highlight": "Juntos, estamos reconstruyendo Haití con dignidad y esperanza."
   },
   "form": {
     "title": "Sé parte de la comunidad",
@@ -13,14 +13,18 @@
     "phoneLabel": "Teléfono (opcional)",
     "locationLabel": "Ciudad / País",
     "messageLabel": "Mensaje (opcional)",
-    "submitLabel": "Unirme al movimiento"
+    "submitLabel": "Unirse al movimiento",
+    "successMessage": "¡Gracias por unirte! Pronto recibirás un correo electrónico de confirmación."
   },
-  "success": {
-    "title": "¡Gracias por unirte!",
-    "message": "Hemos recibido tu información. Muy pronto recibirás noticias y próximos pasos."
-  },
-  "error": {
-    "title": "Ha ocurrido un error",
-    "message": "No pudimos enviar tu solicitud. Inténtalo de nuevo en unos minutos o escríbenos directamente."
+  "email": {
+    "userSubject": "Gracias por unirte a Nouvo Ayiti 2075",
+    "userGreeting": "Estimado/a {name},",
+    "userIntro": "Gracias por unirte a Nouvo Ayiti 2075. Tu decisión de sumarte al movimiento nos ayuda a restaurar la dignidad, reconstruir la esperanza y servir a las comunidades de Haití.",
+    "userSummaryTitle": "Aquí tienes un resumen de la información que compartiste:",
+    "userOutro": "Nuestro equipo te mantendrá informado sobre proyectos, eventos y maneras concretas de apoyar la visión de una nueva Haití.",
+    "userSignature": "Con gratitud,\nEl equipo de Nouvo Ayiti 2075",
+    "adminSubject": "Nuevo envío del formulario de unión – Nouvo Ayiti 2075",
+    "adminIntro": "Una nueva persona acaba de completar el formulario de unión. Detalles:",
+    "adminFooter": "Revisa esta información y realiza el seguimiento que sea necesario."
   }
 }

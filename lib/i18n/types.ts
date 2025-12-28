@@ -1,3 +1,5 @@
+// lib/i18n/types.ts
+
 /** Sections supported by the dictionary system */
 export type Section =
   | "home"
@@ -91,24 +93,65 @@ export type BlogDictionary = {
   }[];
 };
 
-/** Join page (/[locale]/join) */
+/** Projects page (/[locale]/projects) */
+export type ProjectsDictionary = {
+  title: string;
+  intro: string;
+  motto?: string;
+  categories?: {
+    id: string;
+    label: string;
+  }[];
+  items: {
+    id?: string;
+    title: string;
+    description: string;
+    category?: string;
+    status?: string;
+    badge?: string;
+  }[];
+};
+
+/** Join page (/[locale]/join) – email copy + form + hero */
+
+export type JoinEmailDictionary = {
+  // User / confirmation email
+  userSubject?: string;
+  userGreeting?: string; // supports {name}
+  userIntro?: string;
+  userSummaryTitle?: string;
+  userOutro?: string;
+  userSignature?: string;
+
+  // Admin notification
+  adminSubject?: string;
+  adminIntro?: string;
+  adminFooter?: string;
+};
+
+export type JoinFormDictionary = {
+  title?: string;
+  description?: string;
+  nameLabel?: string;
+  emailLabel?: string;
+  phoneLabel?: string;
+  locationLabel?: string;
+  messageLabel?: string;
+  submitLabel?: string;
+  successMessage?: string;
+};
+
+export type JoinHeroDictionary = {
+  eyebrow?: string;
+  title?: string;
+  subtitle?: string;
+  highlight?: string;
+};
+
 export type JoinDictionary = {
-  hero?: {
-    eyebrow?: string;
-    title?: string;
-    subtitle?: string;
-    highlight?: string;
-  };
-  form?: {
-    title?: string;
-    description?: string;
-    nameLabel?: string;
-    emailLabel?: string;
-    phoneLabel?: string;
-    locationLabel?: string;
-    messageLabel?: string;
-    submitLabel?: string;
-  };
+  hero?: JoinHeroDictionary;
+  form?: JoinFormDictionary;
+  email?: JoinEmailDictionary; // used by /api/join
   success?: {
     title?: string;
     message?: string;

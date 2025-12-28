@@ -13,14 +13,18 @@
     "phoneLabel": "Phone (optional)",
     "locationLabel": "City / Country",
     "messageLabel": "Message (optional)",
-    "submitLabel": "Join the movement"
+    "submitLabel": "Join the movement",
+    "successMessage": "Thank you for joining! You will receive a confirmation email shortly."
   },
-  "success": {
-    "title": "Thank you for joining!",
-    "message": "We have received your information. You will hear from us soon with updates and next steps."
-  },
-  "error": {
-    "title": "Something went wrong",
-    "message": "We could not submit your request. Please try again in a few minutes or email us directly."
+  "email": {
+    "userSubject": "Thank you for joining Nouvo Ayiti 2075",
+    "userGreeting": "Dear {name},",
+    "userIntro": "Thank you for standing with Nouvo Ayiti 2075. Your decision to join the movement helps us restore dignity, rebuild hope, and serve communities across Haiti.",
+    "userSummaryTitle": "Here is a copy of the information you shared:",
+    "userOutro": "Our team will keep you informed about projects, events, and concrete ways to support the vision for a renewed Haiti.",
+    "userSignature": "With gratitude,\nThe Nouvo Ayiti 2075 Team",
+    "adminSubject": "New join form submission – Nouvo Ayiti 2075",
+    "adminIntro": "A new person has just completed the join form. Details:",
+    "adminFooter": "Please review this submission and follow up as appropriate."
   }
 }
