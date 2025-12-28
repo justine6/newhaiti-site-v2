@@ -1,13 +1,26 @@
 {
-  "title": "TODO: translate title",
-  "description": "TODO: translate description",
-  "cta": "TODO: translate cta",
+  "hero": {
+    "eyebrow": "Únete al movimiento",
+    "title": "Apoya a Nouvo Ayiti 2075",
+    "subtitle": "Comparte tus datos de contacto para recibir información sobre proyectos, eventos y maneras de colaborar.",
+    "highlight": "Juntos reconstruimos Haití con dignidad y esperanza."
+  },
   "form": {
-    "name": "[es] TODO: translate name",
-    "email": "[es] TODO: translate email",
-    "phone": "[es] TODO: translate phone",
-    "location": "[es] TODO: translate location",
-    "message": "[es] TODO: translate message",
-    "submit": "[es] TODO: translate submit"
+    "title": "Sé parte de la comunidad",
+    "description": "Completa este breve formulario para recibir actualizaciones, oportunidades de servicio e historias desde el terreno.",
+    "nameLabel": "Nombre completo",
+    "emailLabel": "Correo electrónico",
+    "phoneLabel": "Teléfono (opcional)",
+    "locationLabel": "Ciudad / País",
+    "messageLabel": "Mensaje (opcional)",
+    "submitLabel": "Unirme al movimiento"
+  },
+  "success": {
+    "title": "¡Gracias por unirte!",
+    "message": "Hemos recibido tu información. Muy pronto recibirás noticias y próximos pasos."
+  },
+  "error": {
+    "title": "Ha ocurrido un error",
+    "message": "No pudimos enviar tu solicitud. Inténtalo de nuevo en unos minutos o escríbenos directamente."
   }
 }

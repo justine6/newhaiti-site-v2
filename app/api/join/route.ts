@@ -31,11 +31,18 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    const { name, email, phone, location, message } = await req.json();
+    const body = await req.json().catch(() => null);
 
-    if (!name || !email || !phone || !location) {
+    const name = (body?.name || '').toString().trim();
+    const email = (body?.email || '').toString().trim();
+    const phone = (body?.phone || '').toString().trim();
+    const location = (body?.location || '').toString().trim();
+    const message = (body?.message || '').toString().trim();
+
+    // ✅ Only name + email are required; others optional
+    if (!name || !email) {
       return NextResponse.json(
-        { error: 'Missing required fields' },
+        { error: 'Name and email are required.' },
         { status: 400 }
       );
     }
@@ -71,8 +78,8 @@ export async function POST(req: NextRequest) {
         <ul>
           <li><strong>Nom :</strong> ${name}</li>
           <li><strong>Email :</strong> ${email}</li>
-          <li><strong>Téléphone :</strong> ${phone}</li>
-          <li><strong>Localisation :</strong> ${location}</li>
+          ${phone ? `<li><strong>Téléphone :</strong> ${phone}</li>` : ''}
+          ${location ? `<li><strong>Localisation :</strong> ${location}</li>` : ''}
           <li><strong>Message :</strong> ${message || '—'}</li>
         </ul>
         <p>L’équipe Ayiti 2075</p>
@@ -91,8 +98,8 @@ export async function POST(req: NextRequest) {
         <ul>
           <li><strong>Nom :</strong> ${name}</li>
           <li><strong>Email :</strong> ${email}</li>
-          <li><strong>Téléphone :</strong> ${phone}</li>
-          <li><strong>Localisation :</strong> ${location}</li>
+          ${phone ? `<li><strong>Téléphone :</strong> ${phone}</li>` : ''}
+          ${location ? `<li><strong>Localisation :</strong> ${location}</li>` : ''}
           <li><strong>Message :</strong> ${message || '—'}</li>
         </ul>
       `,
@@ -110,4 +117,3 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: 'Internal Server Error' }, { status: 500 });
   }
 }
-

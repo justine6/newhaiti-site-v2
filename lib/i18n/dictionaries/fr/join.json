@@ -1,13 +1,26 @@
 {
-  "title": "TODO: translate title",
-  "description": "TODO: translate description",
-  "cta": "TODO: translate cta",
+  "hero": {
+    "eyebrow": "Rejoignez le mouvement",
+    "title": "Soutenez Nouvo Ayiti 2075",
+    "subtitle": "Partagez vos coordonnées pour recevoir des informations sur les projets, les événements et les façons de contribuer.",
+    "highlight": "Ensemble, nous rebâtissons Haïti avec dignité et espoir."
+  },
   "form": {
-    "name": "[fr] TODO: translate name",
-    "email": "[fr] TODO: translate email",
-    "phone": "[fr] TODO: translate phone",
-    "location": "[fr] TODO: translate location",
-    "message": "[fr] TODO: translate message",
-    "submit": "[fr] TODO: translate submit"
+    "title": "Faites partie de la communauté",
+    "description": "Remplissez ce court formulaire pour recevoir des nouvelles, des opportunités de servir et des histoires du terrain.",
+    "nameLabel": "Nom complet",
+    "emailLabel": "E-mail",
+    "phoneLabel": "Téléphone (optionnel)",
+    "locationLabel": "Ville / Pays",
+    "messageLabel": "Message (optionnel)",
+    "submitLabel": "Rejoindre le mouvement"
+  },
+  "success": {
+    "title": "Merci de nous avoir rejoints !",
+    "message": "Nous avons bien reçu vos informations. Vous recevrez bientôt des nouvelles et les prochaines étapes."
+  },
+  "error": {
+    "title": "Une erreur est survenue",
+    "message": "Nous n'avons pas pu envoyer votre demande. Veuillez réessayer dans quelques minutes ou nous écrire directement."
   }
 }

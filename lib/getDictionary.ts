@@ -1,18 +1,28 @@
-import fs from 'fs';
-import path from 'path';
-import type { Locale } from './types';
+import fs from "fs";
+import path from "path";
+import { Locale } from "./settings";
 
-// Base path for home translations
-const basePath = path.join(process.cwd(), 'content', 'home');
+const basePath = path.join(process.cwd(), "lib", "i18n", "dictionaries");
 
-export async function getDictionary(locale: Locale) {
-  // Build path like lib/i18n/dictionaries/en.json, fr.json, ht.json, es.json
-  const filePath = path.join(basePath, `${locale}.json`);
+export async function getDictionary(locale: Locale, section: string) {
+  const filePath = path.join(basePath, locale, `${section}.json`);
 
-  if (!fs.existsSync(filePath)) {
-    throw new Error(`❌ Missing translation file: ${locale}.json`);
+  try {
+    if (!fs.existsSync(filePath)) {
+      throw new Error(`Missing translation file: ${locale}/${section}.json`);
+    }
+
+    const raw = fs.readFileSync(filePath, "utf-8");
+    return JSON.parse(raw);
+  } catch (err: any) {
+    console.error(`Error loading ${locale}/${section}.json → ${err.message}`);
+
+    // fallback
+    const fallbackPath = path.join(basePath, "en", `${section}.json`);
+    if (fs.existsSync(fallbackPath)) {
+      return JSON.parse(fs.readFileSync(fallbackPath, "utf-8"));
+    }
+
+    return {};
   }
-
-  const raw = fs.readFileSync(filePath, 'utf-8');
-  return JSON.parse(raw);
 }

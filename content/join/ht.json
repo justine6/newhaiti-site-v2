@@ -1,0 +1,13 @@
+{
+  "title": "Antre nan Mouvmant lan",
+  "description": "Vin fè pati transfòmasyon Ayiti. Enskri pi ba a pou patisipe.",
+  "cta": "Kòmanse",
+  "form": {
+    "name": "Non ou",
+    "email": "Imèl ou",
+    "phone": "Nimewo telefòn ou",
+    "location": "Kote w ye",
+    "message": "Mesaj ou",
+    "submit": "Antre nan Mouvmant lan"
+  }
+}

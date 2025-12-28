@@ -1,13 +1,26 @@
 {
-  "title": "TODO: translate title",
-  "description": "TODO: translate description",
-  "cta": "TODO: translate cta",
+  "hero": {
+    "eyebrow": "Antre nan mouvman an",
+    "title": "Kanpe ansanm ak Nouvo Ayiti 2075",
+    "subtitle": "Pataje enfòmasyon kontak ou pou nou ka kenbe w okouran de pwojè yo, evènman yo, ak fason ou ka ede.",
+    "highlight": "Ansanm, n ap rebati Ayiti ak diyite ak espwa."
+  },
   "form": {
-    "name": "[ht] TODO: translate name",
-    "email": "[ht] TODO: translate email",
-    "phone": "[ht] TODO: translate phone",
-    "location": "[ht] TODO: translate location",
-    "message": "[ht] TODO: translate message",
-    "submit": "[ht] TODO: translate submit"
+    "title": "Vin pati nan kominote a",
+    "description": "Ranpli ti fòm sa a pou resevwa nouvèl, opòtinite pou sèvi, ak istwa ki soti sou teren an.",
+    "nameLabel": "Non konplè",
+    "emailLabel": "Imèl",
+    "phoneLabel": "Telefòn (opsyonèl)",
+    "locationLabel": "Vil / Peyi",
+    "messageLabel": "Mesaj (opsyonèl)",
+    "submitLabel": "Antre nan mouvman an"
+  },
+  "success": {
+    "title": "Mèsi paske ou rantre nan mouvman an!",
+    "message": "Nou resevwa enfòmasyon ou. Byento w ap resevwa nouvèl ak pwochen etap yo."
+  },
+  "error": {
+    "title": "Gen yon pwoblèm",
+    "message": "Nou pa t kapab voye demann ou an. Tanpri eseye ankò pita oswa voye yon imèl ban nou dirèkteman."
   }
 }

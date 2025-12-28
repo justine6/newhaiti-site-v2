@@ -1,13 +1,78 @@
 {
-  "title": "Antre nan Mouvman an",
-  "description": "Vin yon pati nan transfòmasyon Ayiti a. Enskri anba a pou patisipe.",
-  "cta": "Kòmanse",
-  "form": {
-    "name": "Non Ou",
-    "email": "Imèl Ou",
-    "phone": "Nimewo Telefòn Ou",
-    "location": "Kote Ou",
-    "message": "Mesaj Ou",
-    "submit": "Antre Kounye a"
+  "newsletter": {
+    "title": "Rete konekte",
+    "subtitle": "Abòne pou resevwa nouvèl, mizajou, ak istwa espwa.",
+    "placeholder": "Antre imel ou",
+    "cta": "Abòne",
+    "success": "Mèsi paske ou abòne !",
+    "error": "Gen yon erè ki fèt. Tanpri eseye ankò."
+  },
+  "joinPreview": {
+    "title": "Vin pati nan mouvman an",
+    "description": "Pataje non ou, kontak ou, ak kote w ye pou n ka mache ansanm pou yon Nouvo Ayiti.",
+    "cta": "Louvri fòm enskripsyon an"
+  },
+  "projects": {
+    "title": "Pwojè Nou yo",
+    "subtitle": "Dekouvri inisyativ kle nou yo pou retabli diyite, rebati espwa, epi renouvle vizyon atravè Ayiti.",
+    "promiseLine": "Chak pwojè se yon pwomès pou lavni.",
+    "comingSoon": "Detay pwojè yo ap vini byento. Rete branche.",
+    "items": [
+      {
+        "id": "clean-water",
+        "icon": "water",
+        "title": "Dlo pwòp",
+        "description": "Bay fanmi ak kominote yo dlo pou yo bwè ki pwòp ak an sekirite.",
+        "status": "Byento"
+      },
+      {
+        "id": "education",
+        "icon": "education",
+        "title": "Edikasyon",
+        "description": "Lekòl pou nouvo jenerasyon an, ak pwofesè ki jwenn bon sipò.",
+        "status": "Planifye"
+      },
+      {
+        "id": "infrastructure",
+        "icon": "infrastructure",
+        "title": "Enfrastrikti",
+        "description": "Bati wout, pon, ak espas kominotè ki konekte epi pwoteje moun yo.",
+        "status": "Planifye"
+      },
+      {
+        "id": "healthcare",
+        "icon": "health",
+        "title": "Sante",
+        "description": "Elaji aksè ak swen bon jan kalite, klinik, ak sèvis esansyèl yo.",
+        "status": "Planifye"
+      },
+      {
+        "id": "agriculture",
+        "icon": "agriculture",
+        "title": "Agrikilti",
+        "description": "Sipòte peyizan yo, sekirite alimantè, ak bon jan jesyon tè.",
+        "status": "Planifye"
+      },
+      {
+        "id": "youth-leadership",
+        "icon": "youth",
+        "title": "Jèn & Lidèchip",
+        "description": "Leve yon nouvo jenerasyon lidè ki chita sou valè, sèvis, ak vizyon.",
+        "status": "Planifye"
+      }
+    ]
+  },
+  "hero": {
+    "title": "Ayiti Team 2075",
+    "subtitle": "Nou leve diyite. Nou rebati espwa.",
+    "readVision": "Li vizyon an",
+    "joinMovement": "Antre nan mouvman an"
+  },
+  "blogSection": {
+    "title": "Soti nan blog nou an",
+    "subtitle": "Istwa, nouvèl, ak vizyon ki sòti nan mouvman Nouvo Ayiti 2075 la.",
+    "viewAll": "Gade blog la",
+    "blogUnavailable": "Blog la pa disponib pou kounya. Tanpri tounen pita.",
+    "readMore": "Li plis"
   }
 }

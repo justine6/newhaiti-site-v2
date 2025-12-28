@@ -1,0 +1,13 @@
+{
+  "title": "Join the Movement",
+  "description": "Be part of Haiti's transformation. Sign up below to participate.",
+  "cta": "Get Started",
+  "form": {
+    "name": "Your Name",
+    "email": "Your Email",
+    "phone": "Your Phone Number",
+    "location": "Your Location",
+    "message": "Your Message",
+    "submit": "Join Now"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "title": "Rejoindre le Mouvement",
+  "description": "Faites partie de la transformation d’Haïti. Inscrivez-vous ci-dessous pour participer.",
+  "cta": "Commencer",
+  "form": {
+    "name": "Votre nom",
+    "email": "Votre e-mail",
+    "phone": "Votre numéro de téléphone",
+    "location": "Votre localité",
+    "message": "Votre message",
+    "submit": "Rejoindre maintenant"
+  }
+}

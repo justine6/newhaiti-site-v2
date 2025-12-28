@@ -1,17 +1,30 @@
-'use client';
+"use client";
 
-type HeroProps = {
-  dictionary: {
-    title: string;
-    subtitle: string;
-  };
+import ContactCard, { ContactDictionary } from "./ContactCard";
+import NewsletterSection from "./NewsletterSection";
+import ContactForm from "./ContactForm";
+
+type ContactSectionProps = {
+  newsletterDictionary?: any; // use your existing newsletter type if you prefer
+  contactCardDictionary?: ContactDictionary;
 };
 
-export default function HeroSection({ dictionary }: HeroProps) {
+export default function ContactSection({
+  newsletterDictionary,
+  contactCardDictionary,
+}: ContactSectionProps) {
   return (
-    <section className="text-center py-20">
-      <h1 className="text-4xl font-bold">{dictionary.title}</h1>
-      <p className="text-xl mt-4">{dictionary.subtitle}</p>
+    <section id="contact" className="bg-slate-50 py-16 px-4">
+      <div className="max-w-6xl mx-auto space-y-12">
+        {/* 1) Visitor contact form */}
+        <ContactForm />
+
+        {/* 2) Stay Connected (newsletter) */}
+        <NewsletterSection dictionary={newsletterDictionary} />
+
+        {/* 3) Static contact details */}
+        <ContactCard dictionary={contactCardDictionary} />
+      </div>
     </section>
   );
 }

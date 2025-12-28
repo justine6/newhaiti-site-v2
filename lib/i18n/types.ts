@@ -91,28 +91,32 @@ export type BlogDictionary = {
   }[];
 };
 
-/** Projects page (/[locale]/projects) */
-export type ProjectsDictionary = {
-  heading: string;
-  intro: string;
-  /** Keys must match your categoryIcons slugs */
-  categories: Record<string, string>;
-  callToAction: string;
-};
-
 /** Join page (/[locale]/join) */
 export type JoinDictionary = {
-  title: string;
-  description: string;
-  fields: {
-    name: string;
-    email: string;
-    phone: string;
-    location: string;
-    message: string;
+  hero?: {
+    eyebrow?: string;
+    title?: string;
+    subtitle?: string;
+    highlight?: string;
   };
-  cta: string;
-  success: string;
+  form?: {
+    title?: string;
+    description?: string;
+    nameLabel?: string;
+    emailLabel?: string;
+    phoneLabel?: string;
+    locationLabel?: string;
+    messageLabel?: string;
+    submitLabel?: string;
+  };
+  success?: {
+    title?: string;
+    message?: string;
+  };
+  error?: {
+    title?: string;
+    message?: string;
+  };
 };
 
 /** Vision page (/[locale]/vision) */

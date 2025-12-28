@@ -1,98 +1,34 @@
 {
-  "topbar": {
-    "home": "Akèy",
-    "about": "Konsènan",
-    "projects": "Pwojè",
-    "blog": "Blog",
-    "vision": "Vizyond",
-    "contact": "Kontak",
-    "language": "Lang"
-  },
   "hero": {
-    "title": "Ekip Ayiti 2075",
-    "subtitle": "Rete Djanm nan Dinyite. Rebati Espwa.",
-    "readMore": "Li Vizyond lan",
-    "joinNow": "Antre nan Mouvman an"
-  },
-  "about": {
-    "title": "Konsènan Nou",
-    "description": "Aprann plis sou misyon nou, vizyon nou, ak moun ki ap mennen renouvèlman Ayiti."
-  },
-  "mission": {
-    "heading": "Misyon Nou",
-    "paragraph": "Nou ap rebati Ayiti avèk diyite, inovasyon, ak yon vizyon pataje."
-  },
-  "blogSection": {
-    "title": "Soti nan Blog Nou an",
-    "paragraph": "Eksplore refleksyon, istwa, ak nouvèl sou mouvman Ayiti 2075.",
-    "cta": "Vizite Blog Nou an",
-    "readMore": "[ht] TODO: translate readMore",
-    "fallbackNotice": "[ht] TODO: translate fallbackNotice",
-    "blogUnavailable": "[ht] TODO: translate blogUnavailable"
-  },
-  "projects": {
-    "title": "Pwojè Nou yo",
-    "intro": "Dekouvri prensipal inisyativ nou yo pou retabli diyite, rebati espwa, ak renouvle vizyon atravè Ayiti.",
-    "motto": "Chak pwojè se yon pwomès pou lavni.",
-    "items": [
-      {
-        "title": "Dlo Pwòp",
-        "description": "Bay dlo potab ki an sekirite."
-      },
-      {
-        "title": "Edikasyon",
-        "description": "Lekòl pou jenerasyon k ap vini yo."
-      },
-      {
-        "title": "Swen Sante",
-        "description": "Swen medikal aksesib pou tout moun."
-      },
-      {
-        "title": "Enfrastrikti",
-        "description": "Rebati wout ak lojman yo."
-      },
-      {
-        "title": "Agrikilti",
-        "description": "Sipòte peyizan yo ak sekirite alimantè."
-      },
-      {
-        "title": "Teknoloji",
-        "description": "Zouti dijital pou pwogrè."
-      }
-    ]
-  },
-  "blog": {
-    "title": "Blog Nou",
-    "description": "Li dènye istwa yo, panse yo ak nouvèl sou mouvman Ayiti 2075."
+    "title": "Byenveni nan Ekip Ayiti 2075",
+    "subtitle": "N ap retabli diyite. N ap rebati espwa.",
+    "button": "Antre nan Misyon an",
+    "readMore": "Li vizyon an",
+    "joinNow": "Antre nan mouvman an"
   },
   "newsletter": {
-    "title": "Rete Konekte",
-    "description": "Abòne pou resevwa nouvèl, mizajou, ak istwa espwa.",
+    "heading": "Abòne ak bilten nouvèl nou an",
+    "description": "Resevwa mizajou sou pwojè nou yo, istwa kominote yo, ak pwogrè n ap fè ansanm.",
     "placeholder": "Antre imel ou",
-    "subscribe": "Abòne"
+    "cta": "Abòne",
+    "success": "Mèsi paske ou abòne!"
   },
-  "join": {
-    "title": "Antre nan Mouvman an",
-    "description": "Fè pati vizyon an. Enskri jodi a pou sipòte ak konekte avèk nou.",
-    "form": {
-      "name": "Non konplè",
-      "email": "Adrès Imèl",
-      "phone": "Nimewo Telefòn",
-      "location": "Kote",
-      "message": "Mesaj (opsyonèl)",
-      "submit": "Antre Kounye a"
-    }
-  },
-  "contact": {
-    "title": "Kontakte Nou",
-    "description": "Nou ta renmen tande nouvèl ou. Kontakte nou nenpòt ki lè."
-  },
-  "footer": {
-    "rights": "© 2025 Nouvo Ayiti 2075. Tout dwa rezève.",
-    "social": {
-      "facebook": "Swiv nou sou Facebook",
-      "twitter": "Swiv nou sou Twitter",
-      "youtube": "Gade sou YouTube"
-    }
+  "projects": {
+    "title": "Pwojè Restorasyon Lapè",
+    "intro": "Sa nou ap fè a se pa politik. Se lapè, gerizon, ak lavni pi bon pou timoun nou yo.\nNou pa mande w chwazi kan, nou mande w pran zouti w pou rebati.",
+    "motto": "\"Kite zam yo, pran zouti w pou rebati.\"",
+    "items": [
+      { "title": "Netwayaj Kominotè & Sanitasyon", "description": "Amelyore sante piblik atravè katye ki pwòp" },
+      { "title": "Pwogram Edikasyon pou Jèn yo", "description": "Envesti nan lavni an atravè konesans" },
+      { "title": "Rekonstriksyon Enfrastrikti", "description": "Rebati sèvis ak estrikti ki esansyèl yo" },
+      { "title": "Aksè ak Swen Sante", "description": "Pote swen medikal toupatou nan kominote yo" },
+      { "title": "Devlopman Agrikòl", "description": "Asire sekirite alimantè ak dirabilite" },
+      { "title": "Fòmasyon Pwofesyonèl", "description": "Bati kapasite pou endepandans ekonomik" },
+      { "title": "Pwoteksyon Kilti ak Eritaj", "description": "Selebre epi pwoteje eritaj ayisyen an" },
+      { "title": "Rezolisyon Konfli", "description": "Kreye dyalòg lapè ant kominote yo" },
+      { "title": "Otonomi Fanm yo", "description": "Sipòte egalite ak opòtinite pou fanm yo" },
+      { "title": "Pwoteksyon Anviwònman", "description": "Pwoteje resous natirèl Ayiti yo" },
+      { "title": "Inklizyon Dijital", "description": "Fè teknoloji vin aksesib pou tout Ayisyen" }
+    ]
   }
 }

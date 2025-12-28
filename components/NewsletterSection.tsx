@@ -3,65 +3,46 @@
 import { useState } from 'react';
 import Link from 'next/link';
 
-type NewsletterSectionProps = {
-  locale: string;
-  dictionary: {
-    newsletterTitle: string;
-    newsletterDescription: string;
-    newsletterPlaceholder: string;
-    newsletterButton: string;
-  };
-  joinLabel: string;
+type NewsletterDictionary = {
+  title?: string;
+  description?: string;
+  placeholder?: string;
+  subscribe?: string;
 };
 
-export default function NewsletterSection({
-  locale,
-  dictionary,
-  joinLabel,
-}: NewsletterSectionProps) {
-  const [email, setEmail] = useState('');
+type NewsletterSectionProps = {
+  dictionary?: NewsletterDictionary;
+  locale: string;
+};
 
-  const handleSubscribe = (e: React.FormEvent) => {
-    e.preventDefault();
-    // TODO: Send email to backend
-    setEmail('');
-  };
+export default function NewsletterSection({ dictionary, locale }: NewsletterSectionProps) {
+  const title = dictionary?.title ?? "Stay Connected";
+  const description =
+    dictionary?.description ??
+    "Subscribe to receive updates, news, and stories of hope.";
+  const placeholder = dictionary?.placeholder ?? "Enter your email";
+  const subscribe = dictionary?.subscribe ?? "Subscribe";
 
   return (
-    <section className="bg-blue-50 py-16 text-center px-4">
-      {/* Join Button */}
-      <div className="flex justify-center gap-4 mb-8 flex-wrap">
-        <Link href={`/${locale}/join`}>
-          <span className="inline-block bg-red-600 text-white font-semibold px-6 py-2 rounded-full shadow hover:scale-105 hover:bg-red-700 transition-transform cursor-pointer">
-            {joinLabel}
-          </span>
-        </Link>
+    <section className="bg-blue-50 py-12">
+      <div className="max-w-xl mx-auto px-4 text-center space-y-4">
+        <h2 className="text-2xl font-bold text-slate-900">{title}</h2>
+        <p className="text-sm text-slate-600">{description}</p>
+
+        <form className="mt-4 flex gap-2 justify-center">
+          <input
+            type="email"
+            placeholder={placeholder}
+            className="w-full max-w-xs border border-blue-200 rounded px-3 py-2 text-sm"
+          />
+          <button
+            type="submit"
+            className="inline-flex items-center justify-center rounded bg-blue-600 px-4 py-2 text-sm font-semibold text-white hover:bg-blue-700"
+          >
+            {subscribe}
+          </button>
+        </form>
       </div>
-
-      {/* Newsletter Text */}
-      <h2 className="text-4xl font-bold text-blue-900">{dictionary.newsletterTitle}</h2>
-      <p className="mt-4 text-blue-800 text-lg">{dictionary.newsletterDescription}</p>
-
-      {/* Newsletter Form */}
-      <form
-        onSubmit={handleSubscribe}
-        className="mt-8 flex justify-center items-center flex-wrap gap-4 max-w-xl mx-auto"
-      >
-        <input
-          type="email"
-          placeholder={dictionary.newsletterPlaceholder}
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          required
-          className="p-3 rounded-md border border-blue-300 flex-grow min-w-[250px]"
-        />
-        <button
-          type="submit"
-          className="bg-blue-600 text-white px-6 py-3 rounded-md font-semibold hover:bg-blue-700 transition"
-        >
-          {dictionary.newsletterButton}
-        </button>
-      </form>
     </section>
   );
 }

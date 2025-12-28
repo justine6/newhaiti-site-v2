@@ -1,13 +1,78 @@
 {
-  "title": "Únete al Movimiento",
-  "description": "Sé parte de la transformación de Haití. Regístrate abajo para participar.",
-  "cta": "Comenzar",
-  "form": {
-    "name": "Tu Nombre",
-    "email": "Tu Correo",
-    "phone": "Tu Número de Teléfono",
-    "location": "Tu Ubicación",
-    "message": "Tu Mensaje",
-    "submit": "Unirse Ahora"
+  "newsletter": {
+    "title": "Mantente conectado",
+    "subtitle": "Suscríbete para recibir noticias, actualizaciones e historias de esperanza.",
+    "placeholder": "Ingresa tu correo electrónico",
+    "cta": "Suscribirse",
+    "success": "¡Gracias por suscribirte!",
+    "error": "Algo salió mal. Inténtalo de nuevo."
+  },
+  "joinPreview": {
+    "title": "Sé parte del movimiento",
+    "description": "Comparte tu nombre, tus datos de contacto y dónde vives para que podamos avanzar juntos hacia un nuevo Haití.",
+    "cta": "Abrir formulario de registro"
+  },
+  "projects": {
+    "title": "Nuestros Proyectos",
+    "subtitle": "Descubre nuestras principales iniciativas para restaurar la dignidad, reconstruir la esperanza y renovar la visión en Haití.",
+    "promiseLine": "Cada proyecto es una promesa para el futuro.",
+    "comingSoon": "Los detalles de los proyectos estarán disponibles pronto. Mantente atento.",
+    "items": [
+      {
+        "id": "clean-water",
+        "icon": "water",
+        "title": "Agua potable",
+        "description": "Proporcionando agua potable, segura y confiable a familias y comunidades.",
+        "status": "Próximamente"
+      },
+      {
+        "id": "education",
+        "icon": "education",
+        "title": "Educación",
+        "description": "Escuelas para la nueva generación, con docentes apoyados y niños acompañados.",
+        "status": "Planificado"
+      },
+      {
+        "id": "infrastructure",
+        "icon": "infrastructure",
+        "title": "Infraestructura",
+        "description": "Construir caminos, puentes y espacios comunitarios que conecten y protejan a las personas.",
+        "status": "Planificado"
+      },
+      {
+        "id": "healthcare",
+        "icon": "health",
+        "title": "Salud",
+        "description": "Ampliar el acceso a atención médica de calidad, clínicas y servicios esenciales.",
+        "status": "Planificado"
+      },
+      {
+        "id": "agriculture",
+        "icon": "agriculture",
+        "title": "Agricultura",
+        "description": "Apoyar a los agricultores, la seguridad alimentaria y el uso sostenible de la tierra.",
+        "status": "Planificado"
+      },
+      {
+        "id": "youth-leadership",
+        "icon": "youth",
+        "title": "Juventud y Liderazgo",
+        "description": "Levantar una nueva generación de líderes basada en valores, servicio y visión.",
+        "status": "Planificado"
+      }
+    ]
+  },
+  "hero": {
+    "title": "Haiti Team 2075",
+    "subtitle": "Restaurando la dignidad. Reconstruyendo la esperanza.",
+    "readVision": "Leer la visión",
+    "joinMovement": "Únete al movimiento"
+  },
+  "blogSection": {
+    "title": "Desde nuestro blog",
+    "subtitle": "Historias, noticias y visiones del movimiento Nouvo Ayiti 2075.",
+    "viewAll": "Ver el blog",
+    "blogUnavailable": "El blog está temporalmente fuera de servicio. Vuelve pronto.",
+    "readMore": "Leer más"
   }
 }

@@ -1,13 +1,78 @@
 {
-  "title": "Rejoignez le Mouvement",
-  "description": "Faites partie de la transformation d'Haïti. Inscrivez-vous ci-dessous pour participer.",
-  "cta": "Commencer",
-  "form": {
-    "name": "Votre Nom",
-    "email": "Votre Email",
-    "phone": "Numéro de Téléphone",
-    "location": "Votre Localisation",
-    "message": "Votre Message",
-    "submit": "Rejoindre Maintenant"
+  "newsletter": {
+    "title": "Restez connectés",
+    "subtitle": "Abonnez-vous pour recevoir des nouvelles, des mises à jour et des histoires d’espoir.",
+    "placeholder": "Entrez votre e-mail",
+    "cta": "S’abonner",
+    "success": "Merci pour votre inscription !",
+    "error": "Une erreur s’est produite. Veuillez réessayer."
+  },
+  "joinPreview": {
+    "title": "Devenez partie du mouvement",
+    "description": "Partagez votre nom, vos coordonnées et l’endroit où vous vivez pour que nous avancions ensemble vers un nouvel avenir pour Haïti.",
+    "cta": "Ouvrir le formulaire d’adhésion"
+  },
+  "projects": {
+    "title": "Nos Projets",
+    "subtitle": "Découvrez nos principales initiatives pour restaurer la dignité, rebâtir l’espoir et renouveler la vision en Haïti.",
+    "promiseLine": "Chaque projet est une promesse pour l’avenir.",
+    "comingSoon": "Les détails des projets arrivent bientôt. Restez à l’écoute.",
+    "items": [
+      {
+        "id": "clean-water",
+        "icon": "water",
+        "title": "Eau potable",
+        "description": "Offrir une eau potable, sûre et fiable aux familles et aux communautés.",
+        "status": "Bientôt"
+      },
+      {
+        "id": "education",
+        "icon": "education",
+        "title": "Éducation",
+        "description": "Des écoles pour la nouvelle génération, avec des enseignants soutenus et des enfants accompagnés.",
+        "status": "Planifié"
+      },
+      {
+        "id": "infrastructure",
+        "icon": "infrastructure",
+        "title": "Infrastructures",
+        "description": "Construire routes, ponts et équipements locaux pour relier et protéger les communautés.",
+        "status": "Planifié"
+      },
+      {
+        "id": "healthcare",
+        "icon": "health",
+        "title": "Santé",
+        "description": "Étendre l’accès aux soins de qualité, aux cliniques et aux services essentiels.",
+        "status": "Planifié"
+      },
+      {
+        "id": "agriculture",
+        "icon": "agriculture",
+        "title": "Agriculture",
+        "description": "Soutenir les agriculteurs, la sécurité alimentaire et l’utilisation durable des terres.",
+        "status": "Planifié"
+      },
+      {
+        "id": "youth-leadership",
+        "icon": "youth",
+        "title": "Jeunesse & Leadership",
+        "description": "Former une nouvelle génération de leaders ancrés dans les valeurs, le service et la vision.",
+        "status": "Planifié"
+      }
+    ]
+  },
+  "hero": {
+    "title": "Haiti Team 2075",
+    "subtitle": "Restaurer la dignité. Rebâtir l’espérance.",
+    "readVision": "Lire la vision",
+    "joinMovement": "Rejoindre le mouvement"
+  },
+  "blogSection": {
+    "title": "Depuis notre blog",
+    "subtitle": "Récits, nouvelles et visions du mouvement Nouvo Ayiti 2075.",
+    "viewAll": "Voir le blog",
+    "blogUnavailable": "Le blog est temporairement indisponible. Revenez bientôt.",
+    "readMore": "Lire la suite"
   }
 }

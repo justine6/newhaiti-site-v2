@@ -1,98 +1,36 @@
 {
-  "topbar": {
-    "home": "Inicio",
-    "about": "Acerca de",
-    "projects": "Proyectos",
-    "blog": "Blog",
-    "vision": "Visión",
-    "contact": "Contacto",
-    "language": "Idioma"
-  },
   "hero": {
-    "title": "Equipo Haití 2075",
-    "subtitle": "Restaurar la dignidad. Reconstruir la esperanza.",
-    "readMore": "Leer la Visión",
-    "joinNow": "Únete al Movimiento"
+    "title": "Welcome to Team Haiti 2075",
+    "subtitle": "Restoring dignity. Rebuilding hope.",
+    "button": "Join the Mission",
+    "readMore": "Read the Vision",
+    "joinNow": "Join the Movement"
   },
-  "about": {
-    "title": "Acerca de Nosotros",
-    "description": "Conozca más sobre nuestra misión, visión y las personas que impulsan la renovación de Haití."
-  },
-  "mission": {
-    "heading": "Nuestra Misión",
-    "paragraph": "Estamos reconstruyendo Haití con dignidad, innovación y una visión compartida."
-  },
-  "projects": {
-    "title": "Nuestros Proyectos",
-    "intro": "Descubra nuestras iniciativas clave para restaurar la dignidad, reconstruir la esperanza y renovar la visión en todo Haití.",
-    "motto": "Cada proyecto es una promesa para el futuro.",
-    "items": [
-      {
-        "title": "Agua Potable",
-        "description": "Proveer agua potable segura."
-      },
-      {
-        "title": "Educación",
-        "description": "Escuelas para la próxima generación."
-      },
-      {
-        "title": "Salud",
-        "description": "Acceso a centros médicos."
-      },
-      {
-        "title": "Infraestructura",
-        "description": "Reconstrucción de carreteras y puentes."
-      },
-      {
-        "title": "Agricultura",
-        "description": "Apoyo a los agricultores locales."
-      },
-      {
-        "title": "Tecnología",
-        "description": "Programas de inclusión digital."
-      }
-    ]
-  },
-  "blog": {
-    "title": "Nuestro Blog",
-    "description": "Lea las últimas historias, ideas y actualizaciones del movimiento Ayiti 2075."
-  },
+
   "newsletter": {
-    "title": "Mantente Conectado",
-    "description": "Suscríbete para recibir actualizaciones, noticias e historias de esperanza.",
-    "placeholder": "Ingresa tu correo electrónico",
-    "subscribe": "Suscribirse"
+    "heading": "Subscribe to our newsletter",
+    "description": "Get updates about our projects, stories, and community progress.",
+    "placeholder": "Enter your email",
+    "cta": "Subscribe",
+    "success": "Thank you for subscribing!"
   },
-  "join": {
-    "title": "Únete al Movimiento",
-    "description": "Sé parte de la visión. Regístrate hoy para apoyarnos y conectarte con nosotros.",
-    "form": {
-      "name": "Nombre completo",
-      "email": "Correo electrónico",
-      "phone": "Número de teléfono",
-      "location": "Ubicación",
-      "message": "Mensaje (opcional)",
-      "submit": "Unirse ahora"
-    }
-  },
-  "contact": {
-    "title": "Contáctanos",
-    "description": "Nos encantaría saber de ti. Contáctanos en cualquier momento."
-  },
-  "footer": {
-    "rights": "© 2025 Nuevo Haití 2075. Todos los derechos reservados.",
-    "social": {
-      "facebook": "Síguenos en Facebook",
-      "twitter": "Síguenos en Twitter",
-      "youtube": "Míralo en YouTube"
-    }
-  },
-  "blogSection": {
-    "title": "[es] TODO: translate blog title",
-    "paragraph": "[es] TODO: translate blog paragraph",
-    "cta": "[es] TODO: translate blog cta",
-    "readMore": "[es] TODO: translate readMore",
-    "fallbackNotice": "[es] TODO: translate fallbackNotice",
-    "blogUnavailable": "[es] TODO: translate blogUnavailable"
+
+  "projects": {
+    "title": "Peace Restoration Projects",
+    "intro": "This is not about politics. It’s about peace, healing, and giving our children a better tomorrow.\nWe don’t ask you to pick sides — we ask you to pick up your tools.",
+    "motto": "\"Put down your weapons and pick up your tools.\"",
+    "items": [
+      { "title": "Community Cleaning & Sanitation", "description": "Improving public health through clean environments" },
+      { "title": "Youth Education Programs", "description": "Investing in the future through knowledge" },
+      { "title": "Infrastructure Rebuilding", "description": "Restoring essential services and structures" },
+      { "title": "Healthcare Access", "description": "Bringing medical care to all communities" },
+      { "title": "Agricultural Development", "description": "Ensuring food security and sustainability" },
+      { "title": "Vocational Training", "description": "Building skills for economic independence" },
+      { "title": "Cultural Preservation", "description": "Celebrating and protecting Haitian heritage" },
+      { "title": "Conflict Resolution", "description": "Creating peaceful dialogue between communities" },
+      { "title": "Women’s Empowerment", "description": "Supporting gender equality and opportunity" },
+      { "title": "Environmental Protection", "description": "Safeguarding Haiti’s natural resources" },
+      { "title": "Digital Inclusion", "description": "Bridging the technology gap for all Haitians" }
+    ]
   }
 }

@@ -1,7 +1,7 @@
+// lib/i18n/get-dictionary.ts
 import fs from "fs";
 import path from "path";
-
-export type Locale = "en" | "fr" | "ht" | "es";
+import type { Locale } from "./settings";
 
 const basePath = path.join(process.cwd(), "lib", "i18n", "dictionaries");
 
@@ -16,7 +16,7 @@ const requiredSections = [
   "newsletter",
   "join",
   "contact",
-  "footer"
+  "footer",
 ];
 
 export async function getDictionary(locale: Locale, section: string) {

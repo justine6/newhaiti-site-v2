@@ -1,0 +1,13 @@
+{
+  "title": "Únete al Movimiento",
+  "description": "Sé parte de la transformación de Haití. Regístrate abajo para participar.",
+  "cta": "Comenzar",
+  "form": {
+    "name": "Tu nombre",
+    "email": "Tu correo electrónico",
+    "phone": "Tu número de teléfono",
+    "location": "Tu ubicación",
+    "message": "Tu mensaje",
+    "submit": "Únete ahora"
+  }
+}
