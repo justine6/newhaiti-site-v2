@@ -1,5 +1,2 @@
-#!/bin/sh
-. "$(dirname "$0")/_/husky.sh"
-
-# Auto-fix + validate dictionaries before commit
-npm run sync-projects && npm run check-dicts
+npm run sync-projects
+npm run check-dicts
