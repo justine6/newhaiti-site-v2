@@ -128,7 +128,6 @@ export type JoinEmailDictionary = {
   adminIntro?: string;
   adminFooter?: string;
 };
-
 export type JoinFormDictionary = {
   title?: string;
   description?: string;
@@ -139,6 +138,7 @@ export type JoinFormDictionary = {
   messageLabel?: string;
   submitLabel?: string;
   successMessage?: string;
+  spamNote?: string;
 };
 
 export type JoinHeroDictionary = {
