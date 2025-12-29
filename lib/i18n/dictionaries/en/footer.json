@@ -1,8 +1,24 @@
 {
-  "rights": "© 2025 New Haiti 2075. All rights reserved.",
+  "orgName": "Nouvo Ayiti 2075",
+  "tagline": "Restoring dignity. Rebuilding hope.",
+  "copyrightPrefix": "©",
+  "rightsReserved": "All rights reserved.",
+  "contactLabel": "Contact",
+  "contactEmailLabel": "Email",
+  "contactEmail": "info@nouvoayiti2075.com",
+  "followUsLabel": "Follow us",
+  "nav": {
+    "join": "Join the movement",
+    "vision": "Vision",
+    "projects": "Projects",
+    "blog": "Blog"
+  },
   "social": {
-    "facebook": "Follow us on Facebook",
-    "twitter": "Follow us on Twitter",
-    "youtube": "Watch on YouTube"
+    "facebook": "Facebook",
+    "youtube": "YouTube"
   }
+{
+  "builtBy": "Developed by",
+  "deployedOn": "and deployed on"
+}
 }

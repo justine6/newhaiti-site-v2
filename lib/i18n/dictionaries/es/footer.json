@@ -1,8 +1,24 @@
 {
-  "rights": "© 2025 Nuevo Haití 2075. Todos los derechos reservados.",
+  "orgName": "Nouvo Ayiti 2075",
+  "tagline": "Restaurar la dignidad. Reconstruir la esperanza.",
+  "copyrightPrefix": "©",
+  "rightsReserved": "Todos los derechos reservados.",
+  "contactLabel": "Contacto",
+  "contactEmailLabel": "Correo",
+  "contactEmail": "info@nouvoayiti2075.com",
+  "followUsLabel": "Síguenos",
+  "nav": {
+    "join": "Unirse al movimiento",
+    "vision": "Visión",
+    "projects": "Proyectos",
+    "blog": "Blog"
+  },
   "social": {
-    "facebook": "Síguenos en Facebook",
-    "twitter": "Síguenos en Twitter",
-    "youtube": "Míranos en YouTube"
+    "facebook": "Facebook",
+    "youtube": "YouTube"
   }
+  {
+  "builtBy": "Desarrollado por",
+  "deployedOn": "y desplegado en"
+}
 }
