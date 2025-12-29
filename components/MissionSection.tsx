@@ -24,3 +24,4 @@ export default function MissionSection({ dictionary }: MissionSectionProps) {
     </section>
   );
 }
+

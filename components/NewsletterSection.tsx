@@ -46,3 +46,4 @@ export default function NewsletterSection({ dictionary, locale }: NewsletterSect
     </section>
   );
 }
+

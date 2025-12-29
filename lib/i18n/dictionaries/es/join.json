@@ -1,30 +1,30 @@
 {
   "hero": {
     "eyebrow": "Únete al movimiento",
-    "title": "Apoya a Nouvo Ayiti 2075",
-    "subtitle": "Comparte tus datos de contacto para mantenerte informado sobre proyectos, eventos y formas de contribuir.",
-    "highlight": "Juntos, estamos reconstruyendo Haití con dignidad y esperanza."
+    "title": "Unámonos con Nueva Haití 2075",
+    "subtitle": "Comparte tus datos de contacto para que podamos enviarte información sobre proyectos, eventos, oportunidades y actividades comunitarias.",
+    "highlight": "Al completar este formulario, te conviertes oficialmente en miembro de HAITÍ 2075. Nuestra fuerza crece cuando trabajamos juntos. Reconstruyamos Haití con orgullo y dignidad."
   },
   "form": {
-    "title": "Sé parte de la comunidad",
-    "description": "Completa este breve formulario para recibir actualizaciones, oportunidades de servicio e historias desde el terreno.",
+    "title": "Hazte miembro de la comunidad",
+    "description": "Completa este breve formulario para recibir noticias, oportunidades de servicio, capacitación e historias reales desde el terreno.",
     "nameLabel": "Nombre completo",
     "emailLabel": "Correo electrónico",
     "phoneLabel": "Teléfono (opcional)",
     "locationLabel": "Ciudad / País",
     "messageLabel": "Mensaje (opcional)",
     "submitLabel": "Unirse al movimiento",
-    "successMessage": "¡Gracias por unirte! Pronto recibirás un correo electrónico de confirmación."
+    "successMessage": "¡Gracias por unirte al movimiento! En breve recibirás un correo de confirmación."
   },
   "email": {
-    "userSubject": "Gracias por unirte a Nouvo Ayiti 2075",
+    "userSubject": "Gracias por unirte a Nueva Haití 2075",
     "userGreeting": "Estimado/a {name},",
-    "userIntro": "Gracias por unirte a Nouvo Ayiti 2075. Tu decisión de sumarte al movimiento nos ayuda a restaurar la dignidad, reconstruir la esperanza y servir a las comunidades de Haití.",
-    "userSummaryTitle": "Aquí tienes un resumen de la información que compartiste:",
-    "userOutro": "Nuestro equipo te mantendrá informado sobre proyectos, eventos y maneras concretas de apoyar la visión de una nueva Haití.",
-    "userSignature": "Con gratitud,\nEl equipo de Nouvo Ayiti 2075",
-    "adminSubject": "Nuevo envío del formulario de unión – Nouvo Ayiti 2075",
-    "adminIntro": "Una nueva persona acaba de completar el formulario de unión. Detalles:",
-    "adminFooter": "Revisa esta información y realiza el seguimiento que sea necesario."
+    "userIntro": "Gracias por decidir caminar junto a Nueva Haití 2075. Tu decisión de unirte al movimiento nos ayuda a devolver dignidad, esperanza y oportunidades a las comunidades de Haití.",
+    "userSummaryTitle": "Estos son los datos que compartiste:",
+    "userOutro": "Nuestro equipo te mantendrá informado sobre proyectos, eventos y formas concretas de apoyar la visión de Nueva Haití.",
+    "userSignature": "Con profundo agradecimiento,\nEquipo Nueva Haití 2075",
+    "adminSubject": "Nuevo formulario de inscripción — Nueva Haití 2075",
+    "adminIntro": "Una nueva persona se ha unido al movimiento. Estos son sus datos:",
+    "adminFooter": "Por favor revisa esta información y da seguimiento cuando sea necesario."
   }
 }

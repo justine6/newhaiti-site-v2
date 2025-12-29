@@ -33,3 +33,4 @@ export default function BlogPreview({ locale = "en", dictionary }: BlogPreviewPr
     </section>
   );
 }
+

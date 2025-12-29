@@ -16,3 +16,4 @@ i18n
   .init(getOptions());
 
 export default i18n;
+

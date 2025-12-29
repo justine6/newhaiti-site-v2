@@ -18,22 +18,20 @@ export default function HeroSection({ dictionary, locale }: HeroSectionProps) {
   const joinNowLabel = dictionary?.joinNow ?? "Join the Movement";
 
   return (
-    <section
-      className="
-        relative overflow-hidden text-center
-        flex items-center
-        min-h-[640px] sm:min-h-[820px]   /* ⬆️ Taller hero */
-      "
-      style={{
-        // 🌈 Gradient + map combined
-        backgroundImage:
-          "linear-gradient(to bottom, rgba(0,43,127,0.55), rgba(210,16,52,0.75)), url('/images/haiti-map-bg.png')",
-        backgroundSize: "cover",
-        // ⬇️ Focus a bit lower so the island body + tail are in view
-        backgroundPosition: "center 55%",
-        backgroundRepeat: "no-repeat",
-      }}
-    >
+  <section
+    className="
+      relative overflow-hidden text-center
+      flex items-center
+      min-h-[880px] sm:min-h-[1024px]
+    "
+    style={{
+      backgroundImage: "url('/images/haiti-map-bg-v2.png')",
+      backgroundSize: "cover",
+      backgroundPosition: "center center",   // ⬅️ key change
+      backgroundRepeat: "no-repeat",
+    }}
+  >
+
       <div className="mx-auto flex max-w-5xl flex-col items-center px-4 py-20 sm:py-28">
         <h1 className="text-4xl sm:text-6xl font-extrabold tracking-tight text-white drop-shadow-xl">
           {title}

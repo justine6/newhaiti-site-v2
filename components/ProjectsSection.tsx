@@ -83,3 +83,4 @@ export default function ProjectsSection({ dictionary }: ProjectsSectionProps) {
     </section>
   );
 }
+

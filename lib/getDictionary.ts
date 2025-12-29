@@ -26,3 +26,4 @@ export async function getDictionary(locale: Locale, section: string) {
     return {};
   }
 }
+

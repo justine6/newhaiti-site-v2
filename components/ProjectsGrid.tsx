@@ -72,3 +72,4 @@ export default function ProjectsGrid({ items = [] }: ProjectsGridProps) {
     </motion.div>
   );
 }
+

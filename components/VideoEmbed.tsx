@@ -24,3 +24,4 @@ export default function VideoEmbed({ title, embedUrl }: VideoEmbedProps) {
     </div>
   );
 }
+

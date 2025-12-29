@@ -159,3 +159,4 @@ export default function NewYear2026Section({
     </section>
   );
 }
+

@@ -1,30 +1,30 @@
 {
   "hero": {
     "eyebrow": "Join the movement",
-    "title": "Stand with Nouvo Ayiti 2075",
-    "subtitle": "Share your contact details so we can keep you informed about projects, events, and ways to contribute.",
-    "highlight": "Together, we are rebuilding Haiti with dignity and hope."
+    "title": "Stand together with New Haiti 2075",
+    "subtitle": "Share your contact details so we can keep you updated about projects, events, opportunities, and community activities.",
+    "highlight": "When you complete this form, you officially become a member of HAITI 2075 — because our strength grows when we work together. Let’s rebuild Haiti with pride and dignity."
   },
   "form": {
-    "title": "Become part of the community",
-    "description": "Fill out this short form to receive updates, opportunities to serve, and stories from the field.",
-    "nameLabel": "Full name",
+    "title": "Become a community member",
+    "description": "Fill out this short form to receive updates, opportunities to serve, training, and real stories from the field.",
+    "nameLabel": "Full Name",
     "emailLabel": "Email",
     "phoneLabel": "Phone (optional)",
     "locationLabel": "City / Country",
     "messageLabel": "Message (optional)",
-    "submitLabel": "Join the movement",
-    "successMessage": "Thank you for joining! You will receive a confirmation email shortly."
+    "submitLabel": "Join the Movement",
+    "successMessage": "Thank you for joining the movement! You’ll receive a confirmation email shortly."
   },
   "email": {
-    "userSubject": "Thank you for joining Nouvo Ayiti 2075",
+    "userSubject": "Thank you for joining New Haiti 2075",
     "userGreeting": "Dear {name},",
-    "userIntro": "Thank you for standing with Nouvo Ayiti 2075. Your decision to join the movement helps us restore dignity, rebuild hope, and serve communities across Haiti.",
-    "userSummaryTitle": "Here is a copy of the information you shared:",
-    "userOutro": "Our team will keep you informed about projects, events, and concrete ways to support the vision for a renewed Haiti.",
-    "userSignature": "With gratitude,\nThe Nouvo Ayiti 2075 Team",
-    "adminSubject": "New join form submission – Nouvo Ayiti 2075",
-    "adminIntro": "A new person has just completed the join form. Details:",
-    "adminFooter": "Please review this submission and follow up as appropriate."
+    "userIntro": "Thank you for choosing to walk with New Haiti 2075. Your decision to join the movement helps us restore dignity, hope, and opportunity across communities in Haiti.",
+    "userSummaryTitle": "Here is the information you shared:",
+    "userOutro": "Our team will keep you informed about projects, events, and meaningful ways you can support the New Haiti vision.",
+    "userSignature": "With deep appreciation,\nThe New Haiti 2075 Team",
+    "adminSubject": "New Join Form Submission – New Haiti 2075",
+    "adminIntro": "A new person has joined the movement. Here are their details:",
+    "adminFooter": "Please review this information and follow up as needed."
   }
 }

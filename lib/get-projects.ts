@@ -43,3 +43,4 @@ const PROJECTS: Project[] = [
 export function getProjects(): Project[] {
   return PROJECTS;
 }
+

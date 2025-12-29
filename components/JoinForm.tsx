@@ -206,3 +206,4 @@ export default function JoinForm({ labels, locale }: JoinFormProps) {
     </form>
   );
 }
+

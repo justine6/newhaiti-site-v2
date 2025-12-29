@@ -49,3 +49,4 @@ export function rateLimit(key: string, tier: Tier): boolean {
   trackerMap.set(key, { count: 1, expiresAt: now + windowMs });
   return true;
 }
+

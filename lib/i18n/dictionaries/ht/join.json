@@ -2,12 +2,12 @@
   "hero": {
     "eyebrow": "Antre nan mouvman an",
     "title": "Kanpe ansanm ak Nouvo Ayiti 2075",
-    "subtitle": "Pataje enfòmasyon kontak ou pou nou ka kenbe ou enfòme sou pwojè, evènman, ak fason ou ka patisipe.",
-    "highlight": "Ansanm, n ap rebati Ayiti ak diyite ak espwa."
+    "subtitle": "Pataje kontak ou ak nou pou nou ka voye enfòmasyon ba ou sou pwojè yo, nouvèl sou tout evènman kap pase yo, opòtinite ak fòmasyon.",
+    "highlight": "Lè w ranpli fòmilè sa a, ou otomatikman vin yon manm AYITI 2075. Sa bay plis fòs lè nou mete men ansanm. Ann rebati Ayiti nan fyète ak diyite."
   },
   "form": {
     "title": "Vin yon manm kominote a",
-    "description": "Ranpli ti fòm sa a pou resevwa nouvèl, opòtinite pou sèvi, ak istwa ki soti sou tèren an.",
+    "description": "Ranpli fòmilè sa a pou resevwa nouvèl, opòtinite pou sèvi, fòmasyon ak istwa sou lavi ak aktivite kap pase sou tèren an.",
     "nameLabel": "Non konplè",
     "emailLabel": "Imèl",
     "phoneLabel": "Telefòn (opsyonèl)",

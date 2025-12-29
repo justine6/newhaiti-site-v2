@@ -199,3 +199,4 @@ export type DictionaryBySection = {
   vision: VisionDictionary;
   videos: VideosDictionary;
 };
+

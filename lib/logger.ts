@@ -16,3 +16,4 @@ const logger = isProd
     });
 
 export default logger;
+

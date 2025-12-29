@@ -17,3 +17,4 @@ export default function AboutSection({ dictionary }: AboutSectionProps) {
     </section>
   );
 }
+

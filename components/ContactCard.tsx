@@ -69,3 +69,4 @@ export default function ContactCard({ dictionary }: ContactCardProps) {
     </section>
   );
 }
+

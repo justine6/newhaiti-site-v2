@@ -9,3 +9,4 @@ export const getDictionary = async (locale: string, section: Section) => {
     return {};
   }
 };
+

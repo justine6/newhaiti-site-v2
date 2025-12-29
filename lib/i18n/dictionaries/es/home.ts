@@ -56,3 +56,4 @@ Estamos trabajando para restaurar la paz y la prosperidad en toda la nación.`,
 };
 
 export default home;
+

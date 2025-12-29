@@ -71,3 +71,4 @@ export default function ProjectsClient({ heading, intro, categories, callToActio
     </main>
   );
 }
+
