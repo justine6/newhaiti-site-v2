@@ -59,7 +59,7 @@ export default async function LocaleHome({ params }: LocaleHomeProps) {
     phoneValue: "+1 (918) 640-8249",
     addressLabel: "Location",
     addressValue:
-      "Port-au-Prince & Oklahoma City — serving Haitians worldwide",
+      "Worldwide",
   };
 
   return (

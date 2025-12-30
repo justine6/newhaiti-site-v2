@@ -1,63 +1,58 @@
 {
   "hero": {
-    "title": "Welcome to Team Haiti 2075",
-    "subtitle": "Restoring dignity. Rebuilding hope.",
-    "button": "Join the Mission",
-    "readMore": "Read the Vision",
-    "joinNow": "Join the Movement"
+    "eyebrow": "Welcome to Team Haiti 2075",
+    "title": "Rebuilding Haiti with dignity and hope",
+    "subtitle": "A long-term, people-first movement uniting Haitians at home and abroad to restore communities, infrastructure, and opportunity.",
+    "primaryCta": "Read the Vision",
+    "secondaryCta": "Join the Movement"
   },
-  "projects": {
-    "title": "Peace Restoration Projects",
-    "intro": "This is not about politics. It’s about peace, healing, and giving our children a better tomorrow.\nWe don’t ask you to pick sides — we ask you to pick up your tools.",
-    "motto": "\"Put down your weapons and pick up your tools.\"",
-    "items": [
-      { "title": "Community Cleaning & Sanitation", "description": "Improving public health through clean environments" },
-      { "title": "Youth Education Programs", "description": "Investing in the future through knowledge" },
-      { "title": "Infrastructure Rebuilding", "description": "Restoring essential services and structures" },
-      { "title": "Healthcare Access", "description": "Bringing medical care to all communities" },
-      { "title": "Agricultural Development", "description": "Ensuring food security and sustainability" },
-      { "title": "Vocational Training", "description": "Building skills for economic independence" },
-      { "title": "Cultural Preservation", "description": "Celebrating and protecting Haitian heritage" },
-      { "title": "Conflict Resolution", "description": "Creating peaceful dialogue between communities" },
-      { "title": "Women’s Empowerment", "description": "Supporting gender equality and opportunity" },
-      { "title": "Environmental Protection", "description": "Safeguarding Haiti’s natural resources" },
-      { "title": "Digital Inclusion", "description": "Bridging the technology gap for all Haitians" }
+  "topbar": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "blog": "Blog",
+    "vision": "Vision",
+    "contact": "Contact",
+    "join": "Join the movement",
+    "language": "Language"
+  },
+  "about": {
+    "title": "Who we are",
+    "body": "New Haiti 2075 is a community-driven initiative focused on long-term reconstruction and renewal in Haiti. We connect leaders, volunteers, and partners around concrete projects that restore dignity, strengthen communities, and build a future rooted in justice and hope."
+  },
+  "mission": {
+    "title": "Our mission",
+    "points": [
+      "Restore dignity and opportunity in Haitian communities through concrete, long-term projects.",
+      "Mobilize Haitians at home and in the diaspora to work together with trust and transparency.",
+      "Invest in education, health, infrastructure, and local leadership for lasting impact."
     ]
   },
-  "blog": {
-    "title": "From Our Blog",
-    "subtitle": "Explore stories, updates, and reflections from the Nouvo Ayiti 2075 movement.",
-    "visitLabel": "Visit Our Blog",
-    "blogUnavailable": "Blog posts will appear here soon.",
-    "readMore": "Read more"
+  "projectsSection": {
+    "title": "Key project areas",
+    "subtitle": "From basic infrastructure to education and health, each project area is designed to bring real, visible change on the ground.",
+    "viewAllLabel": "Explore all projects"
   },
   "newsletter": {
-    "heading": "Stay Connected",
-    "description": "Subscribe to receive updates, news, and stories of hope.",
-    "placeholder": "Enter your email",
-    "cta": "Subscribe",
-    "success": "Thank you for subscribing!"
+    "title": "Stay connected to the movement",
+    "subtitle": "Receive updates about projects, stories from the field, and ways to support New Haiti 2075.",
+    "emailPlaceholder": "Enter your email",
+    "submitLabel": "Sign up",
+    "successMessage": "Thank you for subscribing! We’ll keep you updated with new stories and progress."
   },
-  "join": {
-  "title": "Join the Movement",
-  "description": "Be part of the vision. Sign up today to support and connect with us.",
-  "form": {
-    "name": "Name",
-    "email": "Email",
-    "phone": "Phone",
-    "location": "Location",
-    "message": "Message (optional)",
-    "submit": "Join Now"
-  }
-},
-  "contact": {
-    "title": "Contact the Team",
-    "subtitle": "Reach out if you’d like to partner, support, or learn more about Nouvo Ayiti 2075.",
-    "emailLabel": "Email",
-    "emailValue": "info@nouvoayiti2075.com",
-    "phoneLabel": "Phone",
-    "phoneValue": "+1 (405) 934-5864",
-    "addressLabel": "Location",
-    "addressValue": "Port-au-Prince & Oklahoma City — serving Haitians worldwide"
+  "footer": {
+    "tagline": "Rebuilding Haiti with dignity, hope, and unity.",
+    "links": {
+      "about": "About",
+      "projects": "Projects",
+      "blog": "Blog",
+      "vision": "Vision",
+      "join": "Join the movement",
+      "contact": "Contact"
+    },
+    "legal": {
+      "rights": "© New Haiti 2075. All rights reserved.",
+      "disclaimer": "New Haiti 2075 is a community-driven initiative dedicated to long-term reconstruction, empowerment, and sustainable development for the people of Haiti."
+    }
   }
 }

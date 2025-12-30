@@ -137,9 +137,9 @@ export default function Footer({ locale, dictionary }: FooterProps) {
               </a>
 
               <a
-                href="https://www.youtube.com"
+                href="https://www.youtube.com/@nouvoayiti2075"
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 aria-label={social.youtube ?? "YouTube"}
                 className="inline-flex items-center gap-2 text-slate-500 hover:text-slate-900"
               >
