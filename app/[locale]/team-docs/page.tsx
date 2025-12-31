@@ -1,5 +1,6 @@
 import { getDictionary } from '@/lib/i18n/get-dictionary';
-import { Locale, locales } from '@/lib/i18n/settings';
+import { SUPPORTED_LOCALES } from "@/lib/i18n/settings";
+
 
 import { Metadata } from 'next';
 

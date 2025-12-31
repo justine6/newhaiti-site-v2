@@ -1,7 +1,7 @@
 // lib/i18n/get-dictionary.ts
 import fs from "fs";
 import path from "path";
-import type { Locale } from "./settings";
+import { SUPPORTED_LOCALES } from "@/lib/i18n/settings";
 
 const basePath = path.join(process.cwd(), "lib", "i18n", "dictionaries");
 

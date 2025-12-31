@@ -1,0 +1,15 @@
+{
+  "success": {
+    "title": "¡Gracias por tu donación!",
+    "message": "Tu contribución ayuda a Nouvo Ayiti 2075 a apoyar a largo plazo proyectos centrados en las personas, para restaurar las comunidades, mejorar la infraestructura y crear oportunidades en Haití.",
+    "receipt": "Nuestro proveedor de pagos seguro ha enviado a tu correo electrónico la confirmación del pago junto con el recibo.",
+    "backHome": "Volver al inicio",
+    "seeFunds": "Ver cómo se usan los fondos"
+  },
+  "cancel": {
+    "title": "Tu donación no se completó",
+    "message": "Parece que el proceso de donación se canceló o no se terminó. No se ha realizado ningún cargo. Puedes volver al inicio o intentarlo de nuevo cuando quieras.",
+    "backHome": "Volver al inicio",
+    "tryAgain": "Intentar donar de nuevo"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "success": {
+    "title": "Thank you for your donation!",
+    "message": "Your contribution helps Nouvo Ayiti 2075 support long-term, people-first projects to restore communities, infrastructure, and opportunity in Haiti.",
+    "receipt": "A payment confirmation and receipt have been sent to your email by our secure payment provider.",
+    "backHome": "Back to homepage",
+    "seeFunds": "See how funds are used"
+  },
+  "cancel": {
+    "title": "Your donation was not completed",
+    "message": "It looks like the donation process was canceled or not completed. No funds have been charged. You can return to the homepage or try again at any time.",
+    "backHome": "Back to homepage",
+    "tryAgain": "Try donating again"
+  }
+}
