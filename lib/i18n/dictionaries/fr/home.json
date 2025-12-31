@@ -1,10 +1,14 @@
 {
   "hero": {
-    "eyebrow": "Bienvenue dans l’équipe Haïti 2075",
     "title": "Reconstruire Haïti avec dignité et espoir",
-    "subtitle": "Un mouvement à long terme, centré sur les personnes, qui unit les Haïtiens du pays et de la diaspora pour restaurer les communautés, les infrastructures et les opportunités.",
-    "primaryCta": "Lire la vision",
-    "secondaryCta": "Rejoindre le mouvement"
+    "subtitle": "Un mouvement de long terme, centré sur les personnes, qui unit les Haïtiens du pays et de la diaspora pour reconstruire les communautés, les infrastructures et les opportunités.",
+    "readMore": "Lire la vision",
+    "joinNow": "Rejoindre le mouvement",
+    "donateLabel": "Faire un don",
+
+    "backToHomepage": "Retour à l’accueil",
+    "seeHowFundsAreUsed": "Voir comment les fonds sont utilisés",
+    "tryDonatingAgain": "Essayer de donner à nouveau"
   },
   "topbar": {
     "home": "Accueil",

@@ -1,10 +1,14 @@
 {
   "hero": {
-    "eyebrow": "Byenveni nan Ekip Ayiti 2075",
     "title": "Rebati Ayiti ak diyite ak espwa",
-    "subtitle": "Se yon mouvman alontèm ki mete moun an premye, ki ini Ayisyen lakay ak aletranje pou retabli kominote yo, enfrastrikti ak opòtinite.",
-    "primaryCta": "Li vizyon an",
-    "secondaryCta": "Antre nan mouvman an"
+    "subtitle": "Se yon mouvman alontèm ki mete moun an premye, ki ini Ayisyen lakay ak nan dyaspora pou retabli kominote yo, enfrastrikti yo ak opòtinite yo.",
+    "readMore": "Li vizyon an",
+    "joinNow": "Antre nan mouvman an",
+    "donateLabel": "Fè yon don",
+
+    "backToHomepage": "Retounen lakay",
+    "seeHowFundsAreUsed": "Gade kijan lajan yo itilize",
+    "tryDonatingAgain": "Eseye fè don ankò"
   },
   "topbar": {
     "home": "Akèy",

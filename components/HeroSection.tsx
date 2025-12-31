@@ -6,6 +6,10 @@ type HeroDictionary = {
   readMore?: string;
   joinNow?: string;
   donateLabel?: string;
+
+  backToHomepage?: string;
+  seeHowFundsAreUsed?: string;
+  tryDonatingAgain?: string;
 };
 
 type HeroSectionProps = {
