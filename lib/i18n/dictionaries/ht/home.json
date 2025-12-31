@@ -1,34 +1,58 @@
 {
   "hero": {
-    "title": "Byenveni nan Ekip Ayiti 2075",
-    "subtitle": "N ap retabli diyite. N ap rebati espwa.",
-    "button": "Antre nan Misyon an",
-    "readMore": "Li vizyon an",
-    "joinNow": "Antre nan mouvman an"
+    "eyebrow": "Byenveni nan Ekip Ayiti 2075",
+    "title": "Rebati Ayiti ak diyite ak espwa",
+    "subtitle": "Se yon mouvman alontèm ki mete moun an premye, ki ini Ayisyen lakay ak aletranje pou retabli kominote yo, enfrastrikti ak opòtinite.",
+    "primaryCta": "Li vizyon an",
+    "secondaryCta": "Antre nan mouvman an"
+  },
+  "topbar": {
+    "home": "Akèy",
+    "about": "Konsènan nou",
+    "projects": "Pwojè",
+    "blog": "Blog",
+    "vision": "Vizyon",
+    "contact": "Kontak",
+    "join": "Antre nan mouvman an",
+    "language": "Lang"
+  },
+  "about": {
+    "title": "Kiyès nou ye",
+    "body": "New Haiti 2075 se yon inisyativ kominotè ki konsantre sou rekonstriksyon ak renovasyon alontèm nan Ayiti. Nou konekte lidè, volontè ak patnè alantou pwojè konkrè ki retabli diyite, ranfòse kominote yo epi bati yon lavni ki chita sou jistis ak espwa."
+  },
+  "mission": {
+    "title": "Misyon nou",
+    "points": [
+      "Retabli diyite ak opòtinite nan kominote ayisyen yo atravè pwojè konkrè ki dire lontan.",
+      "Mobilize Ayisyen lakay ak nan dyaspora a pou travay ansanm ak konfyans ak transparans.",
+      "Envesti nan edikasyon, sante, enfrastrikti ak lidèchip lokal pou gen enpak ki dire."
+    ]
+  },
+  "projectsSection": {
+    "title": "Gwo domèn pwojè yo",
+    "subtitle": "Depi nan enfrastrikti debaz rive nan edikasyon ak sante, chak domèn pwojè fèt pou pote chanjman reyèl ak vizib sou teren an.",
+    "viewAllLabel": "Gade tout pwojè yo"
   },
   "newsletter": {
-    "heading": "Abòne ak bilten nouvèl nou an",
-    "description": "Resevwa mizajou sou pwojè nou yo, istwa kominote yo, ak pwogrè n ap fè ansanm.",
-    "placeholder": "Antre imel ou",
-    "cta": "Abòne",
-    "success": "Mèsi paske ou abòne!"
+    "title": "Rete konekte ak mouvman an",
+    "subtitle": "Resevwa nouvèl sou pwojè yo, istwa sou teren an, ak fason ou ka soutni New Haiti 2075.",
+    "emailPlaceholder": "Antre imel ou",
+    "submitLabel": "Enskri",
+    "successMessage": "Mèsi paske ou enskri ! N ap kenbe ou enfòme sou nouvo istwa ak pwogrè yo."
   },
-  "projects": {
-    "title": "Pwojè Restorasyon Lapè",
-    "intro": "Sa nou ap fè a se pa politik. Se lapè, gerizon, ak lavni pi bon pou timoun nou yo.\nNou pa mande w chwazi kan, nou mande w pran zouti w pou rebati.",
-    "motto": "\"Kite zam yo, pran zouti w pou rebati.\"",
-    "items": [
-      { "title": "Netwayaj Kominotè & Sanitasyon", "description": "Amelyore sante piblik atravè katye ki pwòp" },
-      { "title": "Pwogram Edikasyon pou Jèn yo", "description": "Envesti nan lavni an atravè konesans" },
-      { "title": "Rekonstriksyon Enfrastrikti", "description": "Rebati sèvis ak estrikti ki esansyèl yo" },
-      { "title": "Aksè ak Swen Sante", "description": "Pote swen medikal toupatou nan kominote yo" },
-      { "title": "Devlopman Agrikòl", "description": "Asire sekirite alimantè ak dirabilite" },
-      { "title": "Fòmasyon Pwofesyonèl", "description": "Bati kapasite pou endepandans ekonomik" },
-      { "title": "Pwoteksyon Kilti ak Eritaj", "description": "Selebre epi pwoteje eritaj ayisyen an" },
-      { "title": "Rezolisyon Konfli", "description": "Kreye dyalòg lapè ant kominote yo" },
-      { "title": "Otonomi Fanm yo", "description": "Sipòte egalite ak opòtinite pou fanm yo" },
-      { "title": "Pwoteksyon Anviwònman", "description": "Pwoteje resous natirèl Ayiti yo" },
-      { "title": "Inklizyon Dijital", "description": "Fè teknoloji vin aksesib pou tout Ayisyen" }
-    ]
+  "footer": {
+    "tagline": "Rebati Ayiti ak diyite, espwa ak inite.",
+    "links": {
+      "about": "Konsènan nou",
+      "projects": "Pwojè",
+      "blog": "Blog",
+      "vision": "Vizyon",
+      "join": "Antre nan mouvman an",
+      "contact": "Kontak"
+    },
+    "legal": {
+      "rights": "© New Haiti 2075. Tout dwa rezève.",
+      "disclaimer": "New Haiti 2075 se yon inisyativ kominotè ki konsakre a rekonstriksyon alontèm, ranfòsman kapasite ak devlopman dirab pou pèp ayisyen an."
+    }
   }
 }

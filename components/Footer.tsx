@@ -21,8 +21,8 @@ type FooterDictionary = {
   contactEmailLabel?: string;
   contactEmail?: string;
   followUsLabel?: string;
-  builtBy?: string;        // ✅ needed
-  deployedOn?: string;     // ✅ needed
+  builtBy?: string;
+  deployedOn?: string;
   nav?: FooterNav;
   social?: FooterSocial;
 };
@@ -35,11 +35,15 @@ type FooterProps = {
 export default function Footer({ locale, dictionary }: FooterProps) {
   const year = new Date().getFullYear();
 
+  const stripeDonateUrl = process.env.NEXT_PUBLIC_STRIPE_DONATE_URL || "";
+  const hasStripeDonate = stripeDonateUrl.trim().length > 0;
+
   const orgName = dictionary?.orgName ?? "Nouvo Ayiti 2075";
   const tagline =
     dictionary?.tagline ?? "Restoring dignity. Rebuilding hope.";
   const copyrightPrefix = dictionary?.copyrightPrefix ?? "©";
-  const rightsReserved = dictionary?.rightsReserved ?? "All rights reserved.";
+  const rightsReserved =
+    dictionary?.rightsReserved ?? "All rights reserved.";
 
   const contactLabel = dictionary?.contactLabel ?? "Contact";
   const contactEmailLabel = dictionary?.contactEmailLabel ?? "Email";
@@ -51,8 +55,12 @@ export default function Footer({ locale, dictionary }: FooterProps) {
   const nav = dictionary?.nav ?? {};
   const social = dictionary?.social ?? {};
 
+  const builtBy = dictionary?.builtBy ?? "Developed by";
+  const deployedOn = dictionary?.deployedOn ?? "and deployed on";
+
   return (
     <footer className="mt-16 border-t border-slate-200 bg-slate-50">
+      {/* Main 3-column footer content */}
       <div className="mx-auto flex max-w-6xl flex-col gap-8 px-4 py-10 md:flex-row md:items-start md:justify-between">
         {/* Left: identity */}
         <div className="space-y-2 text-sm text-slate-700">
@@ -104,7 +112,7 @@ export default function Footer({ locale, dictionary }: FooterProps) {
           </ul>
         </nav>
 
-        {/* Right: contact + social */}
+        {/* Right: contact + social + donate */}
         <div className="space-y-3 text-sm text-slate-700">
           <div>
             <div className="font-semibold">{contactLabel}</div>
@@ -121,7 +129,9 @@ export default function Footer({ locale, dictionary }: FooterProps) {
 
           <div>
             <div className="font-semibold">{followUsLabel}</div>
-            <div className="mt-2 flex items-center gap-4">
+
+            <div className="mt-2 flex flex-wrap items-center gap-4">
+              {/* Facebook */}
               <a
                 href="https://www.facebook.com"
                 target="_blank"
@@ -129,13 +139,13 @@ export default function Footer({ locale, dictionary }: FooterProps) {
                 aria-label={social.facebook ?? "Facebook"}
                 className="inline-flex items-center gap-2 text-slate-500 hover:text-slate-900"
               >
-                {/* Simple Facebook icon */}
                 <span className="inline-flex h-7 w-7 items-center justify-center rounded-full bg-slate-800 text-white text-xs font-bold">
                   f
                 </span>
                 <span>{social.facebook ?? "Facebook"}</span>
               </a>
 
+              {/* YouTube */}
               <a
                 href="https://www.youtube.com/@nouvoayiti2075"
                 target="_blank"
@@ -143,20 +153,34 @@ export default function Footer({ locale, dictionary }: FooterProps) {
                 aria-label={social.youtube ?? "YouTube"}
                 className="inline-flex items-center gap-2 text-slate-500 hover:text-slate-900"
               >
-                {/* Simple YouTube icon */}
                 <span className="inline-flex h-7 w-7 items-center justify-center rounded-full border border-slate-800 text-xs font-bold">
                   ▶
                 </span>
                 <span>{social.youtube ?? "YouTube"}</span>
               </a>
+
+              {/* Stripe Donate — only if configured */}
+              {hasStripeDonate && (
+                <a
+                  href={stripeDonateUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Donate"
+                  className="inline-flex items-center gap-2 rounded-full border border-rose-600 px-3 py-1.5 text-rose-700 hover:bg-rose-600 hover:text-white transition"
+                >
+                  <span>❤️</span>
+                  <span>Donate</span>
+                </a>
+              )}
             </div>
           </div>
         </div>
-        </div>
+      </div>
 
-        {/* Attribution line */}
-        <div className="border-t border-slate-200 pt-4 text-center text-xs text-slate-500">
-          {dictionary?.builtBy ?? "Developed by"}{" "}
+      {/* Attribution strip */}
+      <div className="border-t border-slate-200 bg-slate-100">
+        <div className="mx-auto max-w-6xl px-4 py-3 text-center text-xs text-slate-500">
+          {builtBy}{" "}
           <a
             href="https://justinelonglat-lane.com"
             target="_blank"
@@ -165,7 +189,7 @@ export default function Footer({ locale, dictionary }: FooterProps) {
           >
             Justine Longla-T
           </a>{" "}
-          {dictionary?.deployedOn ?? "and deployed on"}{" "}
+          {deployedOn}{" "}
           <a
             href="https://justinelonglat-lane.com"
             target="_blank"
@@ -175,6 +199,7 @@ export default function Footer({ locale, dictionary }: FooterProps) {
             justinelonglat-lane.com
           </a>
         </div>
+      </div>
     </footer>
   );
 }

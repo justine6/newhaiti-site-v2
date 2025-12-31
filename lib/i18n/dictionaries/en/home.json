@@ -1,20 +1,21 @@
 {
   "hero": {
-    "eyebrow": "Welcome to Team Haiti 2075",
     "title": "Rebuilding Haiti with dignity and hope",
     "subtitle": "A long-term, people-first movement uniting Haitians at home and abroad to restore communities, infrastructure, and opportunity.",
-    "primaryCta": "Read the Vision",
-    "secondaryCta": "Join the Movement"
+    "readMore": "Read the Vision",
+    "joinNow": "Join the Movement",
+    "donateLabel": "Donate"
   },
   "topbar": {
     "home": "Home",
     "about": "About",
     "projects": "Projects",
     "blog": "Blog",
-    "vision": "Vision",
     "contact": "Contact",
+    "vision": "Vision",
+    "language": "Language",
     "join": "Join the movement",
-    "language": "Language"
+    "donate": "Donate"
   },
   "about": {
     "title": "Who we are",

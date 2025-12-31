@@ -15,6 +15,7 @@ type TopbarLabels = {
   vision: string;
   language: string;
   join?: string;
+  donate?: string;
 };
 
 type TopbarProps = {
@@ -31,6 +32,7 @@ const DEFAULT_LABELS: TopbarLabels = {
   vision: "Vision",
   language: "Language",
   join: "Join the movement",
+  donate: "Donate",
 };
 
 const BLOG_BASE_URL =
@@ -42,6 +44,9 @@ export default function Topbar({ locale, labels }: TopbarProps) {
   const toggleMenu = () => setIsOpen((v) => !v);
 
   const safeLabels: TopbarLabels = { ...DEFAULT_LABELS, ...(labels ?? {}) };
+
+  const stripeDonateUrl = process.env.NEXT_PUBLIC_STRIPE_DONATE_URL ?? "";
+  const hasStripeDonate = stripeDonateUrl.trim().length > 0;
 
   const navLinks: { href: string; label: string; external?: boolean }[] = [
     { href: `/${locale}`, label: safeLabels.home },
@@ -101,7 +106,7 @@ export default function Topbar({ locale, labels }: TopbarProps) {
           )}
         </nav>
 
-        {/* Right: profile pill + CTA + language */}
+        {/* Right: profile pill + CTAs + language (desktop) */}
         <div className="hidden md:flex items-center gap-4">
           {/* Signature pill */}
           <div className="flex items-center gap-2 rounded-full border border-slate-200 bg-white/90 px-2.5 py-1 shadow-sm">
@@ -118,13 +123,26 @@ export default function Topbar({ locale, labels }: TopbarProps) {
             </span>
           </div>
 
-          {/* Primary CTA */}
+          {/* Join CTA – now black */}
           <Link
             href={`/${locale}/join`}
-            className="inline-flex items-center justify-center rounded-full bg-blue-600 px-5 py-2 text-sm font-semibold text-white shadow-md hover:bg-blue-700 hover:shadow-lg active:scale-[0.98] transition-all"
+            className="inline-flex items-center justify-center rounded-full bg-black px-5 py-2 text-sm font-semibold text-white shadow-md hover:bg-gray-900 hover:shadow-lg active:scale-[0.98] transition-all"
           >
             {safeLabels.join ?? "Join the movement"}
           </Link>
+
+          {/* Donate CTA – only if Stripe URL configured */}
+          {hasStripeDonate && (
+            <a
+              href={stripeDonateUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 rounded-full border border-rose-500 bg-white px-5 py-2 text-sm font-semibold text-rose-700 shadow-md hover:bg-rose-600 hover:text-white hover:shadow-lg active:scale-[0.98] transition-all"
+            >
+              <span>❤️</span>
+              <span>{safeLabels.donate ?? "Donate"}</span>
+            </a>
+          )}
 
           <LanguageSwitcher />
         </div>
@@ -145,6 +163,7 @@ export default function Topbar({ locale, labels }: TopbarProps) {
       {/* Mobile menu */}
       {isOpen && (
         <div className="md:hidden bg-white shadow-sm px-4 py-3 space-y-2 border-t border-slate-100">
+          {/* Mini signature */}
           <div className="flex items-center gap-2 pb-2">
             <Image
               src="/images/kiawel-daniel.png"
@@ -159,6 +178,7 @@ export default function Topbar({ locale, labels }: TopbarProps) {
             </span>
           </div>
 
+          {/* Mobile nav links */}
           {navLinks.map((link) =>
             link.external ? (
               <a
@@ -181,16 +201,30 @@ export default function Topbar({ locale, labels }: TopbarProps) {
             )
           )}
 
+          {/* Mobile Join – black */}
           <Link
             href={`/${locale}/join`}
-            className="mt-2 inline-flex w-full items-center justify-center rounded-full bg-blue-600 px-4 py-2 text-sm font-semibold text-white shadow-md hover:bg-blue-700"
+            className="mt-2 inline-flex w-full items-center justify-center rounded-full bg-black px-4 py-2 text-sm font-semibold text-white shadow-md hover:bg-gray-900 active:scale-[0.98] transition-all"
             onClick={() => setIsOpen(false)}
           >
             {safeLabels.join ?? "Join the movement"}
           </Link>
+
+          {/* Mobile Donate – only if configured */}
+          {hasStripeDonate && (
+            <a
+              href={stripeDonateUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-2 inline-flex w-full items-center justify-center gap-2 rounded-full border border-rose-500 bg-white px-4 py-2 text-sm font-semibold text-rose-700 shadow-md hover:bg-rose-600 hover:text-white active:scale-[0.98] transition-all"
+              onClick={() => setIsOpen(false)}
+            >
+              <span>❤️</span>
+              <span>{safeLabels.donate ?? "Donate"}</span>
+            </a>
+          )}
         </div>
       )}
     </header>
   );
 }
-

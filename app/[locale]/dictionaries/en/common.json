@@ -1,7 +1,8 @@
 {
   "hero": {
     "readVision": "Read the Vision",
-    "joinMovement": "Join the Movement"
+    "joinMovement": "Join the Movement",
+    "donate": "Donate"            
   },
   "newsletter": {
     "title": "Stay Connected",
@@ -10,4 +11,3 @@
     "subscribe": "Subscribe"
   }
 }
-

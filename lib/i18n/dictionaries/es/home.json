@@ -1,36 +1,58 @@
 {
   "hero": {
-    "title": "Welcome to Team Haiti 2075",
-    "subtitle": "Restoring dignity. Rebuilding hope.",
-    "button": "Join the Mission",
-    "readMore": "Read the Vision",
-    "joinNow": "Join the Movement"
+    "eyebrow": "Bienvenido al Equipo Haití 2075",
+    "title": "Reconstruyendo Haití con dignidad y esperanza",
+    "subtitle": "Un movimiento a largo plazo, centrado en las personas, que une a los haitianos dentro y fuera del país para restaurar comunidades, infraestructuras y oportunidades.",
+    "primaryCta": "Leer la visión",
+    "secondaryCta": "Únete al movimiento"
   },
-
-  "newsletter": {
-    "heading": "Subscribe to our newsletter",
-    "description": "Get updates about our projects, stories, and community progress.",
-    "placeholder": "Enter your email",
-    "cta": "Subscribe",
-    "success": "Thank you for subscribing!"
+  "topbar": {
+    "home": "Inicio",
+    "about": "Quiénes somos",
+    "projects": "Proyectos",
+    "blog": "Blog",
+    "vision": "Visión",
+    "contact": "Contacto",
+    "join": "Únete al movimiento",
+    "language": "Idioma"
   },
-
-  "projects": {
-    "title": "Peace Restoration Projects",
-    "intro": "This is not about politics. It’s about peace, healing, and giving our children a better tomorrow.\nWe don’t ask you to pick sides — we ask you to pick up your tools.",
-    "motto": "\"Put down your weapons and pick up your tools.\"",
-    "items": [
-      { "title": "Community Cleaning & Sanitation", "description": "Improving public health through clean environments" },
-      { "title": "Youth Education Programs", "description": "Investing in the future through knowledge" },
-      { "title": "Infrastructure Rebuilding", "description": "Restoring essential services and structures" },
-      { "title": "Healthcare Access", "description": "Bringing medical care to all communities" },
-      { "title": "Agricultural Development", "description": "Ensuring food security and sustainability" },
-      { "title": "Vocational Training", "description": "Building skills for economic independence" },
-      { "title": "Cultural Preservation", "description": "Celebrating and protecting Haitian heritage" },
-      { "title": "Conflict Resolution", "description": "Creating peaceful dialogue between communities" },
-      { "title": "Women’s Empowerment", "description": "Supporting gender equality and opportunity" },
-      { "title": "Environmental Protection", "description": "Safeguarding Haiti’s natural resources" },
-      { "title": "Digital Inclusion", "description": "Bridging the technology gap for all Haitians" }
+  "about": {
+    "title": "Quiénes somos",
+    "body": "New Haiti 2075 es una iniciativa impulsada por la comunidad y centrada en la reconstrucción y la renovación a largo plazo de Haití. Conectamos líderes, voluntarios y aliados alrededor de proyectos concretos que restauran la dignidad, fortalecen a las comunidades y construyen un futuro basado en la justicia y la esperanza."
+  },
+  "mission": {
+    "title": "Nuestra misión",
+    "points": [
+      "Restaurar la dignidad y las oportunidades en las comunidades haitianas a través de proyectos concretos y de largo plazo.",
+      "Movilizar a los haitianos dentro y fuera del país para trabajar juntos con confianza y transparencia.",
+      "Invertir en educación, salud, infraestructura y liderazgo local para lograr un impacto duradero."
     ]
+  },
+  "projectsSection": {
+    "title": "Áreas clave de proyecto",
+    "subtitle": "Desde infraestructura básica hasta educación y salud, cada área de proyecto está diseñada para generar un cambio real y visible en el terreno.",
+    "viewAllLabel": "Explorar todos los proyectos"
+  },
+  "newsletter": {
+    "title": "Mantente conectado al movimiento",
+    "subtitle": "Recibe actualizaciones sobre los proyectos, historias desde el terreno y formas de apoyar a New Haiti 2075.",
+    "emailPlaceholder": "Introduce tu correo electrónico",
+    "submitLabel": "Suscribirse",
+    "successMessage": "¡Gracias por suscribirte! Te mantendremos al tanto de nuevas historias y avances."
+  },
+  "footer": {
+    "tagline": "Reconstruyendo Haití con dignidad, esperanza y unidad.",
+    "links": {
+      "about": "Quiénes somos",
+      "projects": "Proyectos",
+      "blog": "Blog",
+      "vision": "Visión",
+      "join": "Únete al movimiento",
+      "contact": "Contacto"
+    },
+    "legal": {
+      "rights": "© New Haiti 2075. Todos los derechos reservados.",
+      "disclaimer": "New Haiti 2075 es una iniciativa impulsada por la comunidad, dedicada a la reconstrucción a largo plazo, el empoderamiento y el desarrollo sostenible del pueblo haitiano."
+    }
   }
 }

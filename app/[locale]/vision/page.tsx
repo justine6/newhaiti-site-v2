@@ -1,4 +1,3 @@
-// app/[locale]/vision/page.tsx
 import Link from "next/link";
 import { getDictionary } from "@/lib/i18n/get-dictionary";
 
@@ -24,9 +23,15 @@ export default async function VisionPage({ params }: VisionPageProps) {
   const joinLabel =
     (vision as any).cta ?? hero.joinNow ?? "Join the Movement";
 
+  const donateLabel =
+    (vision as any).donateCta ?? hero.donate ?? "Donate";
+
   const highlights: string[] = Array.isArray((vision as any).highlights)
     ? (vision as any).highlights
     : [];
+
+  const stripeDonateUrl = process.env.NEXT_PUBLIC_STRIPE_DONATE_URL ?? "";
+  const hasStripeDonate = stripeDonateUrl.trim().length > 0;
 
   return (
     <main className="max-w-5xl mx-auto px-4 py-16 space-y-12">
@@ -76,12 +81,28 @@ export default async function VisionPage({ params }: VisionPageProps) {
 
       {/* CTA */}
       <section className="flex justify-center pt-4">
-        <Link
-          href={`/${locale}/join`}
-          className="inline-flex items-center justify-center rounded-lg bg-red-600 px-10 py-3 text-base font-semibold text-white shadow-md transition-transform hover:scale-105 hover:bg-red-700"
-        >
-          {joinLabel}
-        </Link>
+        <div className="flex flex-wrap items-center justify-center gap-3">
+          {/* Join button */}
+          <Link
+            href={`/${locale}/join`}
+            className="inline-flex items-center justify-center rounded-lg bg-red-600 px-10 py-3 text-base font-semibold text-white shadow-md transition-transform hover:scale-105 hover:bg-red-700"
+          >
+            {joinLabel}
+          </Link>
+
+          {/* Donate button – only if Stripe URL is configured */}
+          {hasStripeDonate && (
+            <a
+              href={stripeDonateUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center rounded-lg border border-rose-600 px-8 py-3 text-base font-semibold text-rose-700 shadow-sm transition hover:bg-rose-600 hover:text-white"
+            >
+              <span className="mr-2">❤️</span>
+              <span>{donateLabel}</span>
+            </a>
+          )}
+        </div>
       </section>
     </main>
   );
