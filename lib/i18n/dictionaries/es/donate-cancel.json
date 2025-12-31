@@ -1,0 +1,7 @@
+{
+  "title": "Donación cancelada",
+  "message": "Tu donación se canceló antes de completarse. No se realizó ningún cargo. Puedes volver a la página principal o intentarlo de nuevo en cualquier momento.",
+  "note": "Si crees que se trata de un error, vuelve a intentarlo o contacta con el equipo de Nouvo Ayiti 2075 para recibir ayuda.",
+  "primaryCtaLabel": "Volver a la página principal",
+  "secondaryCtaLabel": "Intentar donar de nuevo"
+}
