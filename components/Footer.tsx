@@ -5,6 +5,7 @@ type FooterNav = {
   vision?: string;
   projects?: string;
   blog?: string;
+  videos?: string; // 👈 NEW – matches footer.json.nav.videos
 };
 
 type FooterSocial = {
@@ -107,6 +108,14 @@ export default function Footer({ locale, dictionary }: FooterProps) {
                 className="hover:underline"
               >
                 {nav.blog ?? "Blog"}
+              </Link>
+            </li>
+            <li>
+              <Link
+                href={`/${locale}/videos`}
+                className="hover:underline"
+              >
+                {nav.videos ?? "Videos"}
               </Link>
             </li>
           </ul>

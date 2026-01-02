@@ -1,62 +1,63 @@
 {
   "hero": {
     "title": "Rebati Ayiti ak diyite ak espwa",
-    "subtitle": "Se yon mouvman alontèm ki mete moun an premye, ki ini Ayisyen lakay ak nan dyaspora pou retabli kominote yo, enfrastrikti yo ak opòtinite yo.",
+    "subtitle": "Yon mouvman alontèm ki santre sou moun, ki ini Ayisyen lakay ak nan dyaspora pou rebati kominote yo, enfrastrikti yo ak opòtinite yo.",
     "readMore": "Li vizyon an",
     "joinNow": "Antre nan mouvman an",
     "donateLabel": "Fè yon don",
-
-    "backToHomepage": "Retounen lakay",
+    "backToHomepage": "Retounen sou paj dakèy la",
     "seeHowFundsAreUsed": "Gade kijan lajan yo itilize",
-    "tryDonatingAgain": "Eseye fè don ankò"
+    "tryDonatingAgain": "Eseye fè yon lòt don"
   },
   "topbar": {
     "home": "Akèy",
-    "about": "Konsènan nou",
-    "projects": "Pwojè",
+    "about": "Sou nou",
+    "projects": "Pwojè yo",
     "blog": "Blog",
+    "videos": "Videyo",
     "vision": "Vizyon",
     "contact": "Kontak",
     "join": "Antre nan mouvman an",
     "language": "Lang"
   },
   "about": {
-    "title": "Kiyès nou ye",
-    "body": "New Haiti 2075 se yon inisyativ kominotè ki konsantre sou rekonstriksyon ak renovasyon alontèm nan Ayiti. Nou konekte lidè, volontè ak patnè alantou pwojè konkrè ki retabli diyite, ranfòse kominote yo epi bati yon lavni ki chita sou jistis ak espwa."
+    "title": "Ki moun nou ye",
+    "body": "New Haiti 2075 se yon inisyativ kominotè ki konsantre sou rekonstriksyon ak renouvèlman alontèm ann Ayiti. Nou konekte lidè, volontè ak patnè bò kote pwojè konkrè ki retabli diyite, ranfòse kominote yo epi bati yon avni ki chita sou jistis ak espwa."
   },
   "mission": {
-    "title": "Misyon nou",
+    "title": "Misyo nou",
     "points": [
-      "Retabli diyite ak opòtinite nan kominote ayisyen yo atravè pwojè konkrè ki dire lontan.",
-      "Mobilize Ayisyen lakay ak nan dyaspora a pou travay ansanm ak konfyans ak transparans.",
-      "Envesti nan edikasyon, sante, enfrastrikti ak lidèchip lokal pou gen enpak ki dire."
+      "Retabli diyite ak opòtinite nan kominote ayisyèn yo atravè pwojè konkrè ak dirab.",
+      "Mobilize Ayisyen lakay ak nan dyaspora pou yo travay ansanm nan konfyans ak transparans.",
+      "Envesti nan edikasyon, sante, enfrastrikti ak lidèchip lokal pou gen yon enpak ki dire lontan."
     ]
   },
   "projectsSection": {
-    "title": "Gwo domèn pwojè yo",
-    "subtitle": "Depi nan enfrastrikti debaz rive nan edikasyon ak sante, chak domèn pwojè fèt pou pote chanjman reyèl ak vizib sou teren an.",
-    "viewAllLabel": "Gade tout pwojè yo"
+    "title": "Domèn pwojè kle yo",
+    "subtitle": "Soti nan enfrastrikti debaz rive nan edikasyon ak sante, chak domèn pwojè vize kreye chanjman ki reyal e ki vizib sou teren an.",
+    "viewAllLabel": "Dekouvri tout pwojè yo"
   },
   "newsletter": {
     "title": "Rete konekte ak mouvman an",
-    "subtitle": "Resevwa nouvèl sou pwojè yo, istwa sou teren an, ak fason ou ka soutni New Haiti 2075.",
-    "emailPlaceholder": "Antre imel ou",
+    "subtitle": "Resevwa nouvèl sou pwojè yo, temwayaj sou teren an ak fason pou sipòte New Haiti 2075.",
+    "emailPlaceholder": "Antre adrès imèl ou",
     "submitLabel": "Enskri",
-    "successMessage": "Mèsi paske ou enskri ! N ap kenbe ou enfòme sou nouvo istwa ak pwogrè yo."
+    "successMessage": "Mèsi paske ou enskri! N ap kenbe ou enfòme sou nouvo istwa ak pwogrè yo."
   },
   "footer": {
     "tagline": "Rebati Ayiti ak diyite, espwa ak inite.",
     "links": {
-      "about": "Konsènan nou",
-      "projects": "Pwojè",
+      "about": "Sou nou",
+      "projects": "Pwojè yo",
       "blog": "Blog",
+      "videos": "Videyo",
       "vision": "Vizyon",
       "join": "Antre nan mouvman an",
       "contact": "Kontak"
     },
     "legal": {
       "rights": "© New Haiti 2075. Tout dwa rezève.",
-      "disclaimer": "New Haiti 2075 se yon inisyativ kominotè ki konsakre a rekonstriksyon alontèm, ranfòsman kapasite ak devlopman dirab pou pèp ayisyen an."
+      "disclaimer": "New Haiti 2075 se yon inisyativ kominotè ki dedye a rekonstriksyon alontèm, otoronomizasyon ak devlopman dirab pou pèp ayisyèn nan."
     }
   }
 }

@@ -14,6 +14,7 @@
     "about": "About",
     "projects": "Projects",
     "blog": "Blog",
+    "videos": "Videos",
     "contact": "Contact",
     "vision": "Vision",
     "language": "Language",
@@ -50,6 +51,7 @@
       "about": "About",
       "projects": "Projects",
       "blog": "Blog",
+      "videos": "Videos",
       "vision": "Vision",
       "join": "Join the movement",
       "contact": "Contact"

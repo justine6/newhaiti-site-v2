@@ -5,7 +5,6 @@
     "readMore": "Lire la vision",
     "joinNow": "Rejoindre le mouvement",
     "donateLabel": "Faire un don",
-
     "backToHomepage": "Retour à l’accueil",
     "seeHowFundsAreUsed": "Voir comment les fonds sont utilisés",
     "tryDonatingAgain": "Essayer de donner à nouveau"
@@ -15,6 +14,7 @@
     "about": "À propos",
     "projects": "Projets",
     "blog": "Blog",
+    "videos": "Vidéos",
     "vision": "Vision",
     "contact": "Contact",
     "join": "Rejoindre le mouvement",
@@ -50,6 +50,7 @@
       "about": "À propos",
       "projects": "Projets",
       "blog": "Blog",
+      "videos": "Vidéos",
       "vision": "Vision",
       "join": "Rejoindre le mouvement",
       "contact": "Contact"

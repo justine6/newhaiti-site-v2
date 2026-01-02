@@ -1,5 +1,14 @@
 {
-  "title": "Videyo yo",
-  "description": "Isit la n ap montre istwa, nouvèl, ak evènman nan fòma videyo.",
-  "sampleVideoTitle": "Egzanp Videyo"
+  "title": "Videyo",
+  "description": "Se la nou pral pataje istwa, nouvèl, ak evènman an fòm videyo.",
+  "items": [
+    {
+      "title": "Ayiti 2075 – Mizajou Edisyon 1",
+      "embedUrl": "https://youtu.be/brCFRyzM90s"
+    },
+    {
+      "title": "Ayiti 2075 – Mizajou Edisyon 2",
+      "embedUrl": "https://youtu.be/NoRoc_VosQU"
+    }
+  ]
 }

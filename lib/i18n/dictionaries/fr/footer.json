@@ -1,24 +1,23 @@
 {
   "orgName": "Nouvo Ayiti 2075",
-  "tagline": "Restaurer la dignité. Reconstruire l’espoir.",
+  "tagline": "Restaurer la dignité. Rebâtir l’espoir.",
   "copyrightPrefix": "©",
   "rightsReserved": "Tous droits réservés.",
   "contactLabel": "Contact",
-  "contactEmailLabel": "E-mail",
+  "contactEmailLabel": "Email",
   "contactEmail": "info@nouvoayiti2075.com",
   "followUsLabel": "Suivez-nous",
   "nav": {
     "join": "Rejoindre le mouvement",
     "vision": "Vision",
     "projects": "Projets",
-    "blog": "Blog"
+    "blog": "Blog",
+    "videos": "Vidéos"
   },
   "social": {
     "facebook": "Facebook",
     "youtube": "YouTube"
-  }
-  {
+  },
   "builtBy": "Développé par",
   "deployedOn": "et déployé sur"
-}
 }

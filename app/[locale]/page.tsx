@@ -6,6 +6,7 @@ import NewsletterSection from "@/components/NewsletterSection";
 import NewYear2026Section from "@/components/NewYear2026Section";
 import ContactCard from "@/components/ContactCard";
 import ContactForm from "@/components/ContactForm";
+import HomeVideosSection from "@/components/HomeVideosSection";
 
 import { getDictionary } from "@/lib/i18n/get-dictionary";
 import { normalizeLocale } from "@/lib/i18n/settings";
@@ -36,7 +37,9 @@ export default async function LocaleHome({ params }: LocaleHomeProps) {
   // 🔹 Fetch blog posts and keep 3 for the preview grid
   const allPosts: any[] = await fetchBlogFeed();
   const previewPosts = Array.isArray(allPosts)
-    ? allPosts.filter((post) => (post.locale ?? "en") === locale).slice(0, 3)
+    ? allPosts
+        .filter((post) => (post.locale ?? "en") === locale)
+        .slice(0, 3)
     : [];
 
   // 📝 Map home.contact into form text
@@ -58,8 +61,7 @@ export default async function LocaleHome({ params }: LocaleHomeProps) {
     phoneLabel: "Phone",
     phoneValue: "+1 (918) 640-8249",
     addressLabel: "Location",
-    addressValue:
-      "Worldwide",
+    addressValue: "Worldwide",
   };
 
   return (
@@ -69,6 +71,9 @@ export default async function LocaleHome({ params }: LocaleHomeProps) {
       <NewYear2026Section locale={locale} />
 
       <ProjectsSection dictionary={projectsDict} />
+
+      {/* 👇 New videos strip on the homepage */}
+      <HomeVideosSection locale={locale} />
 
       <BlogSection
         locale={locale}

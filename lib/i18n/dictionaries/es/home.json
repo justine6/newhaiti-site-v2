@@ -1,57 +1,58 @@
 {
   "hero": {
-    "title": "Reconstruyendo Haití con dignidad y esperanza",
-    "subtitle": "Un movimiento a largo plazo, centrado en las personas, que une a los haitianos dentro y fuera del país para restaurar las comunidades, la infraestructura y las oportunidades.",
+    "title": "Reconstruir Haití con dignidad y esperanza",
+    "subtitle": "Un movimiento a largo plazo, centrado en las personas, que une a los haitianos dentro y fuera del país para reconstruir comunidades, infraestructuras y oportunidades.",
     "readMore": "Leer la visión",
     "joinNow": "Unirse al movimiento",
     "donateLabel": "Donar",
-
-    "backToHomepage": "Volver a la página principal",
-    "seeHowFundsAreUsed": "Ver cómo se usan los fondos",
+    "backToHomepage": "Volver al inicio",
+    "seeHowFundsAreUsed": "Ver cómo se utilizan los fondos",
     "tryDonatingAgain": "Intentar donar de nuevo"
   },
   "topbar": {
     "home": "Inicio",
-    "about": "Quiénes somos",
+    "about": "Acerca de",
     "projects": "Proyectos",
     "blog": "Blog",
+    "videos": "Videos",
     "vision": "Visión",
     "contact": "Contacto",
-    "join": "Únete al movimiento",
+    "join": "Unirse al movimiento",
     "language": "Idioma"
   },
   "about": {
     "title": "Quiénes somos",
-    "body": "New Haiti 2075 es una iniciativa impulsada por la comunidad y centrada en la reconstrucción y la renovación a largo plazo de Haití. Conectamos líderes, voluntarios y aliados alrededor de proyectos concretos que restauran la dignidad, fortalecen a las comunidades y construyen un futuro basado en la justicia y la esperanza."
+    "body": "New Haiti 2075 es una iniciativa impulsada por la comunidad, centrada en la reconstrucción y la renovación a largo plazo en Haití. Conectamos líderes, voluntarios y socios en torno a proyectos concretos que restauran la dignidad, fortalecen las comunidades y construyen un futuro basado en la justicia y la esperanza."
   },
   "mission": {
     "title": "Nuestra misión",
     "points": [
-      "Restaurar la dignidad y las oportunidades en las comunidades haitianas a través de proyectos concretos y de largo plazo.",
+      "Restaurar la dignidad y las oportunidades en las comunidades haitianas a través de proyectos concretos y sostenibles.",
       "Movilizar a los haitianos dentro y fuera del país para trabajar juntos con confianza y transparencia.",
-      "Invertir en educación, salud, infraestructura y liderazgo local para lograr un impacto duradero."
+      "Invertir en educación, salud, infraestructuras y liderazgo local para lograr un impacto duradero."
     ]
   },
   "projectsSection": {
     "title": "Áreas clave de proyecto",
-    "subtitle": "Desde infraestructura básica hasta educación y salud, cada área de proyecto está diseñada para generar un cambio real y visible en el terreno.",
-    "viewAllLabel": "Explorar todos los proyectos"
+    "subtitle": "Desde la infraestructura básica hasta la educación y la salud, cada área de proyecto busca crear un cambio real y visible sobre el terreno.",
+    "viewAllLabel": "Ver todos los proyectos"
   },
   "newsletter": {
-    "title": "Mantente conectado al movimiento",
-    "subtitle": "Recibe actualizaciones sobre los proyectos, historias desde el terreno y formas de apoyar a New Haiti 2075.",
+    "title": "Mantente conectado con el movimiento",
+    "subtitle": "Recibe noticias de los proyectos, testimonios desde el terreno y formas de apoyar a New Haiti 2075.",
     "emailPlaceholder": "Introduce tu correo electrónico",
     "submitLabel": "Suscribirse",
     "successMessage": "¡Gracias por suscribirte! Te mantendremos al tanto de nuevas historias y avances."
   },
   "footer": {
-    "tagline": "Reconstruyendo Haití con dignidad, esperanza y unidad.",
+    "tagline": "Reconstruir Haití con dignidad, esperanza y unidad.",
     "links": {
-      "about": "Quiénes somos",
+      "about": "Acerca de",
       "projects": "Proyectos",
       "blog": "Blog",
+      "videos": "Videos",
       "vision": "Visión",
-      "join": "Únete al movimiento",
+      "join": "Unirse al movimiento",
       "contact": "Contacto"
     },
     "legal": {

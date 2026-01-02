@@ -4,21 +4,20 @@
   "copyrightPrefix": "©",
   "rightsReserved": "Todos los derechos reservados.",
   "contactLabel": "Contacto",
-  "contactEmailLabel": "Correo",
+  "contactEmailLabel": "Correo electrónico",
   "contactEmail": "info@nouvoayiti2075.com",
   "followUsLabel": "Síguenos",
   "nav": {
     "join": "Unirse al movimiento",
     "vision": "Visión",
     "projects": "Proyectos",
-    "blog": "Blog"
+    "blog": "Blog",
+    "videos": "Videos"
   },
   "social": {
     "facebook": "Facebook",
     "youtube": "YouTube"
-  }
-  {
+  },
   "builtBy": "Desarrollado por",
   "deployedOn": "y desplegado en"
-}
 }

@@ -16,6 +16,7 @@ type TopbarLabels = {
   language: string;
   join?: string;
   donate?: string;
+  videos?: string; // 👈 NEW
 };
 
 type TopbarProps = {
@@ -33,6 +34,7 @@ const DEFAULT_LABELS: TopbarLabels = {
   language: "Language",
   join: "Join the movement",
   donate: "Donate",
+  videos: "Videos", // 👈 NEW
 };
 
 const BLOG_BASE_URL =
@@ -60,6 +62,10 @@ export default function Topbar({ locale, labels }: TopbarProps) {
     {
       href: `/${locale}/vision`,
       label: safeLabels.vision,
+    },
+    {
+      href: `/${locale}/videos`,
+      label: safeLabels.videos ?? "Videos", // 👈 NEW
     },
     { href: `/${locale}/#contact`, label: safeLabels.contact },
   ];

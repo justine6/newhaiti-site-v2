@@ -1,30 +1,32 @@
 {
-  "title": "Our Vision for Ayiti 2075",
-  "intro": "A future grounded in dignity, resilience, and collective progress.",
+  "title": "Nuestra visión para Ayiti 2075",
+  "intro": "Un futuro basado en la dignidad, la resiliencia y el progreso colectivo.",
   "sections": [
     {
-      "heading": "Dignity",
-      "content": "Center people in every decision we make."
+      "heading": "Dignidad",
+      "content": "Poner a las personas en el centro de cada decisión, honrando su valor y su experiencia."
     },
     {
-      "heading": "Resilience",
-      "content": "Build communities and systems that thrive through change."
+      "heading": "Resiliencia",
+      "content": "Construir comunidades y sistemas capaces de adaptarse, recuperarse y prosperar en tiempos de crisis."
     },
     {
-      "heading": "Unity",
-      "content": "Mobilize Haitians at home and across the diaspora."
+      "heading": "Unidad",
+      "content": "Movilizar a los haitianos dentro y fuera del país para trabajar juntos a largo plazo."
     }
   ],
   "videos": [
     {
-      "title": "Welcome to Ayiti 2075",
-      "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-      "caption": "A brief introduction to our long-term vision."
+      "title": "Ayiti 2075 – Mensaje de visión (Edición 1)",
+      "url": "https://youtu.be/brCFRyzM90s",
+      "caption": "La visión central de Ayiti 2075, compartida por el liderazgo del movimiento."
     },
     {
-      "title": "Community Resilience",
-      "url": "https://vimeo.com/123456789",
-      "caption": "Stories of local leadership and collective action."
+      "title": "Ayiti 2075 – Actualizaciones Edición 2",
+      "url": "https://youtu.be/NoRoc_VosQU",
+      "caption": "Actualizaciones comunitarias y un llamado a la acción para haitianos dentro y fuera del país."
     }
-  ]
+  ],
+  "cta": "Únete al movimiento",
+  "donateCta": "Donar"
 }

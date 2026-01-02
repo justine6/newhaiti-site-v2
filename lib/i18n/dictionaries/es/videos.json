@@ -1,5 +1,14 @@
 {
   "title": "Videos",
-  "description": "Aquí mostraremos historias, actualizaciones y eventos en formato de video.",
-  "sampleVideoTitle": "Video de ejemplo"
+  "description": "Aquí compartimos historias, novedades y eventos en formato de video.",
+  "items": [
+    {
+      "title": "Ayiti 2075 – Actualizaciones Edición 1",
+      "embedUrl": "https://youtu.be/brCFRyzM90s"
+    },
+    {
+      "title": "Ayiti 2075 – Actualizaciones Edición 2",
+      "embedUrl": "https://youtu.be/NoRoc_VosQU"
+    }
+  ]
 }

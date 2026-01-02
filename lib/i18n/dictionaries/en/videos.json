@@ -3,12 +3,12 @@
   "description": "This is where we’ll showcase stories, updates, and events in video format.",
   "items": [
     {
-      "title": "Welcome to Ayiti 2075",
-      "embedUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ"
+      "title": "Ayiti 2075-Updates Edition 1",
+      "embedUrl": "https://youtu.be/brCFRyzM90s"
     },
     {
-      "title": "Our Mission Explained",
-      "embedUrl": "https://www.youtube.com/embed/abcd1234"
+      "title": "Ayiti 2075-Updates Edition 2",
+      "embedUrl": "https://youtu.be/NoRoc_VosQU"
     }
   ]
 }

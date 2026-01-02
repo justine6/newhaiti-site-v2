@@ -1,0 +1,14 @@
+{
+  "title": "Vidéos",
+  "description": "Ici, nous présenterons des histoires, des actualités et des événements au format vidéo.",
+  "items": [
+    {
+      "title": "Ayiti 2075 – Mise à jour, Édition 1",
+      "embedUrl": "https://youtu.be/brCFRyzM90s"
+    },
+    {
+      "title": "Ayiti 2075 – Mise à jour, Édition 2",
+      "embedUrl": "https://youtu.be/NoRoc_VosQU"
+    }
+  ]
+}

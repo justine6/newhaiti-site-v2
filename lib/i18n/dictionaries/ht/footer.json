@@ -1,22 +1,23 @@
 {
   "orgName": "Nouvo Ayiti 2075",
-  "tagline": "Rebati diyite. Rebati espwa.",
+  "tagline": "Retabli diyite. Rebati espwa.",
   "copyrightPrefix": "©",
   "rightsReserved": "Tout dwa rezève.",
   "contactLabel": "Kontak",
   "contactEmailLabel": "Imèl",
   "contactEmail": "info@nouvoayiti2075.com",
   "followUsLabel": "Swiv nou",
-  "builtBy": "Devlope pa",
-  "deployedOn": "epi deplwaye sou",
   "nav": {
     "join": "Antre nan mouvman an",
     "vision": "Vizyon",
     "projects": "Pwojè yo",
-    "blog": "Blog"
+    "blog": "Blog",
+    "videos": "Videyo"
   },
   "social": {
     "facebook": "Facebook",
     "youtube": "YouTube"
-  }
+  },
+  "builtBy": "Devlope pa",
+  "deployedOn": "epi deplwaye sou"
 }
